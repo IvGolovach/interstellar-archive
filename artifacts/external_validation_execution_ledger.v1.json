@@ -403,7 +403,7 @@
   ],
   "review_case_count": 7,
   "review_pack_ref": "artifacts/external_validation_review_pack.v1.json",
-  "review_pack_sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1",
+  "review_pack_sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd",
   "rollup": {
     "all_cases_require_external_records": true,
     "execution_record_count": 0,
@@ -418,7 +418,7 @@
   "source_artifacts": [
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
     },
     {
       "path": "artifacts/mission_dag_v2_boundary.v1.json",
