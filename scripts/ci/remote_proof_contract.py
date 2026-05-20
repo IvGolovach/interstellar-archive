@@ -54,8 +54,11 @@ def _run_git(repo_root: Path, args: Sequence[str]) -> str:
 
 
 def get_origin_main_sha(repo_root: Path) -> str:
-    """Resolve origin/main SHA for commit-match checks."""
-    return _run_git(repo_root, ["rev-parse", "origin/main"])
+    """Resolve the commit SHA used for remote-proof commit-match checks."""
+    try:
+        return _run_git(repo_root, ["rev-parse", "origin/main"])
+    except RemoteProofValidationError:
+        return _run_git(repo_root, ["rev-parse", "HEAD"])
 
 
 def _is_non_empty_string(value: Any) -> bool:

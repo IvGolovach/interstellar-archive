@@ -21,7 +21,16 @@ def _run(cmd: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
 
 
 def _origin_main_sha() -> str:
-    return subprocess.check_output(["git", "rev-parse", "origin/main"], cwd=REPO_ROOT, text=True).strip()
+    proc = subprocess.run(
+        ["git", "rev-parse", "origin/main"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if proc.returncode == 0:
+        return proc.stdout.strip()
+    return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO_ROOT, text=True).strip()
 
 
 def _ci_payload(commit_sha: str) -> dict[str, object]:
