@@ -148,7 +148,7 @@
   "source_artifacts": [
     {
       "path": "artifacts/external_validation_execution_ledger.v1.json",
-      "sha256": "5187a9ef37cfe85031f6627a962fd065883c0e35cb9939cc9f91f6e69458a32a"
+      "sha256": "4a751a3611e1f7f0a7436523d5203cc7a71e340f95e0004667aba0fb8f15c53d"
     },
     {
       "path": "artifacts/independent_physics_backend_comparison.v1.json",

@@ -251,7 +251,7 @@
   "source_artifacts": [
     {
       "path": "artifacts/external_validation_execution_ledger.v1.json",
-      "sha256": "5187a9ef37cfe85031f6627a962fd065883c0e35cb9939cc9f91f6e69458a32a"
+      "sha256": "4a751a3611e1f7f0a7436523d5203cc7a71e340f95e0004667aba0fb8f15c53d"
     },
     {
       "path": "artifacts/independent_physics_backend_comparison.v1.json",
@@ -263,31 +263,31 @@
     },
     {
       "path": "artifacts/evidence_upgrade_closure.v1.json",
-      "sha256": "9992a3bcb01f28b3db0b388a59a0bad35afa6df70735475f326f7492e284b8c6"
+      "sha256": "5e9039bef597cd13f9265e7b7a6ffebd0d5b19db91feec2f01164ab6a09ab361"
     },
     {
       "path": "artifacts/external_reproduction_kit.v1.json",
-      "sha256": "fc8c7025ec38a886ac956757300f4863669af6114fa4e64f8f836e76200d125e"
+      "sha256": "05d5abb72a9c901332fbfa585f74ea4d7984c755ab2f933fb55c9de7e1474f9e"
     },
     {
       "path": "artifacts/external_evidence_intake.v1.json",
-      "sha256": "329443e6167265e8edfc9a791e3bf07edf55bf532dcbec53d6e1fe0c0d4aa088"
+      "sha256": "e738ad25bca6e593aa2e6d86c8e1176e00b1e48679c3f87c68089341d228b304"
     },
     {
       "path": "artifacts/external_validation_campaign.v1.json",
-      "sha256": "a2fd0580440603ba3e13cc6e91d527adb550f214d35562aeaa626b2f179c2f48"
+      "sha256": "4839f77869fe6c73c8951c5492576830c3929c0179168b6f237479c26b1289d7"
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "4b85aa5ec8b5152af61106a911104a8e30c5d98fb1d6be1eb1e10794cbda226c"
+      "sha256": "8725e6fa920b9ce58626f0d010cd4cc877bb45dbe7397e51e5ee8ad04507a6f2"
     },
     {
       "path": "artifacts/roadmap_closure.v1.json",
-      "sha256": "93e96976564cf42ba9137f4fd6a7b668dd4cc20af996b0188e76efb1dd28d4f9"
+      "sha256": "aee52deefd30d25f88ca77336a42c373f249bb29df69e2353b5e22115e1e5f5d"
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
     },
     {
       "path": "mission/RELEASE_CANDIDATE_READINESS_SPEC_v1.md",
