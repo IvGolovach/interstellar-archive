@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.tmp/
+.DS_Store
+coverage/
+.coverage
+web/dist/
+web/node_modules/
+ops/reports/
+ops/reports/**

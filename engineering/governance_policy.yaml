@@ -1,0 +1,100 @@
+{
+  "version": "2",
+  "paths": {
+    "core_prefixes": [
+      "src/",
+      "core/",
+      "models/",
+      "scripts/"
+    ],
+    "architecture_files": [
+      "engineering/ARCHITECTURE.md",
+      "engineering/GOVERNANCE.md",
+      "engineering/REPRODUCIBILITY.md"
+    ],
+    "changelog": "engineering/CHANGELOG.md",
+    "decisions": "engineering/DECISIONS.md",
+    "engineering_prefix": "engineering/",
+    "required_engineering_files": [
+      "engineering/CHANGELOG.md",
+      "engineering/DECISIONS.md",
+      "engineering/ARCHITECTURE.md",
+      "engineering/REPRODUCIBILITY.md",
+      "engineering/GOVERNANCE.md"
+    ]
+  },
+  "changelog": {
+    "required_fields": [
+      "Date (UTC)",
+      "Commit",
+      "Type",
+      "Summary",
+      "Link",
+      "Rationale"
+    ],
+    "allowed_types": [
+      "feature",
+      "fix",
+      "research",
+      "infra",
+      "doc"
+    ],
+    "link_regex": "^(https://github\\.com/.+/commit/[0-9a-f]{7,40}|private-provenance:[0-9a-f]{7,40})$",
+    "heading_regex": "^##\\s+\\d{4}-\\d{2}-\\d{2}\\s+(—|-)\\s+.+$"
+  },
+  "decisions": {
+    "entry_heading_regex": "^##\\s+D-\\d{4}\\s+(—|-)\\s+.+$",
+    "required_meta_fields": [
+      "Status",
+      "Date",
+      "Author",
+      "Related commits"
+    ],
+    "allowed_statuses": [
+      "accepted",
+      "rejected",
+      "superseded"
+    ],
+    "required_sections": [
+      "Context",
+      "Options considered",
+      "Decision",
+      "Rationale",
+      "Trade-offs",
+      "Future reconsideration trigger"
+    ]
+  },
+  "engineering_sections": {
+    "engineering/ARCHITECTURE.md": [
+      "System Overview",
+      "Core Invariants",
+      "Data Model (high-level)",
+      "Critical Failure Modes",
+      "Trust Assumptions",
+      "What This System Explicitly Does NOT Guarantee"
+    ],
+    "engineering/REPRODUCIBILITY.md": [
+      "How to clone and build",
+      "Deterministic setup instructions",
+      "Exact dependency versions",
+      "How to reproduce a full run",
+      "Expected outputs",
+      "How to verify outputs integrity"
+    ],
+    "engineering/GOVERNANCE.md": [
+      "Mandatory Rules",
+      "Future Contributors Policy"
+    ]
+  },
+  "artifacts": {
+    "prefix": "artifacts/",
+    "checksums_file": "artifacts/evidence-pack-v1/checksums.sha256",
+    "tracked_outputs": [
+      "artifacts/claim_values.json",
+      "artifacts/claims_table.csv",
+      "artifacts/traceability_matrix.csv",
+      "artifacts/claims_report.md",
+      "artifacts/evidence-pack-v1/output_metrics.json"
+    ]
+  }
+}

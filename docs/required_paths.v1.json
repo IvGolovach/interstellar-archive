@@ -1,0 +1,278 @@
+{
+  "version": "required_paths.v1",
+  "groups": [
+    {
+      "id": "repository_navigation",
+      "description": "Repository entrypoints and policies that explain how to navigate source, docs, and generated outputs.",
+      "paths": [
+        "README.md",
+        "ARCHITECTURE.md",
+        "EVIDENCE.md",
+        "INVARIANTS.md",
+        "LIMITATIONS.md",
+        "REPRODUCIBILITY.md",
+        "docs/README.md",
+        "docs/ARTIFACT_POLICY.md"
+      ]
+    },
+    {
+      "id": "mission_contract",
+      "description": "Mission schema, scenario, and public contract docs required for the deterministic mission layer.",
+      "paths": [
+        "mission/EVIDENCE_SCHEMA_v1.json",
+        "mission/EVIDENCE_REGISTRY_v1.json",
+        "mission/UNCERTAINTY_MODEL_v1.json",
+        "mission/MISSION_SPEC_v1.md",
+        "mission/MISSION_LAYER_SUMMARY.md",
+        "mission/PARAMETER_CATALOG_v1.md",
+        "mission/UNCERTAINTY_MODEL_v1.md",
+        "mission/SUCCESS_METRIC_v1.md",
+        "mission/CORRECTION_WINDOW_MODEL_v1.md",
+        "mission/BLACK_HOLE_ENV_FILTER_v1.md",
+        "mission/SENSITIVITY_PLAN_v1.md",
+        "mission/OPTIMIZATION_PLAN_v1.json",
+        "mission/OBJECTIVE_FUNCTION_CONTRACT_v1.md",
+        "mission/objectives/objective_contract.v1.json",
+        "mission/objectives/risk_envelope.v1.json"
+      ]
+    },
+    {
+      "id": "capsule_survivability_contract",
+      "description": "Capsule design and deep-time survivability authored contracts required for honest target and flight-horizon interpretation.",
+      "paths": [
+        "docs/CAPSULE_SURVIVABILITY_LAYER.md",
+        "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md",
+        "mission/CAPSULE_SURVIVABILITY_SPEC_v1.md",
+        "mission/capsule/capsule_design.v1.json",
+        "scripts/build_capsule_survivability_artifact.py",
+        "scripts/ci/capsule_survivability_validate.py",
+        "artifacts/capsule_survivability_lab.v1.json"
+      ]
+    },
+    {
+      "id": "capsule_risk_budget_contract",
+      "description": "Capsule Risk Budget v2 authored contracts, source notes, generated artifact, builder, and validator required for non-certifying Monte Carlo survival interpretation.",
+      "paths": [
+        "docs/CAPSULE_RISK_BUDGET_V2.md",
+        "mission/CAPSULE_RISK_BUDGET_SPEC_v1.md",
+        "docs/research/CAPSULE_RISK_BUDGET_DATA_NOTES_v1.md",
+        "scripts/build_capsule_risk_budget_artifact.py",
+        "scripts/ci/capsule_risk_budget_validate.py",
+        "artifacts/capsule_risk_budget.v1.json"
+      ]
+    },
+    {
+      "id": "full_v2_roadmap_closure_contract",
+      "description": "Full v2 roadmap closure contract, generated artifact, builder, validator, and qualification-gap notes required to track all 15 complex roadmap items without certification overclaims.",
+      "paths": [
+        "docs/FULL_V2_ROADMAP_CLOSURE.md",
+        "mission/ROADMAP_CLOSURE_SPEC_v1.md",
+        "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md",
+        "scripts/build_roadmap_closure_artifact.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "artifacts/roadmap_closure.v1.json"
+      ]
+    },
+    {
+      "id": "mission_feasibility_screen_contract",
+      "description": "Mission feasibility screen contract, generated artifact, builder, and validator required to expose target, velocity, flight-time, dust, radiation, cost-proxy, and capsule-risk linkage without mission-readiness overclaims.",
+      "paths": [
+        "mission/MISSION_FEASIBILITY_SCREEN_SPEC_v1.md",
+        "mission/feasibility/screen.py",
+        "scripts/build_mission_feasibility_screen_artifact.py",
+        "scripts/ci/mission_feasibility_screen_validate.py",
+        "artifacts/mission_feasibility_screen.v1.json"
+      ]
+    },
+    {
+      "id": "user_mission_run_catalog_contract",
+      "description": "User-selected mission run catalog, runtime-generation contract, local review-pack runner, validators, and generated artifacts required for deterministic target/velocity run-store semantics without treating local packs as certification records.",
+      "paths": [
+        "mission/USER_MISSION_RUN_CATALOG_SPEC_v1.md",
+        "mission/user_runs/catalog.py",
+        "mission/user_runs/runtime_generation.py",
+        "scripts/build_user_mission_run_catalog_artifact.py",
+        "scripts/build_runtime_scenario_generation_artifact.py",
+        "scripts/run_user_mission_scenario.py",
+        "scripts/ci/user_mission_run_catalog_validate.py",
+        "scripts/ci/runtime_scenario_generation_validate.py",
+        "scripts/ci/user_mission_run_pack_validate.py",
+        "artifacts/runtime_scenario_generation.v1.json",
+        "artifacts/user_mission_run_catalog.v1.json"
+      ]
+    },
+    {
+      "id": "mission_probability_coupling_contract",
+      "description": "Mission probability coupling contract, generated artifact, builder, and validator required to factor selected mission probability without closing external target, environment, or recovery evidence gaps.",
+      "paths": [
+        "mission/MISSION_PROBABILITY_COUPLING_SPEC_v1.md",
+        "mission/probability/coupling.py",
+        "scripts/build_mission_probability_coupling_artifact.py",
+        "scripts/ci/mission_probability_coupling_validate.py",
+        "artifacts/mission_probability_coupling.v1.json"
+      ]
+    },
+    {
+      "id": "uncertainty_interactions_contract",
+      "description": "Uncertainty interactions contract, generated artifact, builder, and validator required to expose pairwise uncertainty residuals without claiming calibrated covariance or closed probability intervals.",
+      "paths": [
+        "mission/UNCERTAINTY_INTERACTIONS_SPEC_v1.md",
+        "mission/uncertainty/interactions.py",
+        "scripts/build_uncertainty_interactions_artifact.py",
+        "scripts/ci/uncertainty_interactions_validate.py",
+        "artifacts/uncertainty_interactions.v1.json"
+      ]
+    },
+    {
+      "id": "evidence_upgrade_campaign_contract",
+      "description": "Evidence upgrade campaign contract, generated artifact, builder, and validator required to rank source-review work without automatically promoting trust grades or claiming external validation.",
+      "paths": [
+        "mission/EVIDENCE_UPGRADE_CAMPAIGN_SPEC_v1.md",
+        "mission/evidence_upgrade/campaign.py",
+        "scripts/build_evidence_upgrade_campaign_artifact.py",
+        "scripts/ci/evidence_upgrade_campaign_validate.py",
+        "artifacts/evidence_upgrade_campaign.v1.json"
+      ]
+    },
+    {
+      "id": "optimization_v2_contract",
+      "description": "Optimization v2 four-axis decision surface, generated artifact, builder, and validator required to expose success, risk, qualification-gap, and cost-proxy tradeoffs without optimum, procurement, or qualification overclaims.",
+      "paths": [
+        "mission/OPTIMIZATION_V2_SPEC_v1.md",
+        "mission/optimization/v2.py",
+        "scripts/build_optimization_v2_artifact.py",
+        "scripts/ci/optimization_v2_validate.py",
+        "artifacts/optimization_v2_frontier.v1.json"
+      ]
+    },
+    {
+      "id": "mission_dag_v2_boundary_contract",
+      "description": "Mission DAG v2 module-boundary review surface, generated artifact, builder, and validator required to expose v1 wrapper status, v2 trace requirements, and independent-backend evidence gaps without physics-backend overclaims.",
+      "paths": [
+        "mission/DAG_V2_BOUNDARY_SPEC_v1.md",
+        "mission/dag/boundary_v2.py",
+        "scripts/build_mission_dag_v2_boundary_artifact.py",
+        "scripts/ci/mission_dag_v2_boundary_validate.py",
+        "artifacts/mission_dag_v2_boundary.v1.json"
+      ]
+    },
+    {
+      "id": "cost_procurement_architecture_feasibility_contract",
+      "description": "Roadmap item 13 cost, procurement, and architecture feasibility contract, generated artifact, builder, and validator required to expose proxy cost pressure and external procurement gates without budget, launch, or flight-readiness overclaims.",
+      "paths": [
+        "mission/COST_PROCUREMENT_ARCHITECTURE_FEASIBILITY_SPEC_v1.md",
+        "mission/architecture/feasibility.py",
+        "scripts/build_cost_procurement_architecture_feasibility_artifact.py",
+        "scripts/ci/cost_procurement_architecture_feasibility_validate.py",
+        "artifacts/cost_procurement_architecture_feasibility.v1.json"
+      ]
+    },
+    {
+      "id": "external_validation_review_pack_contract",
+      "description": "Roadmap item 14 external validation review-pack contract, generated artifact, builder, and validator required to prepare independent review without claiming third-party validation or reproduction completion.",
+      "paths": [
+        "mission/EXTERNAL_VALIDATION_REVIEW_PACK_SPEC_v1.md",
+        "mission/review/validation_pack.py",
+        "scripts/build_external_validation_review_pack_artifact.py",
+        "scripts/ci/external_validation_review_pack_validate.py",
+        "artifacts/external_validation_review_pack.v1.json"
+      ]
+    },
+    {
+      "id": "public_narrative_hardening_contract",
+      "description": "Roadmap item 15 public narrative hardening contract, generated artifact, builder, and validator required to expose blocked public claims and required qualifiers without certification or external-review overclaims.",
+      "paths": [
+        "mission/PUBLIC_NARRATIVE_HARDENING_SPEC_v1.md",
+        "mission/narrative/hardening.py",
+        "scripts/build_public_narrative_hardening_artifact.py",
+        "scripts/ci/public_narrative_hardening_validate.py",
+        "artifacts/public_narrative_hardening.v1.json"
+      ]
+    },
+    {
+      "id": "external_proof_phase_contract",
+      "description": "External proof-phase contracts, generated artifacts, builders, and validators required to execute review, export reproduction packs, validate external evidence intake, track analytic cross-check, capsule qualification, evidence closure, and publication-readiness boundaries without fabricating external evidence.",
+      "paths": [
+        "mission/EXTERNAL_VALIDATION_EXECUTION_LEDGER_SPEC_v1.md",
+        "mission/INDEPENDENT_PHYSICS_BACKEND_COMPARISON_SPEC_v1.md",
+        "mission/CAPSULE_QUALIFICATION_EVIDENCE_PACK_SPEC_v1.md",
+        "mission/EVIDENCE_UPGRADE_CLOSURE_SPEC_v1.md",
+        "mission/EXTERNAL_REPRODUCTION_KIT_SPEC_v1.md",
+        "mission/EXTERNAL_EVIDENCE_INTAKE_SPEC_v1.md",
+        "mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+        "mission/EXTERNAL_VALIDATION_CAMPAIGN_SPEC_v1.md",
+        "mission/RELEASE_CANDIDATE_READINESS_SPEC_v1.md",
+        "mission/external_proof/phase.py",
+        "mission/external_reproduction/intake.py",
+        "mission/validation_campaign/backend_environment.py",
+        "mission/validation_campaign/campaign.py",
+        "evidence/external_records/README.md",
+        "scripts/build_external_validation_execution_ledger_artifact.py",
+        "scripts/build_independent_physics_backend_comparison_artifact.py",
+        "scripts/build_capsule_qualification_evidence_pack_artifact.py",
+        "scripts/build_evidence_upgrade_closure_artifact.py",
+        "scripts/build_external_reproduction_kit_artifact.py",
+        "scripts/build_external_evidence_intake_artifact.py",
+        "scripts/build_external_validation_campaign_artifact.py",
+        "scripts/export_external_reproduction_pack.py",
+        "scripts/build_release_candidate_readiness_artifact.py",
+        "scripts/ci/external_validation_execution_ledger_validate.py",
+        "scripts/ci/independent_physics_backend_comparison_validate.py",
+        "scripts/ci/capsule_qualification_evidence_pack_validate.py",
+        "scripts/ci/evidence_upgrade_closure_validate.py",
+        "scripts/ci/external_reproduction_kit_validate.py",
+        "scripts/ci/external_evidence_intake_validate.py",
+        "scripts/ci/external_validation_campaign_validate.py",
+        "scripts/ci/external_evidence_record_validate.py",
+        "scripts/ci/external_reproduction_pack_validate.py",
+        "scripts/ci/release_candidate_readiness_validate.py",
+        "artifacts/external_validation_execution_ledger.v1.json",
+        "artifacts/independent_physics_backend_comparison.v1.json",
+        "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "artifacts/evidence_upgrade_closure.v1.json",
+        "artifacts/external_reproduction_kit.v1.json",
+        "artifacts/external_evidence_intake.v1.json",
+        "artifacts/external_validation_campaign.v1.json",
+        "artifacts/release_candidate_readiness.v1.json"
+      ]
+    },
+    {
+      "id": "mission_dag_contract",
+      "description": "Mission DAG schemas, registries, scenarios, and supporting docs required for deterministic orchestration.",
+      "paths": [
+        "mission/dag/schema/module_io.schema.v1.json",
+        "mission/dag/schema/scenario_dag.schema.v1.json",
+        "mission/dag/schema/failure_taxonomy.schema.v1.json",
+        "mission/dag/registry/module_registry.v1.json",
+        "mission/dag/registry/failure_taxonomy.v1.json",
+        "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission/dag/docs/MODULE_CONTRACTS_v1.md",
+        "mission/dag/docs/SCENARIO_DAG_v1.md",
+        "mission/dag/docs/FAILURE_TAXONOMY_v1.md"
+      ]
+    },
+    {
+      "id": "parameter_contract",
+      "description": "Parameter registry, source policy, and trust grading inputs required for parameter governance.",
+      "paths": [
+        "parameters/schema/parameter_registry.schema.v1.json",
+        "parameters/schema/evidence_registry.schema.v1.json",
+        "parameters/registry/parameter_registry.v1.json",
+        "parameters/registry/parameter_literal_scope.v1.json",
+        "parameters/registry/evidence_sources.v1.json",
+        "parameters/registry/parameter_claims.v1.json",
+        "parameters/docs/PARAMETER_MODEL.md",
+        "parameters/docs/TRUST_GRADING.md",
+        "parameters/docs/SOURCE_POLICY.md"
+      ]
+    },
+    {
+      "id": "benchmark_registry",
+      "description": "Benchmark definitions required for drift detection and published baseline comparisons.",
+      "paths": [
+        "benchmarks/benchmark_definitions.json",
+        "benchmarks/baseline_registry.json"
+      ]
+    }
+  ]
+}
