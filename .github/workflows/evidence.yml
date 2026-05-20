@@ -1,0 +1,48 @@
+name: evidence-proof-chain
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Resolve base/head range
+        id: shas
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "base_sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+            echo "head_sha=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+              if git rev-parse "${{ github.sha }}^" >/dev/null 2>&1; then
+                echo "base_sha=$(git rev-parse ${{ github.sha }}^)" >> "$GITHUB_OUTPUT"
+              else
+                echo "base_sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+              fi
+            else
+              echo "base_sha=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+            fi
+            echo "head_sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run canonical repository check suite
+        run: >
+          python3 scripts/ci/check_suite.py
+          --base "${{ steps.shas.outputs.base_sha }}"
+          --head "${{ steps.shas.outputs.head_sha }}"

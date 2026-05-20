@@ -1,0 +1,170 @@
+name: web-sim-deterministic
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verify-web-sim:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: npm ci --prefix web
+
+      - name: Resolve base/head range
+        id: shas
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "base_sha=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+            echo "head_sha=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+              if git rev-parse "${{ github.sha }}^" >/dev/null 2>&1; then
+                echo "base_sha=$(git rev-parse ${{ github.sha }}^)" >> "$GITHUB_OUTPUT"
+              else
+                echo "base_sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+              fi
+            else
+              echo "base_sha=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+            fi
+            echo "head_sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate schema and scenarios
+        run: npm run validate --prefix web
+
+      - name: No UI-only truth guard
+        run: npm run guard:no-ui-truth --prefix web
+
+      - name: Randomness lock lint
+        run: npm run lint:no-random --prefix web
+
+      - name: Run deterministic unit tests
+        run: npm run test --prefix web
+
+      - name: Golden checksum check
+        run: npm run golden:check --prefix web
+
+      - name: Enforce golden integrity contract
+        run: >
+          npm run golden:integrity --prefix web --
+          --base "${{ steps.shas.outputs.base_sha }}"
+          --head "${{ steps.shas.outputs.head_sha }}"
+
+      - name: Drift guard
+        run: python3 scripts/benchmark_drift_guard.py
+
+      - name: Controlled corruption negative proof
+        run: npm run golden:negative-proof --prefix web
+
+      - name: Update determinism status artifact
+        run: npm run determinism:status --prefix web
+
+      - name: Build web app
+        run: npm run build --prefix web
+
+      - name: Upload golden integrity reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: golden-integrity-reports
+          if-no-files-found: ignore
+          path: |
+            ops/reports/golden-integrity-violation.md
+            ops/reports/golden-negative-proof.md
+            artifacts/determinism_status.json
+
+  floating-point-stability:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [18, 20]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefix web
+
+      - name: Cross-platform golden checksum stability
+        run: npm run golden:check --prefix web
+
+  deploy-pages:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs:
+      - verify-web-sim
+      - floating-point-stability
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefix web
+
+      - name: Build web app
+        run: npm run build --prefix web
+
+      - name: Export research signals for badges
+        run: |
+          mkdir -p web/dist
+          cp artifacts/research_signals.json web/dist/research_signals.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
