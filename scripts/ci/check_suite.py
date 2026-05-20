@@ -56,10 +56,8 @@ def resolve_base_head(repo_root: Path, base_sha: str | None, head_sha: str | Non
         _git(repo_root, "rev-parse", "--verify", "origin/main")
         base = _git(repo_root, "merge-base", "origin/main", "HEAD")
     except ValueError:
-        try:
-            base = _git(repo_root, "rev-parse", "HEAD~1")
-        except ValueError:
-            base = head
+        roots = _git(repo_root, "rev-list", "--max-parents=0", "HEAD").splitlines()
+        base = roots[-1] if roots else head
 
     return base, head
 

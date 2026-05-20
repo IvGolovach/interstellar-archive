@@ -30,11 +30,8 @@ jobs:
             echo "head_sha=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
           else
             if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-              if git rev-parse "${{ github.sha }}^" >/dev/null 2>&1; then
-                echo "base_sha=$(git rev-parse ${{ github.sha }}^)" >> "$GITHUB_OUTPUT"
-              else
-                echo "base_sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
-              fi
+              root_sha="$(git rev-list --max-parents=0 "${{ github.sha }}" | tail -n 1)"
+              echo "base_sha=${root_sha:-${{ github.sha }}}" >> "$GITHUB_OUTPUT"
             else
               echo "base_sha=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
             fi
