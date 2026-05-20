@@ -1,0 +1,134 @@
+.uncertainty-shell {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.uncertainty-hero {
+  align-items: end;
+  border-bottom: 1px solid rgba(82, 70, 54, 0.24);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.4rem;
+}
+
+.uncertainty-hero h2 {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+}
+
+.uncertainty-selector label {
+  display: grid;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.uncertainty-selector select {
+  border: 1px solid rgba(82, 70, 54, 0.28);
+  border-radius: 6px;
+  font: inherit;
+  min-height: 2.6rem;
+  padding: 0.55rem 0.75rem;
+}
+
+.uncertainty-metric-grid,
+.uncertainty-detail-grid,
+.uncertainty-list-section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.uncertainty-metric-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.uncertainty-detail-grid,
+.uncertainty-list-section {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.uncertainty-metric,
+.uncertainty-detail,
+.uncertainty-section,
+.uncertainty-list-section article {
+  border: 1px solid rgba(82, 70, 54, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.42);
+  padding: 1rem;
+}
+
+.uncertainty-metric .metric-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 0.35rem 0;
+}
+
+.uncertainty-metric .metric-value.small {
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+.uncertainty-stress-grid {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.stress-cell {
+  border: 1px solid rgba(82, 70, 54, 0.16);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.7rem;
+  min-height: 5.5rem;
+  padding: 0.85rem;
+}
+
+.stress-cell span,
+.effect-list span {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.stress-cell strong,
+.effect-list strong {
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.effect-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.effect-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.uncertainty-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .uncertainty-hero,
+  .effect-list div {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .uncertainty-metric-grid,
+  .uncertainty-detail-grid,
+  .uncertainty-list-section,
+  .uncertainty-stress-grid {
+    grid-template-columns: 1fr;
+  }
+}

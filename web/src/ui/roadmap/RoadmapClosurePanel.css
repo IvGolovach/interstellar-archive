@@ -1,0 +1,153 @@
+.roadmap-closure-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.roadmap-closure-hero {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--panel-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0 0 1rem;
+}
+
+.roadmap-closure-hero .ghost-button {
+  flex: 0 0 auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.roadmap-closure-hero h2,
+.roadmap-section h3,
+.roadmap-item h4 {
+  margin: 0;
+}
+
+.roadmap-metric-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.roadmap-metric {
+  min-width: 0;
+}
+
+.roadmap-item-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.roadmap-section {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.5rem 0 0;
+}
+
+.roadmap-item {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.85rem;
+}
+
+.roadmap-item-header {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.roadmap-item-header code {
+  white-space: nowrap;
+}
+
+.roadmap-item-header span {
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  padding: 0.16rem 0.4rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.roadmap-item p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.roadmap-item dl {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.roadmap-item dl div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.roadmap-item dt {
+  color: var(--muted);
+}
+
+.roadmap-item dd {
+  margin: 0;
+}
+
+.roadmap-gap-list {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.roadmap-gap-list li {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.roadmap-gap-list span {
+  font-weight: 700;
+}
+
+.roadmap-gap-list p {
+  color: var(--muted);
+  margin: 0.15rem 0 0;
+}
+
+.claim-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.claim-chip {
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--muted);
+  padding: 0.3rem 0.55rem;
+}
+
+@media (max-width: 860px) {
+  .roadmap-closure-hero {
+    display: grid;
+  }
+
+  .roadmap-closure-hero .ghost-button {
+    justify-self: start;
+    white-space: normal;
+  }
+
+  .roadmap-metric-grid,
+  .roadmap-item-grid {
+    grid-template-columns: 1fr;
+  }
+}

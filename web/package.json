@@ -1,0 +1,35 @@
+{
+  "name": "interstellar-archive-web-sim",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate && vite build",
+    "preview": "vite preview",
+    "validate": "node --import tsx scripts/validate_schema_and_scenarios.ts && node --import tsx scripts/validate_parameter_drilldown_artifacts.ts && npm run guard:no-ui-truth",
+    "guard:no-ui-truth": "node --import tsx scripts/lint_ui_no_truth.ts",
+    "golden:check": "node --import tsx scripts/golden_check.ts",
+    "golden:update": "node --import tsx scripts/golden_check.ts --update",
+    "golden:integrity": "node --import tsx scripts/golden_integrity_enforce.ts",
+    "golden:negative-proof": "node --import tsx scripts/golden_negative_proof.ts",
+    "lint:no-random": "node --import tsx scripts/lint_no_math_random.ts",
+    "determinism:status": "node --import tsx scripts/update_determinism_status.ts",
+    "run:local": "node --import tsx scripts/run_local_artifact.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.5",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.7.0",
+    "tsx": "4.19.3",
+    "typescript": "5.7.3",
+    "vite": "6.4.2",
+    "vitest": "3.2.4"
+  }
+}

@@ -1,0 +1,129 @@
+.mission-run-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.mission-run-hero {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--panel-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0 0 1rem;
+}
+
+.mission-run-hero h2,
+.mission-run-detail h3 {
+  margin: 0;
+}
+
+.mission-run-selector {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mission-run-selector label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mission-run-selector span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mission-run-metric-grid,
+.mission-run-detail-grid,
+.mission-run-recipe {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mission-run-detail {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 0.85rem;
+}
+
+.mission-run-detail dl {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.mission-run-detail dl div {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.mission-run-detail dt {
+  color: var(--muted);
+}
+
+.mission-run-detail dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.mission-run-detail pre {
+  background: rgba(10, 17, 24, 0.52);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mission-run-warning {
+  border-color: var(--warning);
+}
+
+.mission-run-warning h3 {
+  margin: 0;
+}
+
+.mission-run-list-section {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-top: 0.5rem;
+}
+
+.mission-run-list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mission-run-list li {
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  padding-left: 0.75rem;
+}
+
+@media (max-width: 860px) {
+  .mission-run-hero,
+  .mission-run-metric-grid,
+  .mission-run-detail-grid,
+  .mission-run-recipe,
+  .mission-run-list-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

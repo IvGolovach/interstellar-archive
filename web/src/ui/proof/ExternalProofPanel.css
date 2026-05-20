@@ -1,0 +1,180 @@
+.external-proof-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.external-proof-hero {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--panel-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0 0 1rem;
+}
+
+.external-proof-hero .ghost-button {
+  flex: 0 0 auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.external-proof-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.external-proof-hero h2,
+.external-proof-section h3,
+.external-proof-two-column h3 {
+  margin: 0;
+}
+
+.external-proof-status {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.external-proof-status p {
+  margin: 0;
+}
+
+.external-proof-status div:not(:last-child) {
+  border-right: 1px solid var(--panel-border);
+  padding-right: 0.75rem;
+}
+
+.external-proof-metric-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.external-proof-metric {
+  min-width: 0;
+}
+
+.external-proof-metric .help-text {
+  overflow-wrap: anywhere;
+}
+
+.external-proof-section {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.5rem 0 0;
+}
+
+.external-proof-gate-grid,
+.external-proof-two-column {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.external-proof-gate,
+.external-proof-two-column article {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.85rem;
+}
+
+.external-proof-gate-header {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.external-proof-gate-header code {
+  white-space: nowrap;
+}
+
+.external-proof-list code {
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.external-proof-gate-header span {
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  padding: 0.16rem 0.4rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.external-proof-gate p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.external-proof-list {
+  display: grid;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.external-proof-list li {
+  align-items: center;
+  border-top: 1px solid var(--panel-border);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding-top: 0.55rem;
+}
+
+.external-proof-list span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.external-proof-shell .claim-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.external-proof-shell .claim-chip {
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  padding: 0.3rem 0.55rem;
+}
+
+@media (max-width: 960px) {
+  .external-proof-hero,
+  .external-proof-status {
+    display: grid;
+  }
+
+  .external-proof-hero .ghost-button {
+    justify-self: start;
+    white-space: normal;
+  }
+
+  .external-proof-actions {
+    justify-content: flex-start;
+  }
+
+  .external-proof-status div:not(:last-child) {
+    border-right: 0;
+    border-bottom: 1px solid var(--panel-border);
+    padding: 0 0 0.75rem;
+  }
+
+  .external-proof-metric-grid,
+  .external-proof-gate-grid,
+  .external-proof-two-column {
+    grid-template-columns: 1fr;
+  }
+}
