@@ -32,7 +32,7 @@
     "module_count": 6,
     "state_trace_contract_complete": true
   },
-  "determinism_signature": "64b94ac17a529791736bbcfd02c6040ac2d45b35a6b1f7f881ec602f12b655b1",
+  "determinism_signature": "fa80aadae2650ed84fb59c1fdb1db22ce02ba468e6425bfbe89608fc92432567",
   "evidence_review_surface": {
     "automatic_trust_upgrade_claimed": false,
     "claim_count": 66,
@@ -522,7 +522,7 @@
     },
     {
       "path": "artifacts/runtime_scenario_generation.v1.json",
-      "sha256": "98589a3339e98d0ece8ca75f239a3c44e5636a377b1148758aea84be51dbb08e"
+      "sha256": "8ec7a414c28971ca9fa2c1015b154596bfd481e4688e87d217ebc4d40e8e28b6"
     },
     {
       "path": "artifacts/cost_procurement_architecture_feasibility.v1.json",
