@@ -30,7 +30,11 @@ function changedFiles(repoRoot: string, base: string, head: string): string[] {
 
 function fileAtRef(repoRoot: string, ref: string, filePath: string): string | null {
   try {
-    return execSync(`git show ${ref}:${filePath}`, { cwd: repoRoot, encoding: "utf8" });
+    return execSync(`git show ${ref}:${filePath}`, {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
   } catch {
     return null;
   }
@@ -132,6 +136,7 @@ function main(): void {
 
   const schemaHeadRaw = fileAtRef(repoRoot, head, schemaPath);
   const schemaBaseRaw = fileAtRef(repoRoot, base, schemaPath);
+  const goldenBaseRaw = fileAtRef(repoRoot, base, goldenChecksumPath);
   const schemaHeadVersion = parseSchemaVersion(schemaHeadRaw);
   const schemaBaseVersion = parseSchemaVersion(schemaBaseRaw);
   const schemaBumped = parseVersionNumber(schemaHeadVersion) === parseVersionNumber(schemaBaseVersion) + 1;
@@ -145,10 +150,11 @@ function main(): void {
   const decisionsChanged = changedSet.has(decisionsPath);
   const baselineChanged = changedSet.has(baselinePath);
   const breakingFlag = parseBreakingFlag(schemaHeadRaw);
+  const initializesGoldenBaseline = goldenChecksumChanged && goldenBaseRaw === null;
 
   const violations: Violation[] = [];
 
-  if (goldenChecksumChanged) {
+  if (goldenChecksumChanged && !initializesGoldenBaseline) {
     if (!(schemaBumped || engineBumped || breakingFlag)) {
       violations.push({
         rule: "golden_requires_version_or_breaking_flag",
