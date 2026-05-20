@@ -298,7 +298,7 @@
       "validator_action": "fail_public_release"
     }
   ],
-  "determinism_signature": "7ed574a230fe427e1347e03067f04e7119e6dc34aac4bd07ae7a85350e71b881",
+  "determinism_signature": "c6dd48fba81d90a463d6b4f0e3b145b5ef185e423feac09aa0396b83c5f8e20b",
   "external_evidence_gaps": [
     "external reviewer wording audit",
     "audience testing for overinterpretation risk",
@@ -766,7 +766,7 @@
   "source_artifacts": [
     {
       "path": "README.md",
-      "sha256": "db4daaf1dbd40c691334b2a65ede7b97dde9d9281dd9d6780e891ae8fa1aa6e0"
+      "sha256": "69dbcd0d5a67db361a45b937e6a453a6394944ae22cb84baa3321eeff176599a"
     },
     {
       "path": "LIMITATIONS.md",
@@ -798,7 +798,7 @@
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
     },
     {
       "path": "artifacts/evidence_upgrade_campaign.v1.json",
@@ -826,7 +826,7 @@
     },
     {
       "path": "artifacts/runtime_scenario_generation.v1.json",
-      "sha256": "98589a3339e98d0ece8ca75f239a3c44e5636a377b1148758aea84be51dbb08e"
+      "sha256": "8ec7a414c28971ca9fa2c1015b154596bfd481e4688e87d217ebc4d40e8e28b6"
     },
     {
       "path": "artifacts/capsule_risk_budget.v1.json",
