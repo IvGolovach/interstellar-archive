@@ -1,0 +1,38 @@
+{
+  "schema_version": "v1",
+  "metrics": [
+    {
+      "metric_name": "checks_pass_rate",
+      "units": "ratio",
+      "collection_method": "artifacts/evidence-pack-v1/output_metrics.json:checks_pass_rate",
+      "regression_threshold": {
+        "type": "floor",
+        "value": 1.0
+      },
+      "acceptable_variance": 0.0,
+      "higher_is_better": true
+    },
+    {
+      "metric_name": "checks_passed",
+      "units": "count",
+      "collection_method": "artifacts/evidence-pack-v1/output_metrics.json:checks_passed",
+      "regression_threshold": {
+        "type": "floor",
+        "value": 22
+      },
+      "acceptable_variance": 0.0,
+      "higher_is_better": true
+    },
+    {
+      "metric_name": "claims_total",
+      "units": "count",
+      "collection_method": "artifacts/evidence-pack-v1/output_metrics.json:claims_total",
+      "regression_threshold": {
+        "type": "floor",
+        "value": 9
+      },
+      "acceptable_variance": 0.0,
+      "higher_is_better": true
+    }
+  ]
+}

@@ -1,0 +1,1086 @@
+{
+  "blocked_claims": [
+    "remote execution isolation completed",
+    "persistent reviewed run archive",
+    "mission feasible",
+    "flight ready",
+    "certified local run pack",
+    "guaranteed arrival or archive recovery"
+  ],
+  "determinism_signature": "312ee3d170819d39c938152eaefc79fc745d67618bba078777ea530120787ff9",
+  "generation_row_count": 15,
+  "generation_rows": [
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-alpha-centauri-scale-concept-95-6915eb03da",
+        "--seed": 1,
+        "--target-id": "alpha-centauri-scale",
+        "--velocity-id": "concept-95"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id alpha-centauri-scale --velocity-id concept-95 --mode dual --seed 1 --run-id umr-alpha-centauri-scale-concept-95-6915eb03da --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 4.37,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 13790.453068,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-alpha-centauri-scale-concept-95-6915eb03da",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "6915eb03daf3bd53380d3d4f2b18c390ad6a9d444c581feea48bb87f1241103b",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-alpha-centauri-scale-conditional-45-43cb7f6b1b",
+        "--seed": 1,
+        "--target-id": "alpha-centauri-scale",
+        "--velocity-id": "conditional-45"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id alpha-centauri-scale --velocity-id conditional-45 --mode dual --seed 1 --run-id umr-alpha-centauri-scale-conditional-45-43cb7f6b1b --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 4.37,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 28907.613448,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-alpha-centauri-scale-conditional-45-43cb7f6b1b",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "43cb7f6b1ba65062a610704bd5e836d1a4e5b1e2e767839ced508010ce1ed434",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-alpha-centauri-scale-oberth-23-8875705193",
+        "--seed": 1,
+        "--target-id": "alpha-centauri-scale",
+        "--velocity-id": "oberth-23"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id alpha-centauri-scale --velocity-id oberth-23 --mode dual --seed 1 --run-id umr-alpha-centauri-scale-oberth-23-8875705193 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 4.37,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 56542.643136,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-alpha-centauri-scale-oberth-23-8875705193",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "8875705193b28d4d9b403b0a2870c53ac40931395bcd4ebbf3a6c90284d6788b",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-alpha-centauri-scale-oberth-34-88c7c17eac",
+        "--seed": 1,
+        "--target-id": "alpha-centauri-scale",
+        "--velocity-id": "oberth-34"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id alpha-centauri-scale --velocity-id oberth-34 --mode dual --seed 1 --run-id umr-alpha-centauri-scale-oberth-34-88c7c17eac --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 4.37,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 38817.571599,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-alpha-centauri-scale-oberth-34-88c7c17eac",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "88c7c17eac8fbf43b2fa294d1f35e32523819133024068b14237e408d1cee993",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-alpha-centauri-scale-stress-60-280736ac15",
+        "--seed": 1,
+        "--target-id": "alpha-centauri-scale",
+        "--velocity-id": "stress-60"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id alpha-centauri-scale --velocity-id stress-60 --mode dual --seed 1 --run-id umr-alpha-centauri-scale-stress-60-280736ac15 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 4.37,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 21834.884024,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-alpha-centauri-scale-stress-60-280736ac15",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "280736ac1565fba0a7a468564afd772bb76d6b64c96ab30cdce6bae66009d959",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-reference-black-hole-concept-95-eeca913675",
+        "--seed": 1,
+        "--target-id": "reference-black-hole",
+        "--velocity-id": "concept-95"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id reference-black-hole --velocity-id concept-95 --mode dual --seed 1 --run-id umr-reference-black-hole-concept-95-eeca913675 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 1560.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 4922907.731368,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-reference-black-hole-concept-95-eeca913675",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "eeca9136756e6bedc864c398eb80e6c89c9ad143c57e242783397fcc4787a372",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_sub_10",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+        "--seed": 1,
+        "--target-id": "reference-black-hole",
+        "--velocity-id": "conditional-45"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id reference-black-hole --velocity-id conditional-45 --mode dual --seed 1 --run-id umr-reference-black-hole-conditional-45-3615a2ddec --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 1560.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 10319422.649603,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "3615a2ddecc2db1c7730b6ba1befb599ec52a5ba61be9d220d8d35c73e290ec0",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-reference-black-hole-oberth-23-53e26b1a8f",
+        "--seed": 1,
+        "--target-id": "reference-black-hole",
+        "--velocity-id": "oberth-23"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id reference-black-hole --velocity-id oberth-23 --mode dual --seed 1 --run-id umr-reference-black-hole-oberth-23-53e26b1a8f --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 1560.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 20184559.10574,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-reference-black-hole-oberth-23-53e26b1a8f",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "53e26b1a8fc7b2b1dfaf976ddf8c703b93269dfd882ee74bd6567fe1306850f5",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-reference-black-hole-oberth-34-2908698012",
+        "--seed": 1,
+        "--target-id": "reference-black-hole",
+        "--velocity-id": "oberth-34"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id reference-black-hole --velocity-id oberth-34 --mode dual --seed 1 --run-id umr-reference-black-hole-oberth-34-2908698012 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 1560.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 13857073.614222,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-reference-black-hole-oberth-34-2908698012",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "290869801262f778a659bdfb476b70f1e0086c5fb639a237d64ca45477457a2e",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-reference-black-hole-stress-60-a6161b0443",
+        "--seed": 1,
+        "--target-id": "reference-black-hole",
+        "--velocity-id": "stress-60"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id reference-black-hole --velocity-id stress-60 --mode dual --seed 1 --run-id umr-reference-black-hole-stress-60-a6161b0443 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 1560.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 7794603.908,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-reference-black-hole-stress-60-a6161b0443",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "a6161b0443a7b00db4e67c2b96fa81914b54d87b588799009bde43f430a500c3",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_sub_10",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-sgr-a-rounded-concept-95-2321fb5990",
+        "--seed": 1,
+        "--target-id": "sgr-a-rounded",
+        "--velocity-id": "concept-95"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id sgr-a-rounded --velocity-id concept-95 --mode dual --seed 1 --run-id umr-sgr-a-rounded-concept-95-2321fb5990 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 26000.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 82048462.189474,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-sgr-a-rounded-concept-95-2321fb5990",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "2321fb59902739e286d2235f7aa97350489bfc8ad59b6d0f777ecbf82c43266a",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-sgr-a-rounded-conditional-45-2b3cc53000",
+        "--seed": 1,
+        "--target-id": "sgr-a-rounded",
+        "--velocity-id": "conditional-45"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id sgr-a-rounded --velocity-id conditional-45 --mode dual --seed 1 --run-id umr-sgr-a-rounded-conditional-45-2b3cc53000 --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 26000.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 171990377.49338,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-sgr-a-rounded-conditional-45-2b3cc53000",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "2b3cc53000827ac62a50a53b1750c470ba95d6652be03992227ce2265e1d3b3a",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-sgr-a-rounded-oberth-23-caf31ebd8e",
+        "--seed": 1,
+        "--target-id": "sgr-a-rounded",
+        "--velocity-id": "oberth-23"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id sgr-a-rounded --velocity-id oberth-23 --mode dual --seed 1 --run-id umr-sgr-a-rounded-oberth-23-caf31ebd8e --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 26000.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 336409318.429003,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-sgr-a-rounded-oberth-23-caf31ebd8e",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "caf31ebd8e101d16698cff30e09b402c23c41a8d9e521ec7b3ee9036c6abfded",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-sgr-a-rounded-oberth-34-0912c766ae",
+        "--seed": 1,
+        "--target-id": "sgr-a-rounded",
+        "--velocity-id": "oberth-34"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id sgr-a-rounded --velocity-id oberth-34 --mode dual --seed 1 --run-id umr-sgr-a-rounded-oberth-34-0912c766ae --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 26000.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 230951226.903704,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-sgr-a-rounded-oberth-34-0912c766ae",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "0912c766aefdcb933f7a09a5ad076881eb5df6afacafa4126c038073b4a928ca",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s"
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "remote execution isolation completed",
+        "persistent reviewed run archive",
+        "certified local run pack"
+      ],
+      "cli_args": {
+        "--mode": "dual",
+        "--run-id": "umr-sgr-a-rounded-stress-60-499f022fae",
+        "--seed": 1,
+        "--target-id": "sgr-a-rounded",
+        "--velocity-id": "stress-60"
+      },
+      "command_preview": "python3 scripts/run_user_mission_scenario.py --target-id sgr-a-rounded --velocity-id stress-60 --mode dual --seed 1 --run-id umr-sgr-a-rounded-stress-60-499f022fae --verify-deterministic",
+      "compiled_scenario_delta": {
+        "bh_parameters.distance_from_earth_ly": 26000.0,
+        "environment_model.dust_flux_scale": 1.4,
+        "mission_mode_policy": "realistic for realistic or dual, speculative for speculative",
+        "seed_policy": "user-mission-run:{run_id}:{seed}",
+        "velocity_runtime_policy": "selection metadata only in v1; velocity shapes catalog flight-time and risk rows, not a new MISSION_SCHEMA_v1 runtime field"
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "flight_years": 129910065.133333,
+      "ownership_boundary": {
+        "persistent_reviewed_archive": false,
+        "remote_execution": false,
+        "tracked_by_default": false,
+        "user_owned": true
+      },
+      "run_id": "umr-sgr-a-rounded-stress-60-499f022fae",
+      "run_pack_contract": {
+        "determinism_flag": "--verify-deterministic",
+        "output_files": [
+          "COMPILED_MISSION_SCENARIO.json",
+          "USER_RUN_SUMMARY.json",
+          "DAG_RUN_SUMMARY.json",
+          "SOURCE_MANIFEST.json",
+          "RUN_REPORT.md",
+          "meta.json"
+        ],
+        "output_root": "ops/reports/user-mission-runs",
+        "summary_schema_version": "user_mission_run_summary.v1",
+        "validation_function": "mission.user_runs.catalog.validate_user_run_summary",
+        "writes_tracked_files": false
+      },
+      "selection_hash": "499f022fae3615707db918b1de46619c74d0f3a3e265baebd7319f1b0329f8d0",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s"
+    }
+  ],
+  "generator": "scripts/build_runtime_scenario_generation_artifact.py",
+  "interpretation_limits": [
+    "Runtime scenario generation is a local review-pack contract, not a hosted execution service.",
+    "Generated packs are user-owned artifacts under ops/reports or exported JSON, not repository truth by default.",
+    "The browser may display command previews and pack contracts, but it must not recompute mission physics."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "runtime_scenario_generation_user_owned_runs",
+  "rollup": {
+    "determinism_flag_required": true,
+    "persistent_reviewed_archive_claimed": false,
+    "remote_execution_claimed": false,
+    "rows_with_command_preview": 15,
+    "rows_writing_tracked_files": 0
+  },
+  "run_pack_contract": {
+    "output_files": [
+      "COMPILED_MISSION_SCENARIO.json",
+      "USER_RUN_SUMMARY.json",
+      "DAG_RUN_SUMMARY.json",
+      "SOURCE_MANIFEST.json",
+      "RUN_REPORT.md",
+      "meta.json"
+    ],
+    "output_root": "ops/reports/user-mission-runs",
+    "required_summary_fields": [
+      "selection_hash",
+      "compiled_mission_scenario_sha256",
+      "dag_execution.manifest_hash",
+      "dag_execution.hashchain_status",
+      "source_manifest",
+      "verdict"
+    ],
+    "summary_schema_version": "user_mission_run_summary.v1",
+    "tracked_by_default": false,
+    "writes_tracked_files": false
+  },
+  "scenario_generation_contract": {
+    "allowed_user_inputs": [
+      "target_id",
+      "velocity_id",
+      "mode",
+      "seed",
+      "run_id"
+    ],
+    "browser_execution_policy": "browser may render and prepare run-pack metadata, but does not execute mission physics or write tracked files",
+    "forbidden_runtime_claims": [
+      "remote execution isolation completed",
+      "persistent reviewed run archive",
+      "mission feasible",
+      "flight ready",
+      "certified local run pack",
+      "guaranteed arrival or archive recovery"
+    ],
+    "runner": "scripts/run_user_mission_scenario.py",
+    "scenario_compiler": "mission.user_runs.catalog.compile_selected_mission_scenario",
+    "source_catalog": "artifacts/user_mission_run_catalog.v1.json"
+  },
+  "schema_version": "runtime_scenario_generation.v1",
+  "selection_axes": {
+    "default_run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+    "default_seed": 1,
+    "supported_modes": [
+      "realistic",
+      "speculative",
+      "dual"
+    ],
+    "target_count": 3,
+    "target_options": [
+      {
+        "distance_ly": 4.37,
+        "target_detail": "Nearby-star control scenario using a NASA/Hubble 4.3 ly anchor.",
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale"
+      },
+      {
+        "distance_ly": 1560.0,
+        "target_detail": "Default project-owned 1560 ly black-hole scenario; 45.32 km/s gives about 10.3 Myr.",
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate"
+      },
+      {
+        "distance_ly": 26000.0,
+        "target_detail": "Repo-compatible Galactic-center stress scenario at rounded 26000 ly.",
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded"
+      }
+    ],
+    "velocity_count": 5,
+    "velocity_options": [
+      {
+        "velocity_detail": "Concept-only speed stress to expose sensitivity, not current architecture baseline.",
+        "velocity_fraction_c": 0.00031688589,
+        "velocity_id": "concept-95",
+        "velocity_km_s": 95.0,
+        "velocity_label": "95 km/s"
+      },
+      {
+        "velocity_detail": "Conditional inbound-energy Sun-Oberth band; default black-hole row is near 10 Myr.",
+        "velocity_fraction_c": 0.000151171248,
+        "velocity_id": "conditional-45",
+        "velocity_km_s": 45.32,
+        "velocity_label": "45.32 km/s"
+      },
+      {
+        "velocity_detail": "Near-parabolic Sun-Oberth lower band.",
+        "velocity_fraction_c": 7.7286801e-05,
+        "velocity_id": "oberth-23",
+        "velocity_km_s": 23.17,
+        "velocity_label": "23.17 km/s"
+      },
+      {
+        "velocity_detail": "Near-parabolic Sun-Oberth upper band.",
+        "velocity_fraction_c": 0.000112577882,
+        "velocity_id": "oberth-34",
+        "velocity_km_s": 33.75,
+        "velocity_label": "33.75 km/s"
+      },
+      {
+        "velocity_detail": "High-relative-speed dust stress row, not a validation claim.",
+        "velocity_fraction_c": 0.000200138457,
+        "velocity_id": "stress-60",
+        "velocity_km_s": 60.0,
+        "velocity_label": "60 km/s"
+      }
+    ]
+  },
+  "source_artifacts": [
+    {
+      "path": "artifacts/user_mission_run_catalog.v1.json",
+      "sha256": "1c51106149ad5f12008558a2f13ee59af52bc7068d9f0140163c8289b6e8b732"
+    },
+    {
+      "path": "scripts/run_user_mission_scenario.py",
+      "sha256": "abcf6cc473cde299742ce792132b609e868224e4e27ae5c806e1ef3a095585ba"
+    },
+    {
+      "path": "scripts/ci/user_mission_run_pack_validate.py",
+      "sha256": "5acc4fa626a8a3d3a40ff1cd0d86faede7be1d4385dfe21577903ba212e08f93"
+    },
+    {
+      "path": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+      "sha256": "5063d979940a7bd2d91fc2bebeba5f25b0e1314b2e1172d629fddcf65aea1859"
+    },
+    {
+      "path": "mission/BASELINE_SCENARIO_v1.json",
+      "sha256": "2e6126d1628a29dbab15a9b51c577e222176c7775c629913760c7817a34b6cbc"
+    },
+    {
+      "path": "mission/MISSION_SCHEMA_v1.json",
+      "sha256": "44fb73f124f8769404419453660be2044b1de16314b3b0889cc8cbfb6e887f90"
+    },
+    {
+      "path": "mission/USER_MISSION_RUN_CATALOG_SPEC_v1.md",
+      "sha256": "d69a35ff4845ab98377cc9bf66d2f1e0f806562f7a6067b503661290b18063a4"
+    }
+  ]
+}

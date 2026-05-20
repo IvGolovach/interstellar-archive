@@ -1,0 +1,345 @@
+{
+  "excluded_internal_parameter_count": 35,
+  "excluded_parameters": [
+    {
+      "domain": "realistic",
+      "exclusion_reason": [
+        "affects_core_probability_false"
+      ],
+      "parameter_id": "capsule_model.frontal_area_m2",
+      "trust_grade": "B"
+    },
+    {
+      "domain": "realistic",
+      "exclusion_reason": [
+        "affects_core_probability_false"
+      ],
+      "parameter_id": "capsule_model.mass_kg",
+      "trust_grade": "B"
+    },
+    {
+      "domain": "realistic",
+      "exclusion_reason": [
+        "affects_core_probability_false"
+      ],
+      "parameter_id": "capsule_model.shield_areal_density_kg_m2",
+      "trust_grade": "C"
+    },
+    {
+      "domain": "speculative",
+      "exclusion_reason": [
+        "claim_mode_not_realistic",
+        "domain_not_realistic",
+        "trust_not_ABC"
+      ],
+      "parameter_id": "environment_model.non_physical_safety_multiplier",
+      "trust_grade": "D"
+    },
+    {
+      "domain": "speculative",
+      "exclusion_reason": [
+        "claim_mode_not_realistic",
+        "domain_not_realistic",
+        "trust_not_ABC"
+      ],
+      "parameter_id": "trajectory_model.non_physical_capture_bias",
+      "trust_grade": "D"
+    }
+  ],
+  "internal_parameter_prefixes_excluded": [
+    "code_literal."
+  ],
+  "mode": "realistic",
+  "objective_contract_ref": "mission/objectives/objective_contract.v1.json",
+  "parameters_considered": [
+    {
+      "affects_core_probability": true,
+      "baseline_value": 26000.0,
+      "bounds": [
+        0.001,
+        1000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.distance_from_earth_ly",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 8.55e+36,
+      "bounds": [
+        1e+30,
+        1e+41
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.mass_kg",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 3.0,
+      "bounds": [
+        0.01,
+        100.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.max_dust_flux_scale",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 80000000000.0,
+      "bounds": [
+        1.0,
+        1e+20
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.max_plasma_density_proxy_m3",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 20000000.0,
+      "bounds": [
+        100.0,
+        1000000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.max_radiative_flux_w_m2",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 12300000000.0,
+      "bounds": [
+        1.0,
+        1000000000000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.periapsis_distance_m",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.82,
+      "bounds": [
+        0.4,
+        0.98
+      ],
+      "domain": "realistic",
+      "parameter_id": "capsule_model.data_media_survival_margin",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.00022,
+      "bounds": [
+        0.0001,
+        0.0004
+      ],
+      "domain": "realistic",
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.68,
+      "bounds": [
+        0.01,
+        1.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.actuator_efficiency",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 36.0,
+      "bounds": [
+        0.0,
+        20000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 180.0,
+      "bounds": [
+        0.0,
+        100000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.end_year",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.08,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 2.5e-07,
+      "bounds": [
+        0.0,
+        0.1
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.guidance_sigma_rad",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 180.0,
+      "bounds": [
+        1.0,
+        2000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.max_duration_years",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 180.0,
+      "bounds": [
+        1.0,
+        1000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.power_available_w",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 3200.0,
+      "bounds": [
+        1.0,
+        20000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.specific_impulse_s",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.0,
+      "bounds": [
+        0.0,
+        100000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.start_year",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.0025,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "environment_model.accretion_luminosity_fraction",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 1.4,
+      "bounds": [
+        0.0,
+        1000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "environment_model.dust_flux_scale",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 50000000000.0,
+      "bounds": [
+        0.0,
+        1e+24
+      ],
+      "domain": "realistic",
+      "parameter_id": "environment_model.plasma_density_proxy_m3",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 12000000.0,
+      "bounds": [
+        0.0,
+        1000000000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "environment_model.radiative_flux_w_m2",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.62,
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "success_threshold",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 1800000.0,
+      "bounds": [
+        0.0,
+        1000000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "trajectory_model.initial_state_sigma_m",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 86400.0,
+      "bounds": [
+        1.0,
+        31536000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "trajectory_model.integration_step_s",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 1200000.0,
+      "bounds": [
+        0.0,
+        1000000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 0.08,
+      "bounds": [
+        0.0,
+        100000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+      "trust_grade": "C"
+    }
+  ],
+  "schema_version": "optimization_search_space.v1",
+  "seed": 1,
+  "trust_filter": "A|B|C"
+}

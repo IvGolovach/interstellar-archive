@@ -1,0 +1,317 @@
+{
+  "blocked_claims": [
+    "external validation completed",
+    "third-party validated",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "qualified",
+    "certified",
+    "flight-ready",
+    "source correctness proven",
+    "trust grades upgraded automatically"
+  ],
+  "component_rollups": {
+    "capsule_qualification_evidence_pack": {
+      "artifact_ref": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "all_tests_external_required": true,
+        "certified_hardware_survivability": false,
+        "flight_ready_claimed": false,
+        "lab_record_count": 0,
+        "layer_count": 7,
+        "mass_budget_closed": true,
+        "material_count": 7,
+        "qualification_complete": false,
+        "qualification_test_count": 6
+      },
+      "schema_version": "capsule_qualification_evidence_pack.v1"
+    },
+    "evidence_upgrade_closure": {
+      "artifact_ref": "artifacts/evidence_upgrade_closure.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "closure_cycle_count": 15,
+        "external_required_count": 13,
+        "external_source_upgrade_count": 0,
+        "realistic_D_grade_public_rows_closed": 0,
+        "source_correctness_claimed": false,
+        "speculative_quarantine_count": 2,
+        "trust_grade_promotion_count": 0,
+        "trust_grades_upgraded_automatically": false
+      },
+      "schema_version": "evidence_upgrade_closure.v1"
+    },
+    "external_evidence_intake": {
+      "artifact_ref": "artifacts/external_evidence_intake.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "accepted_record_count": 0,
+        "certification_go": false,
+        "external_validation_completed": false,
+        "first_real_external_record_present": false,
+        "flight_readiness_go": false,
+        "independent_backend_validated": false,
+        "independent_reproduction_completed": false,
+        "intake_contract_ready": true,
+        "qualification_complete": false,
+        "record_count": 0,
+        "record_schema_available": true,
+        "rejected_record_count": 0,
+        "self_signed_records_accepted": false
+      },
+      "schema_version": "external_evidence_intake.v1"
+    },
+    "external_reproduction_kit": {
+      "artifact_ref": "artifacts/external_reproduction_kit.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "export_cli_available": true,
+        "external_execution_completed": false,
+        "external_reproduction_kit_ready": true,
+        "external_validation_completed": false,
+        "fake_external_records_accepted": false,
+        "first_real_external_record_present": false,
+        "independent_backend_validated": false,
+        "record_schema_available": true
+      },
+      "schema_version": "external_reproduction_kit.v1"
+    },
+    "external_validation_campaign": {
+      "artifact_ref": "artifacts/external_validation_campaign.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "accepted_external_record_count": 0,
+        "accepted_record_count": 0,
+        "campaign_ready": true,
+        "certification_go": false,
+        "external_validation_completed": false,
+        "first_real_external_record_present": false,
+        "independent_backend_validated": false,
+        "line_of_sight_model_complete": false,
+        "proof_promotion_applied": false,
+        "public_dossier_ready": true,
+        "qualification_complete": false,
+        "workstream_count": 6
+      },
+      "schema_version": "external_validation_campaign.v1"
+    },
+    "external_validation_execution_ledger": {
+      "artifact_ref": "artifacts/external_validation_execution_ledger.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "all_cases_require_external_records": true,
+        "execution_record_count": 0,
+        "external_record_count": 0,
+        "external_red_team_completed": false,
+        "external_validation_completed": false,
+        "independent_reproduction_completed": false,
+        "review_case_count": 7,
+        "third_party_records_uploaded": false
+      },
+      "schema_version": "external_validation_execution_ledger.v1"
+    },
+    "external_validation_review_pack": {
+      "artifact_ref": "artifacts/external_validation_review_pack.v1.json",
+      "review_pack_status": "repo_native_review_pack_ready_external_review_not_completed",
+      "rollup": {
+        "all_cases_require_external_review": true,
+        "external_deliverable_count": 6,
+        "external_red_team_completed": false,
+        "external_validation_claimed": false,
+        "high_fidelity_state_trace_complete": false,
+        "independent_benchmark_completed": false,
+        "independent_reproduction_completed": false,
+        "review_case_count": 7,
+        "third_party_review_completed": false
+      },
+      "schema_version": "external_validation_review_pack.v1"
+    },
+    "independent_physics_backend_comparison": {
+      "artifact_ref": "artifacts/independent_physics_backend_comparison.v1.json",
+      "non_certification_notice": true,
+      "rollup": {
+        "all_repo_analytic_checks_match": true,
+        "analytic_check_count": 5,
+        "cross_backend_comparison_completed": false,
+        "high_fidelity_state_trace_complete": false,
+        "independent_external_backend_complete": false,
+        "independent_physics_backend_validated": false,
+        "max_relative_error": 3.717473e-10
+      },
+      "schema_version": "independent_physics_backend_comparison.v1"
+    },
+    "public_narrative_hardening": {
+      "artifact_ref": "artifacts/public_narrative_hardening.v1.json",
+      "rollup": {
+        "all_required_concepts_present": true,
+        "audience_testing_completed": false,
+        "external_validation_claimed": false,
+        "external_wording_audit_completed": false,
+        "full_mission_probability_closed_count": 0,
+        "global_optimum_claimed": false,
+        "independent_backend_complete": false,
+        "independent_reproduction_completed": false,
+        "legal_review_completed": false,
+        "persistent_reviewed_archive_claimed": false,
+        "procurement_grade_estimate_available": false,
+        "public_claim_approval_completed": false,
+        "source_correctness_claimed": false,
+        "third_party_review_completed": false,
+        "trust_grades_upgraded_automatically": false,
+        "unsafe_public_overclaim_count": 0,
+        "vendor_quote_count": 0
+      },
+      "schema_version": "public_narrative_hardening.v1"
+    },
+    "roadmap_closure": {
+      "artifact_ref": "artifacts/roadmap_closure.v1.json",
+      "closure_metrics": {
+        "external_evidence_gap_count": 37,
+        "non_certification_notice_count": 15,
+        "repo_native_closure_count": 15,
+        "trust_grade_distribution": {
+          "B": 8,
+          "C": 56,
+          "D": 2
+        }
+      },
+      "schema_version": "roadmap_closure.v1"
+    }
+  },
+  "determinism_signature": "ac4b65c96cac6707189a02263cdba7652b21444dcb124ead1c897ca14a59fd0a",
+  "external_evidence_gaps": [
+    "third-party validation records",
+    "first accepted external evidence intake record",
+    "six-workstream external validation campaign execution",
+    "independent physics backend report",
+    "capsule qualification and lab test records",
+    "evidence source upgrade records",
+    "certification, launch, legal, and operations approvals"
+  ],
+  "generator": "scripts/build_release_candidate_readiness_artifact.py",
+  "interpretation_limits": [
+    "Ready here means repository publication candidate, not mission approval.",
+    "Certification, flight readiness, external validation, and source correctness remain blocked.",
+    "This artifact is a release-readiness index over tracked evidence boundaries."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "repo_publication_readiness_external_evidence_boundary",
+  "release_candidate_status": "repo_publication_candidate_external_evidence_open",
+  "repository_gates": [
+    {
+      "evidence": "All component artifacts are deterministic JSON generated by tracked builders.",
+      "gate_id": "repo_artifacts_deterministic",
+      "status": "ready"
+    },
+    {
+      "evidence": "artifacts/public_narrative_hardening.v1.json",
+      "gate_id": "public_claim_boundary",
+      "status": "ready"
+    },
+    {
+      "evidence": "artifacts/external_evidence_intake.v1.json",
+      "gate_id": "external_validation_records",
+      "status": "external_required"
+    },
+    {
+      "evidence": "artifacts/external_validation_campaign.v1.json",
+      "gate_id": "external_validation_campaign_execution",
+      "status": "external_required"
+    },
+    {
+      "evidence": "artifacts/external_reproduction_kit.v1.json",
+      "gate_id": "external_reproduction_pack",
+      "status": "ready"
+    },
+    {
+      "evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "gate_id": "capsule_qualification_records",
+      "status": "external_required"
+    },
+    {
+      "evidence": "artifacts/independent_physics_backend_comparison.v1.json",
+      "gate_id": "independent_backend_records",
+      "status": "external_required"
+    }
+  ],
+  "rollup": {
+    "certification_go": false,
+    "external_validation_completed": false,
+    "flight_readiness_go": false,
+    "independent_backend_validated": false,
+    "public_claim_boundary_ready": true,
+    "qualification_complete": false,
+    "repo_publication_candidate_ready": true,
+    "trust_grade_promotions_completed": false
+  },
+  "schema_version": "release_candidate_readiness.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/external_validation_execution_ledger.v1.json",
+      "sha256": "5187a9ef37cfe85031f6627a962fd065883c0e35cb9939cc9f91f6e69458a32a"
+    },
+    {
+      "path": "artifacts/independent_physics_backend_comparison.v1.json",
+      "sha256": "888202dc063e5b3ea5342488de51b94142ef787966c8455bb77c3291f2dbbf6d"
+    },
+    {
+      "path": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "sha256": "ee78509ea576b1ec441bb6cae6da2a042989c404aa201cd66ccd915dcc45de22"
+    },
+    {
+      "path": "artifacts/evidence_upgrade_closure.v1.json",
+      "sha256": "9992a3bcb01f28b3db0b388a59a0bad35afa6df70735475f326f7492e284b8c6"
+    },
+    {
+      "path": "artifacts/external_reproduction_kit.v1.json",
+      "sha256": "fc8c7025ec38a886ac956757300f4863669af6114fa4e64f8f836e76200d125e"
+    },
+    {
+      "path": "artifacts/external_evidence_intake.v1.json",
+      "sha256": "329443e6167265e8edfc9a791e3bf07edf55bf532dcbec53d6e1fe0c0d4aa088"
+    },
+    {
+      "path": "artifacts/external_validation_campaign.v1.json",
+      "sha256": "a2fd0580440603ba3e13cc6e91d527adb550f214d35562aeaa626b2f179c2f48"
+    },
+    {
+      "path": "artifacts/public_narrative_hardening.v1.json",
+      "sha256": "4b85aa5ec8b5152af61106a911104a8e30c5d98fb1d6be1eb1e10794cbda226c"
+    },
+    {
+      "path": "artifacts/roadmap_closure.v1.json",
+      "sha256": "93e96976564cf42ba9137f4fd6a7b668dd4cc20af996b0188e76efb1dd28d4f9"
+    },
+    {
+      "path": "artifacts/external_validation_review_pack.v1.json",
+      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+    },
+    {
+      "path": "mission/RELEASE_CANDIDATE_READINESS_SPEC_v1.md",
+      "sha256": "b5d361122dc0ac2de1fcded5dbfef26ce877a39a3e569c5da2cb548312c3c400"
+    },
+    {
+      "path": "mission/external_proof/phase.py",
+      "sha256": "72cecfde49ee2bda49d8944e7ff163e7508bb383da0c0e356af32f31ef90f6c2"
+    },
+    {
+      "path": "mission/external_proof/__init__.py",
+      "sha256": "43c591118358803cc0660f2e960dd62d24935c791338d175e8b3ac3a4000fb77"
+    },
+    {
+      "path": "scripts/build_release_candidate_readiness_artifact.py",
+      "sha256": "8f9261884abce5d8884a5113c30a814170e0d26419988ffa989ffee03d6014d3"
+    },
+    {
+      "path": "scripts/ci/release_candidate_readiness_validate.py",
+      "sha256": "db07de9e7eede5eeb9baac7b4b538a6a653911d5e5bf6e6348a43c447783e9e4"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ]
+}

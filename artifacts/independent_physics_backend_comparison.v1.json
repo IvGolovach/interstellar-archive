@@ -1,0 +1,145 @@
+{
+  "analytic_check_count": 5,
+  "analytic_checks": [
+    {
+      "absolute_error": 0.0,
+      "analytic_value": 12698734060.192917,
+      "artifact_value": 12698734060.192917,
+      "check_id": "schwarzschild-radius",
+      "description": "Analytic Schwarzschild radius from committed black-hole mass.",
+      "relative_error": 0.0,
+      "status": "match",
+      "units": "m"
+    },
+    {
+      "absolute_error": 1.76951e-07,
+      "analytic_value": 10319422.649602823,
+      "artifact_value": 10319422.649603,
+      "check_id": "ballistic-time-of-flight",
+      "description": "Analytic distance / velocity flight time for the default reference black-hole row.",
+      "relative_error": 1.71e-14,
+      "status": "match",
+      "units": "years"
+    },
+    {
+      "absolute_error": 0.0,
+      "analytic_value": 0.000151171248,
+      "artifact_value": 0.000151171248,
+      "check_id": "velocity-fraction-c",
+      "description": "Analytic velocity fraction of c for the default row.",
+      "relative_error": 3.717473e-10,
+      "status": "match",
+      "units": "fraction"
+    },
+    {
+      "absolute_error": 0.0,
+      "analytic_value": 5.6097969e-05,
+      "artifact_value": 5.6097969e-05,
+      "check_id": "swept-local-dust-mass",
+      "description": "Analytic local dust mass swept by capsule frontal area over the default path.",
+      "relative_error": 6.76e-14,
+      "status": "match",
+      "units": "kg"
+    },
+    {
+      "absolute_error": 0.0,
+      "analytic_value": 211551947200.0,
+      "artifact_value": 211551947200.0,
+      "check_id": "capsule-kinetic-energy",
+      "description": "Analytic capsule kinetic energy at the default velocity using configured capsule mass.",
+      "relative_error": 0.0,
+      "status": "match",
+      "units": "J"
+    }
+  ],
+  "backend_boundary": {
+    "claim_boundary": "Closed-form repository cross-check only; not an independent high-fidelity physics engine.",
+    "external_backend_id": null,
+    "external_backend_record_uploaded": false,
+    "repo_analytic_backend_id": "repo_closed_form_physics_crosscheck_v1"
+  },
+  "blocked_claims": [
+    "external validation completed",
+    "third-party validated",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "qualified",
+    "certified",
+    "flight-ready",
+    "source correctness proven",
+    "trust grades upgraded automatically"
+  ],
+  "comparison_status": "repo_analytic_crosscheck_ready_external_backend_open",
+  "dag_boundary_snapshot": {
+    "cross_backend_comparison_available": false,
+    "high_fidelity_state_traces_available": false,
+    "independent_backend_complete": false,
+    "module_count": 6,
+    "state_trace_contract_complete": true
+  },
+  "default_scenario_ref": "feas-reference-black-hole-conditional-45",
+  "determinism_signature": "e737bb08367296f9615a099017a41fbe84a0057dd709b7430b4a03b741946b6f",
+  "external_evidence_gaps": [
+    "independent backend implementation outside this repository",
+    "state trace bundle for each physics module",
+    "cross-backend comparison report signed by reviewer",
+    "high-fidelity geodesic, dust, radiation, and material transport traces"
+  ],
+  "generator": "scripts/build_independent_physics_backend_comparison_artifact.py",
+  "interpretation_limits": [
+    "Closed-form checks catch gross arithmetic drift but do not validate the physical model.",
+    "External backend and high-fidelity state traces remain open proof requirements."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "repo_analytic_physics_crosscheck",
+  "rollup": {
+    "all_repo_analytic_checks_match": true,
+    "analytic_check_count": 5,
+    "cross_backend_comparison_completed": false,
+    "high_fidelity_state_trace_complete": false,
+    "independent_external_backend_complete": false,
+    "independent_physics_backend_validated": false,
+    "max_relative_error": 3.717473e-10
+  },
+  "schema_version": "independent_physics_backend_comparison.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/mission_feasibility_screen.v1.json",
+      "sha256": "bad50fe37b0fcceecbc01ed66b34dc9f56d7152e5a06656f0001b103dea3cdc5"
+    },
+    {
+      "path": "mission/capsule/capsule_design.v1.json",
+      "sha256": "db6a32dd8ec9fe837ce814392d7cb664b3e94ed5b7e4ffd862eb604fe4e27671"
+    },
+    {
+      "path": "artifacts/mission_dag_v2_boundary.v1.json",
+      "sha256": "af821ab4e367ee9ab7c38712132c8cb282d5bf115a66e09ab9ffbe37ca726bc2"
+    },
+    {
+      "path": "mission/INDEPENDENT_PHYSICS_BACKEND_COMPARISON_SPEC_v1.md",
+      "sha256": "ed067ff5cf346fee7b000a583855ddaaf87bc5be3c9f9be1636d35a6b3e98e1e"
+    },
+    {
+      "path": "mission/external_proof/phase.py",
+      "sha256": "72cecfde49ee2bda49d8944e7ff163e7508bb383da0c0e356af32f31ef90f6c2"
+    },
+    {
+      "path": "mission/external_proof/__init__.py",
+      "sha256": "43c591118358803cc0660f2e960dd62d24935c791338d175e8b3ac3a4000fb77"
+    },
+    {
+      "path": "scripts/build_independent_physics_backend_comparison_artifact.py",
+      "sha256": "84cee11b5ba40e571b4517fbb3d74686f10a17defbb18470c36c84fbc35a950b"
+    },
+    {
+      "path": "scripts/ci/independent_physics_backend_comparison_validate.py",
+      "sha256": "f01f420fad1fae0b4f189c1aa6b55afbaade76270c55bde404e21764181b602e"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ]
+}

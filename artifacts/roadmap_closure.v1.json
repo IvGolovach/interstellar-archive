@@ -1,0 +1,1085 @@
+{
+  "closure_metrics": {
+    "external_evidence_gap_count": 37,
+    "non_certification_notice_count": 15,
+    "repo_native_closure_count": 15,
+    "trust_grade_distribution": {
+      "B": 8,
+      "C": 56,
+      "D": 2
+    }
+  },
+  "dag_v2": {
+    "artifact_ref": "artifacts/mission_dag_v2_boundary.v1.json",
+    "blocked_claims": [
+      "independent physics backend validated",
+      "high-fidelity state trace complete",
+      "flight-ready module approved",
+      "external backend reproduction completed"
+    ],
+    "cross_backend_comparison_available": false,
+    "external_evidence_gaps": [
+      "actuator authority and power-margin state trace fixture",
+      "bit-level post-exposure readability trace fixture",
+      "closed-loop guidance/control backend",
+      "independent geodesic or trajectory backend",
+      "independent plasma/radiation environment backend",
+      "media/ECC recoverability backend",
+      "module fixture tied to representative dust-size and impact-angle bins",
+      "module fixture with heat-load and material-response state trace",
+      "orbit-determination covariance trace fixture",
+      "source-backed environment state trace over target approach",
+      "thermal transport backend for selected material stack",
+      "transport or hydrocode backend for selected shield stack"
+    ],
+    "external_reproduction_completed": false,
+    "failure_taxonomy_mapping_module_count": 6,
+    "hashchain_contract_available": true,
+    "high_fidelity_state_traces_available": false,
+    "independent_backend_complete": false,
+    "module_count": 6,
+    "module_expectations": [
+      "independent backend id",
+      "state trace hash",
+      "input/output schema version",
+      "failure taxonomy mapping",
+      "replayable module fixture",
+      "cross-backend comparison report"
+    ],
+    "module_io_schema_contract_available": true,
+    "schema_version": "mission_dag_v2_boundary.v1",
+    "state_trace_contract_complete": true,
+    "status": "implemented_as_tracked_module_boundary_artifact"
+  },
+  "evidence_upgrade": {
+    "artifact_ref": "artifacts/evidence_upgrade_campaign.v1.json",
+    "blocked_claims": [
+      "evidence campaign completed",
+      "trust grades upgraded automatically",
+      "source correctness proven",
+      "external validation completed",
+      "certified or flight-ready"
+    ],
+    "boundary": "campaign ranks evidence review work; it does not promote trust grades or certify source correctness",
+    "claim_count": 66,
+    "external_evidence_gaps": [
+      "primary-source replacements for assumption-backed priors",
+      "independent datasets for B-to-A promotion",
+      "source-backed uncertainty narrowing for high-priority C-grade parameters",
+      "stable public URLs or archival references for source records that currently lack public URLs",
+      "periodic source freshness review"
+    ],
+    "internal_audit_count": 35,
+    "model": "artifact_backed_evidence_upgrade_campaign_v1",
+    "public_campaign_count": 31,
+    "public_trust_distribution": {
+      "B": 8,
+      "C": 21,
+      "D": 2
+    },
+    "public_upgrade_candidate_count": 31,
+    "schema_version": "evidence_upgrade_campaign.v1",
+    "speculative_quarantine_count": 2,
+    "status": "implemented_as_tracked_campaign_ledger",
+    "top_priority_count": 15,
+    "top_priority_ids": [
+      "environment_model.non_physical_safety_multiplier",
+      "trajectory_model.non_physical_capture_bias",
+      "environment_model.plasma_density_proxy_m3",
+      "environment_model.radiative_flux_w_m2",
+      "environment_model.accretion_luminosity_fraction"
+    ],
+    "trust_grade_distribution": {
+      "B": 8,
+      "C": 56,
+      "D": 2
+    }
+  },
+  "generator": "scripts/build_roadmap_closure_artifact.py",
+  "model_summaries": {
+    "cost_feasibility": {
+      "all_rows_review_required": true,
+      "architecture_row_count": 15,
+      "architecture_selected_for_flight": false,
+      "artifact_ref": "artifacts/cost_procurement_architecture_feasibility.v1.json",
+      "blocked_claims": [
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete",
+        "mission feasible"
+      ],
+      "calibrated_cost_model_available": false,
+      "capsule_mass_kg": 206.0,
+      "cost_boundary": "screening proxy only; not procurement-grade estimate",
+      "external_evidence_gaps": [
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "independent basis-of-estimate review",
+        "architecture trade study with launch provider constraints"
+      ],
+      "launch_architecture_cost_proxy_musd": 1020.8,
+      "launch_vehicle_selected": false,
+      "model": "order_of_magnitude_architecture_cost_screen_v1",
+      "optimization_cost_proxy_max": 0.811724776049,
+      "optimization_cost_proxy_min": 0.370729943875,
+      "procurement_gate_count": 4,
+      "procurement_grade_estimate_available": false,
+      "qualification_complete": false,
+      "qualification_cost_proxy_musd": 266.52,
+      "schema_version": "cost_procurement_architecture_feasibility.v1",
+      "status": "implemented_as_tracked_cost_procurement_architecture_screen",
+      "top_candidate_cost_proxy": 0.370729943875,
+      "vendor_quote_count": 0
+    },
+    "dust_tail": {
+      "frontal_area_m2": 1.81,
+      "model": "local_ism_dust_tail_screen_v1",
+      "reference_path_ly": 1560.0,
+      "source_backed_mass_density_kg_m3": 2.1e-24,
+      "swept_dust_mass_kg": 5.6097969e-05,
+      "swept_kinetic_energy_j": 57609.87656259683,
+      "swept_specific_energy_j_kg": 1026951200.0,
+      "tail_boundary": "micron-class local anchor only; mm/cm tail remains explicit sensitivity",
+      "velocity_km_s": 45.32
+    },
+    "mission_coupling": {
+      "artifact_ref": "artifacts/mission_probability_coupling.v1.json",
+      "baseline_success_threshold": 0.62,
+      "coupled_reference_probability": 0.018571310604,
+      "coupling_boundary": "factor coupling is visible; targetability and recovery are not collapsed into capsule survival",
+      "coupling_count": 15,
+      "default_coupling_id": "mpc-reference-black-hole-conditional-45-3615a2ddec",
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability_status": "not_closed_external_factors_open",
+      "model": "tracked_mission_probability_coupling_v1",
+      "p_data_intact_reference": 0.175037866228,
+      "p_hit_reference": 1.0,
+      "p_survive_reference": 0.10609881738,
+      "reference_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack"
+    },
+    "mission_physics_v2": {
+      "gravitational_radius_m": 6349367030.096458,
+      "implemented_boundary": "metric-screening contract; not full geodesic integration or MHD",
+      "kerr_outer_horizon_m": 11174468233.373013,
+      "mass_kg": 8.55e+36,
+      "model": "deterministic_kerr_horizon_screen_v1",
+      "outer_horizon_vs_schwarzschild_ratio": 0.879967103839,
+      "schwarzschild_radius_m": 12698734060.192917,
+      "spin_dimensionless_reference": 0.65
+    },
+    "optimization_v2": {
+      "active_axes": [
+        "p_success",
+        "risk_envelope",
+        "qualification_gap",
+        "cost_proxy"
+      ],
+      "aggregation_policy": "pareto_first_no_hidden_weighted_sum",
+      "artifact_ref": "artifacts/optimization_v2_frontier.v1.json",
+      "blocked_claims": [
+        "global optimum proven",
+        "procurement-grade cost estimate",
+        "qualification complete",
+        "flight-ready design selected"
+      ],
+      "boundary": "four-axis Pareto screen; not a global optimum, procurement estimate, or qualification result",
+      "calibrated_cost_model_available": false,
+      "candidate_count": 20,
+      "external_evidence_gaps": [
+        "larger search campaign with solver diversity",
+        "calibrated mission utility and cost model",
+        "stack-level qualification evidence tied to optimized parameters",
+        "external review of candidate dominance assumptions"
+      ],
+      "frontier_candidate_count": 1,
+      "global_optimum_claimed": false,
+      "hidden_weighted_sum_used": false,
+      "model": "artifact_backed_optimization_v2_frontier",
+      "qualification_complete": false,
+      "schema_version": "optimization_v2_frontier.v1",
+      "status": "implemented_as_four_axis_decision_surface",
+      "top_candidate_id": "optv2-pt-000"
+    },
+    "radiation_material": {
+      "attack_mode_count": 5,
+      "material_degradation_dimension_present": true,
+      "media_margin_dimension_present": true,
+      "model": "material_radiation_transport_hook_v1",
+      "plasma_dimension_present": true,
+      "radiation_dimension_present": true,
+      "transport_boundary": "declares material/radiation hooks; does not replace particle transport or stack testing"
+    },
+    "trajectory_reachability": {
+      "model": "ballistic_reachability_table_v1",
+      "navigation_boundary": "flight time is computed; target acquisition and ephemeris validity remain separate gaps",
+      "speed_grid_km_s": [
+        23.17,
+        33.75,
+        45.32,
+        60.0,
+        95.0
+      ],
+      "target_distances_ly": {
+        "galactic_center_rounded": 26000.0,
+        "proxima_scale": 4.2465,
+        "reference_black_hole_proxy": 1560.0
+      },
+      "time_of_flight_years": {
+        "galactic_center_rounded": {
+          "23.17_km_s": 336409318.429,
+          "33.75_km_s": 230951226.904,
+          "45.32_km_s": 171990377.493,
+          "60_km_s": 129910065.133,
+          "95_km_s": 82048462.189
+        },
+        "proxima_scale": {
+          "23.17_km_s": 54944.699,
+          "33.75_km_s": 37720.553,
+          "45.32_km_s": 28090.659,
+          "60_km_s": 21217.811,
+          "95_km_s": 13400.723
+        },
+        "reference_black_hole_proxy": {
+          "23.17_km_s": 20184559.106,
+          "33.75_km_s": 13857073.614,
+          "45.32_km_s": 10319422.65,
+          "60_km_s": 7794603.908,
+          "95_km_s": 4922907.731
+        }
+      }
+    },
+    "uncertainty_v2": {
+      "artifact_ref": "artifacts/uncertainty_interactions.v1.json",
+      "boundary": "pairwise residuals are tracked; validated covariance/correlation evidence remains external",
+      "dimension_count": 4,
+      "dimension_ids": [
+        "environment_model.dust_flux_scale",
+        "capsule_model.material_degradation_mu_1_per_year",
+        "correction_window.execution_sigma_fraction",
+        "trajectory_model.nav_position_sigma_m"
+      ],
+      "dominant_pair_id": "ui-pair-capsule-model-material-degradation-mu-1-per-year--environment-model-dust-flux-scale",
+      "dominant_pair_residual": {
+        "classification": "weak",
+        "high_high": 3.2361274e-05,
+        "high_low": 0.0,
+        "low_high": -2.1579038e-05,
+        "low_low": 0.0,
+        "max_abs": 3.2361274e-05
+      },
+      "external_evidence_gaps": [
+        "validated_parameter_correlation_matrix",
+        "path_conditioned_uncertainty_distribution",
+        "model_form_validation_for_joint_uncertainty"
+      ],
+      "full_uncertainty_interaction_closure": false,
+      "interaction_method": "deterministic_pairwise_endpoint_residual",
+      "interaction_pair_count": 6,
+      "model": "artifact_backed_pairwise_uncertainty_interactions_v1",
+      "schema_version": "uncertainty_interactions.v1",
+      "tail_metric_ready": [
+        "p05",
+        "p01",
+        "loss_probability"
+      ],
+      "validated_correlation_count": 0
+    }
+  },
+  "non_certification_notice": true,
+  "public_narrative": {
+    "all_required_concepts_present": true,
+    "allowed_phrasing": [
+      "deterministic repository artifact",
+      "reduced-order screening model",
+      "non-certifying review contract",
+      "external evidence still required",
+      "qualification-gap ledger",
+      "proxy cost pressure",
+      "review pack prepared, not completed",
+      "repository-native closure with external evidence open"
+    ],
+    "artifact_ref": "artifacts/public_narrative_hardening.v1.json",
+    "audience_testing_completed": false,
+    "blocked_claim_count": 29,
+    "browser_boundary": {
+      "artifact_only_rendering": true,
+      "blocked_claim_suppression_allowed": false,
+      "client_side_claim_recomputation_allowed": false,
+      "external_gap_softening_allowed": false
+    },
+    "claim_rule_count": 10,
+    "external_evidence_gaps": [
+      "external reviewer wording audit",
+      "audience testing for overinterpretation risk",
+      "legal or marketing approval review",
+      "third-party reproduction reports",
+      "independent physics benchmark comparisons"
+    ],
+    "external_wording_audit_completed": false,
+    "forbidden_claims": [
+      "certified",
+      "qualified",
+      "proven flight-ready",
+      "flight ready",
+      "guaranteed survival",
+      "guaranteed arrival",
+      "mission-ready",
+      "hardware-qualified",
+      "third-party validated",
+      "independently reproduced",
+      "external validation completed",
+      "independent reproduction completed",
+      "independent physics backend validated",
+      "high-fidelity state trace complete",
+      "global optimum proven",
+      "flight-ready design selected",
+      "procurement-grade cost estimate",
+      "vendor-quoted budget",
+      "vendor quote obtained",
+      "budget approved",
+      "launch vehicle selected",
+      "full mission probability closed",
+      "source correctness proven",
+      "trust grades upgraded automatically",
+      "trust grades upgraded",
+      "remote execution isolated",
+      "persistent reviewed run archive",
+      "operationally approved",
+      "physical truth"
+    ],
+    "legal_review_completed": false,
+    "public_claim_approval_completed": false,
+    "public_surface_count": 10,
+    "required_claims": [
+      "deterministic artifact",
+      "reduced-order",
+      "non-certifying",
+      "external evidence gaps remain"
+    ],
+    "required_qualifier_count": 4,
+    "review_status": "repo_native_public_narrative_contract_ready_external_audit_not_completed",
+    "schema_version": "public_narrative_hardening.v1",
+    "status": "implemented_as_tracked_public_narrative_hardening",
+    "unsafe_public_overclaim_count": 0
+  },
+  "public_scope": "full_v2_roadmap_repo_native_closure",
+  "qualification_tracks": {
+    "archive_media": {
+      "required_evidence": [
+        "media-specific radiation and thermal aging tests",
+        "bit-level ECC and index recovery campaign",
+        "post-arrival readability assumptions separated from physical survival"
+      ],
+      "status": "repo_native_recoverability_contract_implemented"
+    },
+    "capsule_stack": {
+      "required_evidence": [
+        "ballistic-limit tests across particle size, angle, velocity, and material stack",
+        "hydrocode correlation for tens-of-km/s extrapolation",
+        "mass and thermal closure for final stack geometry"
+      ],
+      "status": "repo_native_gap_ledger_implemented"
+    }
+  },
+  "review_pack": {
+    "all_cases_require_external_review": true,
+    "artifact_ref": "artifacts/external_validation_review_pack.v1.json",
+    "blocked_claims": [
+      "external validation completed",
+      "independent reproduction completed",
+      "independent physics backend validated",
+      "cross-backend comparison completed",
+      "high-fidelity state trace complete",
+      "third-party validated",
+      "certified",
+      "qualified",
+      "flight-ready",
+      "proven mission feasible",
+      "procurement-grade cost estimate",
+      "vendor quote obtained",
+      "regulatory or operations approval complete",
+      "source correctness proven",
+      "trust grades upgraded automatically",
+      "persistent reviewed run archive"
+    ],
+    "external_deliverable_count": 6,
+    "external_evidence_gaps": [
+      "third-party reproduction reports",
+      "independent physics benchmark comparisons",
+      "high-fidelity module state traces",
+      "external red-team review findings",
+      "public wording audit by a reviewer outside the repository"
+    ],
+    "external_red_team_completed": false,
+    "external_validation_claimed": false,
+    "high_fidelity_state_trace_complete": false,
+    "independent_benchmark_completed": false,
+    "independent_reproduction_completed": false,
+    "required_deliverable_ids": [
+      "third_party_reproduction_report",
+      "independent_physics_benchmark_report",
+      "high_fidelity_state_trace_bundle",
+      "external_red_team_report",
+      "reviewer_exception_log",
+      "public_claim_wording_audit"
+    ],
+    "review_case_count": 7,
+    "review_case_ids": [
+      "optimistic-prior-collapse",
+      "dust-tail-severe-mode",
+      "media-decay-severe-mode",
+      "targetability-separated-from-capsule-survival",
+      "independent-backend-comparison",
+      "procurement-and-operations-boundary",
+      "public-wording-overinterpretation"
+    ],
+    "review_pack_status": "repo_native_review_pack_ready_external_review_not_completed",
+    "schema_version": "external_validation_review_pack.v1",
+    "status": "implemented_as_tracked_external_validation_review_pack",
+    "third_party_review_completed": false
+  },
+  "roadmap_item_count": 15,
+  "roadmap_items": [
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "mission/ROADMAP_CLOSURE_SPEC_v1.md"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "full GR geodesic integration",
+        "relativistic plasma/MHD coupling"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-01",
+      "implementation_mode": "deterministic_model_contract",
+      "model_summary_ref": "model_summaries.mission_physics_v2",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds Kerr horizon screening, radial environment hooks, and thermal-dose boundary metadata.",
+      "title": "Mission Physics v2 screening layer",
+      "validators": [
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "target ephemeris over Myr horizons",
+        "closed-loop navigation authority"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-02",
+      "implementation_mode": "deterministic_reachability_contract",
+      "model_summary_ref": "model_summaries.trajectory_reachability",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Publishes target distance, velocity, and time-of-flight tables with targetability gaps separated.",
+      "title": "Target trajectory and reachability engine",
+      "validators": [
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "stack-level ballistic-limit testing",
+        "hydrocode correlation against the selected stack"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-03",
+      "implementation_mode": "qualification_gap_contract",
+      "model_summary_ref": "qualification_tracks.capsule_stack",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Turns shield, material, and stack-level evidence gaps into explicit review gates.",
+      "title": "Capsule qualification evidence stack",
+      "validators": [
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "accelerated-aging media tests",
+        "bit-level ECC recovery under radiation and thermal stress"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-04",
+      "implementation_mode": "recoverability_contract",
+      "model_summary_ref": "qualification_tracks.archive_media",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Separates physical media survival from ECC, indexing, redundancy, and readability requirements.",
+      "title": "Archive media and bit-level recoverability",
+      "validators": [
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "mission-specific mm/cm dust-tail flux",
+        "line-of-sight dust-density bins"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-05",
+      "implementation_mode": "deterministic_hazard_screen",
+      "model_summary_ref": "model_summaries.dust_tail",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a local-ISM dust swept-mass and impact-energy screen while keeping mm/cm tails assumption-bound.",
+      "title": "Interstellar dust-tail model",
+      "validators": [
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "material-specific particle transport",
+        "TID/SEE/displacement damage evidence"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-06",
+      "implementation_mode": "transport_hook_contract",
+      "model_summary_ref": "model_summaries.radiation_material",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Connects radiation, plasma, media, and material-degradation dimensions to explicit transport gaps.",
+      "title": "Radiation and material transport hooks",
+      "validators": [
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/mission_probability_coupling.v1.json",
+        "artifacts/capsule_risk_budget.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "target acquisition probability model",
+        "whole-path environment probability model",
+        "arrival/recovery/readability model"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-07",
+      "implementation_mode": "tracked_factorized_probability_coupling",
+      "model_summary_ref": "model_summaries.mission_coupling",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked factorized coupling artifact with capsule/data review proxies and open external target, environment, and recovery factors.",
+      "title": "Full mission-level probabilistic coupling",
+      "validators": [
+        "scripts/ci/mission_probability_coupling_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/uncertainty_interactions.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "source-backed correlation calibration",
+        "higher-order Sobol/CVaR campaign"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-08",
+      "implementation_mode": "tracked_pairwise_uncertainty_interaction_screen",
+      "model_summary_ref": "model_summaries.uncertainty_v2",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked pairwise uncertainty interaction artifact with open covariance and correlation evidence gates.",
+      "title": "Uncertainty v2 interactions",
+      "validators": [
+        "scripts/ci/uncertainty_interactions_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/evidence_upgrade_campaign.v1.json",
+        "parameters/registry/parameter_claims.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "periodic citation quality review",
+        "primary-source upgrades for assumption-bound priors",
+        "public URLs or archival references for source records"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-09",
+      "implementation_mode": "tracked_evidence_upgrade_campaign",
+      "model_summary_ref": "evidence_upgrade",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked evidence-upgrade campaign artifact that ranks source-review work without promoting trust grades.",
+      "title": "Evidence upgrade campaign",
+      "validators": [
+        "scripts/ci/evidence_upgrade_campaign_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/optimization_v2_frontier.v1.json",
+        "artifacts/optimization_frontier_realistic.v1.json",
+        "artifacts/optimization_search_space.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "larger search campaign with solver diversity",
+        "calibrated mission utility and cost model",
+        "stack-level qualification evidence tied to optimized parameters"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-10",
+      "implementation_mode": "tracked_four_axis_decision_surface",
+      "model_summary_ref": "model_summaries.optimization_v2",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked four-axis optimization v2 artifact over p_success, risk, qualification-gap, and cost-proxy tradeoffs.",
+      "title": "Optimization v2",
+      "validators": [
+        "scripts/ci/optimization_v2_validate.py",
+        "scripts/ci/optimization_frontier_validate.py",
+        "scripts/ci/risk_envelope_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/mission_dag_v2_boundary.v1.json",
+        "mission/dag/registry/module_registry.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "independent physics backends",
+        "module-level high-fidelity state traces"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-11",
+      "implementation_mode": "tracked_module_boundary_artifact",
+      "model_summary_ref": "dag_v2",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked DAG v2 boundary artifact for every module, separating v1 wrapper support from v2 trace/backend requirements.",
+      "title": "Mission DAG v2 physics module boundary",
+      "validators": [
+        "scripts/ci/mission_dag_v2_boundary_validate.py",
+        "scripts/ci/mission_dag_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/user_mission_run_catalog.v1.json",
+        "artifacts/runtime_scenario_generation.v1.json",
+        "scripts/run_user_mission_scenario.py"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "remote execution isolation",
+        "persistent reviewed run archive"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-12",
+      "implementation_mode": "tracked_runtime_generation_contract",
+      "model_summary_ref": "runtime_runs",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked runtime-generation recipe artifact, deterministic selected-run catalog, and strict local pack validator for user-owned scenario artifacts and hashes.",
+      "title": "Runtime scenario generation and user-owned runs",
+      "validators": [
+        "scripts/ci/user_mission_run_catalog_validate.py",
+        "scripts/ci/runtime_scenario_generation_validate.py",
+        "scripts/ci/user_mission_run_pack_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/cost_procurement_architecture_feasibility.v1.json"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "independent architecture trade study"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-13",
+      "implementation_mode": "tracked_cost_procurement_architecture_screen",
+      "model_summary_ref": "model_summaries.cost_feasibility",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked cost/procurement/architecture feasibility artifact with explicit external procurement, launch, and architecture gates.",
+      "title": "Cost, procurement, and architecture feasibility",
+      "validators": [
+        "scripts/ci/cost_procurement_architecture_feasibility_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/external_validation_review_pack.v1.json",
+        "docs/FULL_V2_ROADMAP_CLOSURE.md"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "third-party reproduction reports",
+        "independent physics benchmark comparisons",
+        "high-fidelity module state traces",
+        "external red-team review findings"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-14",
+      "implementation_mode": "tracked_external_validation_review_pack",
+      "model_summary_ref": "review_pack",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked external validation review-pack artifact with required reviewer deliverables and explicit false-claim blockers.",
+      "title": "External validation and independent review pack",
+      "validators": [
+        "scripts/ci/external_validation_review_pack_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    },
+    {
+      "acceptance_criteria": [
+        "tracked artifact exists",
+        "strict validator passes",
+        "browser summary does not recompute truth",
+        "external evidence gaps remain visible"
+      ],
+      "artifacts": [
+        "artifacts/roadmap_closure.v1.json",
+        "artifacts/public_narrative_hardening.v1.json",
+        "docs/FULL_V2_ROADMAP_CLOSURE.md"
+      ],
+      "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+      "external_evidence_gaps": [
+        "external reviewer wording audit",
+        "audience testing for overinterpretation risk",
+        "legal or marketing approval review"
+      ],
+      "false_claims_blocked": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "guaranteed"
+      ],
+      "id": "roadmap-15",
+      "implementation_mode": "tracked_public_narrative_hardening",
+      "model_summary_ref": "public_narrative",
+      "non_certification_notice": true,
+      "status": "repo_native_closure_implemented_external_evidence_open",
+      "summary": "Adds a tracked public narrative hardening artifact with blocked public claims, required qualifiers, and browser-rendering boundaries.",
+      "title": "Public narrative hardening",
+      "validators": [
+        "scripts/ci/public_narrative_hardening_validate.py",
+        "scripts/ci/roadmap_closure_validate.py",
+        "scripts/ci/check_suite.py"
+      ]
+    }
+  ],
+  "runtime_runs": {
+    "artifact_ref": "artifacts/runtime_scenario_generation.v1.json",
+    "blocked_runtime_claims": [
+      "remote execution isolation completed",
+      "persistent reviewed run archive",
+      "mission feasible",
+      "flight ready",
+      "certified local run pack",
+      "guaranteed arrival or archive recovery"
+    ],
+    "catalog_schema_version": "user_mission_run_catalog.v1",
+    "default_run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+    "generation_row_count": 15,
+    "local_runner": "scripts/run_user_mission_scenario.py",
+    "pack_output_files": [
+      "COMPILED_MISSION_SCENARIO.json",
+      "USER_RUN_SUMMARY.json",
+      "DAG_RUN_SUMMARY.json",
+      "SOURCE_MANIFEST.json",
+      "RUN_REPORT.md",
+      "meta.json"
+    ],
+    "pack_validator": "scripts/ci/user_mission_run_pack_validate.py",
+    "persistent_reviewed_archive_claimed": false,
+    "remote_execution_claimed": false,
+    "run_artifact_fields": [
+      "selection_hash",
+      "compiled_mission_scenario_sha256",
+      "dag_manifest_hash",
+      "pack_validator",
+      "created_from_commit"
+    ],
+    "run_count": 15,
+    "run_store_tracked_by_default": false,
+    "schema_version": "runtime_scenario_generation.v1",
+    "status": "implemented_as_tracked_runtime_generation_contract_and_strict_local_pack_validator",
+    "writes_tracked_files": false
+  },
+  "schema_version": "roadmap_closure.v1",
+  "source_artifacts": [
+    {
+      "path": "mission/BASELINE_SCENARIO_v1.json",
+      "sha256": "2e6126d1628a29dbab15a9b51c577e222176c7775c629913760c7817a34b6cbc"
+    },
+    {
+      "path": "artifacts/capsule_survivability_lab.v1.json",
+      "sha256": "292723744efbeec31cee1dae985560329de198e03b21814f768d85deb0ee5a2f"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "artifacts/user_mission_run_catalog.v1.json",
+      "sha256": "1c51106149ad5f12008558a2f13ee59af52bc7068d9f0140163c8289b6e8b732"
+    },
+    {
+      "path": "artifacts/runtime_scenario_generation.v1.json",
+      "sha256": "98589a3339e98d0ece8ca75f239a3c44e5636a377b1148758aea84be51dbb08e"
+    },
+    {
+      "path": "artifacts/mission_probability_coupling.v1.json",
+      "sha256": "8cccfa8ebb4037710d2925630cfcc24a154f46a97794157ece7272160a2be0d0"
+    },
+    {
+      "path": "artifacts/uncertainty_interactions.v1.json",
+      "sha256": "7ae19f9c7572fbc7c147fb587c77e3f662afc8e5ab8aed314422edbdbd215b85"
+    },
+    {
+      "path": "artifacts/evidence_upgrade_campaign.v1.json",
+      "sha256": "7cbe41e459177dc42ce05bca150e67b906771046cdfb7867582f71b0d0dd66a1"
+    },
+    {
+      "path": "artifacts/optimization_v2_frontier.v1.json",
+      "sha256": "4dc08967f5da3dbc3911bc2360a8f8f9c25f480ea1e3046f8151e2a3a6cf3efe"
+    },
+    {
+      "path": "artifacts/mission_dag_v2_boundary.v1.json",
+      "sha256": "af821ab4e367ee9ab7c38712132c8cb282d5bf115a66e09ab9ffbe37ca726bc2"
+    },
+    {
+      "path": "artifacts/cost_procurement_architecture_feasibility.v1.json",
+      "sha256": "c121efd5205a5b304167eb21a73573f02a5d3781bb9aaeb0ab09478f641f2187"
+    },
+    {
+      "path": "artifacts/external_validation_review_pack.v1.json",
+      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+    },
+    {
+      "path": "artifacts/public_narrative_hardening.v1.json",
+      "sha256": "4b85aa5ec8b5152af61106a911104a8e30c5d98fb1d6be1eb1e10794cbda226c"
+    },
+    {
+      "path": "artifacts/optimization_frontier_realistic.v1.json",
+      "sha256": "be296fd4a6c8274bdad3465c823e4440a927a0b85163af87839a1ba527bc308a"
+    },
+    {
+      "path": "parameters/registry/parameter_claims.v1.json",
+      "sha256": "5943329ac28b556a1ab3fd23f2e17c9aa5ee44eaeb370734b1a90af474f00bda"
+    }
+  ]
+}

@@ -1,0 +1,2561 @@
+{
+  "axis_contract": {
+    "aggregation_policy": "pareto_first_no_hidden_weighted_sum",
+    "axes": [
+      {
+        "direction": "maximize",
+        "id": "p_success",
+        "source_ref": "artifacts/optimization_frontier_realistic.v1.json",
+        "status": "computed"
+      },
+      {
+        "direction": "minimize",
+        "id": "risk_envelope",
+        "source_ref": "mission/objectives/risk_envelope.v1.json",
+        "status": "computed"
+      },
+      {
+        "direction": "minimize",
+        "id": "qualification_gap",
+        "method": "trust_weighted_search_excursion",
+        "source_ref": "parameters/registry/parameter_claims.v1.json",
+        "status": "screening_proxy"
+      },
+      {
+        "direction": "minimize",
+        "id": "cost_proxy",
+        "method": "normalized_engineering_resource_pressure",
+        "source_ref": "artifacts/optimization_search_space.v1.json",
+        "status": "screening_proxy"
+      }
+    ],
+    "blocked_claims": [
+      "global optimum proven",
+      "procurement-grade cost estimate",
+      "qualification complete",
+      "flight-ready design selected"
+    ]
+  },
+  "blocked_claims": [
+    "global optimum proven",
+    "procurement-grade cost estimate",
+    "qualification complete",
+    "flight-ready design selected"
+  ],
+  "candidate_count": 20,
+  "candidates": [
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.0018,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 36.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.375878750851,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 180.0,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.185044051808,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 3200.0,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.68320266949,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 180.0,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.823885927552,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 26000.0,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.370729943875,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.185897435897,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.325,
+              "excursion": 0.0,
+              "parameter_id": "capsule_model.data_media_survival_margin",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.325,
+              "excursion": 0.0,
+              "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.325,
+              "excursion": 0.0,
+              "parameter_id": "correction_window.actuator_efficiency",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.325,
+              "excursion": 0.0,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.325,
+              "excursion": 0.0,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-000",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": true,
+      "scores": {
+        "cost_proxy": 0.370729943875,
+        "objective_vector": [
+          0.34684025581,
+          0.662424580631,
+          0.185897435897,
+          0.370729943875
+        ],
+        "p_success": 0.34684025581,
+        "qualification_gap": 0.185897435897,
+        "rank_key": "pareto",
+        "risk_envelope": 0.662424580631
+      },
+      "source_candidate_id": "pt-000",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": true
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.375,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 7500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.812511103276,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 75000.925,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.099030358543,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 7500.625,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.871068432739,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 750.625,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.964077067789,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 475000.0005249999,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.613332452905,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.301041383904,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.827125,
+              "excursion": 0.7725,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.746939655172,
+              "excursion": 0.649137931034,
+              "parameter_id": "capsule_model.data_media_survival_margin",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.716148989899,
+              "excursion": 0.601767676768,
+              "parameter_id": "correction_window.actuator_efficiency",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.6337422,
+              "excursion": 0.474988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.63258,
+              "excursion": 0.4732,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-004",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.613332452905,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.301041383904,
+          0.613332452905
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.301041383904,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-004",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.325,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 6500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.976723028551,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 725000.275,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.086393652817,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 8500.574999999999,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.957716338468,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1450.275,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.89965666845,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 125000.000875,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.629392438093,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.308361107086,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.92624948,
+              "excursion": 0.9249992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.86125,
+              "excursion": 0.825,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.73008,
+              "excursion": 0.6232,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.715548780505,
+              "excursion": 0.6008442777,
+              "parameter_id": "correction_window.power_available_w",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.66625,
+              "excursion": 0.525,
+              "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-013",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.629392438093,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.308361107086,
+          0.629392438093
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.308361107086,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-013",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.475,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 9500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.981550304765,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 775000.225,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.130343211417,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 5500.725,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.948321679112,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1350.325,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.915893116748,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 175000.00082499997,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.683788417882,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.312792176059,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.95784,
+              "excursion": 0.9736,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82797,
+              "excursion": 0.7738,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.718686510045,
+              "excursion": 0.605671553915,
+              "parameter_id": "correction_window.power_available_w",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.67925,
+              "excursion": 0.545,
+              "parameter_id": "success_threshold",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.63375,
+              "excursion": 0.475,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-006",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.683788417882,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.312792176059,
+          0.683788417882
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.312792176059,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-006",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.225,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 4500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.732992824304,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 25000.975000000002,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.065059079027,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 10500.475,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.887514690167,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 850.575,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.958709881182,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 425000.00057499995,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.548726606476,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.314137550523,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.926248375,
+              "excursion": 0.9249975,
+              "parameter_id": "correction_window.guidance_sigma_rad",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.92508,
+              "excursion": 0.9232,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79625,
+              "excursion": 0.725,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.794625,
+              "excursion": 0.7225,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.66547,
+              "excursion": 0.5238,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-011",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.548726606476,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.314137550523,
+          0.548726606476
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.314137550523,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-011",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.025,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.96598004632,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 625000.375,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.032469840254,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 14500.275,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.974704867127,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1650.175,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.821993336179,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 25000.000975,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.516170882607,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.317903009836,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.87425,
+              "excursion": 0.845,
+              "parameter_id": "correction_window.execution_sigma_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.796248375,
+              "excursion": 0.7249975,
+              "parameter_id": "correction_window.guidance_sigma_rad",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.779439655172,
+              "excursion": 0.699137931034,
+              "parameter_id": "capsule_model.data_media_survival_margin",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.708565842055,
+              "excursion": 0.59010129547,
+              "parameter_id": "correction_window.power_available_w",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.66625,
+              "excursion": 0.525,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-007",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.516170882607,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.317903009836,
+          0.516170882607
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.317903009836,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-007",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.525,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 10500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.849485508843,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 125000.875,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.150601761397,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 4500.775000000001,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.852268572065,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 650.675,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.968906589311,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 525000.000475,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.67160896965,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.320158773027,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.92534,
+              "excursion": 0.9236,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.859625,
+              "excursion": 0.8225,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79624948,
+              "excursion": 0.7249992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79508,
+              "excursion": 0.7232,
+              "parameter_id": "trajectory_model.initial_state_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.73047,
+              "excursion": 0.6238,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-017",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.67160896965,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.320158773027,
+          0.67160896965
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.320158773027,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-017",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.625,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 12500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.986075673445,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 825000.1749999999,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.209935297226,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 2500.875,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.938204222888,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1250.375,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.928020279956,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 225000.000775,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.742540118698,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.321093905084,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.86034,
+              "excursion": 0.8236,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.86008,
+              "excursion": 0.8232,
+              "parameter_id": "trajectory_model.initial_state_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79508,
+              "excursion": 0.7232,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.73124948,
+              "excursion": 0.6249992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.73008,
+              "excursion": 0.6232,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-019",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.742540118698,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.321093905084,
+          0.742540118698
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.321093905084,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-019",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.925,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 18500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.994356961325,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 925000.0750000001,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.01942359049,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 16500.175,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.91528575177,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1050.475,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.945764817987,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 325000.00067499996,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.805730757201,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.323574965051,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.92508,
+              "excursion": 0.9232,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.86008,
+              "excursion": 0.8232,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.748648989899,
+              "excursion": 0.651767676768,
+              "parameter_id": "correction_window.actuator_efficiency",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.731248375,
+              "excursion": 0.6249975,
+              "parameter_id": "correction_window.guidance_sigma_rad",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.729625,
+              "excursion": 0.6225,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-005",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.805730757201,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.323574965051,
+          0.805730757201
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.323574965051,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-005",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.125,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 2500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.918647377162,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 325000.675,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.047455366324,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 12500.375,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.726881424479,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 250.875,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.984482000748,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 725000.000275,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.534276394203,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.325061064255,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.86125,
+              "excursion": 0.825,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.861248375,
+              "excursion": 0.8249975,
+              "parameter_id": "correction_window.guidance_sigma_rad",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.86047,
+              "excursion": 0.8238,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.7962422,
+              "excursion": 0.724988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.73125,
+              "excursion": 0.625,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-009",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.534276394203,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.325061064255,
+          0.534276394203
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.325061064255,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-009",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.075,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 1500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.998167437806,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 975000.025,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.039684859726,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 13500.325,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.902131621873,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 950.525,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.952670140939,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 375000.000625,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.553939987989,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.335172329346,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.95797,
+              "excursion": 0.9738,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.828748375,
+              "excursion": 0.7749975,
+              "parameter_id": "correction_window.guidance_sigma_rad",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82758,
+              "excursion": 0.7732,
+              "parameter_id": "trajectory_model.initial_state_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.76374948,
+              "excursion": 0.6749992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.762125,
+              "excursion": 0.6725,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-018",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.553939987989,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.335172329346,
+          0.553939987989
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.335172329346,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-018",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.275,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 5500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.929005331925,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 375000.625,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.07516394698,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 9500.525,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.660024655149,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 150.925,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.987700189181,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 775000.0002250001,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.576119394541,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.335988913487,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.958748375,
+              "excursion": 0.9749975,
+              "parameter_id": "correction_window.guidance_sigma_rad",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.95758,
+              "excursion": 0.9732,
+              "parameter_id": "trajectory_model.initial_state_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82875,
+              "excursion": 0.775,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.8287422,
+              "excursion": 0.774988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82758,
+              "excursion": 0.7732,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-002",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.576119394541,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.335988913487,
+          0.576119394541
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.335988913487,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-002",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.575,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 11500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.946115681606,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 475000.52499999997,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.175971707876,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 3500.825,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.9966707917,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1950.025,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.993556450343,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 875000.000125,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.736330801326,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.336277814653,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.8937422,
+              "excursion": 0.874988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89284,
+              "excursion": 0.8736,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89258,
+              "excursion": 0.8732,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.77675,
+              "excursion": 0.695,
+              "parameter_id": "correction_window.execution_sigma_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.76375,
+              "excursion": 0.675,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-008",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.736330801326,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.336277814653,
+          0.736330801326
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.336277814653,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-008",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.675,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 13500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.873840016012,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 175000.82499999998,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.261488760914,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 1500.925,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.830327138863,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 550.725,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.973296427223,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 575000.000425,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.735699673614,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.337128887514,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.95875,
+              "excursion": 0.975,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.892125,
+              "excursion": 0.8725,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82784,
+              "excursion": 0.7736,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.76375,
+              "excursion": 0.675,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.76258,
+              "excursion": 0.6732,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-010",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.735699673614,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.337128887514,
+          0.735699673614
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.337128887514,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-010",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.425,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 8500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.938064919604,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 425000.575,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.113477827879,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 6500.675,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.517219545625,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 50.975,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.990717105405,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 825000.0001749999,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.607861011027,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.34556189613,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.92625,
+              "excursion": 0.925,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.92547,
+              "excursion": 0.9238,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.86124948,
+              "excursion": 0.8249992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.8612422,
+              "excursion": 0.824988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79625,
+              "excursion": 0.725,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-015",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.607861011027,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.34556189613,
+          0.607861011027
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.34556189613,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-015",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.775,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 15500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.990334685844,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 875000.125,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.002556324305,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 19500.024999999998,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.927243410347,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1150.425,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.937703632775,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 275000.000725,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.757577623922,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.345764352766,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.95874948,
+              "excursion": 0.9749992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89297,
+              "excursion": 0.8738,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82875,
+              "excursion": 0.775,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82758,
+              "excursion": 0.7732,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.76284,
+              "excursion": 0.6736,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-012",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.757577623922,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.345764352766,
+          0.757577623922
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.345764352766,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-012",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.825,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 16500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.892030669002,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 225000.775,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.007871720645,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 18500.075,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.803979311166,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 450.775,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.977320001956,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 625000.0003750001,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.743147788963,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.346639927178,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.92625,
+              "excursion": 0.925,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.924625,
+              "excursion": 0.9225,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.86008,
+              "excursion": 0.8232,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79547,
+              "excursion": 0.7238,
+              "parameter_id": "trajectory_model.nav_position_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.7312422,
+              "excursion": 0.624988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-003",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.743147788963,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.346639927178,
+          0.743147788963
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.346639927178,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-003",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.725,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 14500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.95335994939,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 525000.475,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.372286160137,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 500.975,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.989748453928,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1850.075,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.996237970308,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 925000.0000750001,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.811724776049,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.35540205009,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.9262422,
+              "excursion": 0.924988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.92508,
+              "excursion": 0.9232,
+              "parameter_id": "trajectory_model.initial_state_sigma_m",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.80925,
+              "excursion": 0.745,
+              "parameter_id": "correction_window.execution_sigma_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79534,
+              "excursion": 0.7236,
+              "parameter_id": "environment_model.dust_flux_scale",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.79508,
+              "excursion": 0.7232,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-001",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.811724776049,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.35540205009,
+          0.811724776049
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.35540205009,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-001",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.975,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 19500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.906555639798,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 275000.72500000003,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.025736159333,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 15500.225,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.77099891162,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 350.825,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.98103375256,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 675000.000325,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.789528139115,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.372079611043,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.95875,
+              "excursion": 0.975,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.95758,
+              "excursion": 0.9732,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.957125,
+              "excursion": 0.9725,
+              "parameter_id": "environment_model.accretion_luminosity_fraction",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89375,
+              "excursion": 0.875,
+              "parameter_id": "correction_window.start_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.82874948,
+              "excursion": 0.7749992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-016",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.789528139115,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.372079611043,
+          0.789528139115
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.372079611043,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-016",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    },
+    {
+      "axis_explainability": {
+        "cost_proxy": {
+          "components": [
+            {
+              "normalized_pressure": 0.875,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "value": 17500.0,
+              "weight": 0.3
+            },
+            {
+              "normalized_pressure": 0.959944694282,
+              "parameter_id": "correction_window.power_available_w",
+              "value": 575000.4249999999,
+              "weight": 0.2
+            },
+            {
+              "normalized_pressure": 0.013482548353,
+              "parameter_id": "correction_window.specific_impulse_s",
+              "value": 17500.125,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.982441563049,
+              "parameter_id": "correction_window.max_duration_years",
+              "value": 1750.125,
+              "weight": 0.15
+            },
+            {
+              "normalized_pressure": 0.998778290634,
+              "parameter_id": "bh_parameters.distance_from_earth_ly",
+              "value": 975000.000025,
+              "weight": 0.2
+            }
+          ],
+          "method": "normalized_engineering_resource_pressure",
+          "score": 0.803633213694,
+          "source_boundary": "screening proxy only; not procurement or launch pricing"
+        },
+        "qualification_gap": {
+          "method": "trust_weighted_search_excursion",
+          "score": 0.373204138944,
+          "top_gap_drivers": [
+            {
+              "contribution": 0.9587422,
+              "excursion": 0.974988,
+              "parameter_id": "environment_model.radiative_flux_w_m2",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.95758,
+              "excursion": 0.9732,
+              "parameter_id": "correction_window.end_year",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89375,
+              "excursion": 0.875,
+              "parameter_id": "environment_model.plasma_density_proxy_m3",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89374948,
+              "excursion": 0.8749992,
+              "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            },
+            {
+              "contribution": 0.89258,
+              "excursion": 0.8732,
+              "parameter_id": "correction_window.delta_v_budget_mps",
+              "penalty": 0.65,
+              "trust_grade": "C"
+            }
+          ],
+          "trust_distribution": {
+            "B": 6,
+            "C": 20
+          },
+          "trust_penalty": {
+            "A": 0.0,
+            "B": 0.25,
+            "C": 0.65
+          }
+        }
+      },
+      "candidate_id": "optv2-pt-014",
+      "dominant_drivers": {
+        "excluded_internal_parameter_count": 0,
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "pareto_frontier_member": false,
+      "scores": {
+        "cost_proxy": 0.803633213694,
+        "objective_vector": [
+          0.0,
+          1.0,
+          0.373204138944,
+          0.803633213694
+        ],
+        "p_success": 0.0,
+        "qualification_gap": 0.373204138944,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0
+      },
+      "source_candidate_id": "pt-014",
+      "source_constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "source_v1_pareto_member": false
+    }
+  ],
+  "determinism_signature": "6544d6ff8fc67edb0c1eb1ea47cd1a64f7c46699cce4f2f1a03c4bae555c51c2",
+  "external_evidence_gaps": [
+    "larger search campaign with solver diversity",
+    "calibrated mission utility and cost model",
+    "stack-level qualification evidence tied to optimized parameters",
+    "external review of candidate dominance assumptions"
+  ],
+  "frontier_candidate_count": 1,
+  "generator": "scripts/build_optimization_v2_artifact.py",
+  "interpretation_limits": [
+    "Cost proxy is an engineering-resource screen, not a procurement quote.",
+    "Qualification gap is a trust/evidence screen, not a hardware qualification result.",
+    "Pareto membership is computed over reduced-order deterministic artifacts only.",
+    "No global optimum, launch readiness, or physical certification is claimed."
+  ],
+  "mode": "realistic",
+  "non_certification_notice": true,
+  "pareto_frontier_candidate_ids": [
+    "optv2-pt-000"
+  ],
+  "public_scope": "optimization_v2_four_axis_decision_surface",
+  "rollup": {
+    "aggregation_policy": "pareto_first_no_hidden_weighted_sum",
+    "axis_ids": [
+      "p_success",
+      "risk_envelope",
+      "qualification_gap",
+      "cost_proxy"
+    ],
+    "calibrated_cost_model_available": false,
+    "dimension_count": 4,
+    "global_optimum_claimed": false,
+    "hidden_weighted_sum_used": false,
+    "qualification_complete": false,
+    "source_frontier_candidate_count": 20,
+    "source_frontier_pareto_count": 1,
+    "top_candidate_id": "optv2-pt-000"
+  },
+  "schema_version": "optimization_v2_frontier.v1",
+  "source_artifacts": [
+    {
+      "path": "mission/objectives/objective_contract.v1.json",
+      "sha256": "5689d63477fbe2c8e14707b7033ed4f27764c2ed549ec01f54d49c33a2ba497f"
+    },
+    {
+      "path": "mission/objectives/risk_envelope.v1.json",
+      "sha256": "920386ad2ce0e7032cc3438dc10d11b44603bc3ed2b7d456c5d22104fb61a7f1"
+    },
+    {
+      "path": "parameters/registry/parameter_claims.v1.json",
+      "sha256": "5943329ac28b556a1ab3fd23f2e17c9aa5ee44eaeb370734b1a90af474f00bda"
+    },
+    {
+      "path": "artifacts/optimization_search_space.v1.json",
+      "sha256": "3b7a6c7959f940d8025286229938c71424bd916a1c2a5bb0fd40cb157372ee62"
+    },
+    {
+      "path": "artifacts/optimization_frontier_realistic.v1.json",
+      "sha256": "be296fd4a6c8274bdad3465c823e4440a927a0b85163af87839a1ba527bc308a"
+    },
+    {
+      "path": "artifacts/mission_feasibility_screen.v1.json",
+      "sha256": "bad50fe37b0fcceecbc01ed66b34dc9f56d7152e5a06656f0001b103dea3cdc5"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "artifacts/evidence_upgrade_campaign.v1.json",
+      "sha256": "7cbe41e459177dc42ce05bca150e67b906771046cdfb7867582f71b0d0dd66a1"
+    }
+  ]
+}

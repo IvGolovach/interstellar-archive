@@ -1,0 +1,133 @@
+{
+  "formula": "p_hit * p_survival * p_data_intact",
+  "input_origins": {
+    "p_data_intact": {
+      "derivation_chain_refs": [
+        "module.control.baseline.v1",
+        "module.data.baseline.v1",
+        "module.env.baseline.v1",
+        "module.shield.baseline.v1",
+        "module.thermal.baseline.v1",
+        "module.traj.baseline.v1",
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "driver_parameter_ids": [
+        "capsule_model.data_media_survival_margin",
+        "capsule_model.material_degradation_mu_1_per_year",
+        "environment_model.accretion_luminosity_fraction",
+        "environment_model.dust_flux_scale",
+        "environment_model.non_physical_safety_multiplier",
+        "environment_model.plasma_density_proxy_m3",
+        "environment_model.radiative_flux_w_m2"
+      ],
+      "origin_type": "computed",
+      "source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-CAPSULE-009",
+        "SRC-ENV-003",
+        "SRC-SPEC-007"
+      ],
+      "value_origin_types": [
+        "assumed",
+        "computed"
+      ]
+    },
+    "p_hit": {
+      "derivation_chain_refs": [
+        "module.control.baseline.v1",
+        "module.data.baseline.v1",
+        "module.env.baseline.v1",
+        "module.shield.baseline.v1",
+        "module.thermal.baseline.v1",
+        "module.traj.baseline.v1",
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "driver_parameter_ids": [
+        "bh_parameters.distance_from_earth_ly",
+        "bh_parameters.mass_kg",
+        "bh_parameters.max_dust_flux_scale",
+        "bh_parameters.max_plasma_density_proxy_m3",
+        "bh_parameters.max_radiative_flux_w_m2",
+        "bh_parameters.periapsis_distance_m",
+        "correction_window.actuator_efficiency",
+        "correction_window.delta_v_budget_mps",
+        "correction_window.end_year",
+        "correction_window.execution_sigma_fraction",
+        "correction_window.guidance_sigma_rad",
+        "correction_window.max_duration_years",
+        "correction_window.power_available_w",
+        "correction_window.specific_impulse_s",
+        "correction_window.start_year",
+        "trajectory_model.initial_state_sigma_m",
+        "trajectory_model.integration_step_s",
+        "trajectory_model.nav_position_sigma_m",
+        "trajectory_model.nav_velocity_sigma_mps",
+        "trajectory_model.non_physical_capture_bias"
+      ],
+      "origin_type": "computed",
+      "source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002",
+        "SRC-PHYS-001",
+        "SRC-SPEC-007"
+      ],
+      "value_origin_types": [
+        "assumed",
+        "computed",
+        "measured"
+      ]
+    },
+    "p_survival": {
+      "derivation_chain_refs": [
+        "module.control.baseline.v1",
+        "module.data.baseline.v1",
+        "module.env.baseline.v1",
+        "module.shield.baseline.v1",
+        "module.thermal.baseline.v1",
+        "module.traj.baseline.v1",
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "driver_parameter_ids": [
+        "capsule_model.material_degradation_mu_1_per_year",
+        "environment_model.accretion_luminosity_fraction",
+        "environment_model.dust_flux_scale",
+        "environment_model.non_physical_safety_multiplier",
+        "environment_model.plasma_density_proxy_m3",
+        "environment_model.radiative_flux_w_m2"
+      ],
+      "origin_type": "computed",
+      "source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-CAPSULE-009",
+        "SRC-ENV-003",
+        "SRC-SPEC-007"
+      ],
+      "value_origin_types": [
+        "assumed",
+        "computed"
+      ]
+    }
+  },
+  "inputs": [
+    "p_hit",
+    "p_survival",
+    "p_data_intact"
+  ],
+  "mode_constraints": {
+    "realistic": {
+      "allow_speculative_parameters": false,
+      "allow_trust_grade_D": false
+    },
+    "speculative": {
+      "allow_speculative_parameters": true,
+      "allow_trust_grade_D": true
+    }
+  },
+  "schema_version": "p_success_defensibility.v1",
+  "uncertainty_propagation": "MonteCarlo"
+}

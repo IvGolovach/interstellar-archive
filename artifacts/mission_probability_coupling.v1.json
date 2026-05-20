@@ -1,0 +1,3147 @@
+{
+  "coupling_count": 15,
+  "coupling_rows": [
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.993765220546,
+        "p50": 0.994662498437,
+        "p95": 0.995369185589,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-alpha-centauri-scale-concept-95-6915eb03da",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "89f400178daa48722f6dce161e542c308ac38e9d13d768de7be58f638df1ef81",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "2221f06c4a8a0a11cb785c9c44779ff2414a28e89cf14d8d0adb81f4d38ae3fd",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.996989464135
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.997666007735
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 13790.453068,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.220070779
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.732310173
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047619048
+          }
+        ],
+        "loss_probability": 0.003010535865,
+        "margin": 0.496989464135,
+        "status": "inside_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.347514809,
+            "driver": "material_degradation",
+            "sensitivity": -0.347514809
+          },
+          {
+            "contribution": 0.300658587,
+            "driver": "media_margin",
+            "sensitivity": -0.300658587
+          },
+          {
+            "contribution": 0.199164136,
+            "driver": "dust",
+            "sensitivity": -0.199164136
+          },
+          {
+            "contribution": 0.088842103,
+            "driver": "radiation",
+            "sensitivity": -0.088842103
+          },
+          {
+            "contribution": 0.063820364,
+            "driver": "plasma",
+            "sensitivity": -0.063820364
+          }
+        ]
+      },
+      "run_id": "umr-alpha-centauri-scale-concept-95-6915eb03da",
+      "selection_hash": "6915eb03daf3bd53380d3d4f2b18c390ad6a9d444c581feea48bb87f1241103b",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+        "feasibility_row_id": "feas-alpha-centauri-scale-concept-95",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.987190443803,
+        "p50": 0.988985129335,
+        "p95": 0.990480361747,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-alpha-centauri-scale-conditional-45-43cb7f6b1b",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "4871113df017f31f980fec11da98cd3940e93a50ef1893721205d3507d222a04",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "1f69ff23dd9f063ea5ba056e9452fb1f12f09d8dc7414f06047058a392af96de",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.993792072173
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.995163029599
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 28907.613448,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.201675654
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.750705298
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047619048
+          }
+        ],
+        "loss_probability": 0.006207927827,
+        "margin": 0.493792072173,
+        "status": "inside_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.334049431,
+            "driver": "material_degradation",
+            "sensitivity": -0.334049431
+          },
+          {
+            "contribution": 0.317579293,
+            "driver": "media_margin",
+            "sensitivity": -0.317579293
+          },
+          {
+            "contribution": 0.17382506,
+            "driver": "dust",
+            "sensitivity": -0.17382506
+          },
+          {
+            "contribution": 0.098971779,
+            "driver": "radiation",
+            "sensitivity": -0.098971779
+          },
+          {
+            "contribution": 0.075280122,
+            "driver": "plasma",
+            "sensitivity": -0.075280122
+          }
+        ]
+      },
+      "run_id": "umr-alpha-centauri-scale-conditional-45-43cb7f6b1b",
+      "selection_hash": "43cb7f6b1ba65062a610704bd5e836d1a4e5b1e2e767839ced508010ce1ed434",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+        "feasibility_row_id": "feas-alpha-centauri-scale-conditional-45",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.975087683976,
+        "p50": 0.978545494971,
+        "p95": 0.981402308375,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-alpha-centauri-scale-oberth-23-8875705193",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "f381f5be306bf1821a5792000784f1d58842f2b918f2fe05f83a2c2056622ee1",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "d024666acbdf2a2cfc3242444ba24059d625e3cd7fb7839257bf176c017f8c51",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.987870423659
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.990560575087
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 56542.643136,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.203770167
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.748579887
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047649946
+          }
+        ],
+        "loss_probability": 0.012129576341,
+        "margin": 0.487870423659,
+        "status": "inside_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.343768517,
+            "driver": "material_degradation",
+            "sensitivity": -0.343768517
+          },
+          {
+            "contribution": 0.304265695,
+            "driver": "media_margin",
+            "sensitivity": -0.304265695
+          },
+          {
+            "contribution": 0.17193781,
+            "driver": "dust",
+            "sensitivity": -0.17193781
+          },
+          {
+            "contribution": 0.095582859,
+            "driver": "radiation",
+            "sensitivity": -0.095582859
+          },
+          {
+            "contribution": 0.083764247,
+            "driver": "plasma",
+            "sensitivity": -0.083764247
+          }
+        ]
+      },
+      "run_id": "umr-alpha-centauri-scale-oberth-23-8875705193",
+      "selection_hash": "8875705193b28d4d9b403b0a2870c53ac40931395bcd4ebbf3a6c90284d6788b",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+        "feasibility_row_id": "feas-alpha-centauri-scale-oberth-23",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.982729150125,
+        "p50": 0.985272174943,
+        "p95": 0.987144528793,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-alpha-centauri-scale-oberth-34-88c7c17eac",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "497fb06a5715d147088f1bd6221919427ab7b085680dc73d553f254d49429414",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "8ed1ab1cb664f4feb27d7d3ee4925fe0c8e5ca441d01c1533e3878e83bffd060",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.991704048054
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.993514322016
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 38817.571599,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.19560851
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.756744469
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047647021
+          }
+        ],
+        "loss_probability": 0.008295951946,
+        "margin": 0.491704048054,
+        "status": "inside_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.367509954,
+            "driver": "material_degradation",
+            "sensitivity": -0.367509954
+          },
+          {
+            "contribution": 0.30108313,
+            "driver": "media_margin",
+            "sensitivity": -0.30108313
+          },
+          {
+            "contribution": 0.172800018,
+            "driver": "dust",
+            "sensitivity": -0.172800018
+          },
+          {
+            "contribution": 0.09305378,
+            "driver": "radiation",
+            "sensitivity": -0.09305378
+          },
+          {
+            "contribution": 0.064936671,
+            "driver": "plasma",
+            "sensitivity": -0.064936671
+          }
+        ]
+      },
+      "run_id": "umr-alpha-centauri-scale-oberth-34-88c7c17eac",
+      "selection_hash": "88c7c17eac8fbf43b2fa294d1f35e32523819133024068b14237e408d1cee993",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+        "feasibility_row_id": "feas-alpha-centauri-scale-oberth-34",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.990283939219,
+        "p50": 0.991659803313,
+        "p95": 0.99274552581,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-alpha-centauri-scale-stress-60-280736ac15",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "78fb65ff6f190d0e6bc34eccd094aa5b99137f0fec613f7394ea729959eaf3cc",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "36a8422fd328927a1148d66942d7bbf7c02ede6a30f08ceda384e966cc841e0e",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.995311743194
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.99633085824
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 21834.884024,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.221276462
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.73110449
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047619048
+          }
+        ],
+        "loss_probability": 0.004688256806,
+        "margin": 0.495311743194,
+        "status": "inside_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.324249713,
+            "driver": "media_margin",
+            "sensitivity": -0.324249713
+          },
+          {
+            "contribution": 0.322307451,
+            "driver": "material_degradation",
+            "sensitivity": -0.322307451
+          },
+          {
+            "contribution": 0.191803981,
+            "driver": "dust",
+            "sensitivity": -0.191803981
+          },
+          {
+            "contribution": 0.08436212,
+            "driver": "radiation",
+            "sensitivity": -0.08436212
+          },
+          {
+            "contribution": 0.073480861,
+            "driver": "plasma",
+            "sensitivity": -0.073480861
+          }
+        ]
+      },
+      "run_id": "umr-alpha-centauri-scale-stress-60-280736ac15",
+      "selection_hash": "280736ac1565fba0a7a468564afd772bb76d6b64c96ab30cdce6bae66009d959",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+        "feasibility_row_id": "feas-alpha-centauri-scale-stress-60",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.105103591223,
+        "p50": 0.144590573358,
+        "p95": 0.186815002791,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-reference-black-hole-concept-95-eeca913675",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "66b4fa18b0bcef7c80af7e7bd81b97e28fa50b14163de3c9af8d380d2678dc38",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "b247afdb4160c2797ead6e615c4d8ff2457f434d00fbf6b1eba7eb728d0fbbf9",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.335214499411
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.431337467837
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 4922907.731368,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.206415321
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.745940632
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047644047
+          }
+        ],
+        "loss_probability": 0.664785500589,
+        "margin": -0.164785500589,
+        "status": "watch",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.341740339,
+            "driver": "material_degradation",
+            "sensitivity": -0.341740339
+          },
+          {
+            "contribution": 0.298762822,
+            "driver": "media_margin",
+            "sensitivity": -0.298762822
+          },
+          {
+            "contribution": 0.178827376,
+            "driver": "dust",
+            "sensitivity": -0.178827376
+          },
+          {
+            "contribution": 0.104528541,
+            "driver": "radiation",
+            "sensitivity": -0.104528541
+          },
+          {
+            "contribution": 0.075589975,
+            "driver": "plasma",
+            "sensitivity": -0.075589975
+          }
+        ]
+      },
+      "run_id": "umr-reference-black-hole-concept-95-eeca913675",
+      "selection_hash": "eeca9136756e6bedc864c398eb80e6c89c9ad143c57e242783397fcc4787a372",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+        "feasibility_row_id": "feas-reference-black-hole-concept-95",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_sub_10",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.009550037305,
+        "p50": 0.018571310604,
+        "p95": 0.031635819721,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-reference-black-hole-conditional-45-3615a2ddec",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "8c4e834be9e6f054b64c6a3f7bae1fd9641fbcbd3913c3906df11f08877573e7",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "948ebd899c24f2689ae35c2804dd4a035fe3d1ec6c0f42313f64604d062d5ca8",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.10609881738
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.175037866228
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 10319422.649603,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.192548187
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.759824228
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047627585
+          }
+        ],
+        "loss_probability": 0.89390118262,
+        "margin": -0.39390118262,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.35134997,
+            "driver": "material_degradation",
+            "sensitivity": -0.35134997
+          },
+          {
+            "contribution": 0.303882674,
+            "driver": "media_margin",
+            "sensitivity": -0.303882674
+          },
+          {
+            "contribution": 0.171995554,
+            "driver": "dust",
+            "sensitivity": -0.171995554
+          },
+          {
+            "contribution": 0.113576367,
+            "driver": "radiation",
+            "sensitivity": -0.113576367
+          },
+          {
+            "contribution": 0.057726824,
+            "driver": "plasma",
+            "sensitivity": -0.057726824
+          }
+        ]
+      },
+      "run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+      "selection_hash": "3615a2ddecc2db1c7730b6ba1befb599ec52a5ba61be9d220d8d35c73e290ec0",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+        "feasibility_row_id": "feas-reference-black-hole-conditional-45",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.000119600668,
+        "p50": 0.000444602576,
+        "p95": 0.001238788649,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-reference-black-hole-oberth-23-53e26b1a8f",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "aa92d05aa72a3f68d477cb4139e622524a0ce78bc4911ae9da269e690468a7ce",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "e47f0bea3ade4e45a39f408d0b3c7844b48ff5a94acd05c79f14b7957986ab1f",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.012970529096
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.034277905951
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 20184559.10574,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.20667158
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.745696595
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047631825
+          }
+        ],
+        "loss_probability": 0.987029470904,
+        "margin": -0.487029470904,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.343739858,
+            "driver": "material_degradation",
+            "sensitivity": -0.343739858
+          },
+          {
+            "contribution": 0.295845545,
+            "driver": "media_margin",
+            "sensitivity": -0.295845545
+          },
+          {
+            "contribution": 0.180208834,
+            "driver": "dust",
+            "sensitivity": -0.180208834
+          },
+          {
+            "contribution": 0.106447877,
+            "driver": "radiation",
+            "sensitivity": -0.106447877
+          },
+          {
+            "contribution": 0.07347623,
+            "driver": "plasma",
+            "sensitivity": -0.07347623
+          }
+        ]
+      },
+      "run_id": "umr-reference-black-hole-oberth-23-53e26b1a8f",
+      "selection_hash": "53e26b1a8fc7b2b1dfaf976ddf8c703b93269dfd882ee74bd6567fe1306850f5",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+        "feasibility_row_id": "feas-reference-black-hole-oberth-23",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.001984718952,
+        "p50": 0.004920698018,
+        "p95": 0.00978965033,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-reference-black-hole-oberth-34-2908698012",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "ccb0f5375ffdf57a7eb0ba38422abdfee7d5bf85367fe18c66094bd5e189cd7e",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "548fb5000268b70db18c7f7492894cdb772f759e31ffa890e46136641c9080b0",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.050414979894
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.097603887342
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 13857073.614222,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.190133405
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.762227478
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047639118
+          }
+        ],
+        "loss_probability": 0.949585020106,
+        "margin": -0.449585020106,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.35423156,
+            "driver": "material_degradation",
+            "sensitivity": -0.35423156
+          },
+          {
+            "contribution": 0.305390624,
+            "driver": "media_margin",
+            "sensitivity": -0.305390624
+          },
+          {
+            "contribution": 0.16504055,
+            "driver": "dust",
+            "sensitivity": -0.16504055
+          },
+          {
+            "contribution": 0.107225066,
+            "driver": "radiation",
+            "sensitivity": -0.107225066
+          },
+          {
+            "contribution": 0.066308842,
+            "driver": "plasma",
+            "sensitivity": -0.066308842
+          }
+        ]
+      },
+      "run_id": "umr-reference-black-hole-oberth-34-2908698012",
+      "selection_hash": "290869801262f778a659bdfb476b70f1e0086c5fb639a237d64ca45477457a2e",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+        "feasibility_row_id": "feas-reference-black-hole-oberth-34",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.029255046378,
+        "p50": 0.048707207262,
+        "p95": 0.073011402047,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-reference-black-hole-stress-60-a6161b0443",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "40886dda56b0e95a38789db38d60a734a097a5b2bbc67e55b56b56b24d8caa26",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "ee23189fa1cd3bd92a081b95e58e79638551634a487899dc5004b21ac924c3d5",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.181762489371
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.267971721948
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 7794603.908,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.177085919
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.775295033
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047619048
+          }
+        ],
+        "loss_probability": 0.818237510629,
+        "margin": -0.318237510629,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.391004693,
+            "driver": "material_degradation",
+            "sensitivity": -0.391004693
+          },
+          {
+            "contribution": 0.3017776,
+            "driver": "media_margin",
+            "sensitivity": -0.3017776
+          },
+          {
+            "contribution": 0.157400932,
+            "driver": "dust",
+            "sensitivity": -0.157400932
+          },
+          {
+            "contribution": 0.092897108,
+            "driver": "radiation",
+            "sensitivity": -0.092897108
+          },
+          {
+            "contribution": 0.056760769,
+            "driver": "plasma",
+            "sensitivity": -0.056760769
+          }
+        ]
+      },
+      "run_id": "umr-reference-black-hole-stress-60-a6161b0443",
+      "selection_hash": "a6161b0443a7b00db4e67c2b96fa81914b54d87b588799009bde43f430a500c3",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+        "feasibility_row_id": "feas-reference-black-hole-stress-60",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_sub_10",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-sgr-a-rounded-concept-95-2321fb5990",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "a1c64e99960b1be88a4d8b662a5174791df63ee24347176b0bf0a845b7287fda",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "42b9a85401a7417dd2c27f8c414e8710749da3c528d0ec2991d1c3856c3b8992",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 1.0824e-08
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 6.34906e-07
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 82048462.189474,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.214924015
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.737441436
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.04763455
+          }
+        ],
+        "loss_probability": 0.999999989176,
+        "margin": -0.499999989176,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.333506036,
+            "driver": "material_degradation",
+            "sensitivity": -0.333506036
+          },
+          {
+            "contribution": 0.318774127,
+            "driver": "media_margin",
+            "sensitivity": -0.318774127
+          },
+          {
+            "contribution": 0.18943317,
+            "driver": "dust",
+            "sensitivity": -0.18943317
+          },
+          {
+            "contribution": 0.085617751,
+            "driver": "radiation",
+            "sensitivity": -0.085617751
+          },
+          {
+            "contribution": 0.072327208,
+            "driver": "plasma",
+            "sensitivity": -0.072327208
+          }
+        ]
+      },
+      "run_id": "umr-sgr-a-rounded-concept-95-2321fb5990",
+      "selection_hash": "2321fb59902739e286d2235f7aa97350489bfc8ad59b6d0f777ecbf82c43266a",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+        "feasibility_row_id": "feas-sgr-a-rounded-concept-95",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-sgr-a-rounded-conditional-45-2b3cc53000",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "c30dff7652275ce6f7e7ef51f7855cba6bfc6d12ad0bcb25780a5976174117fa",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "bf75f9922c43286ad6cce06606086b528622d56db66046774896fbec64c657a9",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 171990377.49338,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.213594362
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.738781208
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.04762443
+          }
+        ],
+        "loss_probability": 1.0,
+        "margin": -0.5,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.350812837,
+            "driver": "material_degradation",
+            "sensitivity": -0.350812837
+          },
+          {
+            "contribution": 0.298920822,
+            "driver": "media_margin",
+            "sensitivity": -0.298920822
+          },
+          {
+            "contribution": 0.193169168,
+            "driver": "dust",
+            "sensitivity": -0.193169168
+          },
+          {
+            "contribution": 0.095208111,
+            "driver": "radiation",
+            "sensitivity": -0.095208111
+          },
+          {
+            "contribution": 0.061381659,
+            "driver": "plasma",
+            "sensitivity": -0.061381659
+          }
+        ]
+      },
+      "run_id": "umr-sgr-a-rounded-conditional-45-2b3cc53000",
+      "selection_hash": "2b3cc53000827ac62a50a53b1750c470ba95d6652be03992227ce2265e1d3b3a",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+        "feasibility_row_id": "feas-sgr-a-rounded-conditional-45",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-sgr-a-rounded-oberth-23-caf31ebd8e",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "0042bee0375e22eed55b92a4ab0f4a22a3ee19850ac02abc8fbd9c2618ee06b3",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "f48f9e44e0ee2acc2794ec4b89336ce37770aa5e9b8b400f95800a11a2dae3aa",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 336409318.429003,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.204322484
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.748058468
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047619048
+          }
+        ],
+        "loss_probability": 1.0,
+        "margin": -0.5,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.347412396,
+            "driver": "material_degradation",
+            "sensitivity": -0.347412396
+          },
+          {
+            "contribution": 0.311075347,
+            "driver": "media_margin",
+            "sensitivity": -0.311075347
+          },
+          {
+            "contribution": 0.181892008,
+            "driver": "dust",
+            "sensitivity": -0.181892008
+          },
+          {
+            "contribution": 0.094327048,
+            "driver": "radiation",
+            "sensitivity": -0.094327048
+          },
+          {
+            "contribution": 0.065293201,
+            "driver": "plasma",
+            "sensitivity": -0.065293201
+          }
+        ]
+      },
+      "run_id": "umr-sgr-a-rounded-oberth-23-caf31ebd8e",
+      "selection_hash": "caf31ebd8e101d16698cff30e09b402c23c41a8d9e521ec7b3ee9036c6abfded",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+        "feasibility_row_id": "feas-sgr-a-rounded-oberth-23",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-sgr-a-rounded-oberth-34-0912c766ae",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "e676a2858d0d9c8786052601f35582373e00728a61c4239e6af0111c8f57423c",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "9217b7f28b6885505da3e43d374a0795b991108c616c539aa000b3581f1e1387",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 230951226.903704,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.192507328
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.759873624
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047619048
+          }
+        ],
+        "loss_probability": 1.0,
+        "margin": -0.5,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.336112285,
+            "driver": "material_degradation",
+            "sensitivity": -0.336112285
+          },
+          {
+            "contribution": 0.322318131,
+            "driver": "media_margin",
+            "sensitivity": -0.322318131
+          },
+          {
+            "contribution": 0.161895154,
+            "driver": "dust",
+            "sensitivity": -0.161895154
+          },
+          {
+            "contribution": 0.09919935,
+            "driver": "radiation",
+            "sensitivity": -0.09919935
+          },
+          {
+            "contribution": 0.080475082,
+            "driver": "plasma",
+            "sensitivity": -0.080475082
+          }
+        ]
+      },
+      "run_id": "umr-sgr-a-rounded-oberth-34-0912c766ae",
+      "selection_hash": "0912c766aefdcb933f7a09a5ad076881eb5df6afacafa4126c038073b4a928ca",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+        "feasibility_row_id": "feas-sgr-a-rounded-oberth-34",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s",
+      "verdict": "review_required"
+    },
+    {
+      "blocked_claims": [
+        "certified capsule survival",
+        "certified hardware survivability",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed archive recovery",
+        "guaranteed arrival or archive recovery",
+        "mission feasible",
+        "proven flight readiness",
+        "qualified material stack",
+        "validated launch or operational approval"
+      ],
+      "closed_capsule_data_probability": {
+        "claim_boundary": "Capsule survival times data integrity only; not full mission success.",
+        "p05": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "status": "review_proxy_only"
+      },
+      "closed_factor_count": 2,
+      "coupling_id": "mpc-sgr-a-rounded-stress-60-499f022fae",
+      "dag_coupling": {
+        "manifest_hash_policy": "compact tracked snapshot plus full local review pack under ops/reports/user-mission-runs",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "runtime_script": "scripts/run_user_mission_scenario.py",
+        "status": "tracked_compact_snapshot",
+        "writes_tracked_files": false
+      },
+      "dag_snapshot": {
+        "compiled_mission_scenario_sha256": "357f68acf5e6d3cb21e3cbe4429dc25d7da08e20be94e0c1e1e4894e98472788",
+        "determinism_policy": "covered_by_artifact_determinism_validator",
+        "execution_modes": [
+          "realistic",
+          "speculative"
+        ],
+        "failure_taxonomy_status": "PASS",
+        "hashchain_status": "PASS",
+        "manifest_hash": "0fbceacedf73f50139d3b41ee40975d12d07b281ba88f30f667d07e8984353f0",
+        "mode": "dual",
+        "mode_summaries": {
+          "realistic": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "realistic",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.274482202443
+          },
+          "speculative": {
+            "core_probability": 0.34684025581,
+            "final_metrics": {
+              "p_data_intact": 0.571968726569,
+              "p_success": 0.34684025581,
+              "p_survival": 0.606397237644
+            },
+            "mode": "speculative",
+            "speculative_parameters_used": [],
+            "trust_weighted_score": 0.267962068602
+          }
+        },
+        "module_artifact_count": 12,
+        "seed": 1,
+        "status": "PASS",
+        "used_failure_ids": []
+      },
+      "external_evidence_gaps": [
+        "archive-media-aging-campaign",
+        "bit-recovery-ecc-campaign",
+        "dust-tail-measurement-upgrade",
+        "launch procurement, navigation, legal, and operations review",
+        "radiation-transport-campaign",
+        "radiation/material transport and archive bit recovery",
+        "stack-level ballistic-limit and material qualification",
+        "target-specific line-of-sight dust and gas model"
+      ],
+      "factor_budget": [
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "launch procurement, navigation, and target acquisition authority",
+          "factor_id": "target_delivery",
+          "label": "Target delivery and navigation",
+          "source_ref": "mission_feasibility_screen.target_velocity_time",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "target-specific line-of-sight dust, gas, radiation, and black-hole environment model",
+          "factor_id": "environment_path",
+          "label": "Whole-path environment survival",
+          "source_ref": "mission_feasibility_screen.dust_gas_black_hole_screens",
+          "status": "external_required",
+          "value_p50": null
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "capsule_survival",
+          "label": "Capsule survival",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 0.0
+        },
+        {
+          "evidence_class": "capsule_risk_budget_reduced_order",
+          "external_evidence_gap": null,
+          "factor_id": "data_integrity",
+          "label": "Archive data integrity",
+          "source_ref": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+          "status": "repo_estimated_review_proxy",
+          "value_p50": 2.37e-10
+        },
+        {
+          "evidence_class": "not_repo_closed",
+          "external_evidence_gap": "arrival discovery, retrieval, power-up, and media readout evidence",
+          "factor_id": "recovery_readout",
+          "label": "Arrival recovery and readout",
+          "source_ref": null,
+          "status": "external_required",
+          "value_p50": null
+        }
+      ],
+      "flight_years": 129910065.133333,
+      "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+      "full_mission_probability": {
+        "blocking_open_factors": [
+          "target_delivery",
+          "environment_path",
+          "recovery_readout"
+        ],
+        "p05": null,
+        "p50": null,
+        "p95": null,
+        "status": "not_closed_external_factors_open"
+      },
+      "non_certification_notice": true,
+      "open_external_factor_count": 3,
+      "risk_budget_snapshot": {
+        "failure_mode_contributions": [
+          {
+            "mode": "structure_loss",
+            "share": 0.235054844
+          },
+          {
+            "mode": "media_loss",
+            "share": 0.717317263
+          },
+          {
+            "mode": "coupled_structure_media_loss",
+            "share": 0.047627893
+          }
+        ],
+        "loss_probability": 1.0,
+        "margin": -0.5,
+        "status": "over_budget",
+        "top_uncertainty_drivers": [
+          {
+            "contribution": 0.325269558,
+            "driver": "material_degradation",
+            "sensitivity": -0.325269558
+          },
+          {
+            "contribution": 0.294767524,
+            "driver": "media_margin",
+            "sensitivity": -0.294767524
+          },
+          {
+            "contribution": 0.209347425,
+            "driver": "dust",
+            "sensitivity": -0.209347425
+          },
+          {
+            "contribution": 0.095591838,
+            "driver": "radiation",
+            "sensitivity": -0.095591838
+          },
+          {
+            "contribution": 0.074828646,
+            "driver": "plasma",
+            "sensitivity": -0.074828646
+          }
+        ]
+      },
+      "run_id": "umr-sgr-a-rounded-stress-60-499f022fae",
+      "selection_hash": "499f022fae3615707db918b1de46619c74d0f3a3e265baebd7319f1b0329f8d0",
+      "source_refs": {
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+        "feasibility_row_id": "feas-sgr-a-rounded-stress-60",
+        "mission_dag_scenario": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "mission_feasibility_screen": "artifacts/mission_feasibility_screen.v1.json",
+        "user_mission_run_catalog": "artifacts/user_mission_run_catalog.v1.json"
+      },
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s",
+      "verdict": "review_required"
+    }
+  ],
+  "default_coupling_id": "mpc-reference-black-hole-conditional-45-3615a2ddec",
+  "default_run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+  "factor_policy": {
+    "closed_proxy_policy": "closed_capsule_data_probability is reportable only as a review proxy",
+    "external_factor_count_per_row": 3,
+    "full_mission_probability_status": "not_closed_external_factors_open",
+    "repo_estimated_factor_count_per_row": 2
+  },
+  "formula": "P_archive_recoverable = P_target_delivery * P_environment_survival * P_capsule_survival * P_data_integrity * P_recovery_readout",
+  "generator": "scripts/build_mission_probability_coupling_artifact.py",
+  "interpretation_limits": [
+    "Full mission probability is intentionally not closed while target delivery and recovery factors lack evidence.",
+    "Closed capsule/data probability is a review proxy, not P_archive_recoverable.",
+    "DAG coupling is available through local review packs; browser surfaces render tracked artifact values only."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "factorized_mission_probability_coupling",
+  "rollup": {
+    "blocked_claims": [
+      "full mission probability closed",
+      "mission feasible",
+      "flight ready",
+      "guaranteed arrival or archive recovery"
+    ],
+    "open_external_factor_total": 45,
+    "rows_with_full_mission_probability_closed": 0,
+    "rows_with_review_proxy": 15
+  },
+  "schema_version": "mission_probability_coupling.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/user_mission_run_catalog.v1.json",
+      "sha256": "1c51106149ad5f12008558a2f13ee59af52bc7068d9f0140163c8289b6e8b732"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "artifacts/mission_feasibility_screen.v1.json",
+      "sha256": "bad50fe37b0fcceecbc01ed66b34dc9f56d7152e5a06656f0001b103dea3cdc5"
+    },
+    {
+      "path": "artifacts/p_success_defensibility.json",
+      "sha256": "f783053f4c27599c23c21a79565075819e2da6c49dc2cc53bc172050685031c8"
+    },
+    {
+      "path": "artifacts/objective_score_baseline.v1.json",
+      "sha256": "8ee5254e113a1c9fa96709d68efc0a705e6d14f28cb4b6a8989f0cffceef8c89"
+    },
+    {
+      "path": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+      "sha256": "5063d979940a7bd2d91fc2bebeba5f25b0e1314b2e1172d629fddcf65aea1859"
+    },
+    {
+      "path": "mission/dag/registry/module_registry.v1.json",
+      "sha256": "02c7a51185c496167146e5bef6438f50d231ade4bb38bc234ede3dda9d63d362"
+    },
+    {
+      "path": "mission/dag/registry/failure_taxonomy.v1.json",
+      "sha256": "ef390445b39d6e66a5690cfdc3b67bcb4c67e965dd0c8c51ea58e558d052ec78"
+    },
+    {
+      "path": "mission/BASELINE_SCENARIO_v1.json",
+      "sha256": "2e6126d1628a29dbab15a9b51c577e222176c7775c629913760c7817a34b6cbc"
+    }
+  ]
+}

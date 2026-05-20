@@ -1,0 +1,206 @@
+{
+  "accepted_record_count": 0,
+  "accepted_records": [],
+  "blocked_claims": [
+    "external validation completed",
+    "third-party validated",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "qualified",
+    "certified",
+    "flight-ready",
+    "source correctness proven"
+  ],
+  "determinism_signature": "aef60afc1541e527ee0aeb5526a0819db4099b1a9df6418c5467df01506a8a5a",
+  "external_evidence_gaps": [
+    "first accepted independent reproduction record",
+    "independent backend comparison record",
+    "capsule lab qualification records",
+    "public immutable report URIs or signed attestations"
+  ],
+  "external_records_dir": "evidence/external_records",
+  "generator": "scripts/build_external_evidence_intake_artifact.py",
+  "intake_status": "external_record_intake_ready_awaiting_external_submission",
+  "interpretation_limits": [
+    "An accepted record is evidence intake, not automatic claim promotion.",
+    "Self-signed repository-native records are rejected.",
+    "Certification, qualification, and flight-readiness remain blocked in v1."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "external_evidence_record_intake",
+  "record_count": 0,
+  "record_schema_ref": "mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+  "record_templates": [
+    {
+      "attestation": {
+        "attestation_kind": "third_party_signed_report",
+        "signature_or_report_uri": ""
+      },
+      "claim_effect": {
+        "certification_go": false,
+        "external_validation_completed": false,
+        "flight_readiness_go": false,
+        "independent_backend_validated": false,
+        "independent_reproduction_completed": false,
+        "qualification_complete": false
+      },
+      "record_id": "external-independent_reproduction-independent-backend-comparison",
+      "record_type": "independent_reproduction",
+      "reproduction": {
+        "commands": [],
+        "exceptions_or_disagreements": [],
+        "output_artifacts": [],
+        "raw_outputs_or_report_uri": "",
+        "reviewed_commit_sha": ""
+      },
+      "review_case_id": "independent-backend-comparison",
+      "reviewer": {
+        "conflict_of_interest_statement": "",
+        "name_or_handle": "",
+        "organization": "",
+        "reviewer_kind": "independent_third_party"
+      },
+      "schema_version": "external_evidence_record.v1"
+    },
+    {
+      "attestation": {
+        "attestation_kind": "third_party_signed_report",
+        "signature_or_report_uri": ""
+      },
+      "claim_effect": {
+        "certification_go": false,
+        "external_validation_completed": false,
+        "flight_readiness_go": false,
+        "independent_backend_validated": false,
+        "independent_reproduction_completed": false,
+        "qualification_complete": false
+      },
+      "record_id": "external-independent_physics_backend-independent-backend-comparison",
+      "record_type": "independent_physics_backend",
+      "reproduction": {
+        "commands": [],
+        "exceptions_or_disagreements": [],
+        "output_artifacts": [],
+        "raw_outputs_or_report_uri": "",
+        "reviewed_commit_sha": ""
+      },
+      "review_case_id": "independent-backend-comparison",
+      "reviewer": {
+        "conflict_of_interest_statement": "",
+        "name_or_handle": "",
+        "organization": "",
+        "reviewer_kind": "independent_third_party"
+      },
+      "schema_version": "external_evidence_record.v1"
+    },
+    {
+      "attestation": {
+        "attestation_kind": "third_party_signed_report",
+        "signature_or_report_uri": ""
+      },
+      "claim_effect": {
+        "certification_go": false,
+        "external_validation_completed": false,
+        "flight_readiness_go": false,
+        "independent_backend_validated": false,
+        "independent_reproduction_completed": false,
+        "qualification_complete": false
+      },
+      "record_id": "external-capsule_qualification-media-decay-severe-mode",
+      "record_type": "capsule_qualification",
+      "reproduction": {
+        "commands": [],
+        "exceptions_or_disagreements": [],
+        "output_artifacts": [],
+        "raw_outputs_or_report_uri": "",
+        "reviewed_commit_sha": ""
+      },
+      "review_case_id": "media-decay-severe-mode",
+      "reviewer": {
+        "conflict_of_interest_statement": "",
+        "name_or_handle": "",
+        "organization": "",
+        "reviewer_kind": "independent_third_party"
+      },
+      "schema_version": "external_evidence_record.v1"
+    }
+  ],
+  "rejected_record_count": 0,
+  "rejected_records": [],
+  "rollup": {
+    "accepted_record_count": 0,
+    "certification_go": false,
+    "external_validation_completed": false,
+    "first_real_external_record_present": false,
+    "flight_readiness_go": false,
+    "independent_backend_validated": false,
+    "independent_reproduction_completed": false,
+    "intake_contract_ready": true,
+    "qualification_complete": false,
+    "record_count": 0,
+    "record_schema_available": true,
+    "rejected_record_count": 0,
+    "self_signed_records_accepted": false
+  },
+  "schema_version": "external_evidence_intake.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/external_validation_execution_ledger.v1.json",
+      "sha256": "5187a9ef37cfe85031f6627a962fd065883c0e35cb9939cc9f91f6e69458a32a"
+    },
+    {
+      "path": "artifacts/independent_physics_backend_comparison.v1.json",
+      "sha256": "888202dc063e5b3ea5342488de51b94142ef787966c8455bb77c3291f2dbbf6d"
+    },
+    {
+      "path": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "sha256": "ee78509ea576b1ec441bb6cae6da2a042989c404aa201cd66ccd915dcc45de22"
+    },
+    {
+      "path": "mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+      "sha256": "199ceab5ed40b38cee0dcf3086be78e91679dfa74da4215f0b79076e05dfde03"
+    },
+    {
+      "path": "scripts/ci/external_evidence_record_validate.py",
+      "sha256": "938717b47a027201ec79588ebe78b66ed5f5c41c76f3b935e43f864628809816"
+    },
+    {
+      "path": "evidence/external_records/README.md",
+      "sha256": "1f738a3f3550bc2543e81a9b010b226cb5fc2b17519e893f9c13c23689550f06"
+    },
+    {
+      "path": "mission/EXTERNAL_EVIDENCE_INTAKE_SPEC_v1.md",
+      "sha256": "226220fd49aa071dd93515a90597800707c46457417e308365b8a905d821a20c"
+    },
+    {
+      "path": "mission/external_reproduction/intake.py",
+      "sha256": "0b3d7a0aeb9893a4a3c3767d07abcdeffcd78920505c29ae9d76667a7cb86495"
+    },
+    {
+      "path": "mission/external_reproduction/__init__.py",
+      "sha256": "afad659370b56909550b76d0ba4e0fada142a8e09a52c9819fb708cedc9a81d3"
+    },
+    {
+      "path": "scripts/build_external_evidence_intake_artifact.py",
+      "sha256": "e2ca193a939177994083c52547728a975ae8931b9d2606ed42bfc33d112f3981"
+    },
+    {
+      "path": "scripts/ci/external_evidence_intake_validate.py",
+      "sha256": "8696dc5ec55abf12a86b84444341a730b13c5320a61aafdc83a95662221ebb90"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ],
+  "validation_policy": {
+    "claim_promotion_requires_followup_review": true,
+    "records_do_not_directly_unlock_claims": true,
+    "reject_repository_maintainer_as_external": true,
+    "reject_self_signed_repo_native_records": true,
+    "require_external_attestation_uri": true,
+    "require_raw_outputs_or_report_uri": true
+  }
+}

@@ -1,0 +1,2927 @@
+{
+  "bh_parameters.distance_from_earth_ly": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "measured",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      },
+      {
+        "citation": "Schwarzschild geometry and relativistic constants reference set.",
+        "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+        "notes": "Primary source family for G, c, and horizon crossing definitions.",
+        "source_id": "SRC-PHYS-001",
+        "type": "paper",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 1000000.0,
+      "minimum": 0.001
+    },
+    "uncertainty_type": "interval",
+    "units": "ly",
+    "value_mode": "scalar",
+    "value_origin_type": "measured"
+  },
+  "bh_parameters.mass_kg": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "measured",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      },
+      {
+        "citation": "Schwarzschild geometry and relativistic constants reference set.",
+        "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+        "notes": "Primary source family for G, c, and horizon crossing definitions.",
+        "source_id": "SRC-PHYS-001",
+        "type": "paper",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 1e+41,
+      "minimum": 1e+30
+    },
+    "uncertainty_type": "interval",
+    "units": "kg",
+    "value_mode": "scalar",
+    "value_origin_type": "measured"
+  },
+  "bh_parameters.max_dust_flux_scale": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "measured",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      },
+      {
+        "citation": "Schwarzschild geometry and relativistic constants reference set.",
+        "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+        "notes": "Primary source family for G, c, and horizon crossing definitions.",
+        "source_id": "SRC-PHYS-001",
+        "type": "paper",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 100.0,
+      "minimum": 0.01
+    },
+    "uncertainty_type": "interval",
+    "units": "scale",
+    "value_mode": "scalar",
+    "value_origin_type": "measured"
+  },
+  "bh_parameters.max_plasma_density_proxy_m3": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "measured",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      },
+      {
+        "citation": "Schwarzschild geometry and relativistic constants reference set.",
+        "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+        "notes": "Primary source family for G, c, and horizon crossing definitions.",
+        "source_id": "SRC-PHYS-001",
+        "type": "paper",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 1e+20,
+      "minimum": 1.0
+    },
+    "uncertainty_type": "interval",
+    "units": "1/m^3",
+    "value_mode": "scalar",
+    "value_origin_type": "measured"
+  },
+  "bh_parameters.max_radiative_flux_w_m2": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "measured",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      },
+      {
+        "citation": "Schwarzschild geometry and relativistic constants reference set.",
+        "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+        "notes": "Primary source family for G, c, and horizon crossing definitions.",
+        "source_id": "SRC-PHYS-001",
+        "type": "paper",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 1000000000.0,
+      "minimum": 100.0
+    },
+    "uncertainty_type": "interval",
+    "units": "W/m^2",
+    "value_mode": "scalar",
+    "value_origin_type": "measured"
+  },
+  "bh_parameters.periapsis_distance_m": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "measured",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      },
+      {
+        "citation": "Schwarzschild geometry and relativistic constants reference set.",
+        "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+        "notes": "Primary source family for G, c, and horizon crossing definitions.",
+        "source_id": "SRC-PHYS-001",
+        "type": "paper",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.8,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-MISSION-002",
+      "SRC-PHYS-001"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 1000000000000000.0,
+      "minimum": 1.0
+    },
+    "uncertainty_type": "interval",
+    "units": "m",
+    "value_mode": "scalar",
+    "value_origin_type": "measured"
+  },
+  "capsule_model.data_media_survival_margin": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success"
+    ],
+    "justification": "Assumption-bounded media integrity prior used by the reduced-order archive survivability model; no public direct persistence fraction was found for this exact numeric value.",
+    "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 0.98,
+      "minimum": 0.4
+    },
+    "uncertainty_type": "interval",
+    "units": "fraction",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "capsule_model.frontal_area_m2": {
+    "affects_core_probability": false,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "success_metrics.mission_validation",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-CAPSULE-008"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Willcockson, Bill. Genesis Sample Return Capsule Overview. Lockheed Martin / JPL overview, August 25, 2004.",
+        "claim_scope": "Genesis-class capsule heritage mass and diameter used as the v1 geometry/mass proxy.",
+        "notes": "Provides Entry Mass = 206 kg and Diameter = 1.52 m for the Genesis SRC.",
+        "source_id": "SRC-CAPSULE-008",
+        "type": "paper",
+        "url": "https://ntrs.nasa.gov/citations/20070014646"
+      }
+    ],
+    "failure_surface": [],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.mission_validation"
+    ],
+    "justification": "Genesis-class frontal reference area proxy derived from the reported 1.52 m heritage diameter and retained with an explicit assumption tag because this repository does not claim a bespoke capsule geometry closure.",
+    "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-CAPSULE-008"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 20.0,
+      "minimum": 0.01
+    },
+    "uncertainty_type": "interval",
+    "units": "m^2",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "capsule_model.mass_kg": {
+    "affects_core_probability": false,
+    "category": "safe",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "success_metrics.mission_validation",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-CAPSULE-008"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Willcockson, Bill. Genesis Sample Return Capsule Overview. Lockheed Martin / JPL overview, August 25, 2004.",
+        "claim_scope": "Genesis-class capsule heritage mass and diameter used as the v1 geometry/mass proxy.",
+        "notes": "Provides Entry Mass = 206 kg and Diameter = 1.52 m for the Genesis SRC.",
+        "source_id": "SRC-CAPSULE-008",
+        "type": "paper",
+        "url": "https://ntrs.nasa.gov/citations/20070014646"
+      }
+    ],
+    "failure_surface": [],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.mission_validation"
+    ],
+    "justification": "Genesis-class entry-mass proxy anchored to the published Genesis SRC overview and kept assumption-tagged because v1 does not present a bespoke capsule mass closure.",
+    "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-CAPSULE-008"
+    ],
+    "trust_grade": "B",
+    "uncertainty_spec": {
+      "maximum": 1000.0,
+      "minimum": 50.0
+    },
+    "uncertainty_type": "interval",
+    "units": "kg",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "capsule_model.material_degradation_mu_1_per_year": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-CAPSULE-009"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Finckenor, Miria. Optical Property Measurements on the Stardust Sample Return Capsule. June 25, 2007.",
+        "claim_scope": "Qualitative post-flight durability precedent for sample-return capsule materials after a multi-year mission.",
+        "notes": "Useful as qualitative survivability precedent only; it does not provide a direct deep-time degradation rate.",
+        "source_id": "SRC-CAPSULE-009",
+        "type": "paper",
+        "url": "https://ntrs.nasa.gov/citations/20070031961"
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ],
+    "justification": "Bounded degradation prior informed qualitatively by returned-sample-capsule material durability precedent, but still treated as an assumption-constrained rate rather than a direct long-horizon measurement.",
+    "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-CAPSULE-009"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "bounds": [
+        0.0001,
+        0.0004
+      ],
+      "distribution": "unspecified",
+      "params": {}
+    },
+    "uncertainty_type": "distribution",
+    "units": "1/year",
+    "value_mode": "distribution",
+    "value_origin_type": "assumed"
+  },
+  "capsule_model.shield_areal_density_kg_m2": {
+    "affects_core_probability": false,
+    "category": "advanced",
+    "classification": "design_choice",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.mission_validation"
+    ],
+    "justification": "v1 shield areal density remains a design-choice sizing prior pending a public stack-level mass closure and ballistic-limit calibration set.",
+    "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 500.0,
+      "minimum": 0.1
+    },
+    "uncertainty_type": "interval",
+    "units": "kg/m^2",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.actuator_efficiency": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1.0,
+      "minimum": 0.01
+    },
+    "uncertainty_type": "interval",
+    "units": "fraction",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.delta_v_budget_mps": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 20000.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "m/s",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.end_year": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 100000.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "year",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.execution_sigma_fraction": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "distribution": "unspecified",
+      "params": {}
+    },
+    "uncertainty_type": "distribution",
+    "units": "fraction",
+    "value_mode": "distribution",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.guidance_sigma_rad": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 0.1,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "rad",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.max_duration_years": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 2000.0,
+      "minimum": 1.0
+    },
+    "uncertainty_type": "interval",
+    "units": "year",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.power_available_w": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1000000.0,
+      "minimum": 1.0
+    },
+    "uncertainty_type": "interval",
+    "units": "W",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.specific_impulse_s": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 20000.0,
+      "minimum": 1.0
+    },
+    "uncertainty_type": "interval",
+    "units": "s",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "correction_window.start_year": {
+    "affects_core_probability": true,
+    "category": "safe",
+    "classification": "assumed",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 100000.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "year",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "environment_model.accretion_luminosity_fraction": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_data_intact",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_survival",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Environment proxy variability ranges for dust/radiation/plasma surrogates.",
+        "claim_scope": "Environment model and uncertainty distributions.",
+        "notes": "Proxy data ranges, not full plasma transport simulation.",
+        "source_id": "SRC-ENV-003",
+        "type": "dataset",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "fraction",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "environment_model.dust_flux_scale": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_data_intact",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_survival",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Environment proxy variability ranges for dust/radiation/plasma surrogates.",
+        "claim_scope": "Environment model and uncertainty distributions.",
+        "notes": "Proxy data ranges, not full plasma transport simulation.",
+        "source_id": "SRC-ENV-003",
+        "type": "dataset",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "bounds": [
+        0.0,
+        1000.0
+      ],
+      "distribution": "unspecified",
+      "params": {}
+    },
+    "uncertainty_type": "distribution",
+    "units": "scale",
+    "value_mode": "distribution",
+    "value_origin_type": "computed"
+  },
+  "environment_model.non_physical_safety_multiplier": {
+    "affects_core_probability": true,
+    "category": "non_physical",
+    "classification": "design_choice",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "speculative",
+    "evidence_source_ids": [
+      "SRC-SPEC-007"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Speculative/non-physical exploration controls for sensitivity studies.",
+        "claim_scope": "Non-physical parameters marked speculative by contract.",
+        "notes": "Must remain isolated from realistic reporting.",
+        "source_id": "SRC-SPEC-007",
+        "type": "assumption",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "speculative",
+    "source_ids": [
+      "SRC-SPEC-007"
+    ],
+    "trust_grade": "D",
+    "uncertainty_spec": {
+      "maximum": 10.0,
+      "minimum": 0.1
+    },
+    "uncertainty_type": "interval",
+    "units": "scale",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "environment_model.plasma_density_proxy_m3": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_data_intact",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_survival",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Environment proxy variability ranges for dust/radiation/plasma surrogates.",
+        "claim_scope": "Environment model and uncertainty distributions.",
+        "notes": "Proxy data ranges, not full plasma transport simulation.",
+        "source_id": "SRC-ENV-003",
+        "type": "dataset",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1e+24,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "1/m^3",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "environment_model.radiative_flux_w_m2": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_data_intact",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_survival",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Environment proxy variability ranges for dust/radiation/plasma surrogates.",
+        "claim_scope": "Environment model and uncertainty distributions.",
+        "notes": "Proxy data ranges, not full plasma transport simulation.",
+        "source_id": "SRC-ENV-003",
+        "type": "dataset",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-ENV-003"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1000000000000.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "W/m^2",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "success_threshold": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "design_choice",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "fraction",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  },
+  "trajectory_model.initial_state_sigma_m": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_hit",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 1000000000.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "m",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "trajectory_model.integration_step_s": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_hit",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 31536000.0,
+      "minimum": 1.0
+    },
+    "uncertainty_type": "interval",
+    "units": "s",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "trajectory_model.nav_position_sigma_m": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_hit",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "bounds": [
+        0.0,
+        1000000000.0
+      ],
+      "distribution": "unspecified",
+      "params": {}
+    },
+    "uncertainty_type": "distribution",
+    "units": "m",
+    "value_mode": "distribution",
+    "value_origin_type": "computed"
+  },
+  "trajectory_model.nav_velocity_sigma_mps": {
+    "affects_core_probability": true,
+    "category": "advanced",
+    "classification": "estimated",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [
+      {
+        "ref": "module.control.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.data.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.env.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.shield.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.thermal.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "module.traj.baseline.v1",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_hit",
+        "type": "module_output"
+      },
+      {
+        "ref": "success_metrics.p_success",
+        "type": "module_output"
+      }
+    ],
+    "domain": "realistic",
+    "evidence_source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Assumption register for bounded engineering constants and heuristics.",
+        "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+        "notes": "Every assumption-tagged value is explicit in trust grading.",
+        "source_id": "SRC-ASSUME-005",
+        "type": "assumption",
+        "url": null
+      },
+      {
+        "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+        "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+        "notes": "Project engineering envelope used for deterministic baseline.",
+        "source_id": "SRC-MISSION-002",
+        "type": "report",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.65,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "realistic",
+    "source_ids": [
+      "SRC-ASSUME-005",
+      "SRC-MISSION-002"
+    ],
+    "trust_grade": "C",
+    "uncertainty_spec": {
+      "maximum": 100000.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "m/s",
+    "value_mode": "scalar",
+    "value_origin_type": "computed"
+  },
+  "trajectory_model.non_physical_capture_bias": {
+    "affects_core_probability": true,
+    "category": "non_physical",
+    "classification": "design_choice",
+    "defensibility_errors": [],
+    "defensibility_status": "PASS",
+    "derivation_chain": [],
+    "domain": "speculative",
+    "evidence_source_ids": [
+      "SRC-SPEC-007"
+    ],
+    "evidence_sources": [
+      {
+        "citation": "Speculative/non-physical exploration controls for sensitivity studies.",
+        "claim_scope": "Non-physical parameters marked speculative by contract.",
+        "notes": "Must remain isolated from realistic reporting.",
+        "source_id": "SRC-SPEC-007",
+        "type": "assumption",
+        "url": null
+      }
+    ],
+    "failure_surface": [
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "CONTROL_AUTHORITY_COLLAPSE"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DATA_CORRUPTION_RADIATION"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "DUST_PENETRATION_MM_TAIL"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "MISS_DISTANCE_EXCEEDS_R_INT"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "OD_UNCERTAINTY_COLLAPSE"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      },
+      {
+        "confidence": 0.4,
+        "dominant_driver_method": "OAT",
+        "failure_mode": "TPS_FAIL_DELAMINATION"
+      }
+    ],
+    "has_uncertainty": true,
+    "influence_path": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ],
+    "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+    "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+    "mode": "speculative",
+    "source_ids": [
+      "SRC-SPEC-007"
+    ],
+    "trust_grade": "D",
+    "uncertainty_spec": {
+      "maximum": 1.0,
+      "minimum": 0.0
+    },
+    "uncertainty_type": "interval",
+    "units": "fraction",
+    "value_mode": "scalar",
+    "value_origin_type": "assumed"
+  }
+}

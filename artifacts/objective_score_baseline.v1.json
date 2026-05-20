@@ -1,0 +1,124 @@
+{
+  "constraints_status": {
+    "realistic": [
+      {
+        "details": {
+          "domain_guard_status": "PASS",
+          "realistic_mode_verified": true
+        },
+        "id": "no_D_grade_influence",
+        "status": "PASS"
+      },
+      {
+        "details": {
+          "evidence_completeness_ratio": 1.0,
+          "evidence_validate_status": "PASS",
+          "missing_evidence_count": 0,
+          "realistic_D_violations": 0
+        },
+        "id": "evidence_completeness_1.0",
+        "status": "PASS"
+      }
+    ]
+  },
+  "contract_ref": "mission/objectives/objective_contract.v1.json",
+  "contract_snapshot": {
+    "definitions": {
+      "p_success": {
+        "source": "artifacts/p_success_defensibility.json"
+      },
+      "risk_envelope": {
+        "method": "lower_quantile",
+        "quantile": 0.05,
+        "source": "mission/objectives/risk_envelope.v1.json"
+      }
+    },
+    "engine_commit": "AUTO",
+    "modes": [
+      "realistic",
+      "speculative"
+    ],
+    "objective_sets": {
+      "realistic": {
+        "aggregation": {
+          "dimensions": [
+            "p_success",
+            "risk_envelope"
+          ],
+          "type": "pareto"
+        },
+        "constraints": [
+          {
+            "enforced_by": "scripts/ci/parameter_domain_guard.py",
+            "id": "no_D_grade_influence",
+            "type": "hard"
+          },
+          {
+            "enforced_by": "scripts/ci/parameter_evidence_validate.py",
+            "id": "evidence_completeness_1.0",
+            "type": "hard"
+          }
+        ],
+        "primary": {
+          "maximize": true,
+          "metric": "p_success"
+        },
+        "secondary": [
+          {
+            "maximize": false,
+            "metric": "risk_envelope"
+          }
+        ]
+      },
+      "speculative": {
+        "aggregation": {
+          "order": [
+            "p_success"
+          ],
+          "type": "lexicographic"
+        },
+        "primary": {
+          "maximize": true,
+          "metric": "p_success"
+        },
+        "secondary": []
+      }
+    },
+    "schema_version": "objective_contract.v1"
+  },
+  "defensibility": {
+    "p_success_ref": "artifacts/p_success_defensibility.json"
+  },
+  "determinism_signature": "9ef35f1adc703f004ccf36461f4b400b3822806633825459c9f43985d6e862e1",
+  "engine": {
+    "commit_sha": "HEAD",
+    "mode": "dual",
+    "scenario_ref": "mission/BASELINE_SCENARIO_v1.json",
+    "seed": "baseline-mission-v1"
+  },
+  "schema_version": "objective_score.v1",
+  "scores": {
+    "realistic": {
+      "objective_vector": [
+        0.34684025581,
+        0.662424580631
+      ],
+      "p_success": 0.34684025581,
+      "rank_key": "pareto",
+      "risk_envelope": 0.662424580631,
+      "risk_meta": {
+        "distribution_size": 64,
+        "method": "lower_quantile",
+        "q_value": 0.337575419369,
+        "quantile": 0.05
+      }
+    },
+    "speculative": {
+      "objective_vector": [
+        0.34684025581
+      ],
+      "p_success": 0.34684025581,
+      "rank_key": "lexicographic"
+    }
+  }
+}

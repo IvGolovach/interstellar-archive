@@ -1,0 +1,135 @@
+{
+  "dominant_drivers": {
+    "confidence": 0.72,
+    "method": "OAT",
+    "top3": [
+      {
+        "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.data_media_survival_margin",
+        "parameter_id": "capsule_model.data_media_survival_margin",
+        "reason": "Stage-specific attribution: reduced-order p_data_intact depends directly on media survivability margin."
+      },
+      {
+        "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.material_degradation_mu_1_per_year",
+        "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+        "reason": "Stage-specific attribution: reduced-order p_data_intact is penalized by the degradation-rate prior over mission horizon."
+      },
+      {
+        "evidence_ref": "artifacts/parameter_evidence_index.json#environment_model.radiative_flux_w_m2",
+        "parameter_id": "environment_model.radiative_flux_w_m2",
+        "reason": "Stage-specific attribution: radiative loading remains an explicit data-integrity stress term."
+      }
+    ]
+  },
+  "engine": {
+    "commit_sha": "HEAD",
+    "determinism_signature": "21707be29bae0fa2fe242629a9a872a239076ef606a842c755de8122ae768676",
+    "mode": "realistic",
+    "scenario_ref": "mission/BASELINE_SCENARIO_v1.json",
+    "seed": 1
+  },
+  "module_events": [
+    {
+      "dominant_driver_parameter_ids": [],
+      "failure_mode": "NONE",
+      "failure_stage": "NONE",
+      "failure_status": "PASS",
+      "module_id": "traj.baseline.v1",
+      "module_type": "TrajectoryModule",
+      "node_id": "traj",
+      "notes": "Trajectory wrapper remained inside baseline uncertainty envelope.",
+      "outputs_hash": "6e002f368553d0e290b9bcc57ee945adc33675e07e1bd4eabf5ef630f1e49ddb"
+    },
+    {
+      "dominant_driver_parameter_ids": [],
+      "failure_mode": "NONE",
+      "failure_stage": "NONE",
+      "failure_status": "PASS",
+      "module_id": "control.baseline.v1",
+      "module_type": "ControlWindowModule",
+      "node_id": "control",
+      "notes": "Control-window proxy remains within configured bounds.",
+      "outputs_hash": "8ac64624f0948bc06e55dbd48ee7328b40d7a0543df0114fa15f0e51be15db46"
+    },
+    {
+      "dominant_driver_parameter_ids": [],
+      "failure_mode": "NONE",
+      "failure_stage": "NONE",
+      "failure_status": "PASS",
+      "module_id": "env.baseline.v1",
+      "module_type": "EnvironmentModule",
+      "node_id": "env",
+      "notes": "Environment proxy remained under configured admissibility thresholds.",
+      "outputs_hash": "0efdbe17b09d3df2579fa457a97faa655a5b31f8f25cec8b56f2d36b0ae51731"
+    },
+    {
+      "dominant_driver_parameter_ids": [],
+      "failure_mode": "NONE",
+      "failure_stage": "NONE",
+      "failure_status": "PASS",
+      "module_id": "thermal.baseline.v1",
+      "module_type": "ThermalModule",
+      "node_id": "thermal",
+      "notes": "Thermal proxy remained below configured limit.",
+      "outputs_hash": "655d815d2863b4b502e84855166d959059cd7d9f7fdcfe5e5dfeaa7ddcbd56f6"
+    },
+    {
+      "dominant_driver_parameter_ids": [],
+      "failure_mode": "NONE",
+      "failure_stage": "NONE",
+      "failure_status": "PASS",
+      "module_id": "shield.baseline.v1",
+      "module_type": "ShieldingModule",
+      "node_id": "shield",
+      "notes": "Shielding proxy remained within configured baseline envelope.",
+      "outputs_hash": "a8f586b0a4771528896080f557300859f43dfccc115db75f469d9d7de752574c"
+    },
+    {
+      "dominant_driver_parameter_ids": [],
+      "failure_mode": "NONE",
+      "failure_stage": "NONE",
+      "failure_status": "PASS",
+      "module_id": "data.baseline.v1",
+      "module_type": "DataIntegrityModule",
+      "node_id": "data",
+      "notes": "Data integrity proxy remained above v1 threshold.",
+      "outputs_hash": "dda88a2e9d22f601791994eba26791c2e6306397bafd52af9daf493b159e808e"
+    }
+  ],
+  "outcome": {
+    "failure_mode": "DATA_CORRUPTION_RADIATION",
+    "failure_stage": "S3",
+    "outcome_class": "FAIL",
+    "p_success": 0.34684025581
+  },
+  "schema_version": "failure_surface.v1",
+  "timeline": [
+    {
+      "stage": "S0",
+      "status": "PASS",
+      "summary": "Stage modules passed: env."
+    },
+    {
+      "stage": "S1",
+      "status": "PASS",
+      "summary": "Stage modules passed: control, traj."
+    },
+    {
+      "stage": "S2",
+      "status": "PASS",
+      "summary": "Stage modules passed: shield, thermal."
+    },
+    {
+      "stage": "S3",
+      "status": "FAIL",
+      "summary": "Threshold-derived failure attribution: DATA_CORRUPTION_RADIATION (success threshold not met)."
+    }
+  ],
+  "what_changed_vs_baseline": {
+    "drivers_added": [],
+    "drivers_removed": [],
+    "failure_mode_changed": false,
+    "failure_stage_changed": false,
+    "p_success_delta": 0.0,
+    "reference": "baseline_self"
+  }
+}

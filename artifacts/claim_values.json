@@ -1,0 +1,41 @@
+{
+  "C-001": {
+    "r_s_km": 29.533393820668785
+  },
+  "C-002": {
+    "flux_0p05_au_mw_m2": 0.5443999999999999,
+    "flux_0p10_au_mw_m2": 0.13609999999999997
+  },
+  "C-003": {
+    "vinf_baseline_max_km_s": 33.75277154742258,
+    "vinf_baseline_min_km_s": 23.169047563429448
+  },
+  "C-004": {
+    "vinf_conditional_max_km_s": 45.31548253365513,
+    "vinf_conditional_min_km_s": 35.22557359803647
+  },
+  "C-005": {
+    "delta_v_1000_au_max_m_s": 0.4561300214371344,
+    "delta_v_1000_au_min_m_s": 0.23313312206786868,
+    "delta_v_100_au_max_m_s": 0.04561300214371344,
+    "delta_v_100_au_min_m_s": 0.023313312206786868
+  },
+  "C-006": {
+    "tof_baseline_max_myr": 20.333749325217394,
+    "tof_baseline_min_myr": 13.755183367058823,
+    "tof_conditional_max_myr": 13.362178128,
+    "tof_conditional_min_myr": 10.392805210666666
+  },
+  "C-007": {
+    "rtg_fraction_1000y": 0.00036940511110985917,
+    "rtg_fraction_10y": 0.9240065057220844,
+    "rtg_fraction_50y": 0.6735582268810038,
+    "rtg_fraction_half_life": 0.5
+  },
+  "C-008": {},
+  "C-009": {
+    "archive_cost_anchor_usd": 100000000.0,
+    "cost_anchor_ratio": 10.0,
+    "flagship_cost_anchor_usd": 1000000000.0
+  }
+}

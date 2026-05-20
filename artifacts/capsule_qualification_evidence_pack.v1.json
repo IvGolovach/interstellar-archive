@@ -1,0 +1,561 @@
+{
+  "blocked_claims": [
+    "external validation completed",
+    "third-party validated",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "qualified",
+    "certified",
+    "flight-ready",
+    "source correctness proven",
+    "trust grades upgraded automatically"
+  ],
+  "capsule_design": {
+    "description": "Deterministic v1 capsule stack for survivability lab studies. Values are bounded engineering assumptions, not a flight-qualified design.",
+    "design_id": "interstellar_archive_capsule_v1",
+    "governance": {
+      "assumption_level": "v1_bounded_design_allocation",
+      "deterministic": true,
+      "network_access_required": false,
+      "used_by_probability_engine": false
+    },
+    "schema_version": "capsule_design.v1"
+  },
+  "determinism_signature": "89a5753a18ac72ab54b34edab1c418738442c3be5baafda123bafd89241aa9e5",
+  "external_evidence_gaps": [
+    "stack-level ballistic limit tests",
+    "radiation and plasma transport qualification",
+    "accelerated archive-media aging tests",
+    "bit recovery and ECC readout tests",
+    "independent review of targetability and operations assumptions"
+  ],
+  "failure_modes": [
+    {
+      "description": "Reduced-order dust-tail pressure derived from source-backed environment proxies and shield assumptions.",
+      "evidence_class": "proxy",
+      "id": "dust_impact_pressure",
+      "label": "Dust and large-particle impact pressure",
+      "model_status": "partially_modeled"
+    },
+    {
+      "description": "Dose stress hook over archive media and materials; not full radiation transport.",
+      "evidence_class": "proxy",
+      "id": "radiation_dose_pressure",
+      "label": "Radiation dose pressure",
+      "model_status": "partially_modeled"
+    },
+    {
+      "description": "Plasma density and charging stress are sampled as proxy drivers, not as validated multiphysics transport.",
+      "evidence_class": "proxy",
+      "id": "plasma_charging_pressure",
+      "label": "Plasma and charging pressure",
+      "model_status": "partially_modeled"
+    },
+    {
+      "description": "Long-horizon material persistence is represented by bounded priors pending qualification evidence.",
+      "evidence_class": "assumption_bound",
+      "id": "material_degradation_pressure",
+      "label": "Deep-time material degradation",
+      "model_status": "partially_modeled"
+    },
+    {
+      "description": "Media-retention margin and redundancy are sampled, but bit-level recoverability is not proven.",
+      "evidence_class": "assumption_bound",
+      "id": "media_integrity_loss",
+      "label": "Archive media integrity loss",
+      "model_status": "partially_modeled"
+    },
+    {
+      "description": "Rows expose selected target and flight horizon so reviewers can reject hidden defaults.",
+      "evidence_class": "mixed",
+      "id": "target_horizon_mismatch",
+      "label": "Target and horizon mismatch",
+      "model_status": "modeled_contract"
+    },
+    {
+      "description": "Radiation, plasma, thermal, and material coupling remain outside the v1 artifact.",
+      "evidence_class": "external_required",
+      "id": "full_multiphysics_transport",
+      "label": "Full multiphysics transport",
+      "model_status": "unmodeled"
+    },
+    {
+      "description": "The artifact has no coupon or stack test data over the full velocity and angle envelope.",
+      "evidence_class": "external_required",
+      "id": "stack_ballistic_limit_validation",
+      "label": "Stack-level ballistic-limit validation",
+      "model_status": "unmodeled"
+    },
+    {
+      "description": "ECC, physical media readout, and post-arrival decoding are not empirically validated here.",
+      "evidence_class": "external_required",
+      "id": "bit_recovery_validation",
+      "label": "Bit-level archive recovery validation",
+      "model_status": "unmodeled"
+    },
+    {
+      "description": "Launch provider, legal, regulatory, navigation, telemetry, and operations readiness are out of scope.",
+      "evidence_class": "external_required",
+      "id": "launch_and_operations_readiness",
+      "label": "Launch and operations readiness",
+      "model_status": "unmodeled"
+    }
+  ],
+  "generator": "scripts/build_capsule_qualification_evidence_pack_artifact.py",
+  "interpretation_limits": [
+    "The material stack is a design allocation, not tested hardware.",
+    "Mass closure is arithmetic only and does not imply qualification.",
+    "All qualification tests remain external_required until raw records are attached."
+  ],
+  "lab_record_count": 0,
+  "lab_records": [],
+  "layer_count": 7,
+  "mass_closure": {
+    "absolute_delta_kg": 0.0,
+    "closure_rule": "sum(layers.mass_kg) must equal configured_capsule_mass_kg within declared_margin_kg",
+    "component_mass_kg": 206.0,
+    "configured_capsule_mass_kg": 206.0,
+    "declared_margin_kg": 0.25,
+    "within_declared_margin": true
+  },
+  "material_count": 7,
+  "material_stack": [
+    {
+      "bounds": {
+        "mass_kg": [
+          35.0,
+          55.0
+        ],
+        "thickness_m": [
+          0.01,
+          0.035
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "c_c_sic_tps",
+      "mass_kg": 46.0,
+      "material_class": "thermal_protection",
+      "material_id": "c_c_sic",
+      "material_name": "C/C-SiC TPS",
+      "radial_order": 1,
+      "role": "front thermal protection system",
+      "stand_off_gap_m": null,
+      "thickness_m": 0.024
+    },
+    {
+      "bounds": {
+        "mass_kg": [
+          15.0,
+          35.0
+        ],
+        "thickness_m": [
+          0.003,
+          0.012
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "al_li_bumper",
+      "mass_kg": 24.0,
+      "material_class": "whipple_bumper",
+      "material_id": "al_li",
+      "material_name": "Al-Li alloy bumper",
+      "radial_order": 2,
+      "role": "sacrificial particle bumper",
+      "stand_off_gap_m": null,
+      "thickness_m": 0.007
+    },
+    {
+      "bounds": {
+        "mass_kg": [
+          0.0,
+          0.0
+        ],
+        "stand_off_gap_m": [
+          0.15,
+          0.45
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "stand_off_gap",
+      "mass_kg": 0.0,
+      "material_class": "geometry",
+      "material_id": "stand_off_gap",
+      "material_name": "Open stand-off gap",
+      "radial_order": 3,
+      "role": "fragment cloud expansion gap",
+      "stand_off_gap_m": 0.25,
+      "thickness_m": null
+    },
+    {
+      "bounds": {
+        "mass_kg": [
+          25.0,
+          50.0
+        ],
+        "thickness_m": [
+          0.006,
+          0.024
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "b4c_ta_rear_wall",
+      "mass_kg": 38.0,
+      "material_class": "radiation_and_particle_wall",
+      "material_id": "b4c_ta",
+      "material_name": "B4C/Ta rear wall",
+      "radial_order": 4,
+      "role": "rear wall and radiation/fragment attenuation",
+      "stand_off_gap_m": null,
+      "thickness_m": 0.014
+    },
+    {
+      "bounds": {
+        "mass_kg": [
+          40.0,
+          65.0
+        ],
+        "thickness_m": [
+          0.006,
+          0.02
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "ti_vault",
+      "mass_kg": 52.0,
+      "material_class": "pressure_and_structure",
+      "material_id": "ti_vault",
+      "material_name": "Titanium vault",
+      "radial_order": 5,
+      "role": "archive vault shell and load path",
+      "stand_off_gap_m": null,
+      "thickness_m": 0.012
+    },
+    {
+      "bounds": {
+        "mass_kg": [
+          18.0,
+          38.0
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "data_media_package",
+      "mass_kg": 28.0,
+      "material_class": "archive_media",
+      "material_id": "data_media",
+      "material_name": "Data media package",
+      "radial_order": 6,
+      "role": "primary inert data media and indexing package",
+      "stand_off_gap_m": null,
+      "thickness_m": null
+    },
+    {
+      "bounds": {
+        "mass_kg": [
+          10.0,
+          30.0
+        ]
+      },
+      "evidence_status": "design_allocation_not_lab_qualified",
+      "layer_id": "redundancy_margin",
+      "mass_kg": 18.0,
+      "material_class": "redundancy_and_margin",
+      "material_id": "redundancy_reserve",
+      "material_name": "Redundant media and integration margin",
+      "radial_order": 7,
+      "role": "duplicate media copies and integration margin",
+      "stand_off_gap_m": null,
+      "thickness_m": null
+    }
+  ],
+  "materials": [
+    {
+      "assumption_note": "Carbon-carbon silicon-carbide ceramic matrix composite allocation for front thermal protection.",
+      "bounds": {
+        "density_kg_m3": [
+          1500.0,
+          2300.0
+        ]
+      },
+      "class": "thermal_protection",
+      "density_kg_m3": 1850.0,
+      "material_id": "c_c_sic",
+      "name": "C/C-SiC TPS"
+    },
+    {
+      "assumption_note": "Low-density aluminum-lithium sacrificial bumper for first debris and particle interception.",
+      "bounds": {
+        "density_kg_m3": [
+          2400.0,
+          2800.0
+        ]
+      },
+      "class": "whipple_bumper",
+      "density_kg_m3": 2650.0,
+      "material_id": "al_li",
+      "name": "Al-Li alloy bumper"
+    },
+    {
+      "assumption_note": "Unfilled separation volume between bumper and rear wall; mass is assigned to neighboring structure.",
+      "bounds": {},
+      "class": "geometry",
+      "material_id": "stand_off_gap",
+      "name": "Open stand-off gap"
+    },
+    {
+      "assumption_note": "Boron-carbide and tantalum graded rear wall allocation for neutron/gamma and fragment attenuation.",
+      "bounds": {
+        "density_kg_m3": [
+          4000.0,
+          10000.0
+        ]
+      },
+      "class": "radiation_and_particle_wall",
+      "density_kg_m3": 6500.0,
+      "material_id": "b4c_ta",
+      "name": "B4C/Ta rear wall"
+    },
+    {
+      "assumption_note": "Titanium alloy vault allocation for media enclosure and load path.",
+      "bounds": {
+        "density_kg_m3": [
+          4200.0,
+          4600.0
+        ]
+      },
+      "class": "pressure_and_structure",
+      "density_kg_m3": 4430.0,
+      "material_id": "ti_vault",
+      "name": "Titanium vault"
+    },
+    {
+      "assumption_note": "Fused silica, sapphire, and etched inert media allocation with carrier fixtures.",
+      "bounds": {
+        "density_kg_m3": [
+          2000.0,
+          4000.0
+        ]
+      },
+      "class": "archive_media",
+      "density_kg_m3": 2600.0,
+      "material_id": "data_media",
+      "name": "Data media package"
+    },
+    {
+      "assumption_note": "Explicit mass reserve for duplicate media copies, retention hardware, fasteners, cableless indexing, and v1 closure margin.",
+      "bounds": {},
+      "class": "redundancy_and_margin",
+      "material_id": "redundancy_reserve",
+      "name": "Redundant media and integration margin"
+    }
+  ],
+  "non_certification_notice": true,
+  "public_scope": "capsule_material_stack_qualification_matrix",
+  "qualification_test_count": 6,
+  "qualification_tests": [
+    {
+      "acceptance_criteria": "Source-backed dust density and large-particle tail bounds for selected target corridors.",
+      "closes_failure_modes": [
+        "dust_impact_pressure"
+      ],
+      "required_record_schema": {
+        "article_or_coupon_configuration": true,
+        "pass_fail_or_exception": true,
+        "raw_outputs_or_report_uri": true,
+        "test_date_utc": true,
+        "test_facility_or_reviewer": true
+      },
+      "status": "external_required",
+      "test_id": "dust-tail-measurement-upgrade",
+      "track": "Dust environment"
+    },
+    {
+      "acceptance_criteria": "Coupon and stack impact evidence over relevant velocity, mass, and angle regimes.",
+      "closes_failure_modes": [
+        "dust_impact_pressure",
+        "stack_ballistic_limit_validation"
+      ],
+      "required_record_schema": {
+        "article_or_coupon_configuration": true,
+        "pass_fail_or_exception": true,
+        "raw_outputs_or_report_uri": true,
+        "test_date_utc": true,
+        "test_facility_or_reviewer": true
+      },
+      "status": "external_required",
+      "test_id": "ballistic-limit-stack-test",
+      "track": "Shield stack"
+    },
+    {
+      "acceptance_criteria": "Material/media dose model tied to transport simulation or test-backed dose envelopes.",
+      "closes_failure_modes": [
+        "radiation_dose_pressure",
+        "plasma_charging_pressure",
+        "full_multiphysics_transport"
+      ],
+      "required_record_schema": {
+        "article_or_coupon_configuration": true,
+        "pass_fail_or_exception": true,
+        "raw_outputs_or_report_uri": true,
+        "test_date_utc": true,
+        "test_facility_or_reviewer": true
+      },
+      "status": "external_required",
+      "test_id": "radiation-transport-campaign",
+      "track": "Radiation and plasma"
+    },
+    {
+      "acceptance_criteria": "Accelerated aging and redundancy evidence that can replace assumption-bound media priors.",
+      "closes_failure_modes": [
+        "media_integrity_loss",
+        "material_degradation_pressure"
+      ],
+      "required_record_schema": {
+        "article_or_coupon_configuration": true,
+        "pass_fail_or_exception": true,
+        "raw_outputs_or_report_uri": true,
+        "test_date_utc": true,
+        "test_facility_or_reviewer": true
+      },
+      "status": "external_required",
+      "test_id": "archive-media-aging-campaign",
+      "track": "Archive media"
+    },
+    {
+      "acceptance_criteria": "End-to-end encode, damage, readout, ECC, and decode tests under expected degradation.",
+      "closes_failure_modes": [
+        "bit_recovery_validation"
+      ],
+      "required_record_schema": {
+        "article_or_coupon_configuration": true,
+        "pass_fail_or_exception": true,
+        "raw_outputs_or_report_uri": true,
+        "test_date_utc": true,
+        "test_facility_or_reviewer": true
+      },
+      "status": "external_required",
+      "test_id": "bit-recovery-ecc-campaign",
+      "track": "Recoverability"
+    },
+    {
+      "acceptance_criteria": "Independent review of assumptions, targetability, launch feasibility, and public claims.",
+      "closes_failure_modes": [
+        "launch_and_operations_readiness",
+        "target_horizon_mismatch"
+      ],
+      "required_record_schema": {
+        "article_or_coupon_configuration": true,
+        "pass_fail_or_exception": true,
+        "raw_outputs_or_report_uri": true,
+        "test_date_utc": true,
+        "test_facility_or_reviewer": true
+      },
+      "status": "external_required",
+      "test_id": "independent-review-pack",
+      "track": "External review"
+    }
+  ],
+  "rollup": {
+    "all_tests_external_required": true,
+    "certified_hardware_survivability": false,
+    "flight_ready_claimed": false,
+    "lab_record_count": 0,
+    "layer_count": 7,
+    "mass_budget_closed": true,
+    "material_count": 7,
+    "qualification_complete": false,
+    "qualification_test_count": 6
+  },
+  "schema_version": "capsule_qualification_evidence_pack.v1",
+  "source_artifacts": [
+    {
+      "path": "mission/capsule/capsule_design.v1.json",
+      "sha256": "db6a32dd8ec9fe837ce814392d7cb664b3e94ed5b7e4ffd862eb604fe4e27671"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md",
+      "sha256": "861b21e4cf3f4627f96a5523396a51f18d6bd50d4318f7874265cea8ba006aff"
+    },
+    {
+      "path": "mission/CAPSULE_QUALIFICATION_EVIDENCE_PACK_SPEC_v1.md",
+      "sha256": "516748508662514e473ab3c68acaa6703c675d05d7c61ca3ef3609cf41a9bcd5"
+    },
+    {
+      "path": "mission/external_proof/phase.py",
+      "sha256": "72cecfde49ee2bda49d8944e7ff163e7508bb383da0c0e356af32f31ef90f6c2"
+    },
+    {
+      "path": "mission/external_proof/__init__.py",
+      "sha256": "43c591118358803cc0660f2e960dd62d24935c791338d175e8b3ac3a4000fb77"
+    },
+    {
+      "path": "scripts/build_capsule_qualification_evidence_pack_artifact.py",
+      "sha256": "3d36259a8553441650c51c29ea554ca78978688034fb94d5658f251325ebc4d1"
+    },
+    {
+      "path": "scripts/ci/capsule_qualification_evidence_pack_validate.py",
+      "sha256": "81a6329ac0497eb5335c125a73d81dc7929a36b007e6aefa88dbbcfdbfbecd1e"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ],
+  "survivability_model_inputs": {
+    "data_media_survival_margin": {
+      "note": "Physical archive-media persistence prior for inert redundant media, not bit-level ECC recovery.",
+      "provenance": "assumption",
+      "source_ids": [
+        "SRC-CAPSULE-DESIGN-V1"
+      ],
+      "units": "fraction",
+      "value": 0.86
+    },
+    "frontal_area_m2": {
+      "note": "Genesis-class sample-return capsule diameter proxy converted to frontal area.",
+      "provenance": "proxy",
+      "source_ids": [
+        "SRC-GENESIS-SRC-DIAMETER-1-52M"
+      ],
+      "units": "m^2",
+      "value": 1.81
+    },
+    "material_degradation_mu_1_per_year": {
+      "note": "Deep-time passive-material hazard prior for the survivability engine; distinct from the legacy one-step baseline penalty.",
+      "provenance": "assumption",
+      "source_ids": [
+        "SRC-CAPSULE-DEEP-TIME-PRIOR-V1"
+      ],
+      "units": "1/year",
+      "value": 2.2e-08
+    },
+    "shield_areal_density_kg_m2": {
+      "note": "Forward TPS, bumper, and rear-wall mass allocation divided by frontal area; not a tested ballistic limit.",
+      "provenance": "assumption",
+      "source_ids": [
+        "SRC-CAPSULE-DESIGN-V1"
+      ],
+      "units": "kg/m^2",
+      "value": 59.668508287293
+    }
+  },
+  "survivability_uncertainty_bounds": {
+    "data_media_survival_margin": [
+      0.74,
+      0.92
+    ],
+    "material_degradation_mu_1_per_year": [
+      1e-09,
+      2e-07
+    ],
+    "shield_areal_density_kg_m2": [
+      42.0,
+      74.0
+    ]
+  }
+}

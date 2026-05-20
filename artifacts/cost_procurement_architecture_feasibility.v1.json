@@ -1,0 +1,1031 @@
+{
+  "architecture_options": [
+    {
+      "claim_boundary": "Architecture option for trade review only; no option is selected for flight.",
+      "cost_proxy_score": 0.227579213277,
+      "external_gates": [
+        "vendor_quote_gate",
+        "launch_integration_gate",
+        "basis_of_estimate_gate",
+        "regulatory_operations_gate"
+      ],
+      "flight_years": 10319422.649603,
+      "id": "reference_black_hole_conditional_45",
+      "source_row_id": "cost-arch-reference-black-hole-conditional-45",
+      "status": "review_required",
+      "target_id": "reference-black-hole",
+      "velocity_id": "conditional-45"
+    },
+    {
+      "claim_boundary": "Architecture option for trade review only; no option is selected for flight.",
+      "cost_proxy_score": 1.0,
+      "external_gates": [
+        "vendor_quote_gate",
+        "launch_integration_gate",
+        "basis_of_estimate_gate",
+        "regulatory_operations_gate"
+      ],
+      "flight_years": 13790.453068,
+      "id": "alpha_centauri_concept_95",
+      "source_row_id": "cost-arch-alpha-centauri-scale-concept-95",
+      "status": "review_required",
+      "target_id": "alpha-centauri-scale",
+      "velocity_id": "concept-95"
+    },
+    {
+      "claim_boundary": "Architecture option for trade review only; no option is selected for flight.",
+      "cost_proxy_score": 1.0,
+      "external_gates": [
+        "vendor_quote_gate",
+        "launch_integration_gate",
+        "basis_of_estimate_gate",
+        "regulatory_operations_gate"
+      ],
+      "flight_years": 82048462.189474,
+      "id": "sgr_a_concept_95",
+      "source_row_id": "cost-arch-sgr-a-rounded-concept-95",
+      "status": "review_required",
+      "target_id": "sgr-a-rounded",
+      "velocity_id": "concept-95"
+    }
+  ],
+  "architecture_row_count": 15,
+  "architecture_rows": [
+    {
+      "architecture_feasibility_status": "review_required",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 929575000000.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 1.0,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 13790.453068,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 16.811061735,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required"
+      ],
+      "row_id": "cost-arch-alpha-centauri-scale-concept-95",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+      "source_feasibility_row_id": "feas-alpha-centauri-scale-concept-95",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s"
+    },
+    {
+      "architecture_feasibility_status": "review_required",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 370800000000.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.398891966772,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 21834.884024,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 6.705797479,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required"
+      ],
+      "row_id": "cost-arch-alpha-centauri-scale-stress-60",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+      "source_feasibility_row_id": "feas-alpha-centauri-scale-stress-60",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s"
+    },
+    {
+      "architecture_feasibility_status": "review_required",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 211551947200.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.227579213277,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 28907.613448,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 3.825848204,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required"
+      ],
+      "row_id": "cost-arch-alpha-centauri-scale-conditional-45",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+      "source_feasibility_row_id": "feas-alpha-centauri-scale-conditional-45",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s"
+    },
+    {
+      "architecture_feasibility_status": "review_required",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 117323437500.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.126211911326,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 38817.571599,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 2.121756233,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required"
+      ],
+      "row_id": "cost-arch-alpha-centauri-scale-oberth-34",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+      "source_feasibility_row_id": "feas-alpha-centauri-scale-oberth-34",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s"
+    },
+    {
+      "architecture_feasibility_status": "review_required",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 55295436700.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.059484642658,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 56542.643136,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 1.0,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required"
+      ],
+      "row_id": "cost-arch-alpha-centauri-scale-oberth-23",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+      "source_feasibility_row_id": "feas-alpha-centauri-scale-oberth-23",
+      "target_id": "alpha-centauri-scale",
+      "target_label": "Alpha Centauri scale",
+      "time_horizon_class": "near_interstellar",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 929575000000.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 1.0,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 4922907.731368,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 16.811061735,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-reference-black-hole-concept-95",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+      "source_feasibility_row_id": "feas-reference-black-hole-concept-95",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_sub_10",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 370800000000.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.398891966772,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 7794603.908,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 6.705797479,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-reference-black-hole-stress-60",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+      "source_feasibility_row_id": "feas-reference-black-hole-stress-60",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_sub_10",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 211551947200.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.227579213277,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 10319422.649603,
+      "is_default_reference": true,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 3.825848204,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-reference-black-hole-conditional-45",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+      "source_feasibility_row_id": "feas-reference-black-hole-conditional-45",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 117323437500.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.126211911326,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 13857073.614222,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 2.121756233,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-reference-black-hole-oberth-34",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+      "source_feasibility_row_id": "feas-reference-black-hole-oberth-34",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 55295436700.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.059484642658,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 20184559.10574,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 1.0,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-reference-black-hole-oberth-23",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+      "source_feasibility_row_id": "feas-reference-black-hole-oberth-23",
+      "target_id": "reference-black-hole",
+      "target_label": "Reference black-hole candidate",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 929575000000.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 1.0,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 82048462.189474,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 16.811061735,
+      "review_blockers": [
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-sgr-a-rounded-concept-95",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+      "source_feasibility_row_id": "feas-sgr-a-rounded-concept-95",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "myr_10_to_100",
+      "velocity_id": "concept-95",
+      "velocity_label": "95 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 370800000000.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.398891966772,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 129910065.133333,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 6.705797479,
+      "review_blockers": [
+        "flight_horizon_exceeds_100_myr_review_band",
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-sgr-a-rounded-stress-60",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+      "source_feasibility_row_id": "feas-sgr-a-rounded-stress-60",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "stress-60",
+      "velocity_label": "60 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 211551947200.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.227579213277,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 171990377.49338,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 3.825848204,
+      "review_blockers": [
+        "flight_horizon_exceeds_100_myr_review_band",
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-sgr-a-rounded-conditional-45",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+      "source_feasibility_row_id": "feas-sgr-a-rounded-conditional-45",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "conditional-45",
+      "velocity_label": "45.32 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 117323437500.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.126211911326,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 230951226.903704,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 2.121756233,
+      "review_blockers": [
+        "flight_horizon_exceeds_100_myr_review_band",
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-sgr-a-rounded-oberth-34",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+      "source_feasibility_row_id": "feas-sgr-a-rounded-oberth-34",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "oberth-34",
+      "velocity_label": "33.75 km/s"
+    },
+    {
+      "architecture_feasibility_status": "blocked_external_evidence",
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected",
+        "flight-ready architecture selected",
+        "qualification complete",
+        "regulatory or operations approval complete"
+      ],
+      "capsule_kinetic_energy_j": 55295436700.0,
+      "capsule_mass_kg": 206.0,
+      "claim_boundary": "Scenario row is an architecture screening proxy, not a selected mission design.",
+      "cost_proxy_score": 0.059484642658,
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review",
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data",
+        "architecture trade study with independently reviewed assumptions"
+      ],
+      "flight_years": 336409318.429003,
+      "is_default_reference": false,
+      "procurement_status": "external_required",
+      "relative_to_23_17_km_s": 1.0,
+      "review_blockers": [
+        "flight_horizon_exceeds_100_myr_review_band",
+        "external_launch_procurement_and_navigation_review_required",
+        "dust_tail_and_material_qualification_external_required",
+        "black_hole_environment_model_external_required"
+      ],
+      "row_id": "cost-arch-sgr-a-rounded-oberth-23",
+      "scenario_feasibility_status": "review_required",
+      "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+      "source_feasibility_row_id": "feas-sgr-a-rounded-oberth-23",
+      "target_id": "sgr-a-rounded",
+      "target_label": "Sgr A* rounded",
+      "time_horizon_class": "hundred_myr_plus",
+      "velocity_id": "oberth-23",
+      "velocity_label": "23.17 km/s"
+    }
+  ],
+  "blocked_claims": [
+    "procurement-grade cost estimate",
+    "vendor quote obtained",
+    "budget approved",
+    "launch vehicle selected",
+    "flight-ready architecture selected",
+    "qualification complete",
+    "regulatory or operations approval complete",
+    "mission feasible"
+  ],
+  "claim_boundaries": {
+    "architecture_status": "concept_trade_screen_only",
+    "artifact_status": "repo_native_screening_contract",
+    "browser_policy": "render committed artifact values only",
+    "cost_status": "order_of_magnitude_proxy_only",
+    "procurement_status": "external_required"
+  },
+  "cost_model": {
+    "calibrated_cost_model_available": false,
+    "capsule_mass_kg": 206.0,
+    "components": [
+      {
+        "boundary": "mass-scaled qualification proxy, not a vendor estimate",
+        "id": "capsule_qualification_proxy",
+        "source_ref": "artifacts/capsule_survivability_lab.v1.json",
+        "value_musd": 266.52
+      },
+      {
+        "boundary": "mass-scaled architecture proxy, not launch procurement pricing",
+        "id": "launch_architecture_proxy",
+        "source_ref": "artifacts/capsule_survivability_lab.v1.json",
+        "value_musd": 1020.8
+      },
+      {
+        "boundary": "energy scaling only",
+        "id": "kinetic_energy_pressure",
+        "source_ref": "artifacts/mission_feasibility_screen.v1.json#scenario_rows[].cost_energy_proxy"
+      },
+      {
+        "boundary": "engineering-resource screen only",
+        "id": "optimization_cost_pressure",
+        "source_ref": "artifacts/optimization_v2_frontier.v1.json#candidates[].scores.cost_proxy"
+      }
+    ],
+    "cost_boundary": "screening proxy only; not procurement-grade estimate",
+    "currency_year": null,
+    "launch_architecture_cost_proxy_musd": 1020.8,
+    "method": "bounded_screening_proxy",
+    "model": "order_of_magnitude_architecture_cost_screen_v1",
+    "optimization_cost_proxy_max": 0.811724776049,
+    "optimization_cost_proxy_min": 0.370729943875,
+    "qualification_cost_proxy_musd": 266.52
+  },
+  "determinism_signature": "a14133df01e702081accdcbb1a63d7edbd827f82c1bf2e1754884e1c1651b240",
+  "external_evidence_gaps": [
+    "vendor/procurement-grade estimates",
+    "launch vehicle integration data",
+    "independent basis-of-estimate review",
+    "architecture trade study with launch provider constraints"
+  ],
+  "generator": "scripts/build_cost_procurement_architecture_feasibility_artifact.py",
+  "interpretation_limits": [
+    "Cost values are screening proxies and are not vendor quotes or approved budgets.",
+    "Procurement gates intentionally remain external_required until external records exist.",
+    "Architecture rows compare concepts; they do not select a launch vehicle or flight-ready design.",
+    "Browser UI may render this artifact but must not derive procurement truth client-side."
+  ],
+  "mass_budget": {
+    "capsule_mass_kg": 206.0,
+    "component_mass_kg": 206.0,
+    "configured_capsule_mass_kg": 206.0,
+    "declared_margin_kg": 0.25,
+    "layer_ids": [
+      "c_c_sic_tps",
+      "al_li_bumper",
+      "stand_off_gap",
+      "b4c_ta_rear_wall",
+      "ti_vault",
+      "data_media_package",
+      "redundancy_margin"
+    ]
+  },
+  "non_certification_notice": true,
+  "optimization_cost_axis": {
+    "axis_id": "cost_proxy",
+    "blocked_claims": [
+      "global optimum proven",
+      "procurement-grade cost estimate",
+      "qualification complete",
+      "flight-ready design selected"
+    ],
+    "calibrated_cost_model_available": false,
+    "candidate_count": 20,
+    "external_evidence_gaps": [
+      "larger search campaign with solver diversity",
+      "calibrated mission utility and cost model",
+      "stack-level qualification evidence tied to optimized parameters",
+      "external review of candidate dominance assumptions"
+    ],
+    "frontier_candidate_count": 1,
+    "max_score": 0.811724776049,
+    "method": "normalized_engineering_resource_pressure",
+    "min_score": 0.370729943875,
+    "qualification_complete": false,
+    "source_ref": "artifacts/optimization_search_space.v1.json",
+    "status": "screening_proxy",
+    "top_candidate_cost_proxy": 0.370729943875,
+    "top_candidate_id": "optv2-pt-000",
+    "top_candidate_qualification_gap": 0.185897435897
+  },
+  "procurement_gates": [
+    {
+      "blocked_claim": "vendor quote obtained",
+      "id": "vendor_quote_gate",
+      "required_evidence": [
+        "vendor quote",
+        "basis of estimate",
+        "assumptions/date/currency"
+      ],
+      "status": "external_required"
+    },
+    {
+      "blocked_claim": "launch vehicle selected",
+      "id": "launch_integration_gate",
+      "required_evidence": [
+        "launch provider constraints",
+        "payload interface assumptions",
+        "trajectory/integration study"
+      ],
+      "status": "external_required"
+    },
+    {
+      "blocked_claim": "budget approved",
+      "id": "basis_of_estimate_gate",
+      "required_evidence": [
+        "work-breakdown structure",
+        "confidence range",
+        "review date and estimator"
+      ],
+      "status": "external_required"
+    },
+    {
+      "blocked_claim": "regulatory or operations approval complete",
+      "id": "regulatory_operations_gate",
+      "required_evidence": [
+        "regulatory review",
+        "operations concept",
+        "long-duration responsibility model"
+      ],
+      "status": "external_required"
+    }
+  ],
+  "public_scope": "roadmap_13_cost_procurement_architecture_screen",
+  "roadmap_item": {
+    "external_evidence_gaps": [
+      "vendor/procurement-grade estimates",
+      "launch vehicle integration data",
+      "independent architecture trade study",
+      "regulatory and operations review"
+    ],
+    "id": "roadmap-13",
+    "implementation_mode": "tracked_cost_procurement_architecture_screen",
+    "summary": "Tracks proxy cost pressure, procurement gates, and architecture review status without procurement or flight-readiness claims.",
+    "title": "Cost, procurement, and architecture feasibility"
+  },
+  "rollup": {
+    "all_rows_review_required": true,
+    "architecture_selected_for_flight": false,
+    "calibrated_cost_model_available": false,
+    "external_gate_count": 4,
+    "launch_vehicle_selected": false,
+    "procurement_grade_estimate_available": false,
+    "qualification_complete": false,
+    "row_count": 15,
+    "vendor_quote_count": 0
+  },
+  "schema_version": "cost_procurement_architecture_feasibility.v1",
+  "search_space_cost_inputs": [
+    {
+      "affects_core_probability": true,
+      "baseline_value": 26000.0,
+      "bounds": [
+        0.001,
+        1000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "bh_parameters.distance_from_earth_ly",
+      "trust_grade": "B"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 36.0,
+      "bounds": [
+        0.0,
+        20000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 180.0,
+      "bounds": [
+        1.0,
+        2000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.max_duration_years",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 180.0,
+      "bounds": [
+        1.0,
+        1000000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.power_available_w",
+      "trust_grade": "C"
+    },
+    {
+      "affects_core_probability": true,
+      "baseline_value": 3200.0,
+      "bounds": [
+        1.0,
+        20000.0
+      ],
+      "domain": "realistic",
+      "parameter_id": "correction_window.specific_impulse_s",
+      "trust_grade": "C"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path": "artifacts/mission_feasibility_screen.v1.json",
+      "sha256": "bad50fe37b0fcceecbc01ed66b34dc9f56d7152e5a06656f0001b103dea3cdc5"
+    },
+    {
+      "path": "artifacts/optimization_v2_frontier.v1.json",
+      "sha256": "4dc08967f5da3dbc3911bc2360a8f8f9c25f480ea1e3046f8151e2a3a6cf3efe"
+    },
+    {
+      "path": "artifacts/optimization_search_space.v1.json",
+      "sha256": "3b7a6c7959f940d8025286229938c71424bd916a1c2a5bb0fd40cb157372ee62"
+    },
+    {
+      "path": "artifacts/capsule_survivability_lab.v1.json",
+      "sha256": "292723744efbeec31cee1dae985560329de198e03b21814f768d85deb0ee5a2f"
+    },
+    {
+      "path": "mission/COST_PROCUREMENT_ARCHITECTURE_FEASIBILITY_SPEC_v1.md",
+      "sha256": "c629bce352867b617fb35479f6824388f4db91e39477a96f1309469e5661fe71"
+    },
+    {
+      "path": "docs/FULL_V2_ROADMAP_CLOSURE.md",
+      "sha256": "5ec51102f90b17ec16e614c0361bcbd6811e9b6c7357ba6f5806baf3b6135346"
+    },
+    {
+      "path": "mission/architecture/feasibility.py",
+      "sha256": "c3fbba00182095416827c217e1a7e3a5689b238e5a70461aa1a71e86f817cca8"
+    },
+    {
+      "path": "scripts/build_cost_procurement_architecture_feasibility_artifact.py",
+      "sha256": "4cda286f9f936efce1344207c9602379c7320d0adc5c0a2d9fb7aa7478dc8c7c"
+    },
+    {
+      "path": "scripts/ci/cost_procurement_architecture_feasibility_validate.py",
+      "sha256": "6e376df284c6cc0bac1c7943a4e3b693aaf3976bf83babd79dbfd239595c0ea9"
+    }
+  ]
+}

@@ -1,0 +1,669 @@
+{
+  "blocked_claims": [
+    "trust grades upgraded automatically",
+    "source correctness proven",
+    "automatic trust promotion",
+    "assumption treated as measured evidence",
+    "certified or flight-ready evidence closure"
+  ],
+  "campaign_ref": "artifacts/evidence_upgrade_campaign.v1.json",
+  "closure_cycle_count": 15,
+  "closure_rows": [
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-environment-model-non-physical-safety-multiplier",
+      "closure_decision": "kept out of realistic proof surfaces until source-backed physics replaces speculative control",
+      "closure_status": "speculative_quarantined",
+      "current_trust_grade": "D",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "speculative_parameter_quarantine"
+      ],
+      "mode": "speculative",
+      "parameter_id": "environment_model.non_physical_safety_multiplier",
+      "priority_score": 9.0,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "keep D-grade controls out of realistic reporting unless source-backed physics replaces them"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds"
+      ],
+      "target_trust_grade": "keep_speculative_isolated",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-trajectory-model-non-physical-capture-bias",
+      "closure_decision": "kept out of realistic proof surfaces until source-backed physics replaces speculative control",
+      "closure_status": "speculative_quarantined",
+      "current_trust_grade": "D",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "speculative_parameter_quarantine"
+      ],
+      "mode": "speculative",
+      "parameter_id": "trajectory_model.non_physical_capture_bias",
+      "priority_score": 9.0,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "keep D-grade controls out of realistic reporting unless source-backed physics replaces them"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds"
+      ],
+      "target_trust_grade": "keep_speculative_isolated",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-environment-model-plasma-density-proxy-m3",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "environment_model.plasma_density_proxy_m3",
+      "priority_score": 7.855702,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-environment-model-radiative-flux-w-m2",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "environment_model.radiative_flux_w_m2",
+      "priority_score": 7.838468,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-environment-model-accretion-luminosity-fraction",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "environment_model.accretion_luminosity_fraction",
+      "priority_score": 7.7,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-environment-model-dust-flux-scale",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "environment_model.dust_flux_scale",
+      "priority_score": 7.7,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-actuator-efficiency",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.actuator_efficiency",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-delta-v-budget-mps",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-end-year",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.end_year",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-execution-sigma-fraction",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-guidance-sigma-rad",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.guidance_sigma_rad",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-max-duration-years",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.max_duration_years",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-power-available-w",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.power_available_w",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-specific-impulse-s",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.specific_impulse_s",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    },
+    {
+      "acceptance_criteria": [
+        "new or upgraded source ids resolve in parameters/registry/evidence_sources.v1.json",
+        "parameter claim justification explains the promoted trust grade",
+        "uncertainty bounds are narrowed only when source evidence supports it",
+        "strict evidence, parameter, and browser-dataset validators pass"
+      ],
+      "blocked_claims": [
+        "automatic trust promotion",
+        "trust upgraded without source change",
+        "assumption treated as measured evidence",
+        "realistic mode uses D-grade parameter",
+        "certified or flight-ready evidence closure"
+      ],
+      "campaign_id": "euc-correction-window-start-year",
+      "closure_decision": "external evidence required before trust-grade or source-correctness claims can change",
+      "closure_status": "external_required",
+      "current_trust_grade": "C",
+      "external_source_upgrade_record_uploaded": false,
+      "gap_types": [
+        "assumption_backed_value",
+        "source_record_missing_public_url",
+        "trust_grade_C_upgrade"
+      ],
+      "mode": "realistic",
+      "parameter_id": "correction_window.start_year",
+      "priority_score": 7.6,
+      "recommended_actions": [
+        "replace or bound assumption with primary paper, dataset, or mission-specific test evidence",
+        "narrow uncertainty bounds and add source-specific derivation notes before promoting to B",
+        "add a stable public URL or archival reference where source licensing permits"
+      ],
+      "source_correctness_claimed": false,
+      "source_quality_gaps": [
+        "assumption_source_requires_external_replacement_or_bounds",
+        "source_record_missing_public_url"
+      ],
+      "target_trust_grade": "B",
+      "trust_grade_promoted": false
+    }
+  ],
+  "closure_status": "first_cycle_recorded_external_source_upgrades_open",
+  "determinism_signature": "a27606e60fd7343f037f7df35c3f354c09e094815198f66f6e84e8569bbda366",
+  "external_evidence_gaps": [
+    "primary-source replacements for assumption-backed priors",
+    "independent datasets for B-to-A promotion",
+    "source-backed uncertainty narrowing for high-priority C-grade parameters",
+    "stable public URLs or archival references for source records that currently lack public URLs",
+    "periodic source freshness review"
+  ],
+  "generator": "scripts/build_evidence_upgrade_closure_artifact.py",
+  "interpretation_limits": [
+    "This artifact records the first closure cycle; it does not add new sources.",
+    "Trust grades remain unchanged until evidence registries, derivation notes, and validators prove an upgrade.",
+    "Speculative controls are quarantined rather than promoted."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "evidence_upgrade_first_closure_cycle",
+  "rollup": {
+    "closure_cycle_count": 15,
+    "external_required_count": 13,
+    "external_source_upgrade_count": 0,
+    "realistic_D_grade_public_rows_closed": 0,
+    "source_correctness_claimed": false,
+    "speculative_quarantine_count": 2,
+    "trust_grade_promotion_count": 0,
+    "trust_grades_upgraded_automatically": false
+  },
+  "schema_version": "evidence_upgrade_closure.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/evidence_upgrade_campaign.v1.json",
+      "sha256": "7cbe41e459177dc42ce05bca150e67b906771046cdfb7867582f71b0d0dd66a1"
+    },
+    {
+      "path": "artifacts/external_validation_review_pack.v1.json",
+      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+    },
+    {
+      "path": "mission/EVIDENCE_UPGRADE_CLOSURE_SPEC_v1.md",
+      "sha256": "99984333db6fa30e825d2f23ae195584cc04006bf4db835d3c62246b6f0a1f57"
+    },
+    {
+      "path": "mission/external_proof/phase.py",
+      "sha256": "72cecfde49ee2bda49d8944e7ff163e7508bb383da0c0e356af32f31ef90f6c2"
+    },
+    {
+      "path": "mission/external_proof/__init__.py",
+      "sha256": "43c591118358803cc0660f2e960dd62d24935c791338d175e8b3ac3a4000fb77"
+    },
+    {
+      "path": "scripts/build_evidence_upgrade_closure_artifact.py",
+      "sha256": "b51bce492f4215c8bf702d4c00947b6559591f30b2a3ca967d77da3ae679e5ec"
+    },
+    {
+      "path": "scripts/ci/evidence_upgrade_closure_validate.py",
+      "sha256": "e777face37a1b41be85f78509f64a0ce7e077f5dab29b5f93f4b24987f224c84"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "bh_parameters.distance_from_earth_ly": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "bh_parameters.mass_kg": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "bh_parameters.max_dust_flux_scale": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "bh_parameters.max_plasma_density_proxy_m3": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "bh_parameters.max_radiative_flux_w_m2": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "bh_parameters.periapsis_distance_m": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "capsule_model.data_media_survival_margin": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success"
+    ]
+  },
+  "capsule_model.frontal_area_m2": {
+    "affects_core_probability": false,
+    "modules": [],
+    "paths_to_metrics": [
+      "success_metrics.mission_validation"
+    ]
+  },
+  "capsule_model.mass_kg": {
+    "affects_core_probability": false,
+    "modules": [],
+    "paths_to_metrics": [
+      "success_metrics.mission_validation"
+    ]
+  },
+  "capsule_model.material_degradation_mu_1_per_year": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ]
+  },
+  "capsule_model.shield_areal_density_kg_m2": {
+    "affects_core_probability": false,
+    "modules": [
+      "shield.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.mission_validation"
+    ]
+  },
+  "correction_window.actuator_efficiency": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.delta_v_budget_mps": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.end_year": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.execution_sigma_fraction": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.guidance_sigma_rad": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.max_duration_years": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.power_available_w": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.specific_impulse_s": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "correction_window.start_year": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "environment_model.accretion_luminosity_fraction": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ]
+  },
+  "environment_model.dust_flux_scale": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ]
+  },
+  "environment_model.non_physical_safety_multiplier": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ]
+  },
+  "environment_model.plasma_density_proxy_m3": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ]
+  },
+  "environment_model.radiative_flux_w_m2": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_data_intact",
+      "success_metrics.p_success",
+      "success_metrics.p_survival"
+    ]
+  },
+  "success_threshold": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_success"
+    ]
+  },
+  "trajectory_model.initial_state_sigma_m": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "trajectory_model.integration_step_s": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "trajectory_model.nav_position_sigma_m": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "trajectory_model.nav_velocity_sigma_mps": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  },
+  "trajectory_model.non_physical_capture_bias": {
+    "affects_core_probability": true,
+    "modules": [
+      "control.baseline.v1",
+      "data.baseline.v1",
+      "env.baseline.v1",
+      "shield.baseline.v1",
+      "thermal.baseline.v1",
+      "traj.baseline.v1"
+    ],
+    "paths_to_metrics": [
+      "success_metrics.p_hit",
+      "success_metrics.p_success"
+    ]
+  }
+}

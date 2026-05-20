@@ -1,0 +1,21 @@
+{
+  "artifact_id": "evidence-pack-v1",
+  "artifact_schema_version": "v1",
+  "checksums_file": "artifacts/evidence-pack-v1/checksums.sha256",
+  "commit_sha": "4385d00f33f091104ca0559119be91997b8c5523",
+  "generated_at_utc": "2026-04-09T06:09:39Z",
+  "generation_commit_sha": "4385d00f33f091104ca0559119be91997b8c5523",
+  "generator_script": "scripts/build_evidence_artifacts.py",
+  "input_parameters_file": "artifacts/evidence-pack-v1/input_parameters.json",
+  "output_metrics_file": "artifacts/evidence-pack-v1/output_metrics.json",
+  "outputs": [
+    "artifacts/claim_values.json",
+    "artifacts/claims_table.csv",
+    "artifacts/traceability_matrix.csv",
+    "artifacts/claims_report.md",
+    "artifacts/evidence-pack-v1/output_metrics.json"
+  ],
+  "platform": "macOS-26.4-arm64-arm-64bit",
+  "python_version": "3.10.5",
+  "timestamp_utc": "2026-04-09T06:09:39Z"
+}

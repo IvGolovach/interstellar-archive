@@ -1,0 +1,1070 @@
+{
+  "allowed_phrasing": [
+    "deterministic repository artifact",
+    "reduced-order screening model",
+    "non-certifying review contract",
+    "external evidence still required",
+    "qualification-gap ledger",
+    "proxy cost pressure",
+    "review pack prepared, not completed",
+    "repository-native closure with external evidence open"
+  ],
+  "blocked_claim_count": 29,
+  "browser_boundary": {
+    "artifact_only_rendering": true,
+    "blocked_claim_suppression_allowed": false,
+    "client_side_claim_recomputation_allowed": false,
+    "external_gap_softening_allowed": false
+  },
+  "claim_rule_count": 10,
+  "claim_rules": [
+    {
+      "allowed_replacements": [
+        "non-certifying review contract",
+        "qualification-gap ledger"
+      ],
+      "claim_domain": "certification",
+      "evidence_gap_refs": [
+        "external reviewer wording audit"
+      ],
+      "forbidden_terms": [
+        "certified",
+        "qualified",
+        "proven flight-ready",
+        "flight ready",
+        "hardware-qualified",
+        "operationally approved"
+      ],
+      "id": "certification-boundary",
+      "rationale": "Repository artifacts are review contracts, not certification or qualification results.",
+      "required_qualifiers": [
+        "non-certifying",
+        "external evidence gaps remain"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "docs/FULL_V2_ROADMAP_CLOSURE.md"
+      ],
+      "surface": "all_public_surfaces",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "external review pack prepared",
+        "third-party reproduction remains open"
+      ],
+      "claim_domain": "validation",
+      "evidence_gap_refs": [
+        "third-party reproduction reports",
+        "external red-team review findings"
+      ],
+      "forbidden_terms": [
+        "third-party validated",
+        "independently reproduced",
+        "external validation completed",
+        "independent reproduction completed"
+      ],
+      "id": "external-validation-boundary",
+      "rationale": "A review pack is not evidence that outside review has happened.",
+      "required_qualifiers": [
+        "review pack prepared, not completed",
+        "external evidence gaps remain"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/external_validation_review_pack.v1.json"
+      ],
+      "surface": "review_pack",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "factorized mission probability with open external factors"
+      ],
+      "claim_domain": "mission_success",
+      "evidence_gap_refs": [
+        "target acquisition probability model",
+        "arrival/recovery/readability model"
+      ],
+      "forbidden_terms": [
+        "full mission probability closed",
+        "mission-ready"
+      ],
+      "id": "mission-probability-boundary",
+      "rationale": "Targetability and recovery cannot be collapsed into capsule/data proxies.",
+      "required_qualifiers": [
+        "factorized probability",
+        "external factors open"
+      ],
+      "rule_type": "require_qualifier",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/mission_probability_coupling.v1.json"
+      ],
+      "surface": "mission_probability",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "four-axis Pareto screening surface"
+      ],
+      "claim_domain": "optimization",
+      "evidence_gap_refs": [
+        "larger search campaign with solver diversity"
+      ],
+      "forbidden_terms": [
+        "global optimum proven",
+        "flight-ready design selected"
+      ],
+      "id": "optimization-boundary",
+      "rationale": "Optimization v2 ranks review candidates; it does not prove a global optimum or select hardware.",
+      "required_qualifiers": [
+        "screening proxy",
+        "Pareto review surface"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/optimization_v2_frontier.v1.json"
+      ],
+      "surface": "optimization",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "cost/procurement screening proxy"
+      ],
+      "claim_domain": "cost",
+      "evidence_gap_refs": [
+        "vendor/procurement-grade estimates",
+        "launch vehicle integration data"
+      ],
+      "forbidden_terms": [
+        "procurement-grade cost estimate",
+        "vendor-quoted budget",
+        "vendor quote obtained",
+        "budget approved",
+        "launch vehicle selected"
+      ],
+      "id": "cost-procurement-boundary",
+      "rationale": "Proxy cost pressure is not a basis of estimate, vendor quote, budget, or launch decision.",
+      "required_qualifiers": [
+        "proxy cost pressure",
+        "external procurement gates"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/cost_procurement_architecture_feasibility.v1.json"
+      ],
+      "surface": "cost",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "local run recipe with strict pack validation"
+      ],
+      "claim_domain": "runtime_runs",
+      "evidence_gap_refs": [
+        "remote execution isolation",
+        "persistent reviewed run archive"
+      ],
+      "forbidden_terms": [
+        "remote execution isolated",
+        "persistent reviewed run archive"
+      ],
+      "id": "runtime-boundary",
+      "rationale": "Generated run recipes are local and deterministic, not a hosted reviewed archive.",
+      "required_qualifiers": [
+        "local deterministic recipe",
+        "user-owned run pack"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/runtime_scenario_generation.v1.json"
+      ],
+      "surface": "runs",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "evidence-upgrade campaign ledger"
+      ],
+      "claim_domain": "evidence_trust",
+      "evidence_gap_refs": [
+        "periodic citation quality review"
+      ],
+      "forbidden_terms": [
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "trust grades upgraded"
+      ],
+      "id": "evidence-trust-boundary",
+      "rationale": "The evidence campaign ranks work; it does not prove source correctness or promote grades.",
+      "required_qualifiers": [
+        "source-review campaign",
+        "manual evidence upgrade required"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/evidence_upgrade_campaign.v1.json"
+      ],
+      "surface": "evidence",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "DAG v2 module-boundary review surface"
+      ],
+      "claim_domain": "physics",
+      "evidence_gap_refs": [
+        "independent physics backends",
+        "module-level high-fidelity state traces"
+      ],
+      "forbidden_terms": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "physical truth"
+      ],
+      "id": "physics-backend-boundary",
+      "rationale": "The DAG boundary maps requirements; it does not validate independent physics backends.",
+      "required_qualifiers": [
+        "module boundary artifact",
+        "independent backend evidence open"
+      ],
+      "rule_type": "forbid",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/mission_dag_v2_boundary.v1.json"
+      ],
+      "surface": "dag_boundary",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "capsule risk-budget screening result"
+      ],
+      "claim_domain": "capsule_survival",
+      "evidence_gap_refs": [
+        "stack-level ballistic-limit testing",
+        "bit-level ECC recovery"
+      ],
+      "forbidden_terms": [
+        "guaranteed survival",
+        "guaranteed arrival"
+      ],
+      "id": "capsule-survival-boundary",
+      "rationale": "Capsule risk numbers are model outputs with explicit gaps, not guarantees.",
+      "required_qualifiers": [
+        "Monte Carlo risk budget",
+        "non-certifying"
+      ],
+      "rule_type": "require_qualifier",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/capsule_risk_budget.v1.json"
+      ],
+      "surface": "capsule",
+      "validator_action": "fail_public_release"
+    },
+    {
+      "allowed_replacements": [
+        "browser renders committed artifact fields only"
+      ],
+      "claim_domain": "browser",
+      "evidence_gap_refs": [
+        "browser summary does not recompute truth"
+      ],
+      "forbidden_terms": [
+        "client recomputed truth",
+        "suppressed blocked claims"
+      ],
+      "id": "browser-rendering-boundary",
+      "rationale": "The browser must not soften, recompute, or hide the claim boundary.",
+      "required_qualifiers": [
+        "artifact-only rendering",
+        "blocked claims visible"
+      ],
+      "rule_type": "allow_with_boundary",
+      "severity": "blocking",
+      "source_artifact_refs": [
+        "artifacts/browser_dataset.v1.json"
+      ],
+      "surface": "browser",
+      "validator_action": "fail_public_release"
+    }
+  ],
+  "determinism_signature": "7ed574a230fe427e1347e03067f04e7119e6dc34aac4bd07ae7a85350e71b881",
+  "external_evidence_gaps": [
+    "external reviewer wording audit",
+    "audience testing for overinterpretation risk",
+    "legal or marketing approval review",
+    "third-party reproduction reports",
+    "independent physics benchmark comparisons"
+  ],
+  "forbidden_public_claims": [
+    "certified",
+    "qualified",
+    "proven flight-ready",
+    "flight ready",
+    "guaranteed survival",
+    "guaranteed arrival",
+    "mission-ready",
+    "hardware-qualified",
+    "third-party validated",
+    "independently reproduced",
+    "external validation completed",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "high-fidelity state trace complete",
+    "global optimum proven",
+    "flight-ready design selected",
+    "procurement-grade cost estimate",
+    "vendor-quoted budget",
+    "vendor quote obtained",
+    "budget approved",
+    "launch vehicle selected",
+    "full mission probability closed",
+    "source correctness proven",
+    "trust grades upgraded automatically",
+    "trust grades upgraded",
+    "remote execution isolated",
+    "persistent reviewed run archive",
+    "operationally approved",
+    "physical truth"
+  ],
+  "generator": "scripts/build_public_narrative_hardening_artifact.py",
+  "interpretation_limits": [
+    "This artifact is a claim-boundary contract, not legal, marketing, certification, or external-review approval.",
+    "Blocked claims may be displayed only as blocked claims or replacement guidance.",
+    "External wording audit and audience testing remain open."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "public_claim_boundary_contract",
+  "public_surface_count": 10,
+  "public_surfaces": [
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "README.md",
+      "surface_id": "readme",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "LIMITATIONS.md",
+      "surface_id": "limitations",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "EVIDENCE.md",
+      "surface_id": "evidence_docs",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "INVARIANTS.md",
+      "surface_id": "invariants",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "docs/FULL_V2_ROADMAP_CLOSURE.md",
+      "surface_id": "roadmap_doc",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "docs/ARTIFACT_POLICY.md",
+      "surface_id": "artifact_policy",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "docs/CAPSULE_RISK_BUDGET_V2.md",
+      "surface_id": "capsule_risk_doc",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": true,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "artifacts/browser_dataset.v1.json",
+      "surface_id": "browser_routes",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "artifacts/external_validation_review_pack.v1.json",
+      "surface_id": "review_pack",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "engineering/CHANGELOG.md",
+      "surface_id": "release_notes",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "certification-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "cost-procurement-boundary",
+        "runtime-boundary",
+        "evidence-trust-boundary",
+        "physics-backend-boundary",
+        "capsule-survival-boundary",
+        "browser-rendering-boundary"
+      ],
+      "source_ref": "generated_claim_rules",
+      "surface_id": "all_rules",
+      "unsafe_public_overclaim_count": 0
+    }
+  ],
+  "replacement_guidance": [
+    {
+      "forbidden_claim": "certified",
+      "replacement": "non-certifying review contract",
+      "requires_external_evidence_note": true,
+      "rule_id": "certification-boundary"
+    },
+    {
+      "forbidden_claim": "qualified",
+      "replacement": "non-certifying review contract",
+      "requires_external_evidence_note": true,
+      "rule_id": "certification-boundary"
+    },
+    {
+      "forbidden_claim": "proven flight-ready",
+      "replacement": "non-certifying review contract",
+      "requires_external_evidence_note": true,
+      "rule_id": "certification-boundary"
+    },
+    {
+      "forbidden_claim": "flight ready",
+      "replacement": "non-certifying review contract",
+      "requires_external_evidence_note": true,
+      "rule_id": "certification-boundary"
+    },
+    {
+      "forbidden_claim": "hardware-qualified",
+      "replacement": "non-certifying review contract",
+      "requires_external_evidence_note": true,
+      "rule_id": "certification-boundary"
+    },
+    {
+      "forbidden_claim": "operationally approved",
+      "replacement": "non-certifying review contract",
+      "requires_external_evidence_note": true,
+      "rule_id": "certification-boundary"
+    },
+    {
+      "forbidden_claim": "third-party validated",
+      "replacement": "external review pack prepared",
+      "requires_external_evidence_note": true,
+      "rule_id": "external-validation-boundary"
+    },
+    {
+      "forbidden_claim": "independently reproduced",
+      "replacement": "external review pack prepared",
+      "requires_external_evidence_note": true,
+      "rule_id": "external-validation-boundary"
+    },
+    {
+      "forbidden_claim": "external validation completed",
+      "replacement": "external review pack prepared",
+      "requires_external_evidence_note": true,
+      "rule_id": "external-validation-boundary"
+    },
+    {
+      "forbidden_claim": "independent reproduction completed",
+      "replacement": "external review pack prepared",
+      "requires_external_evidence_note": true,
+      "rule_id": "external-validation-boundary"
+    },
+    {
+      "forbidden_claim": "full mission probability closed",
+      "replacement": "factorized mission probability with open external factors",
+      "requires_external_evidence_note": true,
+      "rule_id": "mission-probability-boundary"
+    },
+    {
+      "forbidden_claim": "mission-ready",
+      "replacement": "factorized mission probability with open external factors",
+      "requires_external_evidence_note": true,
+      "rule_id": "mission-probability-boundary"
+    },
+    {
+      "forbidden_claim": "global optimum proven",
+      "replacement": "four-axis Pareto screening surface",
+      "requires_external_evidence_note": true,
+      "rule_id": "optimization-boundary"
+    },
+    {
+      "forbidden_claim": "flight-ready design selected",
+      "replacement": "four-axis Pareto screening surface",
+      "requires_external_evidence_note": true,
+      "rule_id": "optimization-boundary"
+    },
+    {
+      "forbidden_claim": "procurement-grade cost estimate",
+      "replacement": "cost/procurement screening proxy",
+      "requires_external_evidence_note": true,
+      "rule_id": "cost-procurement-boundary"
+    },
+    {
+      "forbidden_claim": "vendor-quoted budget",
+      "replacement": "cost/procurement screening proxy",
+      "requires_external_evidence_note": true,
+      "rule_id": "cost-procurement-boundary"
+    },
+    {
+      "forbidden_claim": "vendor quote obtained",
+      "replacement": "cost/procurement screening proxy",
+      "requires_external_evidence_note": true,
+      "rule_id": "cost-procurement-boundary"
+    },
+    {
+      "forbidden_claim": "budget approved",
+      "replacement": "cost/procurement screening proxy",
+      "requires_external_evidence_note": true,
+      "rule_id": "cost-procurement-boundary"
+    },
+    {
+      "forbidden_claim": "launch vehicle selected",
+      "replacement": "cost/procurement screening proxy",
+      "requires_external_evidence_note": true,
+      "rule_id": "cost-procurement-boundary"
+    },
+    {
+      "forbidden_claim": "remote execution isolated",
+      "replacement": "local run recipe with strict pack validation",
+      "requires_external_evidence_note": true,
+      "rule_id": "runtime-boundary"
+    },
+    {
+      "forbidden_claim": "persistent reviewed run archive",
+      "replacement": "local run recipe with strict pack validation",
+      "requires_external_evidence_note": true,
+      "rule_id": "runtime-boundary"
+    },
+    {
+      "forbidden_claim": "source correctness proven",
+      "replacement": "evidence-upgrade campaign ledger",
+      "requires_external_evidence_note": true,
+      "rule_id": "evidence-trust-boundary"
+    },
+    {
+      "forbidden_claim": "trust grades upgraded automatically",
+      "replacement": "evidence-upgrade campaign ledger",
+      "requires_external_evidence_note": true,
+      "rule_id": "evidence-trust-boundary"
+    },
+    {
+      "forbidden_claim": "trust grades upgraded",
+      "replacement": "evidence-upgrade campaign ledger",
+      "requires_external_evidence_note": true,
+      "rule_id": "evidence-trust-boundary"
+    },
+    {
+      "forbidden_claim": "independent physics backend validated",
+      "replacement": "DAG v2 module-boundary review surface",
+      "requires_external_evidence_note": true,
+      "rule_id": "physics-backend-boundary"
+    },
+    {
+      "forbidden_claim": "high-fidelity state trace complete",
+      "replacement": "DAG v2 module-boundary review surface",
+      "requires_external_evidence_note": true,
+      "rule_id": "physics-backend-boundary"
+    },
+    {
+      "forbidden_claim": "physical truth",
+      "replacement": "DAG v2 module-boundary review surface",
+      "requires_external_evidence_note": true,
+      "rule_id": "physics-backend-boundary"
+    },
+    {
+      "forbidden_claim": "guaranteed survival",
+      "replacement": "capsule risk-budget screening result",
+      "requires_external_evidence_note": true,
+      "rule_id": "capsule-survival-boundary"
+    },
+    {
+      "forbidden_claim": "guaranteed arrival",
+      "replacement": "capsule risk-budget screening result",
+      "requires_external_evidence_note": true,
+      "rule_id": "capsule-survival-boundary"
+    },
+    {
+      "forbidden_claim": "client recomputed truth",
+      "replacement": "browser renders committed artifact fields only",
+      "requires_external_evidence_note": true,
+      "rule_id": "browser-rendering-boundary"
+    },
+    {
+      "forbidden_claim": "suppressed blocked claims",
+      "replacement": "browser renders committed artifact fields only",
+      "requires_external_evidence_note": true,
+      "rule_id": "browser-rendering-boundary"
+    }
+  ],
+  "required_public_concepts": [
+    "deterministic artifact",
+    "reduced-order",
+    "non-certifying",
+    "external evidence gaps remain"
+  ],
+  "required_qualifier_count": 4,
+  "review_status": "repo_native_public_narrative_contract_ready_external_audit_not_completed",
+  "roadmap_item_ref": "roadmap-15",
+  "rollup": {
+    "all_required_concepts_present": true,
+    "audience_testing_completed": false,
+    "external_validation_claimed": false,
+    "external_wording_audit_completed": false,
+    "full_mission_probability_closed_count": 0,
+    "global_optimum_claimed": false,
+    "independent_backend_complete": false,
+    "independent_reproduction_completed": false,
+    "legal_review_completed": false,
+    "persistent_reviewed_archive_claimed": false,
+    "procurement_grade_estimate_available": false,
+    "public_claim_approval_completed": false,
+    "source_correctness_claimed": false,
+    "third_party_review_completed": false,
+    "trust_grades_upgraded_automatically": false,
+    "unsafe_public_overclaim_count": 0,
+    "vendor_quote_count": 0
+  },
+  "schema_version": "public_narrative_hardening.v1",
+  "source_artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "db4daaf1dbd40c691334b2a65ede7b97dde9d9281dd9d6780e891ae8fa1aa6e0"
+    },
+    {
+      "path": "LIMITATIONS.md",
+      "sha256": "7b8adbffd369c8de412fc8c55c4c33bef11f293cbf1036bf6c5e0c1612847db2"
+    },
+    {
+      "path": "EVIDENCE.md",
+      "sha256": "718b24ff8bd679932379253f552b6f6deb6e1ff637616e9aa02965f4d2efdb24"
+    },
+    {
+      "path": "INVARIANTS.md",
+      "sha256": "ca1bac5249477941f7b05abea210c3e485076bd7aa3ad1612e2309efcb9f1c90"
+    },
+    {
+      "path": "docs/FULL_V2_ROADMAP_CLOSURE.md",
+      "sha256": "5ec51102f90b17ec16e614c0361bcbd6811e9b6c7357ba6f5806baf3b6135346"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    },
+    {
+      "path": "docs/CAPSULE_RISK_BUDGET_V2.md",
+      "sha256": "a5413d8df18dd2081d84b075afb14f633482e26a634fb1f76cc7a4aca08c9199"
+    },
+    {
+      "path": "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md",
+      "sha256": "861b21e4cf3f4627f96a5523396a51f18d6bd50d4318f7874265cea8ba006aff"
+    },
+    {
+      "path": "artifacts/external_validation_review_pack.v1.json",
+      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+    },
+    {
+      "path": "artifacts/evidence_upgrade_campaign.v1.json",
+      "sha256": "7cbe41e459177dc42ce05bca150e67b906771046cdfb7867582f71b0d0dd66a1"
+    },
+    {
+      "path": "artifacts/optimization_v2_frontier.v1.json",
+      "sha256": "4dc08967f5da3dbc3911bc2360a8f8f9c25f480ea1e3046f8151e2a3a6cf3efe"
+    },
+    {
+      "path": "artifacts/cost_procurement_architecture_feasibility.v1.json",
+      "sha256": "c121efd5205a5b304167eb21a73573f02a5d3781bb9aaeb0ab09478f641f2187"
+    },
+    {
+      "path": "artifacts/mission_probability_coupling.v1.json",
+      "sha256": "8cccfa8ebb4037710d2925630cfcc24a154f46a97794157ece7272160a2be0d0"
+    },
+    {
+      "path": "artifacts/uncertainty_interactions.v1.json",
+      "sha256": "7ae19f9c7572fbc7c147fb587c77e3f662afc8e5ab8aed314422edbdbd215b85"
+    },
+    {
+      "path": "artifacts/mission_dag_v2_boundary.v1.json",
+      "sha256": "af821ab4e367ee9ab7c38712132c8cb282d5bf115a66e09ab9ffbe37ca726bc2"
+    },
+    {
+      "path": "artifacts/runtime_scenario_generation.v1.json",
+      "sha256": "98589a3339e98d0ece8ca75f239a3c44e5636a377b1148758aea84be51dbb08e"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "parameters/registry/parameter_claims.v1.json",
+      "sha256": "5943329ac28b556a1ab3fd23f2e17c9aa5ee44eaeb370734b1a90af474f00bda"
+    },
+    {
+      "path": "mission/PUBLIC_NARRATIVE_HARDENING_SPEC_v1.md",
+      "sha256": "7bb17c0ab08d2e77d3c7aa3cf14f1174d1981584e7034d9f7f9e549d4f793a3c"
+    },
+    {
+      "path": "mission/narrative/hardening.py",
+      "sha256": "9c8aa23ff824238803d7532b05b176cb659bf62a11137d211b61ca7b7077cebe"
+    },
+    {
+      "path": "scripts/build_public_narrative_hardening_artifact.py",
+      "sha256": "07906f86f8be9f180149e8e28601e5bc118c3c303c72b8b9ef589a24bf2f67b3"
+    },
+    {
+      "path": "scripts/ci/public_narrative_hardening_validate.py",
+      "sha256": "4f1c7516c0625f0e4ddc9480977cf9db89d955043bce0f6f1465a29c6aaefe01"
+    }
+  ],
+  "source_claim_matrix": [
+    {
+      "guarded_forbidden_claim_mentions": [
+        "mission-ready"
+      ],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "README.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "mission-ready",
+        "physical truth"
+      ],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "LIMITATIONS.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "EVIDENCE.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "INVARIANTS.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "operationally approved",
+        "proven flight-ready",
+        "qualified"
+      ],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "docs/FULL_V2_ROADMAP_CLOSURE.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "physical truth"
+      ],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "docs/ARTIFACT_POLICY.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "qualified"
+      ],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "docs/CAPSULE_RISK_BUDGET_V2.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "external validation completed",
+        "high-fidelity state trace complete",
+        "independent physics backend validated",
+        "independent reproduction completed",
+        "persistent reviewed run archive",
+        "physical truth",
+        "procurement-grade cost estimate",
+        "qualified",
+        "source correctness proven",
+        "third-party validated",
+        "trust grades upgraded",
+        "trust grades upgraded automatically",
+        "vendor quote obtained"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/external_validation_review_pack.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "external validation completed",
+        "source correctness proven",
+        "trust grades upgraded",
+        "trust grades upgraded automatically"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/evidence_upgrade_campaign.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "flight-ready design selected",
+        "global optimum proven",
+        "procurement-grade cost estimate"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/optimization_v2_frontier.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "budget approved",
+        "certified",
+        "flight ready",
+        "flight-ready design selected",
+        "global optimum proven",
+        "guaranteed arrival",
+        "launch vehicle selected",
+        "procurement-grade cost estimate",
+        "vendor quote obtained"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/cost_procurement_architecture_feasibility.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "flight ready",
+        "full mission probability closed",
+        "guaranteed arrival",
+        "qualified"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/mission_probability_coupling.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "flight ready"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/uncertainty_interactions.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "high-fidelity state trace complete",
+        "independent physics backend validated",
+        "qualified"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/mission_dag_v2_boundary.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "flight ready",
+        "guaranteed arrival",
+        "persistent reviewed run archive"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/runtime_scenario_generation.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "qualified"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/capsule_risk_budget.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "parameters/registry/parameter_claims.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "mission/PUBLIC_NARRATIVE_HARDENING_SPEC_v1.md",
+      "unsafe_public_overclaim_count": 0
+    }
+  ],
+  "source_rollups": {
+    "cost_architecture_row_count": 15,
+    "evidence_claim_count": 66,
+    "external_review_case_count": 7,
+    "runtime_generation_row_count": 15
+  }
+}

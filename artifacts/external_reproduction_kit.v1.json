@@ -1,0 +1,256 @@
+{
+  "blocked_claims": [
+    "external validation completed",
+    "third-party validated",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "qualified",
+    "certified",
+    "flight-ready",
+    "source correctness proven"
+  ],
+  "determinism_signature": "c113004619349b13eb805b302f563d08148dbbcbd24b29cfed899092df079da4",
+  "external_evidence_gaps": [
+    "external reviewer execution of the pack",
+    "signed independent reproduction report",
+    "independent physics backend comparison report",
+    "raw outputs or immutable report URI",
+    "reviewer exception log"
+  ],
+  "generator": "scripts/build_external_reproduction_kit_artifact.py",
+  "interpretation_limits": [
+    "The pack is a reviewer handoff, not an external validation record.",
+    "Exporting a pack does not complete reproduction or certification.",
+    "External records must pass the intake validator before changing evidence counts."
+  ],
+  "kit_status": "repo_native_reproduction_kit_ready_external_execution_open",
+  "non_certification_notice": true,
+  "pack_contract": {
+    "commands": [
+      "python3 scripts/ci/check_suite.py",
+      "python3 scripts/ci/external_reproduction_kit_validate.py --strict",
+      "python3 scripts/ci/external_evidence_intake_validate.py --strict",
+      "python3 scripts/ci/external_validation_execution_ledger_validate.py --strict",
+      "python3 scripts/ci/independent_physics_backend_comparison_validate.py --strict",
+      "python3 scripts/ci/capsule_qualification_evidence_pack_validate.py --strict"
+    ],
+    "default_archive_name": "external-reproduction-kit-v1.zip",
+    "export_cli": "scripts/export_external_reproduction_pack.py",
+    "output_root_semantics": "reviewer_owned_or_temporary; generated pack contents are not proof records",
+    "pack_file_count": 31,
+    "pack_files": [
+      "EXTERNAL_REPRODUCTION_README.md",
+      "commands/reproduction_commands.txt",
+      "templates/external_evidence_record_template.v1.json",
+      "manifest/external_reproduction_pack_manifest.v1.json",
+      "repository/README.md",
+      "repository/REPRODUCIBILITY.md",
+      "repository/LIMITATIONS.md",
+      "repository/MODEL_VERSION.json",
+      "repository/VERSION",
+      "repository/mission/EXTERNAL_VALIDATION_REVIEW_PACK_SPEC_v1.md",
+      "repository/mission/EXTERNAL_VALIDATION_EXECUTION_LEDGER_SPEC_v1.md",
+      "repository/mission/INDEPENDENT_PHYSICS_BACKEND_COMPARISON_SPEC_v1.md",
+      "repository/mission/CAPSULE_QUALIFICATION_EVIDENCE_PACK_SPEC_v1.md",
+      "repository/mission/EVIDENCE_UPGRADE_CLOSURE_SPEC_v1.md",
+      "repository/mission/RELEASE_CANDIDATE_READINESS_SPEC_v1.md",
+      "repository/mission/EXTERNAL_REPRODUCTION_KIT_SPEC_v1.md",
+      "repository/mission/EXTERNAL_EVIDENCE_INTAKE_SPEC_v1.md",
+      "repository/mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+      "repository/artifacts/external_validation_review_pack.v1.json",
+      "repository/artifacts/external_validation_execution_ledger.v1.json",
+      "repository/artifacts/independent_physics_backend_comparison.v1.json",
+      "repository/artifacts/capsule_qualification_evidence_pack.v1.json",
+      "repository/artifacts/evidence_upgrade_closure.v1.json",
+      "repository/artifacts/release_candidate_readiness.v1.json",
+      "repository/artifacts/external_reproduction_kit.v1.json",
+      "repository/artifacts/external_evidence_intake.v1.json",
+      "repository/artifacts/roadmap_closure.v1.json",
+      "repository/scripts/ci/check_suite.py",
+      "repository/scripts/ci/external_reproduction_kit_validate.py",
+      "repository/scripts/ci/external_evidence_intake_validate.py",
+      "repository/scripts/ci/external_evidence_record_validate.py"
+    ],
+    "pack_validator": "scripts/ci/external_reproduction_pack_validate.py"
+  },
+  "primary_tracks": [
+    {
+      "record_schema_ref": "mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+      "status": "external_required",
+      "track_id": "independent_reproduction"
+    },
+    {
+      "record_schema_ref": "mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+      "status": "external_required",
+      "track_id": "independent_physics_backend"
+    },
+    {
+      "record_schema_ref": "mission/EXTERNAL_EVIDENCE_RECORD_SCHEMA_v1.json",
+      "status": "external_required_after_reproduction",
+      "track_id": "capsule_qualification"
+    }
+  ],
+  "public_scope": "external_reviewer_reproduction_kit",
+  "readiness_snapshot": {
+    "repo_analytic_check_count": 5,
+    "repo_analytic_max_relative_error": 3.717473e-10
+  },
+  "review_case_count": 7,
+  "review_cases": [
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "independent_reproduction"
+      ],
+      "review_case_id": "optimistic-prior-collapse",
+      "source_inputs": [
+        "artifacts/mission_probability_coupling.v1.json",
+        "artifacts/evidence_upgrade_campaign.v1.json"
+      ],
+      "status": "external_execution_required",
+      "title": "Optimistic prior collapse"
+    },
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "independent_reproduction"
+      ],
+      "review_case_id": "dust-tail-severe-mode",
+      "source_inputs": [
+        "artifacts/capsule_risk_budget.v1.json",
+        "artifacts/uncertainty_interactions.v1.json"
+      ],
+      "status": "external_execution_required",
+      "title": "Dust-tail severe mode"
+    },
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "independent_reproduction"
+      ],
+      "review_case_id": "media-decay-severe-mode",
+      "source_inputs": [
+        "artifacts/capsule_risk_budget.v1.json",
+        "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md"
+      ],
+      "status": "external_execution_required",
+      "title": "Archive media decay severe mode"
+    },
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "external_red_team"
+      ],
+      "review_case_id": "targetability-separated-from-capsule-survival",
+      "source_inputs": [
+        "artifacts/mission_probability_coupling.v1.json",
+        "artifacts/runtime_scenario_generation.v1.json"
+      ],
+      "status": "external_execution_required",
+      "title": "Targetability separated from capsule survival"
+    },
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "independent_reproduction",
+        "independent_physics_backend"
+      ],
+      "review_case_id": "independent-backend-comparison",
+      "source_inputs": [
+        "artifacts/mission_dag_v2_boundary.v1.json"
+      ],
+      "status": "external_execution_required",
+      "title": "Independent backend comparison"
+    },
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "external_red_team"
+      ],
+      "review_case_id": "procurement-and-operations-boundary",
+      "source_inputs": [
+        "artifacts/cost_procurement_architecture_feasibility.v1.json",
+        "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md"
+      ],
+      "status": "external_execution_required",
+      "title": "Procurement and operations boundary"
+    },
+    {
+      "expected_reviewer_action": "run_or_independently_recompute_and_submit_external_evidence_record",
+      "record_types": [
+        "public_wording_audit"
+      ],
+      "review_case_id": "public-wording-overinterpretation",
+      "source_inputs": [
+        "docs/FULL_V2_ROADMAP_CLOSURE.md",
+        "docs/ARTIFACT_POLICY.md"
+      ],
+      "status": "external_execution_required",
+      "title": "Public wording overinterpretation"
+    }
+  ],
+  "rollup": {
+    "export_cli_available": true,
+    "external_execution_completed": false,
+    "external_reproduction_kit_ready": true,
+    "external_validation_completed": false,
+    "fake_external_records_accepted": false,
+    "first_real_external_record_present": false,
+    "independent_backend_validated": false,
+    "record_schema_available": true
+  },
+  "schema_version": "external_reproduction_kit.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/external_validation_review_pack.v1.json",
+      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+    },
+    {
+      "path": "artifacts/external_validation_execution_ledger.v1.json",
+      "sha256": "5187a9ef37cfe85031f6627a962fd065883c0e35cb9939cc9f91f6e69458a32a"
+    },
+    {
+      "path": "artifacts/independent_physics_backend_comparison.v1.json",
+      "sha256": "888202dc063e5b3ea5342488de51b94142ef787966c8455bb77c3291f2dbbf6d"
+    },
+    {
+      "path": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "sha256": "ee78509ea576b1ec441bb6cae6da2a042989c404aa201cd66ccd915dcc45de22"
+    },
+    {
+      "path": "scripts/export_external_reproduction_pack.py",
+      "sha256": "716af4eaf3e3b2c245cfc13f0d69d29bb0c99d05d417a58e51e8615ce60c7f7a"
+    },
+    {
+      "path": "scripts/ci/external_reproduction_pack_validate.py",
+      "sha256": "00fcb1a545fd00ea9479202c10a7040b600cff8bbc136be7a8d5637337ed1022"
+    },
+    {
+      "path": "mission/EXTERNAL_REPRODUCTION_KIT_SPEC_v1.md",
+      "sha256": "a0e9b8bc8d478cf32b1c0c7abeb2bb9aace2f510c1962c89ea7885786ad766f6"
+    },
+    {
+      "path": "mission/external_reproduction/intake.py",
+      "sha256": "0b3d7a0aeb9893a4a3c3767d07abcdeffcd78920505c29ae9d76667a7cb86495"
+    },
+    {
+      "path": "mission/external_reproduction/__init__.py",
+      "sha256": "afad659370b56909550b76d0ba4e0fada142a8e09a52c9819fb708cedc9a81d3"
+    },
+    {
+      "path": "scripts/build_external_reproduction_kit_artifact.py",
+      "sha256": "3421973773568f367f103b671a7808bc3359f2dffd3425461547414e84fa5b81"
+    },
+    {
+      "path": "scripts/ci/external_reproduction_kit_validate.py",
+      "sha256": "e04ede86c59d18101ca007466bc2c4b0eddb406ac8ff8f028a9fb3f09a47b72a"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ],
+  "source_commit_sha_policy": "resolved_by_exported_pack_manifest_not_tracked_artifact"
+}

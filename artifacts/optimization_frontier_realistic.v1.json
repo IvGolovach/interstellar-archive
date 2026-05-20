@@ -1,0 +1,1200 @@
+{
+  "determinism_signature": "84d49dca86d3caffd564871fa3d43778be8e0cb30f77fd18865ff03b264b6dd9",
+  "dimensions": [
+    "p_success",
+    "risk_envelope"
+  ],
+  "engine_commit": "HEAD",
+  "evaluation_count": 20,
+  "method": "deterministic_latin_hypercube",
+  "mode": "realistic",
+  "objective_contract_ref": "mission/objectives/objective_contract.v1.json",
+  "pareto_frontier_indices": [
+    0
+  ],
+  "points": [
+    {
+      "candidate_id": "pt-000",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 26000.0,
+        "bh_parameters.mass_kg": 8.55e+36,
+        "bh_parameters.max_dust_flux_scale": 3.0,
+        "bh_parameters.max_plasma_density_proxy_m3": 80000000000.0,
+        "bh_parameters.max_radiative_flux_w_m2": 20000000.0,
+        "bh_parameters.periapsis_distance_m": 12300000000.0,
+        "capsule_model.data_media_survival_margin": 0.82,
+        "capsule_model.material_degradation_mu_1_per_year": 0.00022,
+        "correction_window.actuator_efficiency": 0.68,
+        "correction_window.delta_v_budget_mps": 36.0,
+        "correction_window.end_year": 180.0,
+        "correction_window.execution_sigma_fraction": 0.08,
+        "correction_window.guidance_sigma_rad": 2.5e-07,
+        "correction_window.max_duration_years": 180.0,
+        "correction_window.power_available_w": 180.0,
+        "correction_window.specific_impulse_s": 3200.0,
+        "correction_window.start_year": 0.0,
+        "environment_model.accretion_luminosity_fraction": 0.0025,
+        "environment_model.dust_flux_scale": 1.4,
+        "environment_model.plasma_density_proxy_m3": 50000000000.0,
+        "environment_model.radiative_flux_w_m2": 12000000.0,
+        "success_threshold": 0.62,
+        "trajectory_model.initial_state_sigma_m": 1800000.0,
+        "trajectory_model.integration_step_s": 86400.0,
+        "trajectory_model.nav_position_sigma_m": 1200000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 0.08
+      },
+      "scores": {
+        "objective_vector": [
+          0.34684025581,
+          0.662424580631
+        ],
+        "p_success": 0.34684025581,
+        "rank_key": "pareto",
+        "risk_envelope": 0.662424580631,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.337575419369,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-001",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 925000.0000750001,
+        "bh_parameters.mass_kg": 3.2500000000674997e+40,
+        "bh_parameters.max_dust_flux_scale": 92.50075,
+        "bh_parameters.max_plasma_density_proxy_m3": 4.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 25000097.5,
+        "bh_parameters.periapsis_distance_m": 525000000000000.5,
+        "capsule_model.data_media_survival_margin": 0.4725,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003175,
+        "correction_window.actuator_efficiency": 0.23275,
+        "correction_window.delta_v_budget_mps": 14500.0,
+        "correction_window.end_year": 42500.0,
+        "correction_window.execution_sigma_fraction": 0.825,
+        "correction_window.guidance_sigma_rad": 0.0425,
+        "correction_window.max_duration_years": 1850.075,
+        "correction_window.power_available_w": 525000.475,
+        "correction_window.specific_impulse_s": 500.975,
+        "correction_window.start_year": 62500.0,
+        "environment_model.accretion_luminosity_fraction": 0.225,
+        "environment_model.dust_flux_scale": 725.0,
+        "environment_model.plasma_density_proxy_m3": 2.25e+23,
+        "environment_model.radiative_flux_w_m2": 925000000000.0,
+        "success_threshold": 0.325,
+        "trajectory_model.initial_state_sigma_m": 925000000.0,
+        "trajectory_model.integration_step_s": 13402800.575,
+        "trajectory_model.nav_position_sigma_m": 25000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 52500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-002",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 775000.0002250001,
+        "bh_parameters.mass_kg": 6.750000000032501e+40,
+        "bh_parameters.max_dust_flux_scale": 97.50025,
+        "bh_parameters.max_plasma_density_proxy_m3": 7.5e+18,
+        "bh_parameters.max_radiative_flux_w_m2": 375000062.5,
+        "bh_parameters.periapsis_distance_m": 475000000000000.5,
+        "capsule_model.data_media_survival_margin": 0.8495,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001225,
+        "correction_window.actuator_efficiency": 0.18325,
+        "correction_window.delta_v_budget_mps": 5500.0,
+        "correction_window.end_year": 77500.0,
+        "correction_window.execution_sigma_fraction": 0.675,
+        "correction_window.guidance_sigma_rad": 0.0975,
+        "correction_window.max_duration_years": 150.925,
+        "correction_window.power_available_w": 375000.625,
+        "correction_window.specific_impulse_s": 9500.525,
+        "correction_window.start_year": 77500.0,
+        "environment_model.accretion_luminosity_fraction": 0.075,
+        "environment_model.dust_flux_scale": 175.0,
+        "environment_model.plasma_density_proxy_m3": 2.75e+23,
+        "environment_model.radiative_flux_w_m2": 775000000000.0,
+        "success_threshold": 0.675,
+        "trajectory_model.initial_state_sigma_m": 975000000.0,
+        "trajectory_model.integration_step_s": 2365200.925,
+        "trajectory_model.nav_position_sigma_m": 375000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 47500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-003",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 625000.0003750001,
+        "bh_parameters.mass_kg": 2.500000000975e+39,
+        "bh_parameters.max_dust_flux_scale": 2.50975,
+        "bh_parameters.max_plasma_density_proxy_m3": 7.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 725000027.5,
+        "bh_parameters.periapsis_distance_m": 425000000000000.56,
+        "capsule_model.data_media_survival_margin": 0.6465,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0002275,
+        "correction_window.actuator_efficiency": 0.13375,
+        "correction_window.delta_v_budget_mps": 16500.0,
+        "correction_window.end_year": 12500.0,
+        "correction_window.execution_sigma_fraction": 0.525,
+        "correction_window.guidance_sigma_rad": 0.0525,
+        "correction_window.max_duration_years": 450.775,
+        "correction_window.power_available_w": 225000.775,
+        "correction_window.specific_impulse_s": 18500.075,
+        "correction_window.start_year": 92500.0,
+        "environment_model.accretion_luminosity_fraction": 0.925,
+        "environment_model.dust_flux_scale": 625.0,
+        "environment_model.plasma_density_proxy_m3": 3.25e+23,
+        "environment_model.radiative_flux_w_m2": 625000000000.0,
+        "success_threshold": 0.025,
+        "trajectory_model.initial_state_sigma_m": 25000000.0,
+        "trajectory_model.integration_step_s": 22863600.275,
+        "trajectory_model.nav_position_sigma_m": 725000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 42500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-004",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 475000.0005249999,
+        "bh_parameters.mass_kg": 3.7500000000625e+40,
+        "bh_parameters.max_dust_flux_scale": 7.50925,
+        "bh_parameters.max_plasma_density_proxy_m3": 3.75e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 75000092.5,
+        "bh_parameters.periapsis_distance_m": 375000000000000.6,
+        "capsule_model.data_media_survival_margin": 0.4435,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003325,
+        "correction_window.actuator_efficiency": 0.08425,
+        "correction_window.delta_v_budget_mps": 7500.0,
+        "correction_window.end_year": 47500.0,
+        "correction_window.execution_sigma_fraction": 0.375,
+        "correction_window.guidance_sigma_rad": 0.0075,
+        "correction_window.max_duration_years": 750.625,
+        "correction_window.power_available_w": 75000.925,
+        "correction_window.specific_impulse_s": 7500.625,
+        "correction_window.start_year": 7500.0,
+        "environment_model.accretion_luminosity_fraction": 0.775,
+        "environment_model.dust_flux_scale": 75.0,
+        "environment_model.plasma_density_proxy_m3": 3.75e+23,
+        "environment_model.radiative_flux_w_m2": 475000000000.0,
+        "success_threshold": 0.375,
+        "trajectory_model.initial_state_sigma_m": 75000000.0,
+        "trajectory_model.integration_step_s": 11826000.625,
+        "trajectory_model.nav_position_sigma_m": 75000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 37500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-005",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 325000.00067499996,
+        "bh_parameters.mass_kg": 7.2500000000275e+40,
+        "bh_parameters.max_dust_flux_scale": 12.50875,
+        "bh_parameters.max_plasma_density_proxy_m3": 2.5e+18,
+        "bh_parameters.max_radiative_flux_w_m2": 425000057.5,
+        "bh_parameters.periapsis_distance_m": 325000000000000.7,
+        "capsule_model.data_media_survival_margin": 0.8205,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001375,
+        "correction_window.actuator_efficiency": 0.03475,
+        "correction_window.delta_v_budget_mps": 18500.0,
+        "correction_window.end_year": 82500.0,
+        "correction_window.execution_sigma_fraction": 0.225,
+        "correction_window.guidance_sigma_rad": 0.0625,
+        "correction_window.max_duration_years": 1050.475,
+        "correction_window.power_available_w": 925000.0750000001,
+        "correction_window.specific_impulse_s": 16500.175,
+        "correction_window.start_year": 22500.0,
+        "environment_model.accretion_luminosity_fraction": 0.625,
+        "environment_model.dust_flux_scale": 525.0,
+        "environment_model.plasma_density_proxy_m3": 4.25e+23,
+        "environment_model.radiative_flux_w_m2": 325000000000.0,
+        "success_threshold": 0.725,
+        "trajectory_model.initial_state_sigma_m": 125000000.0,
+        "trajectory_model.integration_step_s": 788400.9750000001,
+        "trajectory_model.nav_position_sigma_m": 425000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 32500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-006",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 175000.00082499997,
+        "bh_parameters.mass_kg": 7.500000000925e+39,
+        "bh_parameters.max_dust_flux_scale": 17.50825,
+        "bh_parameters.max_plasma_density_proxy_m3": 6.750000000000001e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 775000022.5,
+        "bh_parameters.periapsis_distance_m": 275000000000000.75,
+        "capsule_model.data_media_survival_margin": 0.6175,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0002425,
+        "correction_window.actuator_efficiency": 0.97525,
+        "correction_window.delta_v_budget_mps": 9500.0,
+        "correction_window.end_year": 17500.0,
+        "correction_window.execution_sigma_fraction": 0.075,
+        "correction_window.guidance_sigma_rad": 0.0175,
+        "correction_window.max_duration_years": 1350.325,
+        "correction_window.power_available_w": 775000.225,
+        "correction_window.specific_impulse_s": 5500.725,
+        "correction_window.start_year": 37500.0,
+        "environment_model.accretion_luminosity_fraction": 0.475,
+        "environment_model.dust_flux_scale": 975.0,
+        "environment_model.plasma_density_proxy_m3": 4.7499999999999995e+23,
+        "environment_model.radiative_flux_w_m2": 175000000000.0,
+        "success_threshold": 0.075,
+        "trajectory_model.initial_state_sigma_m": 175000000.0,
+        "trajectory_model.integration_step_s": 21286800.325000003,
+        "trajectory_model.nav_position_sigma_m": 775000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 27500.000000000004
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-007",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 25000.000975,
+        "bh_parameters.mass_kg": 4.2500000000575e+40,
+        "bh_parameters.max_dust_flux_scale": 22.50775,
+        "bh_parameters.max_plasma_density_proxy_m3": 3.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 125000087.5,
+        "bh_parameters.periapsis_distance_m": 225000000000000.78,
+        "capsule_model.data_media_survival_margin": 0.4145,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003475,
+        "correction_window.actuator_efficiency": 0.92575,
+        "correction_window.delta_v_budget_mps": 500.0,
+        "correction_window.end_year": 52500.0,
+        "correction_window.execution_sigma_fraction": 0.925,
+        "correction_window.guidance_sigma_rad": 0.0725,
+        "correction_window.max_duration_years": 1650.175,
+        "correction_window.power_available_w": 625000.375,
+        "correction_window.specific_impulse_s": 14500.275,
+        "correction_window.start_year": 52500.0,
+        "environment_model.accretion_luminosity_fraction": 0.325,
+        "environment_model.dust_flux_scale": 425.0,
+        "environment_model.plasma_density_proxy_m3": 5.25e+23,
+        "environment_model.radiative_flux_w_m2": 25000000000.0,
+        "success_threshold": 0.425,
+        "trajectory_model.initial_state_sigma_m": 225000000.0,
+        "trajectory_model.integration_step_s": 10249200.675,
+        "trajectory_model.nav_position_sigma_m": 125000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 22500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-008",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 875000.000125,
+        "bh_parameters.mass_kg": 7.7500000000225e+40,
+        "bh_parameters.max_dust_flux_scale": 27.50725,
+        "bh_parameters.max_plasma_density_proxy_m3": 9.75e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 475000052.5,
+        "bh_parameters.periapsis_distance_m": 175000000000000.8,
+        "capsule_model.data_media_survival_margin": 0.7915,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001525,
+        "correction_window.actuator_efficiency": 0.87625,
+        "correction_window.delta_v_budget_mps": 11500.0,
+        "correction_window.end_year": 87500.0,
+        "correction_window.execution_sigma_fraction": 0.775,
+        "correction_window.guidance_sigma_rad": 0.0275,
+        "correction_window.max_duration_years": 1950.025,
+        "correction_window.power_available_w": 475000.52499999997,
+        "correction_window.specific_impulse_s": 3500.825,
+        "correction_window.start_year": 67500.0,
+        "environment_model.accretion_luminosity_fraction": 0.175,
+        "environment_model.dust_flux_scale": 875.0,
+        "environment_model.plasma_density_proxy_m3": 5.75e+23,
+        "environment_model.radiative_flux_w_m2": 875000000000.0,
+        "success_threshold": 0.775,
+        "trajectory_model.initial_state_sigma_m": 275000000.0,
+        "trajectory_model.integration_step_s": 30747600.025,
+        "trajectory_model.nav_position_sigma_m": 475000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 17500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-009",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 725000.000275,
+        "bh_parameters.mass_kg": 1.2500000000875e+40,
+        "bh_parameters.max_dust_flux_scale": 32.50675,
+        "bh_parameters.max_plasma_density_proxy_m3": 6.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 825000017.5,
+        "bh_parameters.periapsis_distance_m": 125000000000000.88,
+        "capsule_model.data_media_survival_margin": 0.5885,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0002575,
+        "correction_window.actuator_efficiency": 0.82675,
+        "correction_window.delta_v_budget_mps": 2500.0,
+        "correction_window.end_year": 22500.0,
+        "correction_window.execution_sigma_fraction": 0.625,
+        "correction_window.guidance_sigma_rad": 0.0825,
+        "correction_window.max_duration_years": 250.875,
+        "correction_window.power_available_w": 325000.675,
+        "correction_window.specific_impulse_s": 12500.375,
+        "correction_window.start_year": 82500.0,
+        "environment_model.accretion_luminosity_fraction": 0.025,
+        "environment_model.dust_flux_scale": 325.0,
+        "environment_model.plasma_density_proxy_m3": 6.249999999999999e+23,
+        "environment_model.radiative_flux_w_m2": 725000000000.0,
+        "success_threshold": 0.125,
+        "trajectory_model.initial_state_sigma_m": 325000000.0,
+        "trajectory_model.integration_step_s": 19710000.375,
+        "trajectory_model.nav_position_sigma_m": 825000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 12500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-010",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 575000.000425,
+        "bh_parameters.mass_kg": 4.7500000000525e+40,
+        "bh_parameters.max_dust_flux_scale": 37.50625,
+        "bh_parameters.max_plasma_density_proxy_m3": 2.7500000000000004e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 175000082.5,
+        "bh_parameters.periapsis_distance_m": 75000000000000.92,
+        "capsule_model.data_media_survival_margin": 0.9655,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003625,
+        "correction_window.actuator_efficiency": 0.77725,
+        "correction_window.delta_v_budget_mps": 13500.0,
+        "correction_window.end_year": 57499.99999999999,
+        "correction_window.execution_sigma_fraction": 0.475,
+        "correction_window.guidance_sigma_rad": 0.0375,
+        "correction_window.max_duration_years": 550.725,
+        "correction_window.power_available_w": 175000.82499999998,
+        "correction_window.specific_impulse_s": 1500.925,
+        "correction_window.start_year": 97500.0,
+        "environment_model.accretion_luminosity_fraction": 0.875,
+        "environment_model.dust_flux_scale": 775.0,
+        "environment_model.plasma_density_proxy_m3": 6.75e+23,
+        "environment_model.radiative_flux_w_m2": 575000000000.0,
+        "success_threshold": 0.475,
+        "trajectory_model.initial_state_sigma_m": 375000000.0,
+        "trajectory_model.integration_step_s": 8672400.725000001,
+        "trajectory_model.nav_position_sigma_m": 175000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 7500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-011",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 425000.00057499995,
+        "bh_parameters.mass_kg": 8.2500000000175e+40,
+        "bh_parameters.max_dust_flux_scale": 42.50575,
+        "bh_parameters.max_plasma_density_proxy_m3": 9.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 525000047.5,
+        "bh_parameters.periapsis_distance_m": 25000000000000.977,
+        "capsule_model.data_media_survival_margin": 0.7625,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001675,
+        "correction_window.actuator_efficiency": 0.72775,
+        "correction_window.delta_v_budget_mps": 4500.0,
+        "correction_window.end_year": 92500.0,
+        "correction_window.execution_sigma_fraction": 0.325,
+        "correction_window.guidance_sigma_rad": 0.0925,
+        "correction_window.max_duration_years": 850.575,
+        "correction_window.power_available_w": 25000.975000000002,
+        "correction_window.specific_impulse_s": 10500.475,
+        "correction_window.start_year": 12500.0,
+        "environment_model.accretion_luminosity_fraction": 0.725,
+        "environment_model.dust_flux_scale": 225.0,
+        "environment_model.plasma_density_proxy_m3": 7.25e+23,
+        "environment_model.radiative_flux_w_m2": 425000000000.0,
+        "success_threshold": 0.825,
+        "trajectory_model.initial_state_sigma_m": 425000000.0,
+        "trajectory_model.integration_step_s": 29170800.075000003,
+        "trajectory_model.nav_position_sigma_m": 525000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 2500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-012",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 275000.000725,
+        "bh_parameters.mass_kg": 1.7500000000824997e+40,
+        "bh_parameters.max_dust_flux_scale": 47.50525,
+        "bh_parameters.max_plasma_density_proxy_m3": 5.749999999999999e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 875000012.5,
+        "bh_parameters.periapsis_distance_m": 975000000000000.0,
+        "capsule_model.data_media_survival_margin": 0.5595,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0002725,
+        "correction_window.actuator_efficiency": 0.67825,
+        "correction_window.delta_v_budget_mps": 15500.0,
+        "correction_window.end_year": 27500.000000000004,
+        "correction_window.execution_sigma_fraction": 0.175,
+        "correction_window.guidance_sigma_rad": 0.0475,
+        "correction_window.max_duration_years": 1150.425,
+        "correction_window.power_available_w": 875000.125,
+        "correction_window.specific_impulse_s": 19500.024999999998,
+        "correction_window.start_year": 27500.000000000004,
+        "environment_model.accretion_luminosity_fraction": 0.575,
+        "environment_model.dust_flux_scale": 675.0,
+        "environment_model.plasma_density_proxy_m3": 7.75e+23,
+        "environment_model.radiative_flux_w_m2": 275000000000.0,
+        "success_threshold": 0.175,
+        "trajectory_model.initial_state_sigma_m": 475000000.0,
+        "trajectory_model.integration_step_s": 18133200.424999997,
+        "trajectory_model.nav_position_sigma_m": 875000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 97500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-013",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 125000.000875,
+        "bh_parameters.mass_kg": 5.2500000000475e+40,
+        "bh_parameters.max_dust_flux_scale": 52.50475,
+        "bh_parameters.max_plasma_density_proxy_m3": 2.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 225000077.5,
+        "bh_parameters.periapsis_distance_m": 925000000000000.1,
+        "capsule_model.data_media_survival_margin": 0.9365,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003775,
+        "correction_window.actuator_efficiency": 0.62875,
+        "correction_window.delta_v_budget_mps": 6500.0,
+        "correction_window.end_year": 62500.0,
+        "correction_window.execution_sigma_fraction": 0.025,
+        "correction_window.guidance_sigma_rad": 0.0025,
+        "correction_window.max_duration_years": 1450.275,
+        "correction_window.power_available_w": 725000.275,
+        "correction_window.specific_impulse_s": 8500.574999999999,
+        "correction_window.start_year": 42500.0,
+        "environment_model.accretion_luminosity_fraction": 0.425,
+        "environment_model.dust_flux_scale": 125.0,
+        "environment_model.plasma_density_proxy_m3": 8.25e+23,
+        "environment_model.radiative_flux_w_m2": 125000000000.0,
+        "success_threshold": 0.525,
+        "trajectory_model.initial_state_sigma_m": 525000000.0,
+        "trajectory_model.integration_step_s": 7095600.775,
+        "trajectory_model.nav_position_sigma_m": 225000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 92500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-014",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 975000.000025,
+        "bh_parameters.mass_kg": 8.750000000012501e+40,
+        "bh_parameters.max_dust_flux_scale": 57.50425,
+        "bh_parameters.max_plasma_density_proxy_m3": 8.75e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 575000042.5,
+        "bh_parameters.periapsis_distance_m": 875000000000000.1,
+        "capsule_model.data_media_survival_margin": 0.7335,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001825,
+        "correction_window.actuator_efficiency": 0.57925,
+        "correction_window.delta_v_budget_mps": 17500.0,
+        "correction_window.end_year": 97500.0,
+        "correction_window.execution_sigma_fraction": 0.875,
+        "correction_window.guidance_sigma_rad": 0.0575,
+        "correction_window.max_duration_years": 1750.125,
+        "correction_window.power_available_w": 575000.4249999999,
+        "correction_window.specific_impulse_s": 17500.125,
+        "correction_window.start_year": 57499.99999999999,
+        "environment_model.accretion_luminosity_fraction": 0.275,
+        "environment_model.dust_flux_scale": 575.0,
+        "environment_model.plasma_density_proxy_m3": 8.75e+23,
+        "environment_model.radiative_flux_w_m2": 975000000000.0,
+        "success_threshold": 0.875,
+        "trajectory_model.initial_state_sigma_m": 575000000.0,
+        "trajectory_model.integration_step_s": 27594000.125,
+        "trajectory_model.nav_position_sigma_m": 575000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 87500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-015",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 825000.0001749999,
+        "bh_parameters.mass_kg": 2.2500000000775e+40,
+        "bh_parameters.max_dust_flux_scale": 62.50375,
+        "bh_parameters.max_plasma_density_proxy_m3": 5.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 925000007.5,
+        "bh_parameters.periapsis_distance_m": 825000000000000.1,
+        "capsule_model.data_media_survival_margin": 0.5305,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0002875,
+        "correction_window.actuator_efficiency": 0.52975,
+        "correction_window.delta_v_budget_mps": 8500.0,
+        "correction_window.end_year": 32500.0,
+        "correction_window.execution_sigma_fraction": 0.725,
+        "correction_window.guidance_sigma_rad": 0.0125,
+        "correction_window.max_duration_years": 50.975,
+        "correction_window.power_available_w": 425000.575,
+        "correction_window.specific_impulse_s": 6500.675,
+        "correction_window.start_year": 72500.0,
+        "environment_model.accretion_luminosity_fraction": 0.125,
+        "environment_model.dust_flux_scale": 25.0,
+        "environment_model.plasma_density_proxy_m3": 9.25e+23,
+        "environment_model.radiative_flux_w_m2": 825000000000.0,
+        "success_threshold": 0.225,
+        "trajectory_model.initial_state_sigma_m": 625000000.0,
+        "trajectory_model.integration_step_s": 16556400.475000001,
+        "trajectory_model.nav_position_sigma_m": 925000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 82500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-016",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 675000.000325,
+        "bh_parameters.mass_kg": 5.7500000000425e+40,
+        "bh_parameters.max_dust_flux_scale": 67.50325,
+        "bh_parameters.max_plasma_density_proxy_m3": 1.7499999999999998e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 275000072.5,
+        "bh_parameters.periapsis_distance_m": 775000000000000.2,
+        "capsule_model.data_media_survival_margin": 0.9075,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003925,
+        "correction_window.actuator_efficiency": 0.48025,
+        "correction_window.delta_v_budget_mps": 19500.0,
+        "correction_window.end_year": 67500.0,
+        "correction_window.execution_sigma_fraction": 0.575,
+        "correction_window.guidance_sigma_rad": 0.0675,
+        "correction_window.max_duration_years": 350.825,
+        "correction_window.power_available_w": 275000.72500000003,
+        "correction_window.specific_impulse_s": 15500.225,
+        "correction_window.start_year": 87500.0,
+        "environment_model.accretion_luminosity_fraction": 0.975,
+        "environment_model.dust_flux_scale": 475.0,
+        "environment_model.plasma_density_proxy_m3": 9.75e+23,
+        "environment_model.radiative_flux_w_m2": 675000000000.0,
+        "success_threshold": 0.575,
+        "trajectory_model.initial_state_sigma_m": 675000000.0,
+        "trajectory_model.integration_step_s": 5518800.824999999,
+        "trajectory_model.nav_position_sigma_m": 275000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 77500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-017",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 525000.000475,
+        "bh_parameters.mass_kg": 9.2500000000075e+40,
+        "bh_parameters.max_dust_flux_scale": 72.50275,
+        "bh_parameters.max_plasma_density_proxy_m3": 8.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 625000037.5,
+        "bh_parameters.periapsis_distance_m": 725000000000000.2,
+        "capsule_model.data_media_survival_margin": 0.7045,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001975,
+        "correction_window.actuator_efficiency": 0.43075,
+        "correction_window.delta_v_budget_mps": 10500.0,
+        "correction_window.end_year": 2500.0,
+        "correction_window.execution_sigma_fraction": 0.425,
+        "correction_window.guidance_sigma_rad": 0.0225,
+        "correction_window.max_duration_years": 650.675,
+        "correction_window.power_available_w": 125000.875,
+        "correction_window.specific_impulse_s": 4500.775000000001,
+        "correction_window.start_year": 2500.0,
+        "environment_model.accretion_luminosity_fraction": 0.825,
+        "environment_model.dust_flux_scale": 925.0,
+        "environment_model.plasma_density_proxy_m3": 2.5000000000000002e+22,
+        "environment_model.radiative_flux_w_m2": 525000000000.0,
+        "success_threshold": 0.925,
+        "trajectory_model.initial_state_sigma_m": 725000000.0,
+        "trajectory_model.integration_step_s": 26017200.174999997,
+        "trajectory_model.nav_position_sigma_m": 625000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 72500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-018",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 375000.000625,
+        "bh_parameters.mass_kg": 2.7500000000725e+40,
+        "bh_parameters.max_dust_flux_scale": 77.50225,
+        "bh_parameters.max_plasma_density_proxy_m3": 4.75e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 975000002.5,
+        "bh_parameters.periapsis_distance_m": 675000000000000.4,
+        "capsule_model.data_media_survival_margin": 0.5015,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0003025,
+        "correction_window.actuator_efficiency": 0.38125,
+        "correction_window.delta_v_budget_mps": 1500.0,
+        "correction_window.end_year": 37500.0,
+        "correction_window.execution_sigma_fraction": 0.275,
+        "correction_window.guidance_sigma_rad": 0.0775,
+        "correction_window.max_duration_years": 950.525,
+        "correction_window.power_available_w": 975000.025,
+        "correction_window.specific_impulse_s": 13500.325,
+        "correction_window.start_year": 17500.0,
+        "environment_model.accretion_luminosity_fraction": 0.675,
+        "environment_model.dust_flux_scale": 375.0,
+        "environment_model.plasma_density_proxy_m3": 7.499999999999999e+22,
+        "environment_model.radiative_flux_w_m2": 375000000000.0,
+        "success_threshold": 0.275,
+        "trajectory_model.initial_state_sigma_m": 775000000.0,
+        "trajectory_model.integration_step_s": 14979600.524999999,
+        "trajectory_model.nav_position_sigma_m": 975000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 67500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    },
+    {
+      "candidate_id": "pt-019",
+      "constraint_status": {
+        "bounds": "PASS",
+        "evidence_completeness_1.0": "PASS",
+        "no_D_grade_influence": "PASS"
+      },
+      "dominant_drivers": {
+        "method": "OAT",
+        "parameter_ids": [
+          "capsule_model.data_media_survival_margin",
+          "capsule_model.material_degradation_mu_1_per_year",
+          "environment_model.radiative_flux_w_m2"
+        ]
+      },
+      "parameters": {
+        "bh_parameters.distance_from_earth_ly": 225000.000775,
+        "bh_parameters.mass_kg": 6.2500000000375e+40,
+        "bh_parameters.max_dust_flux_scale": 82.50175,
+        "bh_parameters.max_plasma_density_proxy_m3": 1.25e+19,
+        "bh_parameters.max_radiative_flux_w_m2": 325000067.5,
+        "bh_parameters.periapsis_distance_m": 625000000000000.4,
+        "capsule_model.data_media_survival_margin": 0.8785,
+        "capsule_model.material_degradation_mu_1_per_year": 0.0001075,
+        "correction_window.actuator_efficiency": 0.33175,
+        "correction_window.delta_v_budget_mps": 12500.0,
+        "correction_window.end_year": 72500.0,
+        "correction_window.execution_sigma_fraction": 0.125,
+        "correction_window.guidance_sigma_rad": 0.0325,
+        "correction_window.max_duration_years": 1250.375,
+        "correction_window.power_available_w": 825000.1749999999,
+        "correction_window.specific_impulse_s": 2500.875,
+        "correction_window.start_year": 32500.0,
+        "environment_model.accretion_luminosity_fraction": 0.525,
+        "environment_model.dust_flux_scale": 825.0,
+        "environment_model.plasma_density_proxy_m3": 1.25e+23,
+        "environment_model.radiative_flux_w_m2": 225000000000.0,
+        "success_threshold": 0.625,
+        "trajectory_model.initial_state_sigma_m": 825000000.0,
+        "trajectory_model.integration_step_s": 3942000.875,
+        "trajectory_model.nav_position_sigma_m": 325000000.0,
+        "trajectory_model.nav_velocity_sigma_mps": 62500.0
+      },
+      "scores": {
+        "objective_vector": [
+          0.0,
+          1.0
+        ],
+        "p_success": 0.0,
+        "rank_key": "pareto",
+        "risk_envelope": 1.0,
+        "risk_meta": {
+          "distribution_size": 64,
+          "method": "lower_quantile",
+          "q_value": 0.0,
+          "quantile": 0.05
+        }
+      }
+    }
+  ],
+  "risk_envelope_spec_ref": "mission/objectives/risk_envelope.v1.json",
+  "schema_version": "optimization_frontier.v1",
+  "seed": 1
+}

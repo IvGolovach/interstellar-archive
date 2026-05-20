@@ -1,0 +1,1851 @@
+{
+  "default_run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+  "generator": "scripts/build_user_mission_run_catalog_artifact.py",
+  "interpretation_limits": [
+    "Catalog rows package reviewed assumptions; they do not run a launch provider, trajectory optimizer, or procurement model.",
+    "A generated local review pack is deterministic evidence of the selected assumptions, not evidence of physical qualification.",
+    "Targetability, arrival recovery, and archive readability remain explicit external evidence gaps."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "user_selected_mission_run_catalog",
+  "run_count": 15,
+  "run_rows": [
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 929575000000.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 16.811061735
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": false,
+          "claim_boundary": "No horizon-crossing geometry is evaluated for this target row.",
+          "model": "not_black_hole_target"
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 992.771331,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 4512.5,
+          "swept_local_dust_mass_kg": 1.57146234e-07,
+          "swept_scaled_dust_mass_kg": 2.20004727e-07
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 1.5939118e-05
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.994662498437,
+        "capsule_survival_p05": 0.996090087105,
+        "capsule_survival_p50": 0.996989464135,
+        "capsule_survival_p95": 0.997697804548,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.997666007735,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-alpha-centauri-scale-concept-95-6915eb03da",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-alpha-centauri-scale-concept-95-6915eb03da",
+          "--seed": 1,
+          "--target-id": "alpha-centauri-scale",
+          "--velocity-id": "concept-95"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 4.37,
+        "feasibility_row_id": "feas-alpha-centauri-scale-concept-95",
+        "flight_years": 13790.453068,
+        "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+        "target_detail": "Nearby-star control scenario using a NASA/Hubble 4.3 ly anchor.",
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale",
+        "time_horizon_class": "near_interstellar",
+        "velocity_detail": "Concept-only speed stress to expose sensitivity, not current architecture baseline.",
+        "velocity_fraction_c": 0.00031688589,
+        "velocity_id": "concept-95",
+        "velocity_km_s": 95.0,
+        "velocity_label": "95 km/s"
+      },
+      "selection_hash": "6915eb03daf3bd53380d3d4f2b18c390ad6a9d444c581feea48bb87f1241103b",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-concept-95-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-alpha-centauri-scale-concept-95"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 211551947200.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 3.825848204
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": false,
+          "claim_boundary": "No horizon-crossing geometry is evaluated for this target row.",
+          "model": "not_black_hole_target"
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 225.934118,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 1026.9512,
+          "swept_local_dust_mass_kg": 1.57146234e-07,
+          "swept_scaled_dust_mass_kg": 2.20004727e-07
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 1.5939118e-05
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.988985129335,
+        "capsule_survival_p05": 0.991988663607,
+        "capsule_survival_p50": 0.993792072173,
+        "capsule_survival_p95": 0.995294572133,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.995163029599,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-alpha-centauri-scale-conditional-45-43cb7f6b1b",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-alpha-centauri-scale-conditional-45-43cb7f6b1b",
+          "--seed": 1,
+          "--target-id": "alpha-centauri-scale",
+          "--velocity-id": "conditional-45"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 4.37,
+        "feasibility_row_id": "feas-alpha-centauri-scale-conditional-45",
+        "flight_years": 28907.613448,
+        "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+        "target_detail": "Nearby-star control scenario using a NASA/Hubble 4.3 ly anchor.",
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale",
+        "time_horizon_class": "near_interstellar",
+        "velocity_detail": "Conditional inbound-energy Sun-Oberth band; default black-hole row is near 10 Myr.",
+        "velocity_fraction_c": 0.000151171248,
+        "velocity_id": "conditional-45",
+        "velocity_km_s": 45.32,
+        "velocity_label": "45.32 km/s"
+      },
+      "selection_hash": "43cb7f6b1ba65062a610704bd5e836d1a4e5b1e2e767839ced508010ce1ed434",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-conditional-45-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-alpha-centauri-scale-conditional-45"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 55295436700.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 1.0
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": false,
+          "claim_boundary": "No horizon-crossing geometry is evaluated for this target row.",
+          "model": "not_black_hole_target"
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 59.054648,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 268.42445,
+          "swept_local_dust_mass_kg": 1.57146234e-07,
+          "swept_scaled_dust_mass_kg": 2.20004727e-07
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 1.5939118e-05
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.978545494971,
+        "capsule_survival_p05": 0.98437966188,
+        "capsule_survival_p50": 0.987870423659,
+        "capsule_survival_p95": 0.990754460714,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.990560575087,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-alpha-centauri-scale-oberth-23-8875705193",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-alpha-centauri-scale-oberth-23-8875705193",
+          "--seed": 1,
+          "--target-id": "alpha-centauri-scale",
+          "--velocity-id": "oberth-23"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 4.37,
+        "feasibility_row_id": "feas-alpha-centauri-scale-oberth-23",
+        "flight_years": 56542.643136,
+        "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+        "target_detail": "Nearby-star control scenario using a NASA/Hubble 4.3 ly anchor.",
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale",
+        "time_horizon_class": "near_interstellar",
+        "velocity_detail": "Near-parabolic Sun-Oberth lower band.",
+        "velocity_fraction_c": 7.7286801e-05,
+        "velocity_id": "oberth-23",
+        "velocity_km_s": 23.17,
+        "velocity_label": "23.17 km/s"
+      },
+      "selection_hash": "8875705193b28d4d9b403b0a2870c53ac40931395bcd4ebbf3a6c90284d6788b",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-23-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-alpha-centauri-scale-oberth-23"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 117323437500.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 2.121756233
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": false,
+          "claim_boundary": "No horizon-crossing geometry is evaluated for this target row.",
+          "model": "not_black_hole_target"
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 125.299567,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 569.53125,
+          "swept_local_dust_mass_kg": 1.57146234e-07,
+          "swept_scaled_dust_mass_kg": 2.20004727e-07
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 1.5939118e-05
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.985272174943,
+        "capsule_survival_p05": 0.989144422328,
+        "capsule_survival_p50": 0.991704048054,
+        "capsule_survival_p95": 0.993588624661,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.993514322016,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-alpha-centauri-scale-oberth-34-88c7c17eac",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-alpha-centauri-scale-oberth-34-88c7c17eac",
+          "--seed": 1,
+          "--target-id": "alpha-centauri-scale",
+          "--velocity-id": "oberth-34"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 4.37,
+        "feasibility_row_id": "feas-alpha-centauri-scale-oberth-34",
+        "flight_years": 38817.571599,
+        "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+        "target_detail": "Nearby-star control scenario using a NASA/Hubble 4.3 ly anchor.",
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale",
+        "time_horizon_class": "near_interstellar",
+        "velocity_detail": "Near-parabolic Sun-Oberth upper band.",
+        "velocity_fraction_c": 0.000112577882,
+        "velocity_id": "oberth-34",
+        "velocity_km_s": 33.75,
+        "velocity_label": "33.75 km/s"
+      },
+      "selection_hash": "88c7c17eac8fbf43b2fa294d1f35e32523819133024068b14237e408d1cee993",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-oberth-34-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-alpha-centauri-scale-oberth-34"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 370800000000.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 6.705797479
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": false,
+          "claim_boundary": "No horizon-crossing geometry is evaluated for this target row.",
+          "model": "not_black_hole_target"
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 396.008509,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 1800.0,
+          "swept_local_dust_mass_kg": 1.57146234e-07,
+          "swept_scaled_dust_mass_kg": 2.20004727e-07
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 1.5939118e-05
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.991659803313,
+        "capsule_survival_p05": 0.993930812269,
+        "capsule_survival_p50": 0.995311743194,
+        "capsule_survival_p95": 0.996401464031,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.99633085824,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-alpha-centauri-scale-stress-60-280736ac15",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-alpha-centauri-scale-stress-60-280736ac15",
+          "--seed": 1,
+          "--target-id": "alpha-centauri-scale",
+          "--velocity-id": "stress-60"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 4.37,
+        "feasibility_row_id": "feas-alpha-centauri-scale-stress-60",
+        "flight_years": 21834.884024,
+        "source_capsule_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+        "target_detail": "Nearby-star control scenario using a NASA/Hubble 4.3 ly anchor.",
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale",
+        "time_horizon_class": "near_interstellar",
+        "velocity_detail": "High-relative-speed dust stress row, not a validation claim.",
+        "velocity_fraction_c": 0.000200138457,
+        "velocity_id": "stress-60",
+        "velocity_km_s": 60.0,
+        "velocity_label": "60 km/s"
+      },
+      "selection_hash": "280736ac1565fba0a7a468564afd772bb76d6b64c96ab30cdce6bae66009d959",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-alpha-centauri-scale-ballistic-arrival-stress-60-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-alpha-centauri-scale-stress-60"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 929575000000.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 16.811061735
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 354398.919037,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 4512.5,
+          "swept_local_dust_mass_kg": 5.6097968981e-05,
+          "swept_scaled_dust_mass_kg": 7.8537156573e-05
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.005689936854
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.144590573358,
+        "capsule_survival_p05": 0.243669050477,
+        "capsule_survival_p50": 0.335214499411,
+        "capsule_survival_p95": 0.433106365018,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.431337467837,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-reference-black-hole-concept-95-eeca913675",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-reference-black-hole-concept-95-eeca913675",
+          "--seed": 1,
+          "--target-id": "reference-black-hole",
+          "--velocity-id": "concept-95"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 1560.0,
+        "feasibility_row_id": "feas-reference-black-hole-concept-95",
+        "flight_years": 4922907.731368,
+        "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+        "target_detail": "Default project-owned 1560 ly black-hole scenario; 45.32 km/s gives about 10.3 Myr.",
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate",
+        "time_horizon_class": "myr_sub_10",
+        "velocity_detail": "Concept-only speed stress to expose sensitivity, not current architecture baseline.",
+        "velocity_fraction_c": 0.00031688589,
+        "velocity_id": "concept-95",
+        "velocity_km_s": 95.0,
+        "velocity_label": "95 km/s"
+      },
+      "selection_hash": "eeca9136756e6bedc864c398eb80e6c89c9ad143c57e242783397fcc4787a372",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-concept-95-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-reference-black-hole-concept-95"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 211551947200.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 3.825848204
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 80653.827188,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 1026.9512,
+          "swept_local_dust_mass_kg": 5.6097968981e-05,
+          "swept_scaled_dust_mass_kg": 7.8537156573e-05
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.005689936854
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.018571310604,
+        "capsule_survival_p05": 0.05455983617,
+        "capsule_survival_p50": 0.10609881738,
+        "capsule_survival_p95": 0.180737005101,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.175037866228,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-reference-black-hole-conditional-45-3615a2ddec",
+          "--seed": 1,
+          "--target-id": "reference-black-hole",
+          "--velocity-id": "conditional-45"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 1560.0,
+        "feasibility_row_id": "feas-reference-black-hole-conditional-45",
+        "flight_years": 10319422.649603,
+        "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+        "target_detail": "Default project-owned 1560 ly black-hole scenario; 45.32 km/s gives about 10.3 Myr.",
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate",
+        "time_horizon_class": "myr_10_to_100",
+        "velocity_detail": "Conditional inbound-energy Sun-Oberth band; default black-hole row is near 10 Myr.",
+        "velocity_fraction_c": 0.000151171248,
+        "velocity_id": "conditional-45",
+        "velocity_km_s": 45.32,
+        "velocity_label": "45.32 km/s"
+      },
+      "selection_hash": "3615a2ddecc2db1c7730b6ba1befb599ec52a5ba61be9d220d8d35c73e290ec0",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-reference-black-hole-conditional-45"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 55295436700.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 1.0
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 21081.293058,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 268.42445,
+          "swept_local_dust_mass_kg": 5.6097968981e-05,
+          "swept_scaled_dust_mass_kg": 7.8537156573e-05
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.005689936854
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.000444602576,
+        "capsule_survival_p05": 0.003489147436,
+        "capsule_survival_p50": 0.012970529096,
+        "capsule_survival_p95": 0.036139566147,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.034277905951,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-reference-black-hole-oberth-23-53e26b1a8f",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-reference-black-hole-oberth-23-53e26b1a8f",
+          "--seed": 1,
+          "--target-id": "reference-black-hole",
+          "--velocity-id": "oberth-23"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 1560.0,
+        "feasibility_row_id": "feas-reference-black-hole-oberth-23",
+        "flight_years": 20184559.10574,
+        "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+        "target_detail": "Default project-owned 1560 ly black-hole scenario; 45.32 km/s gives about 10.3 Myr.",
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate",
+        "time_horizon_class": "myr_10_to_100",
+        "velocity_detail": "Near-parabolic Sun-Oberth lower band.",
+        "velocity_fraction_c": 7.7286801e-05,
+        "velocity_id": "oberth-23",
+        "velocity_km_s": 23.17,
+        "velocity_label": "23.17 km/s"
+      },
+      "selection_hash": "53e26b1a8fc7b2b1dfaf976ddf8c703b93269dfd882ee74bd6567fe1306850f5",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-23-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-reference-black-hole-oberth-23"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 117323437500.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 2.121756233
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 44729.364955,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 569.53125,
+          "swept_local_dust_mass_kg": 5.6097968981e-05,
+          "swept_scaled_dust_mass_kg": 7.8537156573e-05
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.005689936854
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.004920698018,
+        "capsule_survival_p05": 0.02033442526,
+        "capsule_survival_p50": 0.050414979894,
+        "capsule_survival_p95": 0.100299799488,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.097603887342,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-reference-black-hole-oberth-34-2908698012",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-reference-black-hole-oberth-34-2908698012",
+          "--seed": 1,
+          "--target-id": "reference-black-hole",
+          "--velocity-id": "oberth-34"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 1560.0,
+        "feasibility_row_id": "feas-reference-black-hole-oberth-34",
+        "flight_years": 13857073.614222,
+        "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+        "target_detail": "Default project-owned 1560 ly black-hole scenario; 45.32 km/s gives about 10.3 Myr.",
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate",
+        "time_horizon_class": "myr_10_to_100",
+        "velocity_detail": "Near-parabolic Sun-Oberth upper band.",
+        "velocity_fraction_c": 0.000112577882,
+        "velocity_id": "oberth-34",
+        "velocity_km_s": 33.75,
+        "velocity_label": "33.75 km/s"
+      },
+      "selection_hash": "290869801262f778a659bdfb476b70f1e0086c5fb639a237d64ca45477457a2e",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-oberth-34-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-reference-black-hole-oberth-34"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 370800000000.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 6.705797479
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 141366.881832,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 1800.0,
+          "swept_local_dust_mass_kg": 5.6097968981e-05,
+          "swept_scaled_dust_mass_kg": 7.8537156573e-05
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.005689936854
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.048707207262,
+        "capsule_survival_p05": 0.109172140124,
+        "capsule_survival_p50": 0.181762489371,
+        "capsule_survival_p95": 0.272459353236,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.267971721948,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-reference-black-hole-stress-60-a6161b0443",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-reference-black-hole-stress-60-a6161b0443",
+          "--seed": 1,
+          "--target-id": "reference-black-hole",
+          "--velocity-id": "stress-60"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 1560.0,
+        "feasibility_row_id": "feas-reference-black-hole-stress-60",
+        "flight_years": 7794603.908,
+        "source_capsule_row_id": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+        "target_detail": "Default project-owned 1560 ly black-hole scenario; 45.32 km/s gives about 10.3 Myr.",
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate",
+        "time_horizon_class": "myr_sub_10",
+        "velocity_detail": "High-relative-speed dust stress row, not a validation claim.",
+        "velocity_fraction_c": 0.000200138457,
+        "velocity_id": "stress-60",
+        "velocity_km_s": 60.0,
+        "velocity_label": "60 km/s"
+      },
+      "selection_hash": "a6161b0443a7b00db4e67c2b96fa81914b54d87b588799009bde43f430a500c3",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-reference-black-hole-ballistic-arrival-stress-60-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-reference-black-hole-stress-60"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 929575000000.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 16.811061735
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 5906648.650624,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 4512.5,
+          "swept_local_dust_mass_kg": 0.000934966149683,
+          "swept_scaled_dust_mass_kg": 0.001308952609557
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.094832280896
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.0,
+        "capsule_survival_p05": 4.3e-11,
+        "capsule_survival_p50": 1.0824e-08,
+        "capsule_survival_p95": 7.34794e-07,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 6.34906e-07,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-sgr-a-rounded-concept-95-2321fb5990",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-sgr-a-rounded-concept-95-2321fb5990",
+          "--seed": 1,
+          "--target-id": "sgr-a-rounded",
+          "--velocity-id": "concept-95"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 26000.0,
+        "feasibility_row_id": "feas-sgr-a-rounded-concept-95",
+        "flight_years": 82048462.189474,
+        "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+        "target_detail": "Repo-compatible Galactic-center stress scenario at rounded 26000 ly.",
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded",
+        "time_horizon_class": "myr_10_to_100",
+        "velocity_detail": "Concept-only speed stress to expose sensitivity, not current architecture baseline.",
+        "velocity_fraction_c": 0.00031688589,
+        "velocity_id": "concept-95",
+        "velocity_km_s": 95.0,
+        "velocity_label": "95 km/s"
+      },
+      "selection_hash": "2321fb59902739e286d2235f7aa97350489bfc8ad59b6d0f777ecbf82c43266a",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-concept-95-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-sgr-a-rounded-concept-95"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 211551947200.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 3.825848204
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 1344230.453127,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 1026.9512,
+          "swept_local_dust_mass_kg": 0.000934966149683,
+          "swept_scaled_dust_mass_kg": 0.001308952609557
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.094832280896
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "flight_horizon_exceeds_100_myr_review_band",
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.0,
+        "capsule_survival_p05": 0.0,
+        "capsule_survival_p50": 0.0,
+        "capsule_survival_p95": 0.0,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.0,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-sgr-a-rounded-conditional-45-2b3cc53000",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-sgr-a-rounded-conditional-45-2b3cc53000",
+          "--seed": 1,
+          "--target-id": "sgr-a-rounded",
+          "--velocity-id": "conditional-45"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 26000.0,
+        "feasibility_row_id": "feas-sgr-a-rounded-conditional-45",
+        "flight_years": 171990377.49338,
+        "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+        "target_detail": "Repo-compatible Galactic-center stress scenario at rounded 26000 ly.",
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded",
+        "time_horizon_class": "hundred_myr_plus",
+        "velocity_detail": "Conditional inbound-energy Sun-Oberth band; default black-hole row is near 10 Myr.",
+        "velocity_fraction_c": 0.000151171248,
+        "velocity_id": "conditional-45",
+        "velocity_km_s": 45.32,
+        "velocity_label": "45.32 km/s"
+      },
+      "selection_hash": "2b3cc53000827ac62a50a53b1750c470ba95d6652be03992227ce2265e1d3b3a",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-conditional-45-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-sgr-a-rounded-conditional-45"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 55295436700.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 1.0
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 351354.884296,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 268.42445,
+          "swept_local_dust_mass_kg": 0.000934966149683,
+          "swept_scaled_dust_mass_kg": 0.001308952609557
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.094832280896
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "flight_horizon_exceeds_100_myr_review_band",
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.0,
+        "capsule_survival_p05": 0.0,
+        "capsule_survival_p50": 0.0,
+        "capsule_survival_p95": 0.0,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.0,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-sgr-a-rounded-oberth-23-caf31ebd8e",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-sgr-a-rounded-oberth-23-caf31ebd8e",
+          "--seed": 1,
+          "--target-id": "sgr-a-rounded",
+          "--velocity-id": "oberth-23"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 26000.0,
+        "feasibility_row_id": "feas-sgr-a-rounded-oberth-23",
+        "flight_years": 336409318.429003,
+        "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+        "target_detail": "Repo-compatible Galactic-center stress scenario at rounded 26000 ly.",
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded",
+        "time_horizon_class": "hundred_myr_plus",
+        "velocity_detail": "Near-parabolic Sun-Oberth lower band.",
+        "velocity_fraction_c": 7.7286801e-05,
+        "velocity_id": "oberth-23",
+        "velocity_km_s": 23.17,
+        "velocity_label": "23.17 km/s"
+      },
+      "selection_hash": "caf31ebd8e101d16698cff30e09b402c23c41a8d9e521ec7b3ee9036c6abfded",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-23-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-sgr-a-rounded-oberth-23"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 117323437500.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 2.121756233
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 745489.415912,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 569.53125,
+          "swept_local_dust_mass_kg": 0.000934966149683,
+          "swept_scaled_dust_mass_kg": 0.001308952609557
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.094832280896
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "flight_horizon_exceeds_100_myr_review_band",
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.0,
+        "capsule_survival_p05": 0.0,
+        "capsule_survival_p50": 0.0,
+        "capsule_survival_p95": 0.0,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 0.0,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-sgr-a-rounded-oberth-34-0912c766ae",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-sgr-a-rounded-oberth-34-0912c766ae",
+          "--seed": 1,
+          "--target-id": "sgr-a-rounded",
+          "--velocity-id": "oberth-34"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 26000.0,
+        "feasibility_row_id": "feas-sgr-a-rounded-oberth-34",
+        "flight_years": 230951226.903704,
+        "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+        "target_detail": "Repo-compatible Galactic-center stress scenario at rounded 26000 ly.",
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded",
+        "time_horizon_class": "hundred_myr_plus",
+        "velocity_detail": "Near-parabolic Sun-Oberth upper band.",
+        "velocity_fraction_c": 0.000112577882,
+        "velocity_id": "oberth-34",
+        "velocity_km_s": 33.75,
+        "velocity_label": "33.75 km/s"
+      },
+      "selection_hash": "0912c766aefdcb933f7a09a5ad076881eb5df6afacafa4126c038073b4a928ca",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-oberth-34-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-sgr-a-rounded-oberth-34"
+      }
+    },
+    {
+      "blocked_claims": [
+        "mission feasible",
+        "flight ready",
+        "certified capsule survival",
+        "guaranteed arrival or archive recovery"
+      ],
+      "cost_energy_proxy": {
+        "capsule_kinetic_energy_j": 370800000000.0,
+        "claim_boundary": "Energy proxy is not a launch quote, procurement estimate, or mission architecture cost.",
+        "procurement_status": "external_required",
+        "relative_to_23_17_km_s": 6.705797479
+      },
+      "exposure_snapshot": {
+        "black_hole_screen": {
+          "applies": true,
+          "claim_boundary": "This is a horizon-geometry screen, not GR trajectory integration or MHD accretion modeling.",
+          "crossing_condition_met": true,
+          "kerr_screening": [
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 1.0,
+              "spin_a_dimensionless": 0.0,
+              "status": "implemented_screen"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.933012701892,
+              "spin_a_dimensionless": 0.5,
+              "status": "screen_only_not_metric_integration"
+            },
+            {
+              "outer_horizon_vs_schwarzschild_ratio": 0.570533679898,
+              "spin_a_dimensionless": 0.99,
+              "status": "screen_only_not_metric_integration"
+            }
+          ],
+          "mass_kg": 8.55e+36,
+          "model": "schwarzschild_with_kerr_screening_placeholder",
+          "periapsis_distance_m": 12300000000.0,
+          "periapsis_to_schwarzschild_ratio": 0.968600487395,
+          "schwarzschild_radius_m": 12698734060.192917
+        },
+        "dust_screen": {
+          "bulk_kinetic_energy_j": 2356114.697202,
+          "claim_boundary": "Local dust mass density is a source-backed prior; mm/cm tail flux is not closed.",
+          "dust_flux_scale": 1.4,
+          "large_particle_tail_status": "assumption_bound_external_required",
+          "local_dust_density_kg_m3": 2.1e-24,
+          "local_dust_density_sigma_kg_m3": 6e-25,
+          "specific_kinetic_energy_kj_g": 1800.0,
+          "swept_local_dust_mass_kg": 0.000934966149683,
+          "swept_scaled_dust_mass_kg": 0.001308952609557
+        },
+        "gas_screen": {
+          "applicability": "local heliosphere/VLISM anchor only; not a whole-path average.",
+          "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+          "swept_local_neutral_h_mass_kg": 0.094832280896
+        },
+        "radiation_material_hooks": {
+          "archive_media_recovery_status": "external_required",
+          "claim_boundary": "No fixed Myr radiation dose or bit recovery claim is produced by this screen.",
+          "gcr_model_status": "reference_hook_only",
+          "material_transport_status": "external_required"
+        }
+      },
+      "external_evidence_gaps": [
+        "target-specific line-of-sight dust and gas model",
+        "stack-level ballistic-limit and material qualification",
+        "radiation/material transport and archive bit recovery",
+        "launch procurement, navigation, legal, and operations review"
+      ],
+      "feasibility_status": {
+        "blockers": [
+          "flight_horizon_exceeds_100_myr_review_band",
+          "external_launch_procurement_and_navigation_review_required",
+          "dust_tail_and_material_qualification_external_required",
+          "black_hole_environment_model_external_required"
+        ],
+        "non_certification_notice": true,
+        "status": "review_required"
+      },
+      "probability_snapshot": {
+        "capsule_data_coupled_p50": 0.0,
+        "capsule_survival_p05": 0.0,
+        "capsule_survival_p50": 0.0,
+        "capsule_survival_p95": 3.56e-10,
+        "claim_boundary": "Capsule-risk snapshot only; targetability and archive recovery remain separate gaps.",
+        "data_integrity_p50": 2.37e-10,
+        "p_hit_policy": "not_closed_by_catalog"
+      },
+      "run_id": "umr-sgr-a-rounded-stress-60-499f022fae",
+      "runtime_pack_template": {
+        "args": {
+          "--mode": "dual",
+          "--run-id": "umr-sgr-a-rounded-stress-60-499f022fae",
+          "--seed": 1,
+          "--target-id": "sgr-a-rounded",
+          "--velocity-id": "stress-60"
+        },
+        "output_root": "ops/reports/user-mission-runs",
+        "script": "scripts/run_user_mission_scenario.py",
+        "writes_tracked_files": false
+      },
+      "selection": {
+        "distance_ly": 26000.0,
+        "feasibility_row_id": "feas-sgr-a-rounded-stress-60",
+        "flight_years": 129910065.133333,
+        "source_capsule_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+        "target_detail": "Repo-compatible Galactic-center stress scenario at rounded 26000 ly.",
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded",
+        "time_horizon_class": "hundred_myr_plus",
+        "velocity_detail": "High-relative-speed dust stress row, not a validation claim.",
+        "velocity_fraction_c": 0.000200138457,
+        "velocity_id": "stress-60",
+        "velocity_km_s": 60.0,
+        "velocity_label": "60 km/s"
+      },
+      "selection_hash": "499f022fae3615707db918b1de46619c74d0f3a3e265baebd7319f1b0329f8d0",
+      "source_refs": {
+        "capsule_lab_artifact": "artifacts/capsule_survivability_lab.v1.json",
+        "capsule_lab_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+        "capsule_risk_attack_mode_id": "nominal",
+        "capsule_risk_budget_artifact": "artifacts/capsule_risk_budget.v1.json",
+        "capsule_risk_budget_row_id": "cap-row-sgr-a-rounded-ballistic-arrival-stress-60-baseline-stack",
+        "feasibility_artifact": "artifacts/mission_feasibility_screen.v1.json",
+        "feasibility_row_id": "feas-sgr-a-rounded-stress-60"
+      }
+    }
+  ],
+  "run_store_policy": {
+    "deterministic_run_id_source": "selection_hash",
+    "output_root": "ops/reports/user-mission-runs",
+    "tracked_by_default": false,
+    "user_owned_run_boundary": "local review packs are generated under ops/reports and are not certification records"
+  },
+  "schema_version": "user_mission_run_catalog.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/mission_feasibility_screen.v1.json",
+      "sha256": "bad50fe37b0fcceecbc01ed66b34dc9f56d7152e5a06656f0001b103dea3cdc5"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "artifacts/capsule_survivability_lab.v1.json",
+      "sha256": "292723744efbeec31cee1dae985560329de198e03b21814f768d85deb0ee5a2f"
+    },
+    {
+      "path": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+      "sha256": "5063d979940a7bd2d91fc2bebeba5f25b0e1314b2e1172d629fddcf65aea1859"
+    },
+    {
+      "path": "mission/BASELINE_SCENARIO_v1.json",
+      "sha256": "2e6126d1628a29dbab15a9b51c577e222176c7775c629913760c7817a34b6cbc"
+    }
+  ],
+  "target_count": 3,
+  "target_ids": [
+    "alpha-centauri-scale",
+    "reference-black-hole",
+    "sgr-a-rounded"
+  ],
+  "velocity_count": 5,
+  "velocity_ids": [
+    "concept-95",
+    "conditional-45",
+    "oberth-23",
+    "oberth-34",
+    "stress-60"
+  ]
+}

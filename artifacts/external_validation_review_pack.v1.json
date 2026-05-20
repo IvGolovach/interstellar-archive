@@ -1,0 +1,592 @@
+{
+  "blocked_claims": [
+    "external validation completed",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "third-party validated",
+    "certified",
+    "qualified",
+    "flight-ready",
+    "proven mission feasible",
+    "procurement-grade cost estimate",
+    "vendor quote obtained",
+    "regulatory or operations approval complete",
+    "source correctness proven",
+    "trust grades upgraded automatically",
+    "persistent reviewed run archive"
+  ],
+  "cost_procurement_review_surface": {
+    "architecture_row_count": 15,
+    "architecture_selected_for_flight": false,
+    "launch_vehicle_selected": false,
+    "procurement_grade_estimate_available": false,
+    "vendor_quote_count": 0
+  },
+  "dag_review_surface": {
+    "cross_backend_comparison_available": false,
+    "external_reproduction_completed": false,
+    "high_fidelity_state_traces_available": false,
+    "independent_backend_complete": false,
+    "module_count": 6,
+    "state_trace_contract_complete": true
+  },
+  "determinism_signature": "64b94ac17a529791736bbcfd02c6040ac2d45b35a6b1f7f881ec602f12b655b1",
+  "evidence_review_surface": {
+    "automatic_trust_upgrade_claimed": false,
+    "claim_count": 66,
+    "public_campaign_count": 31,
+    "source_chain_contract": "claim -> assumption -> model -> artifact -> source",
+    "source_correctness_claimed": false,
+    "speculative_quarantine_count": 2,
+    "trust_grade_distribution": {
+      "B": 8,
+      "C": 56,
+      "D": 2
+    }
+  },
+  "external_evidence_gaps": [
+    "third-party reproduction reports",
+    "independent physics benchmark comparisons",
+    "high-fidelity module state traces",
+    "external red-team review findings",
+    "public wording audit by a reviewer outside the repository"
+  ],
+  "generator": "scripts/build_external_validation_review_pack_artifact.py",
+  "interpretation_limits": [
+    "The review pack is a checklist and evidence request, not a completed third-party review.",
+    "Independent reproduction, benchmark comparison, high-fidelity traces, and external validation remain open.",
+    "Browser UI may render this artifact but must not claim external review completion."
+  ],
+  "non_certification_notice": true,
+  "public_scope": "external_validation_independent_review_pack",
+  "required_external_deliverables": [
+    {
+      "acceptance_fields": [
+        "reviewer_identity",
+        "date",
+        "commit_sha",
+        "commands",
+        "outputs",
+        "exceptions"
+      ],
+      "blocked_claim": "independent reproduction completed",
+      "id": "third_party_reproduction_report",
+      "status": "external_required"
+    },
+    {
+      "acceptance_fields": [
+        "backend_name",
+        "scenario_ids",
+        "state_trace_hashes",
+        "comparison_summary"
+      ],
+      "blocked_claim": "independent physics backend validated",
+      "id": "independent_physics_benchmark_report",
+      "status": "external_required"
+    },
+    {
+      "acceptance_fields": [
+        "module_ids",
+        "scenario_ids",
+        "state_trace_hashes",
+        "backend_versions"
+      ],
+      "blocked_claim": "high-fidelity state trace complete",
+      "id": "high_fidelity_state_trace_bundle",
+      "status": "external_required"
+    },
+    {
+      "acceptance_fields": [
+        "reviewer_identity",
+        "case_ids",
+        "findings",
+        "unresolved_exceptions"
+      ],
+      "blocked_claim": "external validation completed",
+      "id": "external_red_team_report",
+      "status": "external_required"
+    },
+    {
+      "acceptance_fields": [
+        "case_id",
+        "finding",
+        "severity",
+        "resolution_status"
+      ],
+      "blocked_claim": "third-party validated",
+      "id": "reviewer_exception_log",
+      "status": "external_required"
+    },
+    {
+      "acceptance_fields": [
+        "auditor_identity",
+        "reviewed_surfaces",
+        "blocked_claims_found",
+        "approved_wording"
+      ],
+      "blocked_claim": "external validation completed",
+      "id": "public_claim_wording_audit",
+      "status": "external_required"
+    }
+  ],
+  "review_case_count": 7,
+  "review_cases": [
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "external validation completed",
+        "independent reproduction completed",
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "third-party validated",
+        "certified",
+        "qualified",
+        "flight-ready",
+        "proven mission feasible",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "persistent reviewed run archive"
+      ],
+      "expected_failure_modes": [
+        "source correctness proven",
+        "trust grades upgraded automatically"
+      ],
+      "external_deliverable_ids": [
+        "third_party_reproduction_report",
+        "reviewer_exception_log"
+      ],
+      "id": "optimistic-prior-collapse",
+      "independent_result_available": false,
+      "review_questions": [
+        "Which mission-probability factors are external and unclosed?",
+        "Does any trust-grade promotion require independent source evidence?"
+      ],
+      "source_inputs": [
+        "artifacts/mission_probability_coupling.v1.json",
+        "artifacts/evidence_upgrade_campaign.v1.json"
+      ],
+      "status": "external_required",
+      "title": "Optimistic prior collapse"
+    },
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "certified",
+        "proven mission feasible",
+        "external validation completed",
+        "independent reproduction completed",
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "third-party validated",
+        "qualified",
+        "flight-ready",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "persistent reviewed run archive"
+      ],
+      "expected_failure_modes": [
+        "certified",
+        "proven mission feasible"
+      ],
+      "external_deliverable_ids": [
+        "independent_physics_benchmark_report",
+        "high_fidelity_state_trace_bundle",
+        "reviewer_exception_log"
+      ],
+      "id": "dust-tail-severe-mode",
+      "independent_result_available": false,
+      "review_questions": [
+        "Which dust-tail assumptions dominate failure pressure?",
+        "What line-of-sight dust evidence is missing before risk can be treated as physical truth?"
+      ],
+      "source_inputs": [
+        "artifacts/capsule_risk_budget.v1.json",
+        "artifacts/uncertainty_interactions.v1.json"
+      ],
+      "status": "external_required",
+      "title": "Dust-tail severe mode"
+    },
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "qualified",
+        "flight-ready",
+        "external validation completed",
+        "independent reproduction completed",
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "third-party validated",
+        "certified",
+        "proven mission feasible",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "persistent reviewed run archive"
+      ],
+      "expected_failure_modes": [
+        "qualified",
+        "flight-ready"
+      ],
+      "external_deliverable_ids": [
+        "third_party_reproduction_report",
+        "external_red_team_report",
+        "reviewer_exception_log"
+      ],
+      "id": "media-decay-severe-mode",
+      "independent_result_available": false,
+      "review_questions": [
+        "Are physical survival and readable archive recovery separated?",
+        "Which accelerated-aging and ECC recovery tests are still external?"
+      ],
+      "source_inputs": [
+        "artifacts/capsule_risk_budget.v1.json",
+        "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md"
+      ],
+      "status": "external_required",
+      "title": "Archive media decay severe mode"
+    },
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "persistent reviewed run archive",
+        "proven mission feasible",
+        "external validation completed",
+        "independent reproduction completed",
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "third-party validated",
+        "certified",
+        "qualified",
+        "flight-ready",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "source correctness proven",
+        "trust grades upgraded automatically"
+      ],
+      "expected_failure_modes": [
+        "persistent reviewed run archive",
+        "proven mission feasible"
+      ],
+      "external_deliverable_ids": [
+        "third_party_reproduction_report",
+        "external_red_team_report",
+        "reviewer_exception_log"
+      ],
+      "id": "targetability-separated-from-capsule-survival",
+      "independent_result_available": false,
+      "review_questions": [
+        "Does the artifact keep target delivery external instead of folding it into capsule survival?",
+        "Do local run packs remain user-owned rather than reviewed repository truth?"
+      ],
+      "source_inputs": [
+        "artifacts/mission_probability_coupling.v1.json",
+        "artifacts/runtime_scenario_generation.v1.json"
+      ],
+      "status": "external_required",
+      "title": "Targetability separated from capsule survival"
+    },
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "external validation completed",
+        "independent reproduction completed",
+        "third-party validated",
+        "certified",
+        "qualified",
+        "flight-ready",
+        "proven mission feasible",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "persistent reviewed run archive"
+      ],
+      "expected_failure_modes": [
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete"
+      ],
+      "external_deliverable_ids": [
+        "independent_physics_benchmark_report",
+        "high_fidelity_state_trace_bundle",
+        "reviewer_exception_log"
+      ],
+      "id": "independent-backend-comparison",
+      "independent_result_available": false,
+      "review_questions": [
+        "Which modules have only v1 wrapper support?",
+        "What state traces and external backend records are required before independent validation can be claimed?"
+      ],
+      "source_inputs": [
+        "artifacts/mission_dag_v2_boundary.v1.json"
+      ],
+      "status": "external_required",
+      "title": "Independent backend comparison"
+    },
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "external validation completed",
+        "independent reproduction completed",
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "third-party validated",
+        "certified",
+        "qualified",
+        "flight-ready",
+        "proven mission feasible",
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "persistent reviewed run archive"
+      ],
+      "expected_failure_modes": [
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete"
+      ],
+      "external_deliverable_ids": [
+        "third_party_reproduction_report",
+        "external_red_team_report",
+        "public_claim_wording_audit"
+      ],
+      "id": "procurement-and-operations-boundary",
+      "independent_result_available": false,
+      "review_questions": [
+        "Are proxy costs separated from procurement estimates and vendor quotes?",
+        "Which launch, regulatory, and operations records remain external?"
+      ],
+      "source_inputs": [
+        "artifacts/cost_procurement_architecture_feasibility.v1.json",
+        "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md"
+      ],
+      "status": "external_required",
+      "title": "Procurement and operations boundary"
+    },
+    {
+      "acceptance_record_required": {
+        "commands_or_tools": true,
+        "exceptions_or_disagreements": true,
+        "raw_outputs_or_report_uri": true,
+        "review_date_utc": true,
+        "reviewed_commit_sha": true,
+        "reviewer_identity": true
+      },
+      "blocked_claims": [
+        "third-party validated",
+        "certified",
+        "flight-ready",
+        "external validation completed",
+        "independent reproduction completed",
+        "independent physics backend validated",
+        "cross-backend comparison completed",
+        "high-fidelity state trace complete",
+        "qualified",
+        "proven mission feasible",
+        "procurement-grade cost estimate",
+        "vendor quote obtained",
+        "regulatory or operations approval complete",
+        "source correctness proven",
+        "trust grades upgraded automatically",
+        "persistent reviewed run archive"
+      ],
+      "expected_failure_modes": [
+        "third-party validated",
+        "certified",
+        "flight-ready"
+      ],
+      "external_deliverable_ids": [
+        "external_red_team_report",
+        "public_claim_wording_audit",
+        "reviewer_exception_log"
+      ],
+      "id": "public-wording-overinterpretation",
+      "independent_result_available": false,
+      "review_questions": [
+        "Can a public reader mistake a generated artifact for certification?",
+        "Are forbidden claims visibly blocked at the route and artifact level?"
+      ],
+      "source_inputs": [
+        "docs/FULL_V2_ROADMAP_CLOSURE.md",
+        "docs/ARTIFACT_POLICY.md"
+      ],
+      "status": "external_required",
+      "title": "Public wording overinterpretation"
+    }
+  ],
+  "review_pack_status": "repo_native_review_pack_ready_external_review_not_completed",
+  "roadmap_item": {
+    "claim_boundary": "Implemented as a deterministic repository artifact and review contract; external qualification remains separate.",
+    "external_evidence_gaps": [
+      "third-party reproduction reports",
+      "independent physics benchmark comparisons",
+      "high-fidelity module state traces",
+      "external red-team review findings"
+    ],
+    "id": "roadmap-14",
+    "implementation_mode": "tracked_external_validation_review_pack",
+    "status": "repo_native_closure_implemented_external_evidence_open",
+    "summary": "Packages red-team cases, required reviewer deliverables, and external validation blockers without claiming review completion.",
+    "title": "External validation and independent review pack"
+  },
+  "rollup": {
+    "all_cases_require_external_review": true,
+    "external_deliverable_count": 6,
+    "external_red_team_completed": false,
+    "external_validation_claimed": false,
+    "high_fidelity_state_trace_complete": false,
+    "independent_benchmark_completed": false,
+    "independent_reproduction_completed": false,
+    "review_case_count": 7,
+    "third_party_review_completed": false
+  },
+  "runtime_review_surface": {
+    "generation_row_count": 15,
+    "local_pack_validator": "scripts/ci/user_mission_run_pack_validate.py",
+    "persistent_reviewed_archive_claimed": false,
+    "remote_execution_claimed": false
+  },
+  "schema_version": "external_validation_review_pack.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/mission_dag_v2_boundary.v1.json",
+      "sha256": "af821ab4e367ee9ab7c38712132c8cb282d5bf115a66e09ab9ffbe37ca726bc2"
+    },
+    {
+      "path": "artifacts/evidence_upgrade_campaign.v1.json",
+      "sha256": "7cbe41e459177dc42ce05bca150e67b906771046cdfb7867582f71b0d0dd66a1"
+    },
+    {
+      "path": "artifacts/runtime_scenario_generation.v1.json",
+      "sha256": "98589a3339e98d0ece8ca75f239a3c44e5636a377b1148758aea84be51dbb08e"
+    },
+    {
+      "path": "artifacts/cost_procurement_architecture_feasibility.v1.json",
+      "sha256": "c121efd5205a5b304167eb21a73573f02a5d3781bb9aaeb0ab09478f641f2187"
+    },
+    {
+      "path": "artifacts/mission_probability_coupling.v1.json",
+      "sha256": "8cccfa8ebb4037710d2925630cfcc24a154f46a97794157ece7272160a2be0d0"
+    },
+    {
+      "path": "artifacts/uncertainty_interactions.v1.json",
+      "sha256": "7ae19f9c7572fbc7c147fb587c77e3f662afc8e5ab8aed314422edbdbd215b85"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "evidence/claims.json",
+      "sha256": "f0868faefe7b1c21f880df18fb894f46f1fe0b7aa61cc19a880ced0defac26ac"
+    },
+    {
+      "path": "evidence/assumptions.json",
+      "sha256": "82c1fb92496f007c6eef7e034fc6b17db19bcee1edc127277d8c432ddeb4e63b"
+    },
+    {
+      "path": "evidence/sources.json",
+      "sha256": "fddd1eba50389c5bbbfa513e241059b2cc91d5523a3287f54c25ed5937cd5666"
+    },
+    {
+      "path": "artifacts/evidence-pack-v1/metadata.json",
+      "sha256": "5725c498a958f551109564959066d327ad407f25a4540ae7a48fa98d25faa3f9"
+    },
+    {
+      "path": "artifacts/evidence-pack-v1/checksums.sha256",
+      "sha256": "9bafd652fe826d7a261545021ccb519ffe745e4be15dd33d5e6616f5958b424c"
+    },
+    {
+      "path": "docs/research/VALIDATION_AND_QUALIFICATION_GAPS_v1.md",
+      "sha256": "861b21e4cf3f4627f96a5523396a51f18d6bd50d4318f7874265cea8ba006aff"
+    },
+    {
+      "path": "docs/FULL_V2_ROADMAP_CLOSURE.md",
+      "sha256": "5ec51102f90b17ec16e614c0361bcbd6811e9b6c7357ba6f5806baf3b6135346"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    },
+    {
+      "path": "mission/EXTERNAL_VALIDATION_REVIEW_PACK_SPEC_v1.md",
+      "sha256": "8fdcc429962d390364d28efcfee9b425e2ff15f84aa716bba7a40c1d18c1e33a"
+    },
+    {
+      "path": "mission/review/validation_pack.py",
+      "sha256": "0770254474835f5e8b680a236196ee60816135ea802f8ef559b511ab62a524a5"
+    },
+    {
+      "path": "scripts/build_external_validation_review_pack_artifact.py",
+      "sha256": "ee5f4d5ed210dcc0b9f14372ba1110479cb6055e1e4d96d90edbf8274c4eede9"
+    },
+    {
+      "path": "scripts/ci/external_validation_review_pack_validate.py",
+      "sha256": "9f599ac5e457a0a756be13ec98f4339545cf5981e7dfe868e3a5708afc52e833"
+    }
+  ]
+}

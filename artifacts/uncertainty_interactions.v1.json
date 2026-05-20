@@ -1,0 +1,402 @@
+{
+  "baseline": {
+    "p_data_intact": 0.571968726569,
+    "p_hit": 1.0,
+    "p_success": 0.34684025581,
+    "p_survive": 0.606397237644
+  },
+  "blocked_claims": [
+    "validated uncertainty independence",
+    "closed covariance model",
+    "certified probability interval",
+    "flight ready"
+  ],
+  "external_evidence_gaps": [
+    "validated_parameter_correlation_matrix",
+    "path_conditioned_uncertainty_distribution",
+    "model_form_validation_for_joint_uncertainty"
+  ],
+  "generator": "scripts/build_uncertainty_interactions_artifact.py",
+  "interaction_pair_count": 6,
+  "interpretation_limits": [
+    "Pairwise residuals are deterministic stress screens, not a full Sobol or covariance analysis.",
+    "Correlation coefficients are intentionally null until external validation exists.",
+    "The artifact ranks model interaction risk; it does not certify a mission probability interval."
+  ],
+  "main_effects": [
+    {
+      "category": "advanced",
+      "claim_boundary": "Endpoint stress over declared uncertainty bounds; not a validated probability mass or covariance model.",
+      "distribution": "triangular",
+      "effect_high": -0.08989467464,
+      "effect_low": 0.0,
+      "entry_id": "ui-param-environment-model-dust-flux-scale",
+      "max_abs_effect": 0.08989467464,
+      "mode": "both",
+      "p_success_high": 0.25694558117,
+      "p_success_low": 0.34684025581,
+      "p_success_nominal": 0.34684025581,
+      "parameter_id": "environment_model.dust_flux_scale",
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "source_rationale": "Dust/tail exposure varies across trajectory sectors and epoch assumptions.",
+      "stress_values": {
+        "high": 3.0,
+        "low": 0.5,
+        "nominal": 1.4
+      },
+      "trust_grade": "C",
+      "units": "scale"
+    },
+    {
+      "category": "advanced",
+      "claim_boundary": "Endpoint stress over declared uncertainty bounds; not a validated probability mass or covariance model.",
+      "distribution": "uniform",
+      "effect_high": -0.000124859372,
+      "effect_low": 8.3258314e-05,
+      "entry_id": "ui-param-capsule-model-material-degradation-mu-1-per-year",
+      "max_abs_effect": 0.000124859372,
+      "mode": "realistic",
+      "p_success_high": 0.346715396438,
+      "p_success_low": 0.346923514124,
+      "p_success_nominal": 0.34684025581,
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "sensitivity_summary": "OAT influence=0.000152627, delta_p_success=1.52627e-05",
+      "source_rationale": "Bounded long-duration degradation rate for composite shield and media container.",
+      "stress_values": {
+        "high": 0.0004,
+        "low": 0.0001,
+        "nominal": 0.00022
+      },
+      "trust_grade": "C",
+      "units": "1/year"
+    },
+    {
+      "category": "advanced",
+      "claim_boundary": "Endpoint stress over declared uncertainty bounds; not a validated probability mass or covariance model.",
+      "distribution": "lognormal",
+      "effect_high": 0.0,
+      "effect_low": 0.0,
+      "entry_id": "ui-param-correction-window-execution-sigma-fraction",
+      "max_abs_effect": 0.0,
+      "mode": "realistic",
+      "p_success_high": 0.34684025581,
+      "p_success_low": 0.34684025581,
+      "p_success_nominal": 0.34684025581,
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "source_rationale": "Execution dispersion for low-duty-cycle correction burns over centuries.",
+      "stress_values": {
+        "high": 0.6,
+        "low": 0.0,
+        "nominal": 0.08
+      },
+      "trust_grade": "C",
+      "units": "fraction"
+    },
+    {
+      "category": "safe",
+      "claim_boundary": "Endpoint stress over declared uncertainty bounds; not a validated probability mass or covariance model.",
+      "distribution": "normal",
+      "effect_high": 0.0,
+      "effect_low": 0.0,
+      "entry_id": "ui-param-trajectory-model-nav-position-sigma-m",
+      "max_abs_effect": 0.0,
+      "mode": "realistic",
+      "p_success_high": 0.34684025581,
+      "p_success_low": 0.34684025581,
+      "p_success_nominal": 0.34684025581,
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "source_rationale": "Earth-based long-baseline optical/radio tracking uncertainty envelope.",
+      "stress_values": {
+        "high": 6000000.0,
+        "low": 100000.0,
+        "nominal": 1200000.0
+      },
+      "trust_grade": "C",
+      "units": "m"
+    }
+  ],
+  "method": {
+    "baseline_metric": "p_success",
+    "correlation_policy": "correlation coefficients remain null until external covariance evidence exists",
+    "definition": "interaction_residual = joint_endpoint_delta - sum(individual_endpoint_deltas)",
+    "name": "deterministic_pairwise_endpoint_residual",
+    "stress_policy": "low/high endpoints come from declared uncertainty_model bounds"
+  },
+  "mode": "realistic",
+  "non_certification_notice": true,
+  "pair_interactions": [
+    {
+      "baseline_p_success": 0.34684025581,
+      "claim_boundary": "Pairwise endpoint residual is computed; correlation and covariance evidence remain external.",
+      "correlation": {
+        "evidence_gap_id": "validated_parameter_correlation_matrix",
+        "rho": null,
+        "status": "external_correlation_evidence_required"
+      },
+      "interaction_residual": {
+        "classification": "weak",
+        "high_high": 3.2361274e-05,
+        "high_low": 0.0,
+        "low_high": -2.1579038e-05,
+        "low_low": 0.0,
+        "max_abs": 3.2361274e-05
+      },
+      "main_effect_reference": {
+        "capsule_model.material_degradation_mu_1_per_year": {
+          "effect_high": -0.000124859372,
+          "effect_low": 8.3258314e-05
+        },
+        "environment_model.dust_flux_scale": {
+          "effect_high": -0.08989467464,
+          "effect_low": 0.0
+        }
+      },
+      "pair_id": "ui-pair-capsule-model-material-degradation-mu-1-per-year--environment-model-dust-flux-scale",
+      "parameter_ids": [
+        "capsule_model.material_degradation_mu_1_per_year",
+        "environment_model.dust_flux_scale"
+      ],
+      "status": "external_correlation_evidence_required",
+      "stress_p_success": {
+        "high_high": 0.256853083072,
+        "high_low": 0.346715396438,
+        "low_high": 0.257007260446,
+        "low_low": 0.346923514124
+      }
+    },
+    {
+      "baseline_p_success": 0.34684025581,
+      "claim_boundary": "Pairwise endpoint residual is computed; correlation and covariance evidence remain external.",
+      "correlation": {
+        "evidence_gap_id": "validated_parameter_correlation_matrix",
+        "rho": null,
+        "status": "external_correlation_evidence_required"
+      },
+      "interaction_residual": {
+        "classification": "negligible",
+        "high_high": 0.0,
+        "high_low": 0.0,
+        "low_high": 0.0,
+        "low_low": 0.0,
+        "max_abs": 0.0
+      },
+      "main_effect_reference": {
+        "capsule_model.material_degradation_mu_1_per_year": {
+          "effect_high": -0.000124859372,
+          "effect_low": 8.3258314e-05
+        },
+        "correction_window.execution_sigma_fraction": {
+          "effect_high": 0.0,
+          "effect_low": 0.0
+        }
+      },
+      "pair_id": "ui-pair-capsule-model-material-degradation-mu-1-per-year--correction-window-execution-sigma-fraction",
+      "parameter_ids": [
+        "capsule_model.material_degradation_mu_1_per_year",
+        "correction_window.execution_sigma_fraction"
+      ],
+      "status": "external_correlation_evidence_required",
+      "stress_p_success": {
+        "high_high": 0.346715396438,
+        "high_low": 0.346715396438,
+        "low_high": 0.346923514124,
+        "low_low": 0.346923514124
+      }
+    },
+    {
+      "baseline_p_success": 0.34684025581,
+      "claim_boundary": "Pairwise endpoint residual is computed; correlation and covariance evidence remain external.",
+      "correlation": {
+        "evidence_gap_id": "validated_parameter_correlation_matrix",
+        "rho": null,
+        "status": "external_correlation_evidence_required"
+      },
+      "interaction_residual": {
+        "classification": "negligible",
+        "high_high": 0.0,
+        "high_low": 0.0,
+        "low_high": 0.0,
+        "low_low": 0.0,
+        "max_abs": 0.0
+      },
+      "main_effect_reference": {
+        "capsule_model.material_degradation_mu_1_per_year": {
+          "effect_high": -0.000124859372,
+          "effect_low": 8.3258314e-05
+        },
+        "trajectory_model.nav_position_sigma_m": {
+          "effect_high": 0.0,
+          "effect_low": 0.0
+        }
+      },
+      "pair_id": "ui-pair-capsule-model-material-degradation-mu-1-per-year--trajectory-model-nav-position-sigma-m",
+      "parameter_ids": [
+        "capsule_model.material_degradation_mu_1_per_year",
+        "trajectory_model.nav_position_sigma_m"
+      ],
+      "status": "external_correlation_evidence_required",
+      "stress_p_success": {
+        "high_high": 0.346715396438,
+        "high_low": 0.346715396438,
+        "low_high": 0.346923514124,
+        "low_low": 0.346923514124
+      }
+    },
+    {
+      "baseline_p_success": 0.34684025581,
+      "claim_boundary": "Pairwise endpoint residual is computed; correlation and covariance evidence remain external.",
+      "correlation": {
+        "evidence_gap_id": "validated_parameter_correlation_matrix",
+        "rho": null,
+        "status": "external_correlation_evidence_required"
+      },
+      "interaction_residual": {
+        "classification": "negligible",
+        "high_high": 0.0,
+        "high_low": 0.0,
+        "low_high": 0.0,
+        "low_low": 0.0,
+        "max_abs": 0.0
+      },
+      "main_effect_reference": {
+        "correction_window.execution_sigma_fraction": {
+          "effect_high": 0.0,
+          "effect_low": 0.0
+        },
+        "environment_model.dust_flux_scale": {
+          "effect_high": -0.08989467464,
+          "effect_low": 0.0
+        }
+      },
+      "pair_id": "ui-pair-correction-window-execution-sigma-fraction--environment-model-dust-flux-scale",
+      "parameter_ids": [
+        "correction_window.execution_sigma_fraction",
+        "environment_model.dust_flux_scale"
+      ],
+      "status": "external_correlation_evidence_required",
+      "stress_p_success": {
+        "high_high": 0.25694558117,
+        "high_low": 0.34684025581,
+        "low_high": 0.25694558117,
+        "low_low": 0.34684025581
+      }
+    },
+    {
+      "baseline_p_success": 0.34684025581,
+      "claim_boundary": "Pairwise endpoint residual is computed; correlation and covariance evidence remain external.",
+      "correlation": {
+        "evidence_gap_id": "validated_parameter_correlation_matrix",
+        "rho": null,
+        "status": "external_correlation_evidence_required"
+      },
+      "interaction_residual": {
+        "classification": "negligible",
+        "high_high": 0.0,
+        "high_low": 0.0,
+        "low_high": 0.0,
+        "low_low": 0.0,
+        "max_abs": 0.0
+      },
+      "main_effect_reference": {
+        "correction_window.execution_sigma_fraction": {
+          "effect_high": 0.0,
+          "effect_low": 0.0
+        },
+        "trajectory_model.nav_position_sigma_m": {
+          "effect_high": 0.0,
+          "effect_low": 0.0
+        }
+      },
+      "pair_id": "ui-pair-correction-window-execution-sigma-fraction--trajectory-model-nav-position-sigma-m",
+      "parameter_ids": [
+        "correction_window.execution_sigma_fraction",
+        "trajectory_model.nav_position_sigma_m"
+      ],
+      "status": "external_correlation_evidence_required",
+      "stress_p_success": {
+        "high_high": 0.34684025581,
+        "high_low": 0.34684025581,
+        "low_high": 0.34684025581,
+        "low_low": 0.34684025581
+      }
+    },
+    {
+      "baseline_p_success": 0.34684025581,
+      "claim_boundary": "Pairwise endpoint residual is computed; correlation and covariance evidence remain external.",
+      "correlation": {
+        "evidence_gap_id": "validated_parameter_correlation_matrix",
+        "rho": null,
+        "status": "external_correlation_evidence_required"
+      },
+      "interaction_residual": {
+        "classification": "negligible",
+        "high_high": 0.0,
+        "high_low": 0.0,
+        "low_high": 0.0,
+        "low_low": 0.0,
+        "max_abs": 0.0
+      },
+      "main_effect_reference": {
+        "environment_model.dust_flux_scale": {
+          "effect_high": -0.08989467464,
+          "effect_low": 0.0
+        },
+        "trajectory_model.nav_position_sigma_m": {
+          "effect_high": 0.0,
+          "effect_low": 0.0
+        }
+      },
+      "pair_id": "ui-pair-environment-model-dust-flux-scale--trajectory-model-nav-position-sigma-m",
+      "parameter_ids": [
+        "environment_model.dust_flux_scale",
+        "trajectory_model.nav_position_sigma_m"
+      ],
+      "status": "external_correlation_evidence_required",
+      "stress_p_success": {
+        "high_high": 0.25694558117,
+        "high_low": 0.25694558117,
+        "low_high": 0.34684025581,
+        "low_low": 0.34684025581
+      }
+    }
+  ],
+  "public_scope": "pairwise_uncertainty_interaction_screen",
+  "rollup": {
+    "dominant_pair_id": "ui-pair-capsule-model-material-degradation-mu-1-per-year--environment-model-dust-flux-scale",
+    "full_uncertainty_interaction_closure": false,
+    "material_pair_count": 0,
+    "material_pair_ids": [],
+    "pairs_requiring_external_correlation_evidence": 6,
+    "validated_correlation_count": 0
+  },
+  "schema_version": "uncertainty_interactions.v1",
+  "source_artifacts": [
+    {
+      "path": "mission/BASELINE_SCENARIO_v1.json",
+      "sha256": "2e6126d1628a29dbab15a9b51c577e222176c7775c629913760c7817a34b6cbc"
+    },
+    {
+      "path": "mission/UNCERTAINTY_MODEL_v1.json",
+      "sha256": "bc8b15ff2ad284d0cd57112ef6146d67fffc4cdf4daa7c0b154a12a01261b866"
+    },
+    {
+      "path": "parameters/registry/parameter_claims.v1.json",
+      "sha256": "5943329ac28b556a1ab3fd23f2e17c9aa5ee44eaeb370734b1a90af474f00bda"
+    },
+    {
+      "path": "mission/objectives/risk_envelope.v1.json",
+      "sha256": "920386ad2ce0e7032cc3438dc10d11b44603bc3ed2b7d456c5d22104fb61a7f1"
+    },
+    {
+      "path": "artifacts/parameter_sensitivity_summary.json",
+      "sha256": "de714a762adf183deadbd89d400a0809cae06604f00f81334a0b6338e4fcf4e3"
+    },
+    {
+      "path": "artifacts/p_success_defensibility.json",
+      "sha256": "f783053f4c27599c23c21a79565075819e2da6c49dc2cc53bc172050685031c8"
+    }
+  ],
+  "uncertainty_entry_count": 4
+}

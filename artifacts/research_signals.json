@@ -1,0 +1,54 @@
+{
+  "ci_badge": {
+    "color": "0b7d3b",
+    "label": "CI",
+    "message": "passing"
+  },
+  "ci_status": "passing",
+  "determinism_badge": {
+    "color": "0b7d3b",
+    "label": "Determinism",
+    "message": "Verified"
+  },
+  "determinism_verified": true,
+  "engine_version": "v1",
+  "evidence_badge": {
+    "color": "0b7d3b",
+    "label": "Traceability",
+    "message": "complete"
+  },
+  "evidence_completeness": 1.0,
+  "golden_badge": {
+    "color": "1b6ac9",
+    "label": "Golden",
+    "message": "bda117f..."
+  },
+  "golden_checksum": "bda117f5294cdd3147506d0b3f3f92c99d4113857631230b05bacdd0bd70288c",
+  "golden_checksum_short": "bda117f...",
+  "last_verified_commit": "HEAD",
+  "license": "CC-BY-4.0",
+  "license_badge": {
+    "color": "6a6a6a",
+    "label": "License",
+    "message": "CC-BY-4.0"
+  },
+  "realistic_mode_badge": {
+    "color": "0b7d3b",
+    "label": "Realistic Mode",
+    "message": "Verified"
+  },
+  "realistic_mode_verified": true,
+  "schema_version": "sim_schema.v2",
+  "speculative_mode_badge": {
+    "color": "1b6ac9",
+    "label": "Speculative Mode",
+    "message": "Enabled (Labeled)"
+  },
+  "speculative_mode_enabled": true,
+  "version": "v0.3.0",
+  "version_badge": {
+    "color": "465d84",
+    "label": "Version",
+    "message": "v0.3.0"
+  }
+}

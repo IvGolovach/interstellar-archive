@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "label": "determinism",
+  "message": "PASS",
+  "color": "0b7d3b",
+  "golden_integrity_status": "PASS",
+  "last_verified_commit_sha": "HEAD",
+  "engine_version": "v1",
+  "schema_version": "sim_schema.v2",
+  "golden_checksum": "bda117f5294cdd3147506d0b3f3f92c99d4113857631230b05bacdd0bd70288c"
+}

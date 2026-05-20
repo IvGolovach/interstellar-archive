@@ -1,0 +1,489 @@
+{
+  "blocked_claims": [
+    "external validation completed",
+    "third-party validated",
+    "independent reproduction completed",
+    "independent physics backend validated",
+    "cross-backend comparison completed",
+    "high-fidelity state trace complete",
+    "fixed mm/cm dust truth",
+    "line-of-sight environment validated",
+    "qualification complete",
+    "qualified",
+    "certified",
+    "flight-ready",
+    "legal or public approval complete",
+    "public claim approval complete",
+    "source correctness proven"
+  ],
+  "campaign_policy": {
+    "proof_promotion_requires_followup_review": true,
+    "records_do_not_directly_unlock_claims": true,
+    "repo_native_artifacts_are_not_external_records": true
+  },
+  "campaign_status": "repo_campaign_ready_external_execution_required",
+  "capsule_qualification_program": {
+    "certification_go": false,
+    "flight_ready_claimed": false,
+    "lab_record_count": 0,
+    "qualification_complete": false,
+    "qualification_tracks": [
+      {
+        "external_required": true,
+        "lab_record_count": 0,
+        "repo_native_evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "status": "external_required",
+        "title": "Stack-level dust/fragment ballistic-limit evidence",
+        "track_id": "ballistic-limit"
+      },
+      {
+        "external_required": true,
+        "lab_record_count": 0,
+        "repo_native_evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "status": "external_required",
+        "title": "Hydrocode correlation against representative impact tests",
+        "track_id": "hydrocode-correlation"
+      },
+      {
+        "external_required": true,
+        "lab_record_count": 0,
+        "repo_native_evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "status": "external_required",
+        "title": "Material-specific GCR/TID/SEE radiation-transport evidence",
+        "track_id": "radiation-transport"
+      },
+      {
+        "external_required": true,
+        "lab_record_count": 0,
+        "repo_native_evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "status": "external_required",
+        "title": "Long-duration archive-media aging evidence",
+        "track_id": "archive-media-aging"
+      },
+      {
+        "external_required": true,
+        "lab_record_count": 0,
+        "repo_native_evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "status": "external_required",
+        "title": "Error-correction and redundant-media recovery campaign",
+        "track_id": "ecc-recovery"
+      },
+      {
+        "external_required": true,
+        "lab_record_count": 0,
+        "repo_native_evidence": "artifacts/capsule_qualification_evidence_pack.v1.json",
+        "status": "external_required",
+        "title": "Independent reviewer/lab qualification dossier",
+        "track_id": "independent-review"
+      }
+    ],
+    "status": "external_required",
+    "test_count": 6
+  },
+  "determinism_signature": "246986dd29595374919fbd67f9de832256e2643c62f0bf913fc614641e7ef0e9",
+  "external_evidence_gaps": [
+    "first accepted external evidence intake record",
+    "independent backend execution report",
+    "capsule lab qualification records",
+    "direction-specific line-of-sight dust/plasma model",
+    "manual proof-promotion review after valid records arrive",
+    "public/legal wording approval outside the repository"
+  ],
+  "generator": "scripts/build_external_validation_campaign_artifact.py",
+  "independent_backend_execution_plan": {
+    "high_fidelity_state_trace_complete": false,
+    "independent_external_backend_complete": false,
+    "repo_analytic_check_count": 5,
+    "required_deliverables": [
+      "backend identifier outside the repository-native reduced-order implementation",
+      "scenario-compatible input/output schema mapping",
+      "reviewer-owned execution record",
+      "per-module state trace hashes",
+      "replayable fixtures for representative scenarios",
+      "trace provenance tied to backend version",
+      "signed comparison summary",
+      "exception log for model disagreements",
+      "raw outputs or immutable report URI"
+    ],
+    "status": "external_required"
+  },
+  "interpretation_limits": [
+    "This artifact coordinates the campaign; it is not itself external evidence.",
+    "No automatic claim promotion is allowed in v1, even if future records are accepted.",
+    "The public dossier can show blocked claims but cannot approve certification language."
+  ],
+  "line_of_sight_environment_model": {
+    "assumption_bound_families": [
+      "exact mm/cm interstellar dust flux over Myr horizons",
+      "target-region plasma for black-hole approach",
+      "line-of-sight ISM average for selected target"
+    ],
+    "line_of_sight_rows": [
+      {
+        "assumption_bound_tail_ids": [
+          "mm_cm_dust_flux_tail",
+          "target_region_plasma_proxy",
+          "target_state_and_navigation_stability",
+          "whole_path_ism_density_variation"
+        ],
+        "claim_boundary": "Line-of-sight row binds source anchors to explicit tails; it does not validate the target corridor.",
+        "distance_ly": 4.37,
+        "environment_validation_status": "line_of_sight_evidence_required",
+        "fixed_mm_cm_dust_truth_claimed": false,
+        "flight_years": 28907.613448,
+        "local_dust_density_kg_m3": 2.1e-24,
+        "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+        "selected_feasibility_row_id": "feas-alpha-centauri-scale-conditional-45",
+        "source_backed_anchor_ids": [
+          "alpha_centauri_distance_anchor",
+          "local_neutral_h_density_vlism",
+          "ulysses_interstellar_dust_mass_density",
+          "voyager_interstellar_plasma_density"
+        ],
+        "target_id": "alpha-centauri-scale",
+        "target_label": "Alpha Centauri scale",
+        "target_region_plasma_validated": false,
+        "velocity_id": "conditional-45",
+        "whole_path_dust_model_validated": false
+      },
+      {
+        "assumption_bound_tail_ids": [
+          "mm_cm_dust_flux_tail",
+          "target_reference_black_hole_corridor",
+          "target_region_plasma_proxy",
+          "target_state_and_navigation_stability",
+          "whole_path_ism_density_variation"
+        ],
+        "claim_boundary": "Line-of-sight row binds source anchors to explicit tails; it does not validate the target corridor.",
+        "distance_ly": 1560.0,
+        "environment_validation_status": "line_of_sight_evidence_required",
+        "fixed_mm_cm_dust_truth_claimed": false,
+        "flight_years": 10319422.649603,
+        "local_dust_density_kg_m3": 2.1e-24,
+        "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+        "selected_feasibility_row_id": "feas-reference-black-hole-conditional-45",
+        "source_backed_anchor_ids": [
+          "local_neutral_h_density_vlism",
+          "ulysses_interstellar_dust_mass_density",
+          "voyager_interstellar_plasma_density"
+        ],
+        "target_id": "reference-black-hole",
+        "target_label": "Reference black-hole candidate",
+        "target_region_plasma_validated": false,
+        "velocity_id": "conditional-45",
+        "whole_path_dust_model_validated": false
+      },
+      {
+        "assumption_bound_tail_ids": [
+          "mm_cm_dust_flux_tail",
+          "target_region_plasma_proxy",
+          "target_state_and_navigation_stability",
+          "whole_path_ism_density_variation"
+        ],
+        "claim_boundary": "Line-of-sight row binds source anchors to explicit tails; it does not validate the target corridor.",
+        "distance_ly": 26000.0,
+        "environment_validation_status": "line_of_sight_evidence_required",
+        "fixed_mm_cm_dust_truth_claimed": false,
+        "flight_years": 171990377.49338,
+        "local_dust_density_kg_m3": 2.1e-24,
+        "local_neutral_h_mass_density_kg_m3": 2.13e-22,
+        "selected_feasibility_row_id": "feas-sgr-a-rounded-conditional-45",
+        "source_backed_anchor_ids": [
+          "local_neutral_h_density_vlism",
+          "sgr_a_distance_anchor",
+          "ulysses_interstellar_dust_mass_density",
+          "voyager_interstellar_plasma_density"
+        ],
+        "target_id": "sgr-a-rounded",
+        "target_label": "Sgr A* rounded",
+        "target_region_plasma_validated": false,
+        "velocity_id": "conditional-45",
+        "whole_path_dust_model_validated": false
+      }
+    ],
+    "rollup": {
+      "fixed_mm_cm_dust_truth_claimed": false,
+      "line_of_sight_model_complete": false,
+      "target_region_environment_calibrated": false
+    },
+    "source_backed_anchors": [
+      {
+        "anchor_id": "local_neutral_h_density_vlism",
+        "applicability_limits": [
+          "local heliosphere/VLISM anchor only",
+          "not a whole-path density average",
+          "not target-region plasma validation"
+        ],
+        "category": "gas",
+        "converted_value_m3": 127000.0,
+        "evidence_class": "source_backed_anchor",
+        "quantity": "local interstellar neutral hydrogen density",
+        "sigma": 0.015,
+        "source_ref": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md#interstellar-gas-and-plasma-anchors",
+        "units": "cm^-3",
+        "value": 0.127
+      },
+      {
+        "anchor_id": "voyager_interstellar_plasma_density",
+        "applicability_limits": [
+          "local plasma-wave measurement context",
+          "not a dense black-hole target environment",
+          "not a universal trajectory average"
+        ],
+        "category": "plasma",
+        "converted_value_m3": 80000.0,
+        "evidence_class": "source_backed_anchor",
+        "quantity": "Voyager plasma/electron density order near heliopause",
+        "source_ref": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md#interstellar-gas-and-plasma-anchors",
+        "units": "cm^-3",
+        "value": 0.08
+      },
+      {
+        "anchor_id": "ulysses_interstellar_dust_mass_density",
+        "applicability_limits": [
+          "local in-situ dust mass-density prior",
+          "not a fixed mm/cm impact-tail flux",
+          "not a whole-path deep-interstellar dust truth"
+        ],
+        "category": "dust",
+        "evidence_class": "source_backed_anchor",
+        "quantity": "Ulysses local interstellar dust mass density",
+        "sigma": 6e-25,
+        "source_ref": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md#interstellar-dust-density-and-flux-anchors",
+        "units": "kg/m^3",
+        "value": 2.1e-24
+      },
+      {
+        "anchor_id": "alpha_centauri_distance_anchor",
+        "applicability_limits": [
+          "nearby-star scaling anchor",
+          "not a navigation or arrival authority claim"
+        ],
+        "category": "target",
+        "evidence_class": "source_backed_anchor",
+        "quantity": "Alpha Centauri approximate distance scale",
+        "source_ref": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md#target-distance-and-time-of-flight-anchors",
+        "units": "ly",
+        "value": 4.3
+      },
+      {
+        "anchor_id": "sgr_a_distance_anchor",
+        "applicability_limits": [
+          "precision astronomy distance anchor",
+          "repo rows may use rounded scenario values",
+          "not a target-corridor environment model"
+        ],
+        "category": "target",
+        "evidence_class": "source_backed_anchor",
+        "quantity": "Galactic-center distance anchor",
+        "source_ref": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md#target-distance-and-time-of-flight-anchors",
+        "units": "ly",
+        "value": 26670.0
+      }
+    ],
+    "status": "direction_dependent_model_required"
+  },
+  "non_certification_notice": true,
+  "proof_promotion_review": {
+    "automatic_claim_promotion_allowed": false,
+    "claim_reviews": [
+      {
+        "accepted_record_count": 0,
+        "claim": "external validation completed",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "independent reproduction completed",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "independent physics backend validated",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "high-fidelity state trace complete",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "qualification complete",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "certified",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "flight-ready",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      },
+      {
+        "accepted_record_count": 0,
+        "claim": "public claim approval complete",
+        "decision": "external_record_required",
+        "promoted": false,
+        "promotion_allowed": false
+      }
+    ],
+    "promoted_claims": [],
+    "requires_followup_review": true,
+    "rollup": {
+      "accepted_record_count": 0,
+      "automatic_claim_promotion_allowed": false,
+      "external_validation_completed": false,
+      "first_real_external_record_present": false,
+      "promoted_claim_count": 0,
+      "reviewed_record_count": 0
+    },
+    "status": "blocked_until_valid_external_records"
+  },
+  "public_evidence_dossier": {
+    "certification_language_allowed": false,
+    "marketing_claim_surface": false,
+    "public_claim_approval_completed": false,
+    "sections": [
+      "design_evidence",
+      "qualification_program",
+      "external_review",
+      "claim_boundary"
+    ],
+    "shows_blocked_claims": true,
+    "status": "repo_dossier_ready_external_records_absent"
+  },
+  "public_scope": "six_workstream_external_validation_campaign",
+  "rollup": {
+    "accepted_external_record_count": 0,
+    "accepted_record_count": 0,
+    "campaign_ready": true,
+    "certification_go": false,
+    "external_validation_completed": false,
+    "first_real_external_record_present": false,
+    "independent_backend_validated": false,
+    "line_of_sight_model_complete": false,
+    "proof_promotion_applied": false,
+    "public_dossier_ready": true,
+    "qualification_complete": false,
+    "workstream_count": 6
+  },
+  "schema_version": "external_validation_campaign.v1",
+  "source_artifacts": [
+    {
+      "path": "artifacts/independent_physics_backend_comparison.v1.json",
+      "sha256": "888202dc063e5b3ea5342488de51b94142ef787966c8455bb77c3291f2dbbf6d"
+    },
+    {
+      "path": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "sha256": "ee78509ea576b1ec441bb6cae6da2a042989c404aa201cd66ccd915dcc45de22"
+    },
+    {
+      "path": "artifacts/external_reproduction_kit.v1.json",
+      "sha256": "fc8c7025ec38a886ac956757300f4863669af6114fa4e64f8f836e76200d125e"
+    },
+    {
+      "path": "artifacts/external_evidence_intake.v1.json",
+      "sha256": "329443e6167265e8edfc9a791e3bf07edf55bf532dcbec53d6e1fe0c0d4aa088"
+    },
+    {
+      "path": "artifacts/public_narrative_hardening.v1.json",
+      "sha256": "4b85aa5ec8b5152af61106a911104a8e30c5d98fb1d6be1eb1e10794cbda226c"
+    },
+    {
+      "path": "artifacts/external_validation_review_pack.v1.json",
+      "sha256": "1ecaad60e7039fc807394055d56e76d10e00c039a82b473ebb2ba2ff843aadd1"
+    },
+    {
+      "path": "mission/capsule/capsule_design.v1.json",
+      "sha256": "db6a32dd8ec9fe837ce814392d7cb664b3e94ed5b7e4ffd862eb604fe4e27671"
+    },
+    {
+      "path": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md",
+      "sha256": "7b24a3d8f9f27edb27ce4cbef57613dca4d048321dc912f8a393988363503f67"
+    },
+    {
+      "path": "mission/EXTERNAL_VALIDATION_CAMPAIGN_SPEC_v1.md",
+      "sha256": "742117b9e3e8a767436bac6093ceb8c9ffcace517f45eb37785671398bc5d7f5"
+    },
+    {
+      "path": "mission/validation_campaign/campaign.py",
+      "sha256": "369ec460913ecd472706676dff21a5af29ae0b5a13288532101ac6301dc50f68"
+    },
+    {
+      "path": "mission/validation_campaign/backend_environment.py",
+      "sha256": "41e685726e4bfabe401ed698017eee2526b23c1ce5867e1d258c0640faf46441"
+    },
+    {
+      "path": "mission/validation_campaign/__init__.py",
+      "sha256": "bc046b02ffb3b92548309e1049ad2a60db23d11aba136d080a3819314d1be193"
+    },
+    {
+      "path": "scripts/build_external_validation_campaign_artifact.py",
+      "sha256": "2ad478074e33dbac486372c9f1278c900421f74fcdab280207c623636b6af3d0"
+    },
+    {
+      "path": "scripts/ci/external_validation_campaign_validate.py",
+      "sha256": "17417f8a21b4020e4f4d2b5b48c830e93be69664a08872e851b0cf22d8c55377"
+    },
+    {
+      "path": "docs/ARTIFACT_POLICY.md",
+      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+    }
+  ],
+  "workstream_count": 6,
+  "workstreams": [
+    {
+      "current_accepted_record_count": 0,
+      "evidence_ref": "artifacts/external_evidence_intake.v1.json",
+      "status": "external_required",
+      "workstream_id": "first-real-external-record"
+    },
+    {
+      "current_accepted_record_count": 0,
+      "evidence_ref": "artifacts/independent_physics_backend_comparison.v1.json",
+      "status": "external_required",
+      "workstream_id": "independent-physics-backend"
+    },
+    {
+      "current_accepted_record_count": 0,
+      "evidence_ref": "artifacts/capsule_qualification_evidence_pack.v1.json",
+      "status": "external_required",
+      "workstream_id": "capsule-qualification-program"
+    },
+    {
+      "current_accepted_record_count": 0,
+      "evidence_ref": "docs/research/CAPSULE_ENVIRONMENT_DATA_BRIEF_v1.md",
+      "status": "direction_dependent_model_required",
+      "workstream_id": "line-of-sight-environment-model"
+    },
+    {
+      "current_accepted_record_count": 0,
+      "evidence_ref": "artifacts/external_evidence_intake.v1.json",
+      "status": "blocked_until_valid_external_records",
+      "workstream_id": "proof-promotion-review"
+    },
+    {
+      "current_accepted_record_count": 0,
+      "evidence_ref": "artifacts/external_validation_campaign.v1.json",
+      "status": "repo_dossier_ready_external_records_absent",
+      "workstream_id": "public-evidence-dossier"
+    }
+  ]
+}

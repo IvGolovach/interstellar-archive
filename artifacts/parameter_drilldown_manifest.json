@@ -1,0 +1,1911 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/parameter_static_usage_graph.json",
+      "sha256": "34409b9ebf88c9173d8d6a798211a2fdc93d771ce006242a7d2a08d83ef20fe2"
+    },
+    {
+      "path": "artifacts/parameter_evidence_index.json",
+      "sha256": "0af154665561bb82135b6e3b518d08192562d9688a1ec1287aa4b911ef1ddb0f"
+    },
+    {
+      "path": "artifacts/p_success_defensibility.json",
+      "sha256": "f783053f4c27599c23c21a79565075819e2da6c49dc2cc53bc172050685031c8"
+    }
+  ],
+  "dynamic_trace_semantics": "module_level_attribution",
+  "excluded_internal_parameter_count": 35,
+  "generator": "scripts/build_parameter_drilldown_artifacts.py",
+  "global_evidence_completeness_ratio": 1.0,
+  "inputs": [
+    {
+      "path": "parameters/registry/parameter_registry.v1.json",
+      "sha256": "30ce2f9f0edeae7589364cc0a9edf39f12e1820ee4ad19f92797f827acd071ef"
+    },
+    {
+      "path": "parameters/registry/parameter_claims.v1.json",
+      "sha256": "5943329ac28b556a1ab3fd23f2e17c9aa5ee44eaeb370734b1a90af474f00bda"
+    },
+    {
+      "path": "parameters/registry/evidence_sources.v1.json",
+      "sha256": "8ac9378c34ed48f191a87be695bb5ffcf08fd72760886406238736f23bc3a131"
+    },
+    {
+      "path": "mission/UNCERTAINTY_MODEL_v1.json",
+      "sha256": "bc8b15ff2ad284d0cd57112ef6146d67fffc4cdf4daa7c0b154a12a01261b866"
+    },
+    {
+      "path": "mission/dag/registry/module_registry.v1.json",
+      "sha256": "02c7a51185c496167146e5bef6438f50d231ade4bb38bc234ede3dda9d63d362"
+    },
+    {
+      "path": "mission/dag/registry/failure_taxonomy.v1.json",
+      "sha256": "ef390445b39d6e66a5690cfdc3b67bcb4c67e965dd0c8c51ea58e558d052ec78"
+    },
+    {
+      "path": "mission/dag/runner_v1.py",
+      "sha256": "b5e2d34b84a53082f13e061fafdc8c29bae988db8528cd2eb928dcc3753eac3d"
+    },
+    {
+      "path": "artifacts/parameter_sensitivity_summary.json",
+      "sha256": "de714a762adf183deadbd89d400a0809cae06604f00f81334a0b6338e4fcf4e3"
+    }
+  ],
+  "internal_parameter_prefixes_excluded": [
+    "code_literal."
+  ],
+  "parameter_count": 31,
+  "parameters": [
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000.0,
+        "minimum": 0.001
+      },
+      "category": "safe",
+      "classification": "measured",
+      "default_value": 26000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#bh_parameters.distance_from_earth_ly",
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-PHYS-001"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "bh_parameters.distance_from_earth_ly",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#bh_parameters.distance_from_earth_ly",
+      "trust_grade": "B",
+      "units": "ly",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1e+41,
+        "minimum": 1e+30
+      },
+      "category": "safe",
+      "classification": "measured",
+      "default_value": 8.55e+36,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#bh_parameters.mass_kg",
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-PHYS-001"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "bh_parameters.mass_kg",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=3.4684, delta_p_success=0.34684",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#bh_parameters.mass_kg",
+      "trust_grade": "B",
+      "units": "kg",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 100.0,
+        "minimum": 0.01
+      },
+      "category": "safe",
+      "classification": "measured",
+      "default_value": 3.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#bh_parameters.max_dust_flux_scale",
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-PHYS-001"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "bh_parameters.max_dust_flux_scale",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#bh_parameters.max_dust_flux_scale",
+      "trust_grade": "B",
+      "units": "scale",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1e+20,
+        "minimum": 1.0
+      },
+      "category": "safe",
+      "classification": "measured",
+      "default_value": 80000000000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#bh_parameters.max_plasma_density_proxy_m3",
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-PHYS-001"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "bh_parameters.max_plasma_density_proxy_m3",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0.16015, delta_p_success=0.016015",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#bh_parameters.max_plasma_density_proxy_m3",
+      "trust_grade": "B",
+      "units": "1/m^3",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000000.0,
+        "minimum": 100.0
+      },
+      "category": "safe",
+      "classification": "measured",
+      "default_value": 20000000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#bh_parameters.max_radiative_flux_w_m2",
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-PHYS-001"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "bh_parameters.max_radiative_flux_w_m2",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0.142934, delta_p_success=0.0142934",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#bh_parameters.max_radiative_flux_w_m2",
+      "trust_grade": "B",
+      "units": "W/m^2",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000000000000.0,
+        "minimum": 1.0
+      },
+      "category": "safe",
+      "classification": "measured",
+      "default_value": 12300000000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#bh_parameters.periapsis_distance_m",
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-PHYS-001"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "bh_parameters.periapsis_distance_m",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=3.4684, delta_p_success=0.34684",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#bh_parameters.periapsis_distance_m",
+      "trust_grade": "B",
+      "units": "m",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 0.98,
+        "minimum": 0.4
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 0.82,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.data_media_survival_margin",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "capsule_model.data_media_survival_margin",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0.34684, delta_p_success=0.034684",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#capsule_model.data_media_survival_margin",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 20.0,
+        "minimum": 0.01
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 1.81,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.frontal_area_m2",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-CAPSULE-008"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [],
+      "modules_touched_count": 0,
+      "parameter_id": "capsule_model.frontal_area_m2",
+      "paths_to_metrics": [
+        "success_metrics.mission_validation"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#capsule_model.frontal_area_m2",
+      "trust_grade": "B",
+      "units": "m^2",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000.0,
+        "minimum": 50.0
+      },
+      "category": "safe",
+      "classification": "estimated",
+      "default_value": 206.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.mass_kg",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-CAPSULE-008"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [],
+      "modules_touched_count": 0,
+      "parameter_id": "capsule_model.mass_kg",
+      "paths_to_metrics": [
+        "success_metrics.mission_validation"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#capsule_model.mass_kg",
+      "trust_grade": "B",
+      "units": "kg",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 0.0004,
+        "minimum": 0.0001
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 0.00022,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.material_degradation_mu_1_per_year",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-CAPSULE-009"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0.000152627, delta_p_success=1.52627e-05",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#capsule_model.material_degradation_mu_1_per_year",
+      "trust_grade": "C",
+      "units": "1/year",
+      "value_mode": "distribution",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 500.0,
+        "minimum": 0.1
+      },
+      "category": "advanced",
+      "classification": "design_choice",
+      "default_value": 32.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#capsule_model.shield_areal_density_kg_m2",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "DUST_PENETRATION_MM_TAIL"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "shield.baseline.v1"
+      ],
+      "modules_touched_count": 1,
+      "parameter_id": "capsule_model.shield_areal_density_kg_m2",
+      "paths_to_metrics": [
+        "success_metrics.mission_validation"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#capsule_model.shield_areal_density_kg_m2",
+      "trust_grade": "C",
+      "units": "kg/m^2",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1.0,
+        "minimum": 0.01
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 0.68,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.actuator_efficiency",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.actuator_efficiency",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.actuator_efficiency",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 20000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 36.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.delta_v_budget_mps",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.delta_v_budget_mps",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 100000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 180.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.end_year",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.end_year",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.end_year",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 0.08,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.execution_sigma_fraction",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.execution_sigma_fraction",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "distribution",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 0.1,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 2.5e-07,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.guidance_sigma_rad",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.guidance_sigma_rad",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.guidance_sigma_rad",
+      "trust_grade": "C",
+      "units": "rad",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 2000.0,
+        "minimum": 1.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 180.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.max_duration_years",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.max_duration_years",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.max_duration_years",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000.0,
+        "minimum": 1.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 180.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.power_available_w",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.power_available_w",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.power_available_w",
+      "trust_grade": "C",
+      "units": "W",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 20000.0,
+        "minimum": 1.0
+      },
+      "category": "advanced",
+      "classification": "assumed",
+      "default_value": 3200.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.specific_impulse_s",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.specific_impulse_s",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.specific_impulse_s",
+      "trust_grade": "C",
+      "units": "s",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 100000.0,
+        "minimum": 0.0
+      },
+      "category": "safe",
+      "classification": "assumed",
+      "default_value": 0.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#correction_window.start_year",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "correction_window.start_year",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#correction_window.start_year",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 0.0025,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#environment_model.accretion_luminosity_fraction",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-ENV-003"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "environment_model.accretion_luminosity_fraction",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#environment_model.accretion_luminosity_fraction",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 1.4,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#environment_model.dust_flux_scale",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-ENV-003"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "environment_model.dust_flux_scale",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#environment_model.dust_flux_scale",
+      "trust_grade": "C",
+      "units": "scale",
+      "value_mode": "distribution",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 10.0,
+        "minimum": 0.1
+      },
+      "category": "non_physical",
+      "classification": "design_choice",
+      "default_value": 1.0,
+      "defensibility_status": "PASS",
+      "domain": "speculative",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#environment_model.non_physical_safety_multiplier",
+      "evidence_source_ids": [
+        "SRC-SPEC-007"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "speculative",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "environment_model.non_physical_safety_multiplier",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": null,
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#environment_model.non_physical_safety_multiplier",
+      "trust_grade": "D",
+      "units": "scale",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1e+24,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 50000000000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#environment_model.plasma_density_proxy_m3",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-ENV-003"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "environment_model.plasma_density_proxy_m3",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0.155702, delta_p_success=0.0155702",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#environment_model.plasma_density_proxy_m3",
+      "trust_grade": "C",
+      "units": "1/m^3",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000000000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 12000000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#environment_model.radiative_flux_w_m2",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-ENV-003"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "environment_model.radiative_flux_w_m2",
+      "paths_to_metrics": [
+        "success_metrics.p_data_intact",
+        "success_metrics.p_success",
+        "success_metrics.p_survival"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0.138468, delta_p_success=0.0138468",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#environment_model.radiative_flux_w_m2",
+      "trust_grade": "C",
+      "units": "W/m^2",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "design_choice",
+      "default_value": 0.62,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#success_threshold",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "success_threshold",
+      "paths_to_metrics": [
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#success_threshold",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 1800000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#trajectory_model.initial_state_sigma_m",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "trajectory_model.initial_state_sigma_m",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#trajectory_model.initial_state_sigma_m",
+      "trust_grade": "C",
+      "units": "m",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 31536000.0,
+        "minimum": 1.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 86400.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#trajectory_model.integration_step_s",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "trajectory_model.integration_step_s",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#trajectory_model.integration_step_s",
+      "trust_grade": "C",
+      "units": "s",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1000000000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 1200000.0,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#trajectory_model.nav_position_sigma_m",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#trajectory_model.nav_position_sigma_m",
+      "trust_grade": "C",
+      "units": "m",
+      "value_mode": "distribution",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 100000.0,
+        "minimum": 0.0
+      },
+      "category": "advanced",
+      "classification": "estimated",
+      "default_value": 0.08,
+      "defensibility_status": "PASS",
+      "domain": "realistic",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#trajectory_model.nav_velocity_sigma_mps",
+      "evidence_source_ids": [
+        "SRC-ASSUME-005",
+        "SRC-MISSION-002"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "realistic",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": "OAT influence=0, delta_p_success=0",
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#trajectory_model.nav_velocity_sigma_mps",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar",
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": {
+        "has_bounds": true,
+        "is_fixed": false,
+        "maximum": 1.0,
+        "minimum": 0.0
+      },
+      "category": "non_physical",
+      "classification": "design_choice",
+      "default_value": 0.0,
+      "defensibility_status": "PASS",
+      "domain": "speculative",
+      "evidence_ref": "artifacts/parameter_evidence_index.json#trajectory_model.non_physical_capture_bias",
+      "evidence_source_ids": [
+        "SRC-SPEC-007"
+      ],
+      "evidence_status": {
+        "reason": null,
+        "status": "OK"
+      },
+      "failure_taxonomy_refs": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "DATA_CORRUPTION_RADIATION",
+        "DUST_PENETRATION_MM_TAIL",
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE",
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "has_dynamic_trace": false,
+      "has_source": true,
+      "has_uncertainty": true,
+      "mode": "speculative",
+      "modules": [
+        "control.baseline.v1",
+        "data.baseline.v1",
+        "env.baseline.v1",
+        "shield.baseline.v1",
+        "thermal.baseline.v1",
+        "traj.baseline.v1"
+      ],
+      "modules_touched_count": 6,
+      "parameter_id": "trajectory_model.non_physical_capture_bias",
+      "paths_to_metrics": [
+        "success_metrics.p_hit",
+        "success_metrics.p_success"
+      ],
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "sensitivity_summary": null,
+      "static_usage_ref": "artifacts/parameter_static_usage_graph.json#trajectory_model.non_physical_capture_bias",
+      "trust_grade": "D",
+      "units": "fraction",
+      "value_mode": "scalar",
+      "visibility": "public"
+    }
+  ],
+  "public_scope": "public_mission_parameters_only",
+  "schema_version": "parameter_drilldown_manifest.v1",
+  "ui_scope": "mission_design_environment_only"
+}

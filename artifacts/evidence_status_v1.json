@@ -1,0 +1,16 @@
+{
+  "evidence_completeness_ratio": 1.0,
+  "missing_evidence_count": 0,
+  "realistic_D_violations": 0,
+  "realistic_parameters": 36,
+  "schema_version": "evidence_status.v1",
+  "speculative_parameters": 2,
+  "status": "PASS",
+  "total_parameters": 38,
+  "trust_distribution": {
+    "A": 0,
+    "B": 5,
+    "C": 31,
+    "D": 2
+  }
+}

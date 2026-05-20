@@ -1,0 +1,35 @@
+{
+  "artifact_id": "evidence-pack-v1",
+  "artifact_schema_version": "v1",
+  "golden_run": {
+    "deterministic": true,
+    "entrypoint": "python3 scripts/run_golden.py",
+    "scenario_id": "golden-run-v1"
+  },
+  "input_files": [
+    {
+      "path": "evidence/claims.json",
+      "sha256": "a9aeb887bd6cc91472468941c324c84b8c93c531b53fc797227c82c658b1e157"
+    },
+    {
+      "path": "evidence/assumptions.json",
+      "sha256": "82c1fb92496f007c6eef7e034fc6b17db19bcee1edc127277d8c432ddeb4e63b"
+    },
+    {
+      "path": "evidence/sources.json",
+      "sha256": "fddd1eba50389c5bbbfa513e241059b2cc91d5523a3287f54c25ed5937cd5666"
+    },
+    {
+      "path": "models/constants.py",
+      "sha256": "201acc1d8509d4b8621ac1c865c781bc24ecf6a0ad687ebe8c44f3c6a7411b03"
+    },
+    {
+      "path": "models/core_physics.py",
+      "sha256": "515f6c17e83aacae31ca9b73208e0983f7ce710c846f863476dc9eaa2a5b1abe"
+    },
+    {
+      "path": "models/claim_calculations.py",
+      "sha256": "5ad4f4028d7443f253d5ec3d0622d4322777bb20d8a80c9220eee974bccc484a"
+    }
+  ]
+}

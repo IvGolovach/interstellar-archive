@@ -1,0 +1,349 @@
+{
+  "blocked_claims": [
+    "independent physics backend validated",
+    "high-fidelity state trace complete",
+    "flight-ready module approved",
+    "external backend reproduction completed"
+  ],
+  "determinism_signature": "f7db1ff26027f2e596ad6195e90f3400aa697ce7118249dd4100475888582540",
+  "external_evidence_gaps": [
+    "actuator authority and power-margin state trace fixture",
+    "bit-level post-exposure readability trace fixture",
+    "closed-loop guidance/control backend",
+    "independent geodesic or trajectory backend",
+    "independent plasma/radiation environment backend",
+    "media/ECC recoverability backend",
+    "module fixture tied to representative dust-size and impact-angle bins",
+    "module fixture with heat-load and material-response state trace",
+    "orbit-determination covariance trace fixture",
+    "source-backed environment state trace over target approach",
+    "thermal transport backend for selected material stack",
+    "transport or hydrocode backend for selected shield stack"
+  ],
+  "failure_taxonomy_ref": "mission/dag/registry/failure_taxonomy.v1.json",
+  "generator": "scripts/build_mission_dag_v2_boundary_artifact.py",
+  "interpretation_limits": [
+    "Mission DAG v1 modules remain deterministic wrappers over reduced-order baseline calculations.",
+    "A PASS boundary row means the interface contract is explicit, not that physics has been independently validated.",
+    "State-trace hashes are required by the v2 boundary, but high-fidelity traces remain external evidence gaps.",
+    "No module is flight-ready, externally reproduced, or certified by this artifact."
+  ],
+  "module_boundaries": [
+    {
+      "blocked_claims": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "flight-ready module approved",
+        "external backend reproduction completed"
+      ],
+      "current_v1_support": {
+        "cross_backend_comparison_available": false,
+        "failure_taxonomy_mapping_declared": true,
+        "hashchained_module_artifacts": true,
+        "high_fidelity_state_trace_available": false,
+        "independent_backend_id_declared": false,
+        "module_io_schema_declared": true,
+        "wrapper_over_reduced_order_baseline": true
+      },
+      "domain": "realistic",
+      "entrypoint": "mission/dag/runner_v1.py:run_control_window_module",
+      "failure_taxonomy_ids": [
+        "CONTROL_AUTHORITY_COLLAPSE",
+        "OD_UNCERTAINTY_COLLAPSE"
+      ],
+      "input_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "module_id": "control.baseline.v1",
+      "module_type": "ControlWindowModule",
+      "module_version": "v1",
+      "open_external_evidence_gaps": [
+        "closed-loop guidance/control backend",
+        "actuator authority and power-margin state trace fixture"
+      ],
+      "output_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "scenario_node_ids": [
+        "control"
+      ],
+      "v2_boundary_requirements": [
+        "independent backend id",
+        "state trace hash",
+        "input/output schema version",
+        "failure taxonomy mapping",
+        "replayable module fixture",
+        "cross-backend comparison report"
+      ]
+    },
+    {
+      "blocked_claims": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "flight-ready module approved",
+        "external backend reproduction completed"
+      ],
+      "current_v1_support": {
+        "cross_backend_comparison_available": false,
+        "failure_taxonomy_mapping_declared": true,
+        "hashchained_module_artifacts": true,
+        "high_fidelity_state_trace_available": false,
+        "independent_backend_id_declared": false,
+        "module_io_schema_declared": true,
+        "wrapper_over_reduced_order_baseline": true
+      },
+      "domain": "realistic",
+      "entrypoint": "mission/dag/runner_v1.py:run_data_integrity_module",
+      "failure_taxonomy_ids": [
+        "DATA_CORRUPTION_RADIATION"
+      ],
+      "input_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "module_id": "data.baseline.v1",
+      "module_type": "DataIntegrityModule",
+      "module_version": "v1",
+      "open_external_evidence_gaps": [
+        "media/ECC recoverability backend",
+        "bit-level post-exposure readability trace fixture"
+      ],
+      "output_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "scenario_node_ids": [
+        "data"
+      ],
+      "v2_boundary_requirements": [
+        "independent backend id",
+        "state trace hash",
+        "input/output schema version",
+        "failure taxonomy mapping",
+        "replayable module fixture",
+        "cross-backend comparison report"
+      ]
+    },
+    {
+      "blocked_claims": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "flight-ready module approved",
+        "external backend reproduction completed"
+      ],
+      "current_v1_support": {
+        "cross_backend_comparison_available": false,
+        "failure_taxonomy_mapping_declared": true,
+        "hashchained_module_artifacts": true,
+        "high_fidelity_state_trace_available": false,
+        "independent_backend_id_declared": false,
+        "module_io_schema_declared": true,
+        "wrapper_over_reduced_order_baseline": true
+      },
+      "domain": "realistic",
+      "entrypoint": "mission/dag/runner_v1.py:run_environment_module",
+      "failure_taxonomy_ids": [
+        "PLASMA_ENVIRONMENT_DISQUALIFIED"
+      ],
+      "input_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "module_id": "env.baseline.v1",
+      "module_type": "EnvironmentModule",
+      "module_version": "v1",
+      "open_external_evidence_gaps": [
+        "independent plasma/radiation environment backend",
+        "source-backed environment state trace over target approach"
+      ],
+      "output_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "scenario_node_ids": [
+        "env"
+      ],
+      "v2_boundary_requirements": [
+        "independent backend id",
+        "state trace hash",
+        "input/output schema version",
+        "failure taxonomy mapping",
+        "replayable module fixture",
+        "cross-backend comparison report"
+      ]
+    },
+    {
+      "blocked_claims": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "flight-ready module approved",
+        "external backend reproduction completed"
+      ],
+      "current_v1_support": {
+        "cross_backend_comparison_available": false,
+        "failure_taxonomy_mapping_declared": true,
+        "hashchained_module_artifacts": true,
+        "high_fidelity_state_trace_available": false,
+        "independent_backend_id_declared": false,
+        "module_io_schema_declared": true,
+        "wrapper_over_reduced_order_baseline": true
+      },
+      "domain": "realistic",
+      "entrypoint": "mission/dag/runner_v1.py:run_shielding_module",
+      "failure_taxonomy_ids": [
+        "DUST_PENETRATION_MM_TAIL"
+      ],
+      "input_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "module_id": "shield.baseline.v1",
+      "module_type": "ShieldingModule",
+      "module_version": "v1",
+      "open_external_evidence_gaps": [
+        "transport or hydrocode backend for selected shield stack",
+        "module fixture tied to representative dust-size and impact-angle bins"
+      ],
+      "output_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "scenario_node_ids": [
+        "shield"
+      ],
+      "v2_boundary_requirements": [
+        "independent backend id",
+        "state trace hash",
+        "input/output schema version",
+        "failure taxonomy mapping",
+        "replayable module fixture",
+        "cross-backend comparison report"
+      ]
+    },
+    {
+      "blocked_claims": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "flight-ready module approved",
+        "external backend reproduction completed"
+      ],
+      "current_v1_support": {
+        "cross_backend_comparison_available": false,
+        "failure_taxonomy_mapping_declared": true,
+        "hashchained_module_artifacts": true,
+        "high_fidelity_state_trace_available": false,
+        "independent_backend_id_declared": false,
+        "module_io_schema_declared": true,
+        "wrapper_over_reduced_order_baseline": true
+      },
+      "domain": "realistic",
+      "entrypoint": "mission/dag/runner_v1.py:run_thermal_module",
+      "failure_taxonomy_ids": [
+        "PLASMA_ENVIRONMENT_DISQUALIFIED",
+        "TPS_FAIL_DELAMINATION"
+      ],
+      "input_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "module_id": "thermal.baseline.v1",
+      "module_type": "ThermalModule",
+      "module_version": "v1",
+      "open_external_evidence_gaps": [
+        "thermal transport backend for selected material stack",
+        "module fixture with heat-load and material-response state trace"
+      ],
+      "output_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "scenario_node_ids": [
+        "thermal"
+      ],
+      "v2_boundary_requirements": [
+        "independent backend id",
+        "state trace hash",
+        "input/output schema version",
+        "failure taxonomy mapping",
+        "replayable module fixture",
+        "cross-backend comparison report"
+      ]
+    },
+    {
+      "blocked_claims": [
+        "independent physics backend validated",
+        "high-fidelity state trace complete",
+        "flight-ready module approved",
+        "external backend reproduction completed"
+      ],
+      "current_v1_support": {
+        "cross_backend_comparison_available": false,
+        "failure_taxonomy_mapping_declared": true,
+        "hashchained_module_artifacts": true,
+        "high_fidelity_state_trace_available": false,
+        "independent_backend_id_declared": false,
+        "module_io_schema_declared": true,
+        "wrapper_over_reduced_order_baseline": true
+      },
+      "domain": "realistic",
+      "entrypoint": "mission/dag/runner_v1.py:run_trajectory_module",
+      "failure_taxonomy_ids": [
+        "MISS_DISTANCE_EXCEEDS_R_INT",
+        "OD_UNCERTAINTY_COLLAPSE"
+      ],
+      "input_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "module_id": "traj.baseline.v1",
+      "module_type": "TrajectoryModule",
+      "module_version": "v1",
+      "open_external_evidence_gaps": [
+        "independent geodesic or trajectory backend",
+        "orbit-determination covariance trace fixture"
+      ],
+      "output_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "scenario_node_ids": [
+        "traj"
+      ],
+      "v2_boundary_requirements": [
+        "independent backend id",
+        "state trace hash",
+        "input/output schema version",
+        "failure taxonomy mapping",
+        "replayable module fixture",
+        "cross-backend comparison report"
+      ]
+    }
+  ],
+  "module_count": 6,
+  "non_certification_notice": true,
+  "public_scope": "mission_dag_v2_module_boundary_review_surface",
+  "registry_version": "v1",
+  "rollup": {
+    "cross_backend_comparison_available": false,
+    "external_reproduction_completed": false,
+    "failure_taxonomy_mapping_module_count": 6,
+    "flight_ready_module_claimed": false,
+    "hashchain_contract_available": true,
+    "high_fidelity_state_traces_available": false,
+    "independent_backend_complete": false,
+    "module_count": 6,
+    "module_io_schema_contract_available": true,
+    "state_trace_contract_complete": true
+  },
+  "scenario_id": "mission_dag_baseline.v1",
+  "scenario_ref": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+  "schema_version": "mission_dag_v2_boundary.v1",
+  "source_artifacts": [
+    {
+      "path": "mission/dag/registry/module_registry.v1.json",
+      "sha256": "02c7a51185c496167146e5bef6438f50d231ade4bb38bc234ede3dda9d63d362"
+    },
+    {
+      "path": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+      "sha256": "5063d979940a7bd2d91fc2bebeba5f25b0e1314b2e1172d629fddcf65aea1859"
+    },
+    {
+      "path": "mission/dag/registry/failure_taxonomy.v1.json",
+      "sha256": "ef390445b39d6e66a5690cfdc3b67bcb4c67e965dd0c8c51ea58e558d052ec78"
+    },
+    {
+      "path": "mission/dag/schema/module_io.schema.v1.json",
+      "sha256": "c8f5a33e7dee748ee17e184ff0bf6badfaa4934fddf80cb284dc0f7beb27a941"
+    },
+    {
+      "path": "mission/dag/schema/scenario_dag.schema.v1.json",
+      "sha256": "8d90ecc9d18b178b1c53284f90b4b7cc5b1d90872d12f049bb02385e8972c301"
+    },
+    {
+      "path": "mission/dag/schema/failure_taxonomy.schema.v1.json",
+      "sha256": "8796aac4da78d09f5363b9b38eb3d755fbd2d8f6bf685265b3352b6df8b8c6f4"
+    },
+    {
+      "path": "mission/dag/runner_v1.py",
+      "sha256": "b5e2d34b84a53082f13e061fafdc8c29bae988db8528cd2eb928dcc3753eac3d"
+    },
+    {
+      "path": "mission/dag/contracts.py",
+      "sha256": "8d177c1d3497dc4c14eced0707d99174c94442232de604c4e594330f703edcb5"
+    },
+    {
+      "path": "mission/dag/hashchain.py",
+      "sha256": "6a892f242bc40a6554940c1f8f9ebb133162c01224da6129824e89bd03ab7399"
+    },
+    {
+      "path": "scripts/ci/mission_dag_validate.py",
+      "sha256": "29d3035c9021819f69859f4a9c14d63f83816c38ac639eea05d8a90011e98651"
+    }
+  ]
+}
