@@ -1,0 +1,20 @@
+{
+  "schema_version": "sim_schema.v2",
+  "scenario_id": "default.v1",
+  "seed": "default-seed-v1",
+  "params": {
+    "encounter_distance_au": 300,
+    "correction_window_years": 30,
+    "initial_delta_v_mps": 24,
+    "uncertainty_growth_per_year": 0.02,
+    "dust_flux_scale": 1,
+    "shield_geometry_factor": 1.1,
+    "narrative_leverage_multiplier": 1,
+    "irreversibility_override": 0
+  },
+  "clock": {
+    "step_years": 1,
+    "horizon_years": 80
+  },
+  "notes": "Reference deterministic baseline used for golden checksum enforcement."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "sim_schema.v2",
+  "scenario_id": "optimistic.v1",
+  "seed": "optimistic-seed-v1",
+  "params": {
+    "encounter_distance_au": 420,
+    "correction_window_years": 45,
+    "initial_delta_v_mps": 36,
+    "uncertainty_growth_per_year": 0.012,
+    "dust_flux_scale": 0.75,
+    "shield_geometry_factor": 1.45,
+    "narrative_leverage_multiplier": 1,
+    "irreversibility_override": 0
+  },
+  "clock": {
+    "step_years": 1,
+    "horizon_years": 90
+  },
+  "notes": "Higher correction authority and lower uncertainty growth under favorable assumptions."
+}

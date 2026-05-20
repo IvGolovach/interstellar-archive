@@ -1,0 +1,70 @@
+{
+  "schema_version": "uncertainty_model.v1",
+  "entries": [
+    {
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "distribution": "normal",
+      "parameters": {
+        "mean": 0,
+        "sigma": 1200000
+      },
+      "bounds": {
+        "min": 100000.0,
+        "max": 6000000.0
+      },
+      "units": "m",
+      "mode": "realistic",
+      "category": "safe",
+      "source_rationale": "Earth-based long-baseline optical/radio tracking uncertainty envelope."
+    },
+    {
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "distribution": "lognormal",
+      "parameters": {
+        "mu": -2.6,
+        "sigma": 0.35
+      },
+      "bounds": {
+        "min": 0.0,
+        "max": 0.6
+      },
+      "units": "fraction",
+      "mode": "realistic",
+      "category": "advanced",
+      "source_rationale": "Execution dispersion for low-duty-cycle correction burns over centuries."
+    },
+    {
+      "parameter_id": "environment_model.dust_flux_scale",
+      "distribution": "triangular",
+      "parameters": {
+        "min": 0.8,
+        "mode": 1.4,
+        "max": 2.4
+      },
+      "bounds": {
+        "min": 0.5,
+        "max": 3.0
+      },
+      "units": "scale",
+      "mode": "both",
+      "category": "advanced",
+      "source_rationale": "Dust/tail exposure varies across trajectory sectors and epoch assumptions."
+    },
+    {
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "distribution": "uniform",
+      "parameters": {
+        "min": 0.0001,
+        "max": 0.0004
+      },
+      "bounds": {
+        "min": 0.0001,
+        "max": 0.0004
+      },
+      "units": "1/year",
+      "mode": "realistic",
+      "category": "advanced",
+      "source_rationale": "Bounded long-duration degradation rate for composite shield and media container."
+    }
+  ]
+}

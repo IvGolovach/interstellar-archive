@@ -1,0 +1,20 @@
+{
+  "schema_version": "sim_schema.v2",
+  "scenario_id": "extreme.v1",
+  "seed": "extreme-seed-v1",
+  "params": {
+    "encounter_distance_au": 260,
+    "correction_window_years": 20,
+    "initial_delta_v_mps": 20,
+    "uncertainty_growth_per_year": 0.03,
+    "dust_flux_scale": 1.25,
+    "shield_geometry_factor": 1,
+    "narrative_leverage_multiplier": 1.35,
+    "irreversibility_override": 0.6
+  },
+  "clock": {
+    "step_years": 0.5,
+    "horizon_years": 100
+  },
+  "notes": "Sensitivity stress case using non-physical knobs for exploratory what-if analysis only."
+}

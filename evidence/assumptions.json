@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "assumptions": [
+    {
+      "id": "A-001",
+      "title": "Poisson long-horizon encounter process",
+      "statement": "Encounter frequency over long horizons is approximated by a Poisson process.",
+      "confidence": "medium",
+      "kind": "statistical",
+      "rationale": "Provides a first-order arrival-process baseline for Monte Carlo studies.",
+      "impacted_artifacts": [
+        "appendix/models/monte_carlo.ipynb"
+      ]
+    },
+    {
+      "id": "A-002",
+      "title": "Log-normal relative velocity shape",
+      "statement": "Relative velocity distribution is approximated as log-normal in sparse-data regimes.",
+      "confidence": "low",
+      "kind": "statistical",
+      "rationale": "Captures a heavy upper tail without enforcing symmetry.",
+      "impacted_artifacts": [
+        "appendix/models/uncertainty_growth.ipynb"
+      ]
+    },
+    {
+      "id": "A-003",
+      "title": "Inverse-square detection scaling",
+      "statement": "Detection horizon scales with inverse-square signal decay as a sensitivity proxy.",
+      "confidence": "high",
+      "kind": "physical",
+      "rationale": "First-order radiative dilution model for range scaling.",
+      "impacted_artifacts": [
+        "appendix/models/encounter_geometry.ipynb"
+      ]
+    },
+    {
+      "id": "A-004",
+      "title": "Independent observation windows",
+      "statement": "Observation windows across campaigns are treated as independent.",
+      "confidence": "medium",
+      "kind": "statistical",
+      "rationale": "Keeps uncertainty propagation additive in the baseline envelope.",
+      "impacted_artifacts": [
+        "appendix/models/uncertainty_growth.ipynb"
+      ]
+    },
+    {
+      "id": "A-101",
+      "title": "Solar irradiance baseline at 1 AU",
+      "statement": "Solar constant is fixed at 1361 W/m^2 for envelope calculations.",
+      "confidence": "high",
+      "kind": "constant",
+      "rationale": "Establishes deterministic scaling for perihelion radiative load checks.",
+      "impacted_artifacts": [
+        "models/constants.py",
+        "artifacts/claims_table.csv"
+      ]
+    },
+    {
+      "id": "A-102",
+      "title": "Reference compact object mass",
+      "statement": "Reference compact-object mass for scaling is set to 10 solar masses.",
+      "confidence": "high",
+      "kind": "scenario",
+      "rationale": "Anchors the Schwarzschild-radius scale statement used throughout the whitepaper.",
+      "impacted_artifacts": [
+        "models/claim_calculations.py",
+        "artifacts/claims_report.md"
+      ]
+    },
+    {
+      "id": "A-103",
+      "title": "Two-body heliocentric closure",
+      "statement": "Solar Oberth scale checks use two-body heliocentric dynamics with fixed solar GM.",
+      "confidence": "medium",
+      "kind": "physical",
+      "rationale": "Provides a transparent first-order energy closure before high-fidelity trajectory work.",
+      "impacted_artifacts": [
+        "models/core_physics.py",
+        "artifacts/claim_values.json"
+      ]
+    },
+    {
+      "id": "A-104",
+      "title": "Impulsive perihelion burn approximation",
+      "statement": "SRM burn is modeled as an impulsive prograde delta-v at perihelion.",
+      "confidence": "medium",
+      "kind": "modeling",
+      "rationale": "Supports clear velocity-envelope calculations for q and delta-v ranges.",
+      "impacted_artifacts": [
+        "models/core_physics.py",
+        "artifacts/claims_table.csv"
+      ]
+    },
+    {
+      "id": "A-105",
+      "title": "Near-parabolic inbound baseline",
+      "statement": "Baseline speed envelope assumes inbound v_infinity approximately zero.",
+      "confidence": "medium",
+      "kind": "scenario",
+      "rationale": "Separates baseline claim from conditional high-energy architectures.",
+      "impacted_artifacts": [
+        "models/claim_calculations.py",
+        "artifacts/claims_report.md"
+      ]
+    },
+    {
+      "id": "A-106",
+      "title": "Conditional inbound energy uplift",
+      "statement": "Conditional 35-45 km/s envelope is evaluated for inbound v_infinity in 10-30 km/s range.",
+      "confidence": "low",
+      "kind": "scenario",
+      "rationale": "Makes high-end speed claims explicit and testable as conditional assumptions.",
+      "impacted_artifacts": [
+        "models/claim_calculations.py",
+        "artifacts/claims_report.md"
+      ]
+    },
+    {
+      "id": "A-107",
+      "title": "Small-angle transverse leverage linearization",
+      "statement": "Cross-track correction scale uses linearized relation delta_perp ~= (delta_v_perp / v_infinity) * D.",
+      "confidence": "high",
+      "kind": "modeling",
+      "rationale": "Appropriate first-order approximation when interaction radius is much smaller than distance.",
+      "impacted_artifacts": [
+        "models/core_physics.py",
+        "artifacts/claims_table.csv"
+      ]
+    },
+    {
+      "id": "A-108",
+      "title": "Reference distance anchor",
+      "statement": "Distance anchor for scale checks is fixed at 1560 light-years.",
+      "confidence": "medium",
+      "kind": "scenario",
+      "rationale": "Keeps delta-v leverage and time-of-flight calculations comparable across sections.",
+      "impacted_artifacts": [
+        "models/claim_calculations.py",
+        "artifacts/claims_report.md"
+      ]
+    },
+    {
+      "id": "A-109",
+      "title": "Radioactive-only RTG decay envelope",
+      "statement": "First-order RTG decay uses Pu-238 half-life of 87.7 years.",
+      "confidence": "high",
+      "kind": "constant",
+      "rationale": "Captures lower-bound power decay independent of mechanical degradation modes.",
+      "impacted_artifacts": [
+        "models/core_physics.py",
+        "artifacts/claims_table.csv"
+      ]
+    },
+    {
+      "id": "A-110",
+      "title": "Cost classes are order-of-magnitude anchors",
+      "statement": "Archive-only and flagship cost figures are treated as O(10^8) and O(10^9) class anchors.",
+      "confidence": "low",
+      "kind": "programmatic",
+      "rationale": "Represents framing-level placeholders pending full WBS and vendor-backed estimation.",
+      "impacted_artifacts": [
+        "models/claim_calculations.py",
+        "artifacts/claims_report.md"
+      ]
+    },
+    {
+      "id": "A-111",
+      "title": "Hypervelocity validation window for ground tests",
+      "statement": "Ground test closure is limited to a facility-relevant hypervelocity regime, with higher-relative-speed cases treated as extrapolation risk.",
+      "confidence": "medium",
+      "kind": "programmatic",
+      "rationale": "Separates validated regime from extrapolated high-relative-speed environment cases.",
+      "impacted_artifacts": [
+        "models/claim_calculations.py",
+        "artifacts/claims_report.md"
+      ]
+    }
+  ]
+}

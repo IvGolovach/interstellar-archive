@@ -1,0 +1,69 @@
+{
+  "schema_version": "evidence_sources.v1",
+  "sources": [
+    {
+      "citation": "Schwarzschild geometry and relativistic constants reference set.",
+      "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+      "notes": "Primary source family for G, c, and horizon crossing definitions.",
+      "source_id": "SRC-PHYS-001",
+      "type": "paper",
+      "url": null
+    },
+    {
+      "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+      "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+      "notes": "Project engineering envelope used for deterministic baseline.",
+      "source_id": "SRC-MISSION-002",
+      "type": "report",
+      "url": null
+    },
+    {
+      "citation": "Environment proxy variability ranges for dust/radiation/plasma surrogates.",
+      "claim_scope": "Environment model and uncertainty distributions.",
+      "notes": "Proxy data ranges, not full plasma transport simulation.",
+      "source_id": "SRC-ENV-003",
+      "type": "dataset",
+      "url": null
+    },
+    {
+      "citation": "Willcockson, Bill. Genesis Sample Return Capsule Overview. Lockheed Martin / JPL overview, August 25, 2004.",
+      "claim_scope": "Genesis-class capsule heritage mass and diameter used as the v1 geometry/mass proxy.",
+      "notes": "Provides Entry Mass = 206 kg and Diameter = 1.52 m for the Genesis SRC.",
+      "source_id": "SRC-CAPSULE-008",
+      "type": "paper",
+      "url": "https://ntrs.nasa.gov/citations/20070014646"
+    },
+    {
+      "citation": "Finckenor, Miria. Optical Property Measurements on the Stardust Sample Return Capsule. June 25, 2007.",
+      "claim_scope": "Qualitative post-flight durability precedent for sample-return capsule materials after a multi-year mission.",
+      "notes": "Useful as qualitative survivability precedent only; it does not provide a direct deep-time degradation rate.",
+      "source_id": "SRC-CAPSULE-009",
+      "type": "paper",
+      "url": "https://ntrs.nasa.gov/citations/20070031961"
+    },
+    {
+      "citation": "Assumption register for bounded engineering constants and heuristics.",
+      "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+      "notes": "Every assumption-tagged value is explicit in trust grading.",
+      "source_id": "SRC-ASSUME-005",
+      "type": "assumption",
+      "url": null
+    },
+    {
+      "citation": "Deterministic implementation constants in mission/benchmark scripts.",
+      "claim_scope": "Code literals controlling deterministic transformations and guardrails.",
+      "notes": "Tracks implementation-level numeric literals to prevent silent drift.",
+      "source_id": "SRC-CODE-006",
+      "type": "assumption",
+      "url": null
+    },
+    {
+      "citation": "Speculative/non-physical exploration controls for sensitivity studies.",
+      "claim_scope": "Non-physical parameters marked speculative by contract.",
+      "notes": "Must remain isolated from realistic reporting.",
+      "source_id": "SRC-SPEC-007",
+      "type": "assumption",
+      "url": null
+    }
+  ]
+}

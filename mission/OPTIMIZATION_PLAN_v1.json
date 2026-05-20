@@ -1,0 +1,12 @@
+{
+  "schema_version": "optimization_plan.v1",
+  "mode": "realistic",
+  "objective": "maximize_p_success",
+  "tuned_parameters": [
+    "bh_parameters.mass_kg",
+    "bh_parameters.periapsis_distance_m",
+    "capsule_model.data_media_survival_margin",
+    "bh_parameters.max_plasma_density_proxy_m3"
+  ],
+  "notes": "Optimization guard baseline: realistic-domain only and core-probability-affecting parameters."
+}

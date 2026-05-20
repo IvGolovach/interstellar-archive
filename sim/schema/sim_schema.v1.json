@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "sim_schema.v2",
+  "artifact_schema_version": "sim_output.v1",
+  "breaking_change_flag": false,
+  "units": "SI+AU",
+  "parameters": {
+    "encounter_distance_au": {
+      "type": "number",
+      "minimum": 80,
+      "maximum": 1500,
+      "default": 300,
+      "unit": "AU",
+      "category": "safe",
+      "help": "Distance scale that defines early interaction geometry in the simplified model."
+    },
+    "correction_window_years": {
+      "type": "number",
+      "minimum": 5,
+      "maximum": 100,
+      "default": 30,
+      "unit": "year",
+      "category": "safe",
+      "help": "Effective horizon during which early interventions still provide leverage."
+    },
+    "initial_delta_v_mps": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 120,
+      "default": 24,
+      "unit": "m/s",
+      "category": "safe",
+      "help": "Initial correction authority available to the concept trajectory."
+    },
+    "uncertainty_growth_per_year": {
+      "type": "number",
+      "minimum": 0.001,
+      "maximum": 0.1,
+      "default": 0.02,
+      "unit": "1/year",
+      "category": "advanced",
+      "help": "Annualized growth of compounded navigation uncertainty in reduced-order form."
+    },
+    "dust_flux_scale": {
+      "type": "number",
+      "minimum": 0.2,
+      "maximum": 3.5,
+      "default": 1,
+      "unit": "relative",
+      "category": "advanced",
+      "help": "Dimensionless scale for mm-tail dust exposure stress in the simplified environment."
+    },
+    "shield_geometry_factor": {
+      "type": "number",
+      "minimum": 0.5,
+      "maximum": 2.5,
+      "default": 1.1,
+      "unit": "relative",
+      "category": "advanced",
+      "help": "Geometric attenuation factor for lethal-hit rate under nominal orientation assumptions."
+    },
+    "narrative_leverage_multiplier": {
+      "type": "number",
+      "minimum": 0.5,
+      "maximum": 2,
+      "default": 1,
+      "unit": "non-physical",
+      "category": "non_physical",
+      "help": "Sensitivity-only scale to stress-test interpretation elasticity.",
+      "warning": "Non-physical knobs break realism; use for sensitivity exploration only."
+    },
+    "irreversibility_override": {
+      "type": "number",
+      "minimum": -2,
+      "maximum": 2,
+      "default": 0,
+      "unit": "non-physical",
+      "category": "non_physical",
+      "help": "Sensitivity-only additive override to probe edge-case irreversibility assumptions.",
+      "warning": "Non-physical knobs break realism; use for sensitivity exploration only."
+    }
+  },
+  "clock": {
+    "step_years": {
+      "type": "number",
+      "minimum": 0.25,
+      "maximum": 5,
+      "default": 1,
+      "unit": "year",
+      "category": "safe",
+      "help": "Fixed simulation step used for deterministic time integration."
+    },
+    "horizon_years": {
+      "type": "number",
+      "minimum": 10,
+      "maximum": 200,
+      "default": 80,
+      "unit": "year",
+      "category": "safe",
+      "help": "Total simulated horizon for trend and finite-window estimates."
+    }
+  },
+  "required_parameters": [
+    "encounter_distance_au",
+    "correction_window_years",
+    "initial_delta_v_mps",
+    "uncertainty_growth_per_year",
+    "dust_flux_scale",
+    "shield_geometry_factor",
+    "narrative_leverage_multiplier",
+    "irreversibility_override"
+  ],
+  "required_clock": [
+    "step_years",
+    "horizon_years"
+  ]
+}

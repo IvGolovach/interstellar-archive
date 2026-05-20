@@ -1,0 +1,20 @@
+{
+  "schema_version": "sim_schema.v2",
+  "scenario_id": "pessimistic.v1",
+  "seed": "pessimistic-seed-v1",
+  "params": {
+    "encounter_distance_au": 180,
+    "correction_window_years": 15,
+    "initial_delta_v_mps": 14,
+    "uncertainty_growth_per_year": 0.045,
+    "dust_flux_scale": 1.8,
+    "shield_geometry_factor": 0.85,
+    "narrative_leverage_multiplier": 1,
+    "irreversibility_override": 0
+  },
+  "clock": {
+    "step_years": 1,
+    "horizon_years": 70
+  },
+  "notes": "Compressed control window with elevated uncertainty and harsher dust exposure."
+}

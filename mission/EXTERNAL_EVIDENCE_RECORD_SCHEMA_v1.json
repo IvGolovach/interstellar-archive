@@ -1,0 +1,82 @@
+{
+  "additionalProperties": false,
+  "description": "External evidence record schema for independent reproduction, backend comparison, qualification, red-team, or wording-audit evidence. The repository validator enforces stricter semantic checks than JSON Schema alone.",
+  "properties": {
+    "attestation": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "claim_effect": {
+      "additionalProperties": false,
+      "properties": {
+        "certification_go": {
+          "type": "boolean"
+        },
+        "external_validation_completed": {
+          "type": "boolean"
+        },
+        "flight_readiness_go": {
+          "type": "boolean"
+        },
+        "independent_backend_validated": {
+          "type": "boolean"
+        },
+        "independent_reproduction_completed": {
+          "type": "boolean"
+        },
+        "qualification_complete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "external_validation_completed",
+        "independent_reproduction_completed",
+        "independent_backend_validated",
+        "qualification_complete",
+        "certification_go",
+        "flight_readiness_go"
+      ],
+      "type": "object"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "record_type": {
+      "enum": [
+        "independent_reproduction",
+        "independent_physics_backend",
+        "capsule_qualification",
+        "public_wording_audit",
+        "external_red_team"
+      ],
+      "type": "string"
+    },
+    "reproduction": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "review_case_id": {
+      "type": "string"
+    },
+    "reviewer": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "external_evidence_record.v1",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_id",
+    "record_type",
+    "review_case_id",
+    "reviewer",
+    "attestation",
+    "reproduction",
+    "claim_effect"
+  ],
+  "title": "External Evidence Record v1",
+  "type": "object"
+}

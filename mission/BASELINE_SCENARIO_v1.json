@@ -1,0 +1,356 @@
+{
+  "schema_version": "mission_schema.v1",
+  "mission_mode": "realistic",
+  "success_threshold": 0.62,
+  "bh_model": "schwarzschild",
+  "environment_acceptance_mode": "proxy",
+  "seed": "baseline-mission-v1",
+  "bh_parameters": {
+    "mass_kg": 8.55e+36,
+    "periapsis_distance_m": 12300000000.0,
+    "distance_from_earth_ly": 26000,
+    "max_radiative_flux_w_m2": 20000000,
+    "max_plasma_density_proxy_m3": 80000000000,
+    "max_dust_flux_scale": 3
+  },
+  "trajectory_model": {
+    "deterministic_baseline": true,
+    "initial_state_sigma_m": 1800000,
+    "nav_position_sigma_m": 1200000,
+    "nav_velocity_sigma_mps": 0.08,
+    "integration_step_s": 86400,
+    "non_physical_capture_bias": 0
+  },
+  "correction_window": {
+    "enabled": true,
+    "start_year": 0,
+    "end_year": 180,
+    "max_duration_years": 180,
+    "delta_v_budget_mps": 36,
+    "actuation_model": "deterministic_impulse",
+    "specific_impulse_s": 3200,
+    "power_available_w": 180,
+    "actuator_efficiency": 0.68,
+    "guidance_sigma_rad": 2.5e-07,
+    "execution_sigma_fraction": 0.08
+  },
+  "capsule_model": {
+    "mass_kg": 206,
+    "frontal_area_m2": 1.81,
+    "shield_areal_density_kg_m2": 32,
+    "data_media_survival_margin": 0.82,
+    "material_degradation_mu_1_per_year": 0.00022,
+    "geometry_model": "axisymmetric_shielded",
+    "material_family": "C/C-SiC hybrid"
+  },
+  "environment_model": {
+    "radiative_flux_w_m2": 12000000,
+    "plasma_density_proxy_m3": 50000000000,
+    "dust_flux_scale": 1.4,
+    "accretion_luminosity_fraction": 0.0025,
+    "non_physical_safety_multiplier": 1
+  },
+  "uncertainty_model": [
+    {
+      "name": "navigation_initial_state",
+      "distribution": "normal",
+      "parameters": {
+        "mean": 0,
+        "sigma": 1200000
+      },
+      "units": "m",
+      "mode": "realistic",
+      "category": "safe",
+      "rationale": "Earth-based long-baseline optical/radio tracking uncertainty envelope.",
+      "warning_text": "",
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "bounds": {
+        "min": 100000.0,
+        "max": 6000000.0
+      }
+    },
+    {
+      "name": "correction_execution_sigma",
+      "distribution": "lognormal",
+      "parameters": {
+        "mu": -2.6,
+        "sigma": 0.35
+      },
+      "units": "fraction",
+      "mode": "realistic",
+      "category": "advanced",
+      "rationale": "Execution dispersion for low-duty-cycle correction burns over centuries.",
+      "warning_text": "",
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "bounds": {
+        "min": 0.0,
+        "max": 0.6
+      }
+    },
+    {
+      "name": "environment_dust_variability",
+      "distribution": "triangular",
+      "parameters": {
+        "min": 0.8,
+        "mode": 1.4,
+        "max": 2.4
+      },
+      "units": "scale",
+      "mode": "both",
+      "category": "advanced",
+      "rationale": "Dust/tail exposure varies across trajectory sectors and epoch assumptions.",
+      "warning_text": "",
+      "parameter_id": "environment_model.dust_flux_scale",
+      "bounds": {
+        "min": 0.5,
+        "max": 3.0
+      }
+    },
+    {
+      "name": "material_degradation_rate",
+      "distribution": "uniform",
+      "parameters": {
+        "min": 0.0001,
+        "max": 0.0004
+      },
+      "units": "1/year",
+      "mode": "realistic",
+      "category": "advanced",
+      "rationale": "Bounded long-duration degradation rate for composite shield and media container.",
+      "warning_text": "",
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "bounds": {
+        "min": 0.0001,
+        "max": 0.0004
+      }
+    }
+  ],
+  "speculative_overrides": [],
+  "parameter_tags": {
+    "trajectory_model.non_physical_capture_bias": {
+      "category": "non_physical",
+      "mode": "speculative",
+      "warning_text": "Bias term is non-physical; use only for sensitivity exploration.",
+      "parameter_id": "trajectory_model.non_physical_capture_bias"
+    },
+    "environment_model.non_physical_safety_multiplier": {
+      "category": "non_physical",
+      "mode": "speculative",
+      "warning_text": "Safety multiplier is non-physical and must not be reported as realistic performance.",
+      "parameter_id": "environment_model.non_physical_safety_multiplier"
+    },
+    "correction_window.delta_v_budget_mps": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; no speculative warning.",
+      "parameter_id": "correction_window.delta_v_budget_mps"
+    },
+    "capsule_model.mass_kg": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Genesis-class heritage proxy; not a bespoke capsule mass closure.",
+      "parameter_id": "capsule_model.mass_kg"
+    },
+    "environment_model.radiative_flux_w_m2": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; no speculative warning.",
+      "parameter_id": "environment_model.radiative_flux_w_m2"
+    },
+    "bh_parameters.mass_kg": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "bh_parameters.mass_kg"
+    },
+    "bh_parameters.periapsis_distance_m": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "bh_parameters.periapsis_distance_m"
+    },
+    "bh_parameters.distance_from_earth_ly": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "bh_parameters.distance_from_earth_ly"
+    },
+    "bh_parameters.max_radiative_flux_w_m2": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "bh_parameters.max_radiative_flux_w_m2"
+    },
+    "bh_parameters.max_plasma_density_proxy_m3": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "bh_parameters.max_plasma_density_proxy_m3"
+    },
+    "bh_parameters.max_dust_flux_scale": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "bh_parameters.max_dust_flux_scale"
+    },
+    "trajectory_model.deterministic_baseline": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "trajectory_model.deterministic_baseline"
+    },
+    "trajectory_model.initial_state_sigma_m": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "trajectory_model.initial_state_sigma_m"
+    },
+    "trajectory_model.nav_position_sigma_m": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "trajectory_model.nav_position_sigma_m"
+    },
+    "trajectory_model.nav_velocity_sigma_mps": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "trajectory_model.nav_velocity_sigma_mps"
+    },
+    "trajectory_model.integration_step_s": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "trajectory_model.integration_step_s"
+    },
+    "correction_window.enabled": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.enabled"
+    },
+    "correction_window.start_year": {
+      "category": "safe",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; evidence-bound and auditable.",
+      "parameter_id": "correction_window.start_year"
+    },
+    "correction_window.end_year": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.end_year"
+    },
+    "correction_window.max_duration_years": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.max_duration_years"
+    },
+    "correction_window.actuation_model": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.actuation_model"
+    },
+    "correction_window.specific_impulse_s": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.specific_impulse_s"
+    },
+    "correction_window.power_available_w": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.power_available_w"
+    },
+    "correction_window.actuator_efficiency": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.actuator_efficiency"
+    },
+    "correction_window.guidance_sigma_rad": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.guidance_sigma_rad"
+    },
+    "correction_window.execution_sigma_fraction": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "correction_window.execution_sigma_fraction"
+    },
+    "capsule_model.frontal_area_m2": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Genesis-class frontal reference area proxy derived from 1.52 m heritage diameter.",
+      "parameter_id": "capsule_model.frontal_area_m2"
+    },
+    "capsule_model.shield_areal_density_kg_m2": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Assumption-bound shield sizing prior; not yet tied to a public stack mass closure.",
+      "parameter_id": "capsule_model.shield_areal_density_kg_m2"
+    },
+    "capsule_model.data_media_survival_margin": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Assumption-bound media integrity prior; not a direct measured persistence fraction.",
+      "parameter_id": "capsule_model.data_media_survival_margin"
+    },
+    "capsule_model.material_degradation_mu_1_per_year": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Bounded degradation prior; uncertainty envelope is assumption-constrained.",
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year"
+    },
+    "capsule_model.geometry_model": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Qualitative capsule geometry descriptor; not an evidence-bound numeric input.",
+      "parameter_id": "capsule_model.geometry_model"
+    },
+    "capsule_model.material_family": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Qualitative material-family descriptor; assumption-heavy until stack-level qualification exists.",
+      "parameter_id": "capsule_model.material_family"
+    },
+    "environment_model.plasma_density_proxy_m3": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "environment_model.plasma_density_proxy_m3"
+    },
+    "environment_model.dust_flux_scale": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "environment_model.dust_flux_scale"
+    },
+    "environment_model.accretion_luminosity_fraction": {
+      "category": "advanced",
+      "mode": "realistic",
+      "warning_text": "Realistic parameter; monitor assumptions and uncertainty bounds.",
+      "parameter_id": "environment_model.accretion_luminosity_fraction"
+    }
+  },
+  "outputs_required": [
+    "schwarzschild_radius_m",
+    "crossing_condition_met",
+    "environment_acceptable",
+    "p_hit",
+    "p_survive",
+    "p_data_intact",
+    "p_success",
+    "success_threshold",
+    "success",
+    "mode",
+    "speculative_parameters_used",
+    "trust_weighted_score",
+    "core_probability"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "risk_envelope.v1",
+  "method": "lower_quantile",
+  "quantile": 0.05,
+  "source": "uncertainty_model",
+  "uncertainty_model_ref": "mission/UNCERTAINTY_MODEL_v1.json",
+  "mode": "realistic_only",
+  "deterministic_seed": 1,
+  "monte_carlo_samples": 64,
+  "formula": "risk_envelope = 1 - Q_0.05(p_success_distribution)",
+  "aggregation": "scalar"
+}

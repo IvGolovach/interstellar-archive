@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mission/dag/schema/module_io.schema.v1.json",
+  "title": "Mission DAG Module IO Envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "module_id",
+    "module_type",
+    "module_version",
+    "mode",
+    "inputs_hash",
+    "outputs_hash",
+    "event_clock_domain",
+    "wall_clock_recorded",
+    "outputs",
+    "failure"
+  ],
+  "properties": {
+    "module_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module_type": {
+      "type": "string",
+      "enum": [
+        "TrajectoryModule",
+        "EnvironmentModule",
+        "ShieldingModule",
+        "ThermalModule",
+        "ControlWindowModule",
+        "DataIntegrityModule"
+      ]
+    },
+    "module_version": {
+      "type": "string",
+      "const": "v1"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "realistic",
+        "speculative"
+      ]
+    },
+    "inputs_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "outputs_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "event_clock_domain": {
+      "type": "string",
+      "const": "event"
+    },
+    "wall_clock_recorded": {
+      "type": "boolean"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "failure_mode",
+        "failure_stage",
+        "dominant_driver_parameter_ids",
+        "notes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "WARN"
+          ]
+        },
+        "failure_mode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "failure_stage": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "S0",
+            "S1",
+            "S2",
+            "S3",
+            null
+          ]
+        },
+        "dominant_driver_parameter_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "PASS"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "failure_mode": {
+                "type": "null"
+              },
+              "failure_stage": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "FAIL",
+                  "WARN"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "failure_mode": {
+                "type": "string",
+                "minLength": 1
+              },
+              "failure_stage": {
+                "type": "string",
+                "enum": [
+                  "S0",
+                  "S1",
+                  "S2",
+                  "S3"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

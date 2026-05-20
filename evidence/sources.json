@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "id": "S-001",
+      "kind": "local_document",
+      "title": "Whitepaper quantitative scope statements",
+      "locator": "paper/whitepaper.md:46",
+      "note": "Distance, mass, speed, and radiative-load baseline statements."
+    },
+    {
+      "id": "S-002",
+      "kind": "local_document",
+      "title": "Whitepaper trajectory leverage statements",
+      "locator": "paper/whitepaper.md:87",
+      "note": "Linearized transverse correction and interaction-radius scaling."
+    },
+    {
+      "id": "S-003",
+      "kind": "constant_reference",
+      "title": "SI exact speed of light",
+      "locator": "models/constants.py",
+      "note": "c = 299,792,458 m/s."
+    },
+    {
+      "id": "S-004",
+      "kind": "constant_reference",
+      "title": "Solar irradiance engineering baseline",
+      "locator": "models/constants.py",
+      "note": "Solar constant fixed at 1361 W/m^2 for envelope checks."
+    },
+    {
+      "id": "S-005",
+      "kind": "formula_reference",
+      "title": "Schwarzschild radius formula",
+      "locator": "models/core_physics.py",
+      "note": "r_s = 2GM/c^2 used as non-rotating compact-object baseline."
+    },
+    {
+      "id": "S-006",
+      "kind": "constant_reference",
+      "title": "Solar gravitational parameter",
+      "locator": "models/constants.py",
+      "note": "mu_sun used in perihelion energy closure."
+    },
+    {
+      "id": "S-007",
+      "kind": "constant_reference",
+      "title": "Astronomical unit and light-year conversion constants",
+      "locator": "models/constants.py",
+      "note": "Used for geometric leverage and time-of-flight scaling."
+    },
+    {
+      "id": "S-008",
+      "kind": "constant_reference",
+      "title": "Pu-238 half-life decay constant",
+      "locator": "models/constants.py",
+      "note": "Half-life set to 87.7 years for first-order RTG decay."
+    },
+    {
+      "id": "S-009",
+      "kind": "local_document",
+      "title": "Whitepaper cost-class framing",
+      "locator": "paper/whitepaper.md:161",
+      "note": "O(10^8) and O(10^9) program classes are explicit assumptions."
+    },
+    {
+      "id": "S-010",
+      "kind": "local_document",
+      "title": "Whitepaper hypervelocity validation framing",
+      "locator": "paper/whitepaper.md:107",
+      "note": "Ground validation is framed as facility-limited, with explicit high-velocity extrapolation risk."
+    },
+    {
+      "id": "S-011",
+      "kind": "local_document",
+      "title": "Assumption ledger",
+      "locator": "appendix/assumptions.md:1",
+      "note": "Human-readable assumption baseline mirrored into evidence registry."
+    },
+    {
+      "id": "S-020",
+      "kind": "bibliography",
+      "title": "Interstellar Travel: A Review and Assessment of Concepts",
+      "locator": "refs/bibliography.bib",
+      "cite_key": "segal2002",
+      "note": "Background context for long-range concept framing."
+    },
+    {
+      "id": "S-021",
+      "kind": "bibliography",
+      "title": "The Long-Term Scientific Benefits of a Space-Based Telescope in the Solar System",
+      "locator": "refs/bibliography.bib",
+      "cite_key": "crawford2015",
+      "note": "Context source for long-horizon scientific value framing."
+    },
+    {
+      "id": "S-022",
+      "kind": "bibliography",
+      "title": "The Future of Astronomical Surveys",
+      "locator": "refs/bibliography.bib",
+      "cite_key": "mackenzie2018",
+      "note": "Context source for observation and survey assumptions."
+    }
+  ]
+}

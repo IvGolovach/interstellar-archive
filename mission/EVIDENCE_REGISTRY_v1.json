@@ -1,0 +1,462 @@
+{
+  "evidence_sources": [
+    {
+      "citation": "Assumption register for bounded engineering constants and heuristics.",
+      "claim_scope": "Assumed/design-choice parameters with explicit uncertainty bounds.",
+      "id": "SRC-ASSUME-005",
+      "notes": "Every assumption-tagged value is explicit in trust grading.",
+      "type": "assumption",
+      "url": null
+    },
+    {
+      "citation": "Environment proxy variability ranges for dust/radiation/plasma surrogates.",
+      "claim_scope": "Environment model and uncertainty distributions.",
+      "id": "SRC-ENV-003",
+      "notes": "Proxy data ranges, not full plasma transport simulation.",
+      "type": "dataset",
+      "url": null
+    },
+    {
+      "citation": "Willcockson, Bill. Genesis Sample Return Capsule Overview. Lockheed Martin / JPL overview, August 25, 2004.",
+      "claim_scope": "Genesis-class capsule heritage mass and diameter used as the v1 geometry/mass proxy.",
+      "id": "SRC-CAPSULE-008",
+      "notes": "Provides Entry Mass = 206 kg and Diameter = 1.52 m for the Genesis SRC.",
+      "type": "paper",
+      "url": "https://ntrs.nasa.gov/citations/20070014646"
+    },
+    {
+      "citation": "Finckenor, Miria. Optical Property Measurements on the Stardust Sample Return Capsule. June 25, 2007.",
+      "claim_scope": "Qualitative post-flight durability precedent for sample-return capsule materials after a multi-year mission.",
+      "id": "SRC-CAPSULE-009",
+      "notes": "Useful as qualitative survivability precedent only; it does not provide a direct deep-time degradation rate.",
+      "type": "paper",
+      "url": "https://ntrs.nasa.gov/citations/20070031961"
+    },
+    {
+      "citation": "Mission baseline envelope and correction-window design assumptions (project v1).",
+      "claim_scope": "Baseline mission numeric envelope and correction-window parameters.",
+      "id": "SRC-MISSION-002",
+      "notes": "Project engineering envelope used for deterministic baseline.",
+      "type": "report",
+      "url": null
+    },
+    {
+      "citation": "Schwarzschild geometry and relativistic constants reference set.",
+      "claim_scope": "Horizon radius criterion and physical constants used in mission equations.",
+      "id": "SRC-PHYS-001",
+      "notes": "Primary source family for G, c, and horizon crossing definitions.",
+      "type": "paper",
+      "url": null
+    },
+    {
+      "citation": "Speculative/non-physical exploration controls for sensitivity studies.",
+      "claim_scope": "Non-physical parameters marked speculative by contract.",
+      "id": "SRC-SPEC-007",
+      "notes": "Must remain isolated from realistic reporting.",
+      "type": "assumption",
+      "url": null
+    }
+  ],
+  "parameter_claims": [
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.distance_from_earth_ly",
+      "trust_grade": "B",
+      "units": "ly",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.mass_kg",
+      "trust_grade": "B",
+      "units": "kg",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.max_dust_flux_scale",
+      "trust_grade": "B",
+      "units": "scale",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.max_plasma_density_proxy_m3",
+      "trust_grade": "B",
+      "units": "1/m^3",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.max_radiative_flux_w_m2",
+      "trust_grade": "B",
+      "units": "W/m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.periapsis_distance_m",
+      "trust_grade": "B",
+      "units": "m",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Assumption-bounded media integrity prior used by the reduced-order archive survivability model; no public direct persistence fraction was found for this exact numeric value.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.data_media_survival_margin",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CAPSULE-008",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Genesis-class frontal reference area proxy derived from the reported 1.52 m heritage diameter and retained with an explicit assumption tag because this repository does not claim a bespoke capsule geometry closure.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.frontal_area_m2",
+      "trust_grade": "B",
+      "units": "m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CAPSULE-008",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Genesis-class entry-mass proxy anchored to the published Genesis SRC overview and kept assumption-tagged because v1 does not present a bespoke capsule mass closure.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.mass_kg",
+      "trust_grade": "B",
+      "units": "kg",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CAPSULE-009",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded degradation prior informed qualitatively by returned-sample-capsule material durability precedent, but still treated as an assumption-constrained rate rather than a direct long-horizon measurement.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "trust_grade": "C",
+      "units": "1/year",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ASSUME-005"
+      ],
+      "justification": "v1 shield areal density remains a design-choice sizing prior pending a public stack-level mass closure and ballistic-limit calibration set.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.shield_areal_density_kg_m2",
+      "trust_grade": "C",
+      "units": "kg/m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.actuator_efficiency",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.end_year",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.guidance_sigma_rad",
+      "trust_grade": "C",
+      "units": "rad",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.max_duration_years",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.power_available_w",
+      "trust_grade": "C",
+      "units": "W",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.specific_impulse_s",
+      "trust_grade": "C",
+      "units": "s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.start_year",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.accretion_luminosity_fraction",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.dust_flux_scale",
+      "trust_grade": "C",
+      "units": "scale",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-SPEC-007"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "speculative",
+      "parameter_id": "environment_model.non_physical_safety_multiplier",
+      "trust_grade": "D",
+      "units": "scale",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.plasma_density_proxy_m3",
+      "trust_grade": "C",
+      "units": "1/m^3",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.radiative_flux_w_m2",
+      "trust_grade": "C",
+      "units": "W/m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "success_threshold",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.initial_state_sigma_m",
+      "trust_grade": "C",
+      "units": "m",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.integration_step_s",
+      "trust_grade": "C",
+      "units": "s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "trust_grade": "C",
+      "units": "m",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-SPEC-007"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "speculative",
+      "parameter_id": "trajectory_model.non_physical_capture_bias",
+      "trust_grade": "D",
+      "units": "fraction",
+      "value_mode": "scalar"
+    }
+  ],
+  "schema_version": "evidence_registry.v1"
+}

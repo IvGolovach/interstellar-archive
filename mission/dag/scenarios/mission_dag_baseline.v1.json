@@ -1,0 +1,57 @@
+{
+  "scenario_id": "mission_dag_baseline.v1",
+  "scenario_version": "v1",
+  "mode": "dual",
+  "seed": 1,
+  "modules": [
+    {
+      "node_id": "traj",
+      "module_id": "traj.baseline.v1",
+      "depends_on": []
+    },
+    {
+      "node_id": "env",
+      "module_id": "env.baseline.v1",
+      "depends_on": [
+        "traj"
+      ]
+    },
+    {
+      "node_id": "shield",
+      "module_id": "shield.baseline.v1",
+      "depends_on": [
+        "env"
+      ]
+    },
+    {
+      "node_id": "thermal",
+      "module_id": "thermal.baseline.v1",
+      "depends_on": [
+        "traj"
+      ]
+    },
+    {
+      "node_id": "control",
+      "module_id": "control.baseline.v1",
+      "depends_on": [
+        "traj"
+      ]
+    },
+    {
+      "node_id": "data",
+      "module_id": "data.baseline.v1",
+      "depends_on": [
+        "env",
+        "shield",
+        "thermal"
+      ]
+    }
+  ],
+  "outputs": {
+    "final_metrics": [
+      "p_success",
+      "p_survival",
+      "p_data_intact"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "version": "parameter_literal_scope.v1",
+  "audit": {
+    "python": [
+      "mission/baseline/constants.py",
+      "mission/baseline/model.py",
+      "scripts/benchmark_compare.py",
+      "scripts/benchmark_drift_guard.py"
+    ],
+    "json": [
+      "mission/BASELINE_SCENARIO_v1.json",
+      "mission/UNCERTAINTY_MODEL_v1.json",
+      "mission/MISSION_SCHEMA_v1.json"
+    ]
+  },
+  "watched_roots": {
+    "python": [
+      "mission/dag",
+      "mission/optimization"
+    ],
+    "json": [
+      "mission/dag",
+      "mission/optimization"
+    ]
+  },
+  "exclusions": {
+    "python": [
+      {
+        "path": "mission/dag/__init__.py",
+        "rationale": "Package marker; no mission parameter literals are expected here."
+      },
+      {
+        "path": "mission/dag/boundary_v2.py",
+        "rationale": "DAG v2 boundary constants are module-contract and claim-boundary controls, not mission numeric parameter inputs."
+      },
+      {
+        "path": "mission/dag/contracts.py",
+        "rationale": "DAG envelope and schema mechanics use structural constraints, not parameter-registry inputs in PR2."
+      },
+      {
+        "path": "mission/dag/hashchain.py",
+        "rationale": "Hashchain helpers use serialization defaults and digest mechanics outside the parameter registry."
+      },
+      {
+        "path": "mission/dag/runner_v1.py",
+        "rationale": "DAG runner literals are orchestration wrappers around registered mission outputs; registry mapping is deferred until DAG node parameters have first-class ids."
+      },
+      {
+        "path": "mission/optimization/__init__.py",
+        "rationale": "Package marker; no mission parameter literals are expected here."
+      },
+      {
+        "path": "mission/optimization/constraints.py",
+        "rationale": "Optimization constraint weights are heuristic scoring controls; registry mapping is deferred until the objective contract assigns stable parameter ids."
+      },
+      {
+        "path": "mission/optimization/engine_v1.py",
+        "rationale": "Search engine counters and candidate bookkeeping are execution controls, not parameter-registry inputs in PR2."
+      },
+      {
+        "path": "mission/optimization/pareto.py",
+        "rationale": "Pareto comparison literals are ranking tolerances and structural sentinels outside the parameter registry."
+      },
+      {
+        "path": "mission/optimization/risk_envelope.py",
+        "rationale": "Risk-envelope scoring weights need an objective-contract parameter model before registry refs would be stable."
+      },
+      {
+        "path": "mission/optimization/runner.py",
+        "rationale": "Optimization runner literals are CLI and output-shaping controls, not parameter-registry inputs in PR2."
+      },
+      {
+        "path": "mission/optimization/scoring.py",
+        "rationale": "Composite scoring weights are objective heuristics; registry mapping is deferred until score weights are promoted to parameters."
+      },
+      {
+        "path": "mission/optimization/search_space.py",
+        "rationale": "Search-space expansion constants are derived from scenario values and need stable optimization parameter ids before auditing."
+      },
+      {
+        "path": "mission/optimization/v2.py",
+        "rationale": "Optimization v2 proxy weights and Pareto tolerances are disclosed screening controls; registry mapping is deferred until cost and qualification proxies become calibrated objective parameters."
+      }
+    ],
+    "json": [
+      {
+        "path": "mission/dag/registry/failure_taxonomy.v1.json",
+        "rationale": "Failure taxonomy contains categorical DAG metadata, not numeric parameter defaults."
+      },
+      {
+        "path": "mission/dag/registry/module_registry.v1.json",
+        "rationale": "Module registry contains DAG node metadata; numeric parameter refs are not declared there in PR2."
+      },
+      {
+        "path": "mission/dag/scenarios/mission_dag_baseline.v1.json",
+        "rationale": "DAG scenario numeric values are orchestration seed/version controls, not mission parameter literals."
+      },
+      {
+        "path": "mission/dag/schema/failure_taxonomy.schema.v1.json",
+        "rationale": "Schema numeric constraints describe JSON shape, not mission parameter bounds."
+      },
+      {
+        "path": "mission/dag/schema/module_io.schema.v1.json",
+        "rationale": "Schema numeric constraints describe JSON shape, not mission parameter bounds."
+      },
+      {
+        "path": "mission/dag/schema/scenario_dag.schema.v1.json",
+        "rationale": "Schema numeric constraints describe JSON shape, not mission parameter bounds."
+      }
+    ]
+  }
+}

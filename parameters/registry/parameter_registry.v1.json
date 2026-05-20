@@ -1,0 +1,2161 @@
+{
+  "parameters": [
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.001,
+        1000000.0
+      ],
+      "category": "safe",
+      "classification": "measured",
+      "code_refs": [],
+      "default": 26000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#bh_parameters.distance_from_earth_ly",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.distance_from_earth_ly.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.distance_from_earth_ly.minimum"
+      ],
+      "mode": "realistic",
+      "name": "bh_parameters distance_from_earth_ly",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "bh_parameters.distance_from_earth_ly",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "ly",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1e+30,
+        1e+41
+      ],
+      "category": "safe",
+      "classification": "measured",
+      "code_refs": [],
+      "default": 8.55e+36,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#bh_parameters.mass_kg",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.mass_kg.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.mass_kg.minimum"
+      ],
+      "mode": "realistic",
+      "name": "bh_parameters mass_kg",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "bh_parameters.mass_kg",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "realistic_neutral_value": 8.55e+36,
+      "type": "scalar",
+      "unit": "kg",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.01,
+        100.0
+      ],
+      "category": "safe",
+      "classification": "measured",
+      "code_refs": [],
+      "default": 3.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#bh_parameters.max_dust_flux_scale",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.max_dust_flux_scale.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.max_dust_flux_scale.minimum"
+      ],
+      "mode": "realistic",
+      "name": "bh_parameters max_dust_flux_scale",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "bh_parameters.max_dust_flux_scale",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "scale",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1.0,
+        1e+20
+      ],
+      "category": "safe",
+      "classification": "measured",
+      "code_refs": [],
+      "default": 80000000000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#bh_parameters.max_plasma_density_proxy_m3",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.max_plasma_density_proxy_m3.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.max_plasma_density_proxy_m3.minimum"
+      ],
+      "mode": "realistic",
+      "name": "bh_parameters max_plasma_density_proxy_m3",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "bh_parameters.max_plasma_density_proxy_m3",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "realistic_neutral_value": 80000000000.0,
+      "type": "scalar",
+      "unit": "1/m^3",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        100.0,
+        1000000000.0
+      ],
+      "category": "safe",
+      "classification": "measured",
+      "code_refs": [],
+      "default": 20000000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#bh_parameters.max_radiative_flux_w_m2",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.max_radiative_flux_w_m2.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.max_radiative_flux_w_m2.minimum"
+      ],
+      "mode": "realistic",
+      "name": "bh_parameters max_radiative_flux_w_m2",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "bh_parameters.max_radiative_flux_w_m2",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "W/m^2",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1.0,
+        1000000000000000.0
+      ],
+      "category": "safe",
+      "classification": "measured",
+      "code_refs": [],
+      "default": 12300000000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#bh_parameters.periapsis_distance_m",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.periapsis_distance_m.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.bh_parameters.properties.periapsis_distance_m.minimum"
+      ],
+      "mode": "realistic",
+      "name": "bh_parameters periapsis_distance_m",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "bh_parameters.periapsis_distance_m",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "realistic_neutral_value": 12300000000.0,
+      "type": "scalar",
+      "unit": "m",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.4,
+        0.98
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 0.82,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#capsule_model.data_media_survival_margin",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.data_media_survival_margin.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.data_media_survival_margin.minimum"
+      ],
+      "mode": "realistic",
+      "name": "capsule_model data_media_survival_margin",
+      "notes": "Assumption-bound v1 media survivability prior; realistic tuning range follows the declared sensitivity envelope rather than a direct persistence measurement.",
+      "parameter_id": "capsule_model.data_media_survival_margin",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "realistic_neutral_value": 0.82,
+      "type": "scalar",
+      "unit": "fraction",
+      "used_in": [
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.01,
+        20.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 1.81,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#capsule_model.frontal_area_m2",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.frontal_area_m2.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.frontal_area_m2.minimum"
+      ],
+      "mode": "realistic",
+      "name": "capsule_model frontal_area_m2",
+      "notes": "Genesis-class frontal reference area proxy derived from the published 1.52 m heritage diameter; retained as a validation input, not a direct core-probability driver in v1 runtime.",
+      "parameter_id": "capsule_model.frontal_area_m2",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "m^2",
+      "used_in": [
+        "mission_validation"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        50.0,
+        1000.0
+      ],
+      "category": "safe",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 206.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#capsule_model.mass_kg",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.mass_kg.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.mass_kg.minimum"
+      ],
+      "mode": "realistic",
+      "name": "capsule_model mass_kg",
+      "notes": "Genesis-class entry-mass proxy; tracked as a capsule configuration input, not a direct core-probability driver in v1 runtime.",
+      "parameter_id": "capsule_model.mass_kg",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "kg",
+      "used_in": [
+        "mission_validation"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0001,
+        0.0004
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 0.00022,
+      "dependencies": [],
+      "distribution": {
+        "bounds": [
+          0.0001,
+          0.0004
+        ],
+        "evidence_source_ids": [
+          "SRC-CAPSULE-009",
+          "SRC-ASSUME-005"
+        ],
+        "parameters": {
+          "max": 0.0004,
+          "min": 0.0001
+        },
+        "type": "uniform"
+      },
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#capsule_model.material_degradation_mu_1_per_year",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[3].bounds.max",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[3].bounds.min",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[3].parameters.max",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[3].parameters.min",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.material_degradation_mu_1_per_year.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.material_degradation_mu_1_per_year.minimum",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[3].bounds.max",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[3].bounds.min",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[3].parameters.max",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[3].parameters.min"
+      ],
+      "mode": "realistic",
+      "name": "capsule_model material_degradation_mu_1_per_year",
+      "notes": "Bounded degradation prior informed by returned-capsule durability precedent plus explicit assumption limits; not a direct deep-time rate measurement.",
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "distribution",
+      "unit": "1/year",
+      "used_in": [
+        "p_survival",
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.1,
+        500.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [],
+      "default": 32.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#capsule_model.shield_areal_density_kg_m2",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.shield_areal_density_kg_m2.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.capsule_model.properties.shield_areal_density_kg_m2.minimum"
+      ],
+      "mode": "realistic",
+      "name": "capsule_model shield_areal_density_kg_m2",
+      "notes": "Assumption-bound shield sizing prior pending a public stack-level mass closure and ballistic-limit calibration set; used in DAG failure-surface logic, not direct baseline p_success.",
+      "parameter_id": "capsule_model.shield_areal_density_kg_m2",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "kg/m^2",
+      "used_in": [
+        "mission_validation"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::_threshold_ok::literal[0]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::_threshold_ok::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare._threshold_ok.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::<module>::literal[0]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::<module>::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.module.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::_get_latest_baseline::literal[0]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::_get_latest_baseline::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare._get_latest_baseline.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::main::literal[1]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::main::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        3.0,
+        3.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::main::literal[0]"
+      ],
+      "default": 3.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::main::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::compare_metrics::literal[0]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::compare_metrics::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.compare_metrics.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::main::literal[3]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::main::literal[3]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_3",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::render_text::literal[1]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::render_text::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.render_text.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::main::literal[2]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::main::literal[2]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_2",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_compare.py::render_text::literal[0]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_compare.py::render_text::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_compare.render_text.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_drift_guard.py::<module>::literal[0]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_drift_guard.py::<module>::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.module.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        7.0,
+        7.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_drift_guard.py::validate_guard::literal[1]"
+      ],
+      "default": 7.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_drift_guard.py::validate_guard::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.validate_guard.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_drift_guard.py::_load_engine_version::literal[0]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_drift_guard.py::_load_engine_version::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard._load_engine_version.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_drift_guard.py::main::literal[0]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_drift_guard.py::main::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.main.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_drift_guard.py::main::literal[1]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_drift_guard.py::main::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.main.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": false,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [
+        "scripts/benchmark_drift_guard.py::validate_guard::literal[0]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal scripts/benchmark_drift_guard.py::validate_guard::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.validate_guard.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "benchmark_guard"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        6.6743e-11,
+        6.6743e-11
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/constants.py::<module>::G"
+      ],
+      "default": 6.6743e-11,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/constants.py::<module>::G",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_constants.module.G",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "m^3/(kg*s^2)",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        299792458.0,
+        299792458.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/constants.py::<module>::C"
+      ],
+      "default": 299792458.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/constants.py::<module>::C",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_constants.module.C",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "m/s",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[3]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[3]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_3",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[4]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[4]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_4",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[12]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[12]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_12",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.2,
+        1.2
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::is_bh_environment_acceptable::literal[1]"
+      ],
+      "default": 1.2,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::is_bh_environment_acceptable::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model.is_bh_environment_acceptable.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[0]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.001,
+        0.001
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[1]"
+      ],
+      "default": 0.001,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[2]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[2]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_2",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[5]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[5]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_5",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[7]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[7]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_7",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::schwarzschild_radius_m::literal[0]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::schwarzschild_radius_m::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model.schwarzschild_radius_m.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.5,
+        0.5
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[6]"
+      ],
+      "default": 0.5,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[6]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_6",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        2.0,
+        2.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::schwarzschild_radius_m::literal[1]"
+      ],
+      "default": 2.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::schwarzschild_radius_m::literal[1]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model.schwarzschild_radius_m.literal_1",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.8,
+        0.8
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[8]"
+      ],
+      "default": 0.8,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[8]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_8",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.01,
+        0.01
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[9]"
+      ],
+      "default": 0.01,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[9]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_9",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.6,
+        0.6
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[10]"
+      ],
+      "default": 0.6,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[10]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_10",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        0.0,
+        0.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::_compute_core_probabilities::literal[11]"
+      ],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::_compute_core_probabilities::literal[11]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_11",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "code_literal",
+      "bounds": [
+        1.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "derived",
+      "code_refs": [
+        "mission/baseline/model.py::is_bh_environment_acceptable::literal[0]"
+      ],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [],
+      "mode": "realistic",
+      "name": "code literal mission/baseline/model.py::is_bh_environment_acceptable::literal[0]",
+      "notes": "Code-level numeric literal in mission/benchmark pipeline; explicitly inventory-tracked.",
+      "parameter_id": "code_literal.mission_baseline_model.is_bh_environment_acceptable.literal_0",
+      "public_surfaces": [],
+      "type": "scalar",
+      "unit": "unitless",
+      "used_in": [
+        "p_success",
+        "mission_validation"
+      ],
+      "visibility": "internal"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.01,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 0.68,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.actuator_efficiency",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.actuator_efficiency.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.actuator_efficiency.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window actuator_efficiency",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.actuator_efficiency",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "fraction",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        20000.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 36.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.delta_v_budget_mps",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.delta_v_budget_mps.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.delta_v_budget_mps.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window delta_v_budget_mps",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "m/s",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        100000.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 180.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.end_year",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.end_year.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.end_year.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window end_year",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.end_year",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "year",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 0.08,
+      "dependencies": [],
+      "distribution": {
+        "bounds": [
+          0.0,
+          0.6
+        ],
+        "evidence_source_ids": [
+          "SRC-ENV-003",
+          "SRC-ASSUME-005"
+        ],
+        "parameters": {
+          "mu": -2.6,
+          "sigma": 0.35
+        },
+        "type": "lognormal"
+      },
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.execution_sigma_fraction",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[1].bounds.max",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[1].bounds.min",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[1].parameters.mu",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[1].parameters.sigma",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.execution_sigma_fraction.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.execution_sigma_fraction.minimum",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[1].bounds.max",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[1].bounds.min",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[1].parameters.mu",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[1].parameters.sigma"
+      ],
+      "mode": "realistic",
+      "name": "correction_window execution_sigma_fraction",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "distribution",
+      "unit": "fraction",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        0.1
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 2.5e-07,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.guidance_sigma_rad",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.guidance_sigma_rad.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.guidance_sigma_rad.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window guidance_sigma_rad",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.guidance_sigma_rad",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "rad",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1.0,
+        2000.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 180.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.max_duration_years",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.max_duration_years.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.max_duration_years.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window max_duration_years",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.max_duration_years",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "year",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1.0,
+        1000000.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 180.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.power_available_w",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.power_available_w.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.power_available_w.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window power_available_w",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.power_available_w",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "W",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1.0,
+        20000.0
+      ],
+      "category": "advanced",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 3200.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.specific_impulse_s",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.specific_impulse_s.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.specific_impulse_s.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window specific_impulse_s",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.specific_impulse_s",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "s",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        100000.0
+      ],
+      "category": "safe",
+      "classification": "assumed",
+      "code_refs": [],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#correction_window.start_year",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.start_year.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.correction_window.properties.start_year.minimum"
+      ],
+      "mode": "realistic",
+      "name": "correction_window start_year",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "correction_window.start_year",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "year",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 0.0025,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#environment_model.accretion_luminosity_fraction",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.accretion_luminosity_fraction.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.accretion_luminosity_fraction.minimum"
+      ],
+      "mode": "realistic",
+      "name": "environment_model accretion_luminosity_fraction",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "environment_model.accretion_luminosity_fraction",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "fraction",
+      "used_in": [
+        "p_survival",
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1000.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 1.4,
+      "dependencies": [],
+      "distribution": {
+        "bounds": [
+          0.5,
+          3.0
+        ],
+        "evidence_source_ids": [
+          "SRC-ENV-003",
+          "SRC-ASSUME-005"
+        ],
+        "parameters": {
+          "max": 2.4,
+          "min": 0.8,
+          "mode": 1.4
+        },
+        "type": "triangular"
+      },
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#environment_model.dust_flux_scale",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[2].bounds.max",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[2].bounds.min",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[2].parameters.max",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[2].parameters.min",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[2].parameters.mode",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.dust_flux_scale.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.dust_flux_scale.minimum",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[2].bounds.max",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[2].bounds.min",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[2].parameters.max",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[2].parameters.min",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[2].parameters.mode"
+      ],
+      "mode": "realistic",
+      "name": "environment_model dust_flux_scale",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "environment_model.dust_flux_scale",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "distribution",
+      "unit": "scale",
+      "used_in": [
+        "p_survival",
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.1,
+        10.0
+      ],
+      "category": "non_physical",
+      "classification": "design_choice",
+      "code_refs": [],
+      "default": 1.0,
+      "dependencies": [],
+      "domain": "speculative",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#environment_model.non_physical_safety_multiplier",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.non_physical_safety_multiplier.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.non_physical_safety_multiplier.minimum"
+      ],
+      "mode": "speculative",
+      "name": "environment_model non_physical_safety_multiplier",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "environment_model.non_physical_safety_multiplier",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "realistic_neutral_value": 1.0,
+      "type": "scalar",
+      "unit": "scale",
+      "used_in": [
+        "p_survival",
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1e+24
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 50000000000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#environment_model.plasma_density_proxy_m3",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.plasma_density_proxy_m3.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.plasma_density_proxy_m3.minimum"
+      ],
+      "mode": "realistic",
+      "name": "environment_model plasma_density_proxy_m3",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "environment_model.plasma_density_proxy_m3",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "1/m^3",
+      "used_in": [
+        "p_survival",
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1000000000000.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 12000000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#environment_model.radiative_flux_w_m2",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.radiative_flux_w_m2.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.environment_model.properties.radiative_flux_w_m2.minimum"
+      ],
+      "mode": "realistic",
+      "name": "environment_model radiative_flux_w_m2",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "environment_model.radiative_flux_w_m2",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "W/m^2",
+      "used_in": [
+        "p_survival",
+        "p_data_intact",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "category": "advanced",
+      "classification": "design_choice",
+      "code_refs": [],
+      "default": 0.62,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#success_threshold",
+        "mission/MISSION_SCHEMA_v1.json#properties.success_threshold.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.success_threshold.minimum"
+      ],
+      "mode": "realistic",
+      "name": "success_threshold",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "success_threshold",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "fraction",
+      "used_in": [
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1000000000.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 1800000.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#trajectory_model.initial_state_sigma_m",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.initial_state_sigma_m.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.initial_state_sigma_m.minimum"
+      ],
+      "mode": "realistic",
+      "name": "trajectory_model initial_state_sigma_m",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "trajectory_model.initial_state_sigma_m",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "m",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        1.0,
+        31536000.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 86400.0,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#trajectory_model.integration_step_s",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.integration_step_s.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.integration_step_s.minimum"
+      ],
+      "mode": "realistic",
+      "name": "trajectory_model integration_step_s",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "trajectory_model.integration_step_s",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "s",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1000000000.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 1200000.0,
+      "dependencies": [],
+      "distribution": {
+        "bounds": [
+          100000.0,
+          6000000.0
+        ],
+        "evidence_source_ids": [
+          "SRC-ENV-003",
+          "SRC-ASSUME-005"
+        ],
+        "parameters": {
+          "mean": 0,
+          "sigma": 1200000
+        },
+        "type": "normal"
+      },
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#trajectory_model.nav_position_sigma_m",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[0].bounds.max",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[0].bounds.min",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[0].parameters.mean",
+        "mission/BASELINE_SCENARIO_v1.json#uncertainty_model[0].parameters.sigma",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.nav_position_sigma_m.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.nav_position_sigma_m.minimum",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[0].bounds.max",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[0].bounds.min",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[0].parameters.mean",
+        "mission/UNCERTAINTY_MODEL_v1.json#entries[0].parameters.sigma"
+      ],
+      "mode": "realistic",
+      "name": "trajectory_model nav_position_sigma_m",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "distribution",
+      "unit": "m",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        100000.0
+      ],
+      "category": "advanced",
+      "classification": "estimated",
+      "code_refs": [],
+      "default": 0.08,
+      "dependencies": [],
+      "domain": "realistic",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#trajectory_model.nav_velocity_sigma_mps",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.nav_velocity_sigma_mps.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.nav_velocity_sigma_mps.minimum"
+      ],
+      "mode": "realistic",
+      "name": "trajectory_model nav_velocity_sigma_mps",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "type": "scalar",
+      "unit": "m/s",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    },
+    {
+      "affects_core_probability": true,
+      "audit_scope": "mission_parameter",
+      "bounds": [
+        0.0,
+        1.0
+      ],
+      "category": "non_physical",
+      "classification": "design_choice",
+      "code_refs": [],
+      "default": 0.0,
+      "dependencies": [],
+      "domain": "speculative",
+      "json_refs": [
+        "mission/BASELINE_SCENARIO_v1.json#trajectory_model.non_physical_capture_bias",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.non_physical_capture_bias.maximum",
+        "mission/MISSION_SCHEMA_v1.json#properties.trajectory_model.properties.non_physical_capture_bias.minimum"
+      ],
+      "mode": "speculative",
+      "name": "trajectory_model non_physical_capture_bias",
+      "notes": "Mission parameter tracked by schema+scenario literal inventory.",
+      "parameter_id": "trajectory_model.non_physical_capture_bias",
+      "public_surfaces": [
+        "browser",
+        "optimization"
+      ],
+      "realistic_neutral_value": 0.0,
+      "type": "scalar",
+      "unit": "fraction",
+      "used_in": [
+        "p_hit",
+        "p_success"
+      ],
+      "visibility": "public"
+    }
+  ],
+  "schema_version": "parameter_registry.v1"
+}

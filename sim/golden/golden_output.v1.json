@@ -1,0 +1,504 @@
+{
+  "output_version": "sim_output.v1",
+  "engine_version": "v1",
+  "schema_version": "sim_schema.v2",
+  "derived_metrics": {
+    "finite_control_window_year": 46,
+    "terminal_interaction_radius_au": 166.666667,
+    "encounter_likelihood_percent": 98.438,
+    "expected_mm_tail_hits": 36.818182,
+    "shield_survival_margin": 0.029087
+  },
+  "series": [
+    {
+      "year": 0,
+      "control_leverage": 0.878964,
+      "encounter_likelihood": 0.379555,
+      "lethal_hit_rate": 0
+    },
+    {
+      "year": 1,
+      "control_leverage": 0.837631,
+      "encounter_likelihood": 0.408731,
+      "lethal_hit_rate": 0.011364
+    },
+    {
+      "year": 2,
+      "control_leverage": 0.79554,
+      "encounter_likelihood": 0.438442,
+      "lethal_hit_rate": 0.022727
+    },
+    {
+      "year": 3,
+      "control_leverage": 0.753326,
+      "encounter_likelihood": 0.468241,
+      "lethal_hit_rate": 0.034091
+    },
+    {
+      "year": 4,
+      "control_leverage": 0.707434,
+      "encounter_likelihood": 0.500635,
+      "lethal_hit_rate": 0.045455
+    },
+    {
+      "year": 5,
+      "control_leverage": 0.671848,
+      "encounter_likelihood": 0.525755,
+      "lethal_hit_rate": 0.056818
+    },
+    {
+      "year": 6,
+      "control_leverage": 0.637562,
+      "encounter_likelihood": 0.549956,
+      "lethal_hit_rate": 0.068182
+    },
+    {
+      "year": 7,
+      "control_leverage": 0.608029,
+      "encounter_likelihood": 0.570803,
+      "lethal_hit_rate": 0.079545
+    },
+    {
+      "year": 8,
+      "control_leverage": 0.574115,
+      "encounter_likelihood": 0.594742,
+      "lethal_hit_rate": 0.090909
+    },
+    {
+      "year": 9,
+      "control_leverage": 0.552414,
+      "encounter_likelihood": 0.610061,
+      "lethal_hit_rate": 0.102273
+    },
+    {
+      "year": 10,
+      "control_leverage": 0.525116,
+      "encounter_likelihood": 0.62933,
+      "lethal_hit_rate": 0.113636
+    },
+    {
+      "year": 11,
+      "control_leverage": 0.494832,
+      "encounter_likelihood": 0.650707,
+      "lethal_hit_rate": 0.125
+    },
+    {
+      "year": 12,
+      "control_leverage": 0.469402,
+      "encounter_likelihood": 0.668657,
+      "lethal_hit_rate": 0.136364
+    },
+    {
+      "year": 13,
+      "control_leverage": 0.448925,
+      "encounter_likelihood": 0.683112,
+      "lethal_hit_rate": 0.147727
+    },
+    {
+      "year": 14,
+      "control_leverage": 0.425658,
+      "encounter_likelihood": 0.699535,
+      "lethal_hit_rate": 0.159091
+    },
+    {
+      "year": 15,
+      "control_leverage": 0.407449,
+      "encounter_likelihood": 0.712389,
+      "lethal_hit_rate": 0.170455
+    },
+    {
+      "year": 16,
+      "control_leverage": 0.389757,
+      "encounter_likelihood": 0.724877,
+      "lethal_hit_rate": 0.181818
+    },
+    {
+      "year": 17,
+      "control_leverage": 0.36858,
+      "encounter_likelihood": 0.739826,
+      "lethal_hit_rate": 0.193182
+    },
+    {
+      "year": 18,
+      "control_leverage": 0.352092,
+      "encounter_likelihood": 0.751465,
+      "lethal_hit_rate": 0.204545
+    },
+    {
+      "year": 19,
+      "control_leverage": 0.332501,
+      "encounter_likelihood": 0.765294,
+      "lethal_hit_rate": 0.215909
+    },
+    {
+      "year": 20,
+      "control_leverage": 0.317496,
+      "encounter_likelihood": 0.775885,
+      "lethal_hit_rate": 0.227273
+    },
+    {
+      "year": 21,
+      "control_leverage": 0.303034,
+      "encounter_likelihood": 0.786094,
+      "lethal_hit_rate": 0.238636
+    },
+    {
+      "year": 22,
+      "control_leverage": 0.291041,
+      "encounter_likelihood": 0.794559,
+      "lethal_hit_rate": 0.25
+    },
+    {
+      "year": 23,
+      "control_leverage": 0.275633,
+      "encounter_likelihood": 0.805435,
+      "lethal_hit_rate": 0.261364
+    },
+    {
+      "year": 24,
+      "control_leverage": 0.26116,
+      "encounter_likelihood": 0.815652,
+      "lethal_hit_rate": 0.272727
+    },
+    {
+      "year": 25,
+      "control_leverage": 0.249156,
+      "encounter_likelihood": 0.824125,
+      "lethal_hit_rate": 0.284091
+    },
+    {
+      "year": 26,
+      "control_leverage": 0.239157,
+      "encounter_likelihood": 0.831183,
+      "lethal_hit_rate": 0.295455
+    },
+    {
+      "year": 27,
+      "control_leverage": 0.227168,
+      "encounter_likelihood": 0.839646,
+      "lethal_hit_rate": 0.306818
+    },
+    {
+      "year": 28,
+      "control_leverage": 0.218028,
+      "encounter_likelihood": 0.846098,
+      "lethal_hit_rate": 0.318182
+    },
+    {
+      "year": 29,
+      "control_leverage": 0.208645,
+      "encounter_likelihood": 0.852721,
+      "lethal_hit_rate": 0.329545
+    },
+    {
+      "year": 30,
+      "control_leverage": 0.197973,
+      "encounter_likelihood": 0.860254,
+      "lethal_hit_rate": 0.340909
+    },
+    {
+      "year": 31,
+      "control_leverage": 0.189865,
+      "encounter_likelihood": 0.865977,
+      "lethal_hit_rate": 0.352273
+    },
+    {
+      "year": 32,
+      "control_leverage": 0.181428,
+      "encounter_likelihood": 0.871933,
+      "lethal_hit_rate": 0.363636
+    },
+    {
+      "year": 33,
+      "control_leverage": 0.173346,
+      "encounter_likelihood": 0.877638,
+      "lethal_hit_rate": 0.375
+    },
+    {
+      "year": 34,
+      "control_leverage": 0.165627,
+      "encounter_likelihood": 0.883087,
+      "lethal_hit_rate": 0.386364
+    },
+    {
+      "year": 35,
+      "control_leverage": 0.157111,
+      "encounter_likelihood": 0.889098,
+      "lethal_hit_rate": 0.397727
+    },
+    {
+      "year": 36,
+      "control_leverage": 0.150501,
+      "encounter_likelihood": 0.893764,
+      "lethal_hit_rate": 0.409091
+    },
+    {
+      "year": 37,
+      "control_leverage": 0.142765,
+      "encounter_likelihood": 0.899225,
+      "lethal_hit_rate": 0.420455
+    },
+    {
+      "year": 38,
+      "control_leverage": 0.136466,
+      "encounter_likelihood": 0.903671,
+      "lethal_hit_rate": 0.431818
+    },
+    {
+      "year": 39,
+      "control_leverage": 0.130719,
+      "encounter_likelihood": 0.907728,
+      "lethal_hit_rate": 0.443182
+    },
+    {
+      "year": 40,
+      "control_leverage": 0.126414,
+      "encounter_likelihood": 0.910767,
+      "lethal_hit_rate": 0.454545
+    },
+    {
+      "year": 41,
+      "control_leverage": 0.120556,
+      "encounter_likelihood": 0.914902,
+      "lethal_hit_rate": 0.465909
+    },
+    {
+      "year": 42,
+      "control_leverage": 0.114726,
+      "encounter_likelihood": 0.919017,
+      "lethal_hit_rate": 0.477273
+    },
+    {
+      "year": 43,
+      "control_leverage": 0.109246,
+      "encounter_likelihood": 0.922885,
+      "lethal_hit_rate": 0.488636
+    },
+    {
+      "year": 44,
+      "control_leverage": 0.104077,
+      "encounter_likelihood": 0.926534,
+      "lethal_hit_rate": 0.5
+    },
+    {
+      "year": 45,
+      "control_leverage": 0.101012,
+      "encounter_likelihood": 0.928698,
+      "lethal_hit_rate": 0.511364
+    },
+    {
+      "year": 46,
+      "control_leverage": 0.095541,
+      "encounter_likelihood": 0.93256,
+      "lethal_hit_rate": 0.522727
+    },
+    {
+      "year": 47,
+      "control_leverage": 0.091872,
+      "encounter_likelihood": 0.935149,
+      "lethal_hit_rate": 0.534091
+    },
+    {
+      "year": 48,
+      "control_leverage": 0.087752,
+      "encounter_likelihood": 0.938058,
+      "lethal_hit_rate": 0.545455
+    },
+    {
+      "year": 49,
+      "control_leverage": 0.083858,
+      "encounter_likelihood": 0.940806,
+      "lethal_hit_rate": 0.556818
+    },
+    {
+      "year": 50,
+      "control_leverage": 0.080575,
+      "encounter_likelihood": 0.943124,
+      "lethal_hit_rate": 0.568182
+    },
+    {
+      "year": 51,
+      "control_leverage": 0.076705,
+      "encounter_likelihood": 0.945855,
+      "lethal_hit_rate": 0.579545
+    },
+    {
+      "year": 52,
+      "control_leverage": 0.073283,
+      "encounter_likelihood": 0.948271,
+      "lethal_hit_rate": 0.590909
+    },
+    {
+      "year": 53,
+      "control_leverage": 0.070524,
+      "encounter_likelihood": 0.950218,
+      "lethal_hit_rate": 0.602273
+    },
+    {
+      "year": 54,
+      "control_leverage": 0.067944,
+      "encounter_likelihood": 0.95204,
+      "lethal_hit_rate": 0.613636
+    },
+    {
+      "year": 55,
+      "control_leverage": 0.064969,
+      "encounter_likelihood": 0.95414,
+      "lethal_hit_rate": 0.625
+    },
+    {
+      "year": 56,
+      "control_leverage": 0.06178,
+      "encounter_likelihood": 0.95639,
+      "lethal_hit_rate": 0.636364
+    },
+    {
+      "year": 57,
+      "control_leverage": 0.059496,
+      "encounter_likelihood": 0.958003,
+      "lethal_hit_rate": 0.647727
+    },
+    {
+      "year": 58,
+      "control_leverage": 0.056675,
+      "encounter_likelihood": 0.959994,
+      "lethal_hit_rate": 0.659091
+    },
+    {
+      "year": 59,
+      "control_leverage": 0.054656,
+      "encounter_likelihood": 0.961419,
+      "lethal_hit_rate": 0.670455
+    },
+    {
+      "year": 60,
+      "control_leverage": 0.051711,
+      "encounter_likelihood": 0.963498,
+      "lethal_hit_rate": 0.681818
+    },
+    {
+      "year": 61,
+      "control_leverage": 0.049925,
+      "encounter_likelihood": 0.964759,
+      "lethal_hit_rate": 0.693182
+    },
+    {
+      "year": 62,
+      "control_leverage": 0.047821,
+      "encounter_likelihood": 0.966244,
+      "lethal_hit_rate": 0.704545
+    },
+    {
+      "year": 63,
+      "control_leverage": 0.045855,
+      "encounter_likelihood": 0.967631,
+      "lethal_hit_rate": 0.715909
+    },
+    {
+      "year": 64,
+      "control_leverage": 0.043805,
+      "encounter_likelihood": 0.969079,
+      "lethal_hit_rate": 0.727273
+    },
+    {
+      "year": 65,
+      "control_leverage": 0.042018,
+      "encounter_likelihood": 0.97034,
+      "lethal_hit_rate": 0.738636
+    },
+    {
+      "year": 66,
+      "control_leverage": 0.03997,
+      "encounter_likelihood": 0.971786,
+      "lethal_hit_rate": 0.75
+    },
+    {
+      "year": 67,
+      "control_leverage": 0.038439,
+      "encounter_likelihood": 0.972867,
+      "lethal_hit_rate": 0.761364
+    },
+    {
+      "year": 68,
+      "control_leverage": 0.036804,
+      "encounter_likelihood": 0.97402,
+      "lethal_hit_rate": 0.772727
+    },
+    {
+      "year": 69,
+      "control_leverage": 0.035594,
+      "encounter_likelihood": 0.974875,
+      "lethal_hit_rate": 0.784091
+    },
+    {
+      "year": 70,
+      "control_leverage": 0.03387,
+      "encounter_likelihood": 0.976092,
+      "lethal_hit_rate": 0.795455
+    },
+    {
+      "year": 71,
+      "control_leverage": 0.032735,
+      "encounter_likelihood": 0.976893,
+      "lethal_hit_rate": 0.806818
+    },
+    {
+      "year": 72,
+      "control_leverage": 0.03118,
+      "encounter_likelihood": 0.977991,
+      "lethal_hit_rate": 0.818182
+    },
+    {
+      "year": 73,
+      "control_leverage": 0.030079,
+      "encounter_likelihood": 0.978768,
+      "lethal_hit_rate": 0.829545
+    },
+    {
+      "year": 74,
+      "control_leverage": 0.02865,
+      "encounter_likelihood": 0.979776,
+      "lethal_hit_rate": 0.840909
+    },
+    {
+      "year": 75,
+      "control_leverage": 0.027344,
+      "encounter_likelihood": 0.980698,
+      "lethal_hit_rate": 0.852273
+    },
+    {
+      "year": 76,
+      "control_leverage": 0.026196,
+      "encounter_likelihood": 0.981509,
+      "lethal_hit_rate": 0.863636
+    },
+    {
+      "year": 77,
+      "control_leverage": 0.025278,
+      "encounter_likelihood": 0.982156,
+      "lethal_hit_rate": 0.875
+    },
+    {
+      "year": 78,
+      "control_leverage": 0.024331,
+      "encounter_likelihood": 0.982826,
+      "lethal_hit_rate": 0.886364
+    },
+    {
+      "year": 79,
+      "control_leverage": 0.023298,
+      "encounter_likelihood": 0.983555,
+      "lethal_hit_rate": 0.897727
+    },
+    {
+      "year": 80,
+      "control_leverage": 0.022129,
+      "encounter_likelihood": 0.98438,
+      "lethal_hit_rate": 0.909091
+    }
+  ],
+  "warnings": [],
+  "invariants_passed": true,
+  "golden_checksum": "bda117f5294cdd3147506d0b3f3f92c99d4113857631230b05bacdd0bd70288c",
+  "checksum_payload": "{\"derived_metrics\":{\"encounter_likelihood_percent\":98.438,\"expected_mm_tail_hits\":36.818182,\"finite_control_window_year\":46,\"shield_survival_margin\":0.029087,\"terminal_interaction_radius_au\":166.666667},\"engine_version\":\"v1\",\"invariants_passed\":true,\"output_version\":\"sim_output.v1\",\"schema_version\":\"sim_schema.v2\",\"series\":[{\"control_leverage\":0.878964,\"encounter_likelihood\":0.379555,\"lethal_hit_rate\":0,\"year\":0},{\"control_leverage\":0.837631,\"encounter_likelihood\":0.408731,\"lethal_hit_rate\":0.011364,\"year\":1},{\"control_leverage\":0.79554,\"encounter_likelihood\":0.438442,\"lethal_hit_rate\":0.022727,\"year\":2},{\"control_leverage\":0.753326,\"encounter_likelihood\":0.468241,\"lethal_hit_rate\":0.034091,\"year\":3},{\"control_leverage\":0.707434,\"encounter_likelihood\":0.500635,\"lethal_hit_rate\":0.045455,\"year\":4},{\"control_leverage\":0.671848,\"encounter_likelihood\":0.525755,\"lethal_hit_rate\":0.056818,\"year\":5},{\"control_leverage\":0.637562,\"encounter_likelihood\":0.549956,\"lethal_hit_rate\":0.068182,\"year\":6},{\"control_leverage\":0.608029,\"encounter_likelihood\":0.570803,\"lethal_hit_rate\":0.079545,\"year\":7},{\"control_leverage\":0.574115,\"encounter_likelihood\":0.594742,\"lethal_hit_rate\":0.090909,\"year\":8},{\"control_leverage\":0.552414,\"encounter_likelihood\":0.610061,\"lethal_hit_rate\":0.102273,\"year\":9},{\"control_leverage\":0.525116,\"encounter_likelihood\":0.62933,\"lethal_hit_rate\":0.113636,\"year\":10},{\"control_leverage\":0.494832,\"encounter_likelihood\":0.650707,\"lethal_hit_rate\":0.125,\"year\":11},{\"control_leverage\":0.469402,\"encounter_likelihood\":0.668657,\"lethal_hit_rate\":0.136364,\"year\":12},{\"control_leverage\":0.448925,\"encounter_likelihood\":0.683112,\"lethal_hit_rate\":0.147727,\"year\":13},{\"control_leverage\":0.425658,\"encounter_likelihood\":0.699535,\"lethal_hit_rate\":0.159091,\"year\":14},{\"control_leverage\":0.407449,\"encounter_likelihood\":0.712389,\"lethal_hit_rate\":0.170455,\"year\":15},{\"control_leverage\":0.389757,\"encounter_likelihood\":0.724877,\"lethal_hit_rate\":0.181818,\"year\":16},{\"control_leverage\":0.36858,\"encounter_likelihood\":0.739826,\"lethal_hit_rate\":0.193182,\"year\":17},{\"control_leverage\":0.352092,\"encounter_likelihood\":0.751465,\"lethal_hit_rate\":0.204545,\"year\":18},{\"control_leverage\":0.332501,\"encounter_likelihood\":0.765294,\"lethal_hit_rate\":0.215909,\"year\":19},{\"control_leverage\":0.317496,\"encounter_likelihood\":0.775885,\"lethal_hit_rate\":0.227273,\"year\":20},{\"control_leverage\":0.303034,\"encounter_likelihood\":0.786094,\"lethal_hit_rate\":0.238636,\"year\":21},{\"control_leverage\":0.291041,\"encounter_likelihood\":0.794559,\"lethal_hit_rate\":0.25,\"year\":22},{\"control_leverage\":0.275633,\"encounter_likelihood\":0.805435,\"lethal_hit_rate\":0.261364,\"year\":23},{\"control_leverage\":0.26116,\"encounter_likelihood\":0.815652,\"lethal_hit_rate\":0.272727,\"year\":24},{\"control_leverage\":0.249156,\"encounter_likelihood\":0.824125,\"lethal_hit_rate\":0.284091,\"year\":25},{\"control_leverage\":0.239157,\"encounter_likelihood\":0.831183,\"lethal_hit_rate\":0.295455,\"year\":26},{\"control_leverage\":0.227168,\"encounter_likelihood\":0.839646,\"lethal_hit_rate\":0.306818,\"year\":27},{\"control_leverage\":0.218028,\"encounter_likelihood\":0.846098,\"lethal_hit_rate\":0.318182,\"year\":28},{\"control_leverage\":0.208645,\"encounter_likelihood\":0.852721,\"lethal_hit_rate\":0.329545,\"year\":29},{\"control_leverage\":0.197973,\"encounter_likelihood\":0.860254,\"lethal_hit_rate\":0.340909,\"year\":30},{\"control_leverage\":0.189865,\"encounter_likelihood\":0.865977,\"lethal_hit_rate\":0.352273,\"year\":31},{\"control_leverage\":0.181428,\"encounter_likelihood\":0.871933,\"lethal_hit_rate\":0.363636,\"year\":32},{\"control_leverage\":0.173346,\"encounter_likelihood\":0.877638,\"lethal_hit_rate\":0.375,\"year\":33},{\"control_leverage\":0.165627,\"encounter_likelihood\":0.883087,\"lethal_hit_rate\":0.386364,\"year\":34},{\"control_leverage\":0.157111,\"encounter_likelihood\":0.889098,\"lethal_hit_rate\":0.397727,\"year\":35},{\"control_leverage\":0.150501,\"encounter_likelihood\":0.893764,\"lethal_hit_rate\":0.409091,\"year\":36},{\"control_leverage\":0.142765,\"encounter_likelihood\":0.899225,\"lethal_hit_rate\":0.420455,\"year\":37},{\"control_leverage\":0.136466,\"encounter_likelihood\":0.903671,\"lethal_hit_rate\":0.431818,\"year\":38},{\"control_leverage\":0.130719,\"encounter_likelihood\":0.907728,\"lethal_hit_rate\":0.443182,\"year\":39},{\"control_leverage\":0.126414,\"encounter_likelihood\":0.910767,\"lethal_hit_rate\":0.454545,\"year\":40},{\"control_leverage\":0.120556,\"encounter_likelihood\":0.914902,\"lethal_hit_rate\":0.465909,\"year\":41},{\"control_leverage\":0.114726,\"encounter_likelihood\":0.919017,\"lethal_hit_rate\":0.477273,\"year\":42},{\"control_leverage\":0.109246,\"encounter_likelihood\":0.922885,\"lethal_hit_rate\":0.488636,\"year\":43},{\"control_leverage\":0.104077,\"encounter_likelihood\":0.926534,\"lethal_hit_rate\":0.5,\"year\":44},{\"control_leverage\":0.101012,\"encounter_likelihood\":0.928698,\"lethal_hit_rate\":0.511364,\"year\":45},{\"control_leverage\":0.095541,\"encounter_likelihood\":0.93256,\"lethal_hit_rate\":0.522727,\"year\":46},{\"control_leverage\":0.091872,\"encounter_likelihood\":0.935149,\"lethal_hit_rate\":0.534091,\"year\":47},{\"control_leverage\":0.087752,\"encounter_likelihood\":0.938058,\"lethal_hit_rate\":0.545455,\"year\":48},{\"control_leverage\":0.083858,\"encounter_likelihood\":0.940806,\"lethal_hit_rate\":0.556818,\"year\":49},{\"control_leverage\":0.080575,\"encounter_likelihood\":0.943124,\"lethal_hit_rate\":0.568182,\"year\":50},{\"control_leverage\":0.076705,\"encounter_likelihood\":0.945855,\"lethal_hit_rate\":0.579545,\"year\":51},{\"control_leverage\":0.073283,\"encounter_likelihood\":0.948271,\"lethal_hit_rate\":0.590909,\"year\":52},{\"control_leverage\":0.070524,\"encounter_likelihood\":0.950218,\"lethal_hit_rate\":0.602273,\"year\":53},{\"control_leverage\":0.067944,\"encounter_likelihood\":0.95204,\"lethal_hit_rate\":0.613636,\"year\":54},{\"control_leverage\":0.064969,\"encounter_likelihood\":0.95414,\"lethal_hit_rate\":0.625,\"year\":55},{\"control_leverage\":0.06178,\"encounter_likelihood\":0.95639,\"lethal_hit_rate\":0.636364,\"year\":56},{\"control_leverage\":0.059496,\"encounter_likelihood\":0.958003,\"lethal_hit_rate\":0.647727,\"year\":57},{\"control_leverage\":0.056675,\"encounter_likelihood\":0.959994,\"lethal_hit_rate\":0.659091,\"year\":58},{\"control_leverage\":0.054656,\"encounter_likelihood\":0.961419,\"lethal_hit_rate\":0.670455,\"year\":59},{\"control_leverage\":0.051711,\"encounter_likelihood\":0.963498,\"lethal_hit_rate\":0.681818,\"year\":60},{\"control_leverage\":0.049925,\"encounter_likelihood\":0.964759,\"lethal_hit_rate\":0.693182,\"year\":61},{\"control_leverage\":0.047821,\"encounter_likelihood\":0.966244,\"lethal_hit_rate\":0.704545,\"year\":62},{\"control_leverage\":0.045855,\"encounter_likelihood\":0.967631,\"lethal_hit_rate\":0.715909,\"year\":63},{\"control_leverage\":0.043805,\"encounter_likelihood\":0.969079,\"lethal_hit_rate\":0.727273,\"year\":64},{\"control_leverage\":0.042018,\"encounter_likelihood\":0.97034,\"lethal_hit_rate\":0.738636,\"year\":65},{\"control_leverage\":0.03997,\"encounter_likelihood\":0.971786,\"lethal_hit_rate\":0.75,\"year\":66},{\"control_leverage\":0.038439,\"encounter_likelihood\":0.972867,\"lethal_hit_rate\":0.761364,\"year\":67},{\"control_leverage\":0.036804,\"encounter_likelihood\":0.97402,\"lethal_hit_rate\":0.772727,\"year\":68},{\"control_leverage\":0.035594,\"encounter_likelihood\":0.974875,\"lethal_hit_rate\":0.784091,\"year\":69},{\"control_leverage\":0.03387,\"encounter_likelihood\":0.976092,\"lethal_hit_rate\":0.795455,\"year\":70},{\"control_leverage\":0.032735,\"encounter_likelihood\":0.976893,\"lethal_hit_rate\":0.806818,\"year\":71},{\"control_leverage\":0.03118,\"encounter_likelihood\":0.977991,\"lethal_hit_rate\":0.818182,\"year\":72},{\"control_leverage\":0.030079,\"encounter_likelihood\":0.978768,\"lethal_hit_rate\":0.829545,\"year\":73},{\"control_leverage\":0.02865,\"encounter_likelihood\":0.979776,\"lethal_hit_rate\":0.840909,\"year\":74},{\"control_leverage\":0.027344,\"encounter_likelihood\":0.980698,\"lethal_hit_rate\":0.852273,\"year\":75},{\"control_leverage\":0.026196,\"encounter_likelihood\":0.981509,\"lethal_hit_rate\":0.863636,\"year\":76},{\"control_leverage\":0.025278,\"encounter_likelihood\":0.982156,\"lethal_hit_rate\":0.875,\"year\":77},{\"control_leverage\":0.024331,\"encounter_likelihood\":0.982826,\"lethal_hit_rate\":0.886364,\"year\":78},{\"control_leverage\":0.023298,\"encounter_likelihood\":0.983555,\"lethal_hit_rate\":0.897727,\"year\":79},{\"control_leverage\":0.022129,\"encounter_likelihood\":0.98438,\"lethal_hit_rate\":0.909091,\"year\":80}],\"warnings\":[]}"
+}

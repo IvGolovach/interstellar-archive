@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/IvGolovach/interstellar-archive/blob/main/mission/EVIDENCE_SCHEMA_v1.json",
+  "title": "Evidence Layer Contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_sources",
+    "parameter_claims"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "evidence_registry.v1"
+    },
+    "evidence_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/EvidenceSource"
+      }
+    },
+    "parameter_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/ParameterClaim"
+      }
+    }
+  },
+  "$defs": {
+    "EvidenceSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "citation",
+        "url",
+        "claim_scope",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 2
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "paper",
+            "report",
+            "dataset",
+            "assumption"
+          ]
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 3
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_scope": {
+          "type": "string",
+          "minLength": 3
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "ParameterClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parameter_id",
+        "value_mode",
+        "units",
+        "mode",
+        "evidence_source_ids",
+        "trust_grade",
+        "justification",
+        "last_reviewed_commit"
+      ],
+      "properties": {
+        "parameter_id": {
+          "type": "string",
+          "minLength": 3
+        },
+        "value_mode": {
+          "type": "string",
+          "enum": [
+            "scalar",
+            "distribution"
+          ]
+        },
+        "units": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "realistic",
+            "speculative"
+          ]
+        },
+        "evidence_source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "trust_grade": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "justification": {
+          "type": "string",
+          "minLength": 8
+        },
+        "last_reviewed_commit": {
+          "type": "string",
+          "minLength": 7
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "realistic"
+              }
+            },
+            "required": [
+              "mode"
+            ]
+          },
+          "then": {
+            "properties": {
+              "trust_grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "trust_grade": {
+                "const": "D"
+              }
+            },
+            "required": [
+              "trust_grade"
+            ]
+          },
+          "then": {
+            "properties": {
+              "mode": {
+                "const": "speculative"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

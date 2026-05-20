@@ -1,0 +1,272 @@
+{
+  "schema_version": "capsule_design.v1",
+  "design_id": "interstellar_archive_capsule_v1",
+  "description": "Deterministic v1 capsule stack for survivability lab studies. Values are bounded engineering assumptions, not a flight-qualified design.",
+  "materials": [
+    {
+      "material_id": "c_c_sic",
+      "name": "C/C-SiC TPS",
+      "class": "thermal_protection",
+      "density_kg_m3": 1850.0,
+      "bounds": {
+        "density_kg_m3": [
+          1500.0,
+          2300.0
+        ]
+      },
+      "assumption_note": "Carbon-carbon silicon-carbide ceramic matrix composite allocation for front thermal protection."
+    },
+    {
+      "material_id": "al_li",
+      "name": "Al-Li alloy bumper",
+      "class": "whipple_bumper",
+      "density_kg_m3": 2650.0,
+      "bounds": {
+        "density_kg_m3": [
+          2400.0,
+          2800.0
+        ]
+      },
+      "assumption_note": "Low-density aluminum-lithium sacrificial bumper for first debris and particle interception."
+    },
+    {
+      "material_id": "stand_off_gap",
+      "name": "Open stand-off gap",
+      "class": "geometry",
+      "bounds": {},
+      "assumption_note": "Unfilled separation volume between bumper and rear wall; mass is assigned to neighboring structure."
+    },
+    {
+      "material_id": "b4c_ta",
+      "name": "B4C/Ta rear wall",
+      "class": "radiation_and_particle_wall",
+      "density_kg_m3": 6500.0,
+      "bounds": {
+        "density_kg_m3": [
+          4000.0,
+          10000.0
+        ]
+      },
+      "assumption_note": "Boron-carbide and tantalum graded rear wall allocation for neutron/gamma and fragment attenuation."
+    },
+    {
+      "material_id": "ti_vault",
+      "name": "Titanium vault",
+      "class": "pressure_and_structure",
+      "density_kg_m3": 4430.0,
+      "bounds": {
+        "density_kg_m3": [
+          4200.0,
+          4600.0
+        ]
+      },
+      "assumption_note": "Titanium alloy vault allocation for media enclosure and load path."
+    },
+    {
+      "material_id": "data_media",
+      "name": "Data media package",
+      "class": "archive_media",
+      "density_kg_m3": 2600.0,
+      "bounds": {
+        "density_kg_m3": [
+          2000.0,
+          4000.0
+        ]
+      },
+      "assumption_note": "Fused silica, sapphire, and etched inert media allocation with carrier fixtures."
+    },
+    {
+      "material_id": "redundancy_reserve",
+      "name": "Redundant media and integration margin",
+      "class": "redundancy_and_margin",
+      "bounds": {},
+      "assumption_note": "Explicit mass reserve for duplicate media copies, retention hardware, fasteners, cableless indexing, and v1 closure margin."
+    }
+  ],
+  "layers": [
+    {
+      "layer_id": "c_c_sic_tps",
+      "radial_order": 1,
+      "material_id": "c_c_sic",
+      "role": "front thermal protection system",
+      "mass_kg": 46.0,
+      "thickness_m": 0.024,
+      "bounds": {
+        "mass_kg": [
+          35.0,
+          55.0
+        ],
+        "thickness_m": [
+          0.01,
+          0.035
+        ]
+      }
+    },
+    {
+      "layer_id": "al_li_bumper",
+      "radial_order": 2,
+      "material_id": "al_li",
+      "role": "sacrificial particle bumper",
+      "mass_kg": 24.0,
+      "thickness_m": 0.007,
+      "bounds": {
+        "mass_kg": [
+          15.0,
+          35.0
+        ],
+        "thickness_m": [
+          0.003,
+          0.012
+        ]
+      }
+    },
+    {
+      "layer_id": "stand_off_gap",
+      "radial_order": 3,
+      "material_id": "stand_off_gap",
+      "role": "fragment cloud expansion gap",
+      "mass_kg": 0.0,
+      "stand_off_gap_m": 0.25,
+      "bounds": {
+        "mass_kg": [
+          0.0,
+          0.0
+        ],
+        "stand_off_gap_m": [
+          0.15,
+          0.45
+        ]
+      }
+    },
+    {
+      "layer_id": "b4c_ta_rear_wall",
+      "radial_order": 4,
+      "material_id": "b4c_ta",
+      "role": "rear wall and radiation/fragment attenuation",
+      "mass_kg": 38.0,
+      "thickness_m": 0.014,
+      "bounds": {
+        "mass_kg": [
+          25.0,
+          50.0
+        ],
+        "thickness_m": [
+          0.006,
+          0.024
+        ]
+      }
+    },
+    {
+      "layer_id": "ti_vault",
+      "radial_order": 5,
+      "material_id": "ti_vault",
+      "role": "archive vault shell and load path",
+      "mass_kg": 52.0,
+      "thickness_m": 0.012,
+      "bounds": {
+        "mass_kg": [
+          40.0,
+          65.0
+        ],
+        "thickness_m": [
+          0.006,
+          0.02
+        ]
+      }
+    },
+    {
+      "layer_id": "data_media_package",
+      "radial_order": 6,
+      "material_id": "data_media",
+      "role": "primary inert data media and indexing package",
+      "mass_kg": 28.0,
+      "bounds": {
+        "mass_kg": [
+          18.0,
+          38.0
+        ]
+      }
+    },
+    {
+      "layer_id": "redundancy_margin",
+      "radial_order": 7,
+      "material_id": "redundancy_reserve",
+      "role": "duplicate media copies and integration margin",
+      "mass_kg": 18.0,
+      "bounds": {
+        "mass_kg": [
+          10.0,
+          30.0
+        ]
+      },
+      "redundancy_policy": {
+        "minimum_independent_media_copies": 3,
+        "allocation_includes_integration_margin": true
+      }
+    }
+  ],
+  "mass_budget": {
+    "configured_capsule_mass_kg": 206.0,
+    "declared_margin_kg": 0.25,
+    "closure_rule": "sum(layers.mass_kg) must equal configured_capsule_mass_kg within declared_margin_kg",
+    "component_mass_kg": 206.0
+  },
+  "survivability_model_inputs": {
+    "frontal_area_m2": {
+      "value": 1.81,
+      "units": "m^2",
+      "provenance": "proxy",
+      "source_ids": [
+        "SRC-GENESIS-SRC-DIAMETER-1-52M"
+      ],
+      "note": "Genesis-class sample-return capsule diameter proxy converted to frontal area."
+    },
+    "shield_areal_density_kg_m2": {
+      "value": 59.668508287293,
+      "units": "kg/m^2",
+      "provenance": "assumption",
+      "source_ids": [
+        "SRC-CAPSULE-DESIGN-V1"
+      ],
+      "note": "Forward TPS, bumper, and rear-wall mass allocation divided by frontal area; not a tested ballistic limit."
+    },
+    "data_media_survival_margin": {
+      "value": 0.86,
+      "units": "fraction",
+      "provenance": "assumption",
+      "source_ids": [
+        "SRC-CAPSULE-DESIGN-V1"
+      ],
+      "note": "Physical archive-media persistence prior for inert redundant media, not bit-level ECC recovery."
+    },
+    "material_degradation_mu_1_per_year": {
+      "value": 2.2e-08,
+      "units": "1/year",
+      "provenance": "assumption",
+      "source_ids": [
+        "SRC-CAPSULE-DEEP-TIME-PRIOR-V1"
+      ],
+      "note": "Deep-time passive-material hazard prior for the survivability engine; distinct from the legacy one-step baseline penalty."
+    }
+  },
+  "survivability_uncertainty_bounds": {
+    "shield_areal_density_kg_m2": [
+      42.0,
+      74.0
+    ],
+    "data_media_survival_margin": [
+      0.74,
+      0.92
+    ],
+    "material_degradation_mu_1_per_year": [
+      1e-09,
+      2e-07
+    ]
+  },
+  "governance": {
+    "deterministic": true,
+    "network_access_required": false,
+    "used_by_probability_engine": false,
+    "assumption_level": "v1_bounded_design_allocation"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "registry_version": "v1",
+  "modules": [
+    {
+      "module_id": "traj.baseline.v1",
+      "module_type": "TrajectoryModule",
+      "module_version": "v1",
+      "domain": "realistic",
+      "description": "Wrapper over deterministic mission baseline trajectory/crossing calculations.",
+      "inputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "outputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "implemented_by": {
+        "python_entrypoint": "mission/dag/runner_v1.py:run_trajectory_module"
+      }
+    },
+    {
+      "module_id": "env.baseline.v1",
+      "module_type": "EnvironmentModule",
+      "module_version": "v1",
+      "domain": "realistic",
+      "description": "Environment admissibility and hazard envelope wrapper.",
+      "inputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "outputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "implemented_by": {
+        "python_entrypoint": "mission/dag/runner_v1.py:run_environment_module"
+      }
+    },
+    {
+      "module_id": "shield.baseline.v1",
+      "module_type": "ShieldingModule",
+      "module_version": "v1",
+      "domain": "realistic",
+      "description": "Shield and dust-tail survivability proxy wrapper.",
+      "inputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "outputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "implemented_by": {
+        "python_entrypoint": "mission/dag/runner_v1.py:run_shielding_module"
+      }
+    },
+    {
+      "module_id": "thermal.baseline.v1",
+      "module_type": "ThermalModule",
+      "module_version": "v1",
+      "domain": "realistic",
+      "description": "Thermal load proxy wrapper tied to mission environment envelope.",
+      "inputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "outputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "implemented_by": {
+        "python_entrypoint": "mission/dag/runner_v1.py:run_thermal_module"
+      }
+    },
+    {
+      "module_id": "control.baseline.v1",
+      "module_type": "ControlWindowModule",
+      "module_version": "v1",
+      "domain": "realistic",
+      "description": "Control-window feasibility and authority margin wrapper.",
+      "inputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "outputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "implemented_by": {
+        "python_entrypoint": "mission/dag/runner_v1.py:run_control_window_module"
+      }
+    },
+    {
+      "module_id": "data.baseline.v1",
+      "module_type": "DataIntegrityModule",
+      "module_version": "v1",
+      "domain": "realistic",
+      "description": "Data-media integrity wrapper combining environment/shield/thermal proxies.",
+      "inputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "outputs_schema_ref": "mission/dag/schema/module_io.schema.v1.json",
+      "implemented_by": {
+        "python_entrypoint": "mission/dag/runner_v1.py:run_data_integrity_module"
+      }
+    }
+  ]
+}

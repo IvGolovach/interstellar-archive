@@ -1,0 +1,843 @@
+{
+  "claims": [
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.distance_from_earth_ly",
+      "trust_grade": "B",
+      "units": "ly",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.mass_kg",
+      "trust_grade": "B",
+      "units": "kg",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.max_dust_flux_scale",
+      "trust_grade": "B",
+      "units": "scale",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.max_plasma_density_proxy_m3",
+      "trust_grade": "B",
+      "units": "1/m^3",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.max_radiative_flux_w_m2",
+      "trust_grade": "B",
+      "units": "W/m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-MISSION-002"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "bh_parameters.periapsis_distance_m",
+      "trust_grade": "B",
+      "units": "m",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Assumption-bounded media integrity prior used by the reduced-order archive survivability model; no public direct persistence fraction was found for this exact numeric value.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.data_media_survival_margin",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CAPSULE-008",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Genesis-class frontal reference area proxy derived from the reported 1.52 m heritage diameter and retained with an explicit assumption tag because this repository does not claim a bespoke capsule geometry closure.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.frontal_area_m2",
+      "trust_grade": "B",
+      "units": "m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CAPSULE-008",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Genesis-class entry-mass proxy anchored to the published Genesis SRC overview and kept assumption-tagged because v1 does not present a bespoke capsule mass closure.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.mass_kg",
+      "trust_grade": "B",
+      "units": "kg",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CAPSULE-009",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded degradation prior informed qualitatively by returned-sample-capsule material durability precedent, but still treated as an assumption-constrained rate rather than a direct long-horizon measurement.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.material_degradation_mu_1_per_year",
+      "trust_grade": "C",
+      "units": "1/year",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ASSUME-005"
+      ],
+      "justification": "v1 shield areal density remains a design-choice sizing prior pending a public stack-level mass closure and ballistic-limit calibration set.",
+      "last_reviewed_commit": "4385d00f33f091104ca0559119be91997b8c5523",
+      "mode": "realistic",
+      "parameter_id": "capsule_model.shield_areal_density_kg_m2",
+      "trust_grade": "C",
+      "units": "kg/m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare._threshold_ok.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.module.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare._get_latest_baseline.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.compare_metrics.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_3",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.render_text.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.main.literal_2",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_compare.render_text.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.module.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.validate_guard.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard._load_engine_version.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.main.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.main.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.scripts_benchmark_drift_guard.validate_guard.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_constants.module.G",
+      "trust_grade": "C",
+      "units": "m^3/(kg*s^2)",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_constants.module.C",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_3",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_4",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_12",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model.is_bh_environment_acceptable.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_2",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_5",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_7",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model.schwarzschild_radius_m.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_6",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model.schwarzschild_radius_m.literal_1",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_8",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_9",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_10",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model._compute_core_probabilities.literal_11",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-PHYS-001",
+        "SRC-CODE-006"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "code_literal.mission_baseline_model.is_bh_environment_acceptable.literal_0",
+      "trust_grade": "C",
+      "units": "unitless",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.actuator_efficiency",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.delta_v_budget_mps",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.end_year",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.execution_sigma_fraction",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.guidance_sigma_rad",
+      "trust_grade": "C",
+      "units": "rad",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.max_duration_years",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.power_available_w",
+      "trust_grade": "C",
+      "units": "W",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.specific_impulse_s",
+      "trust_grade": "C",
+      "units": "s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "correction_window.start_year",
+      "trust_grade": "C",
+      "units": "year",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.accretion_luminosity_fraction",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.dust_flux_scale",
+      "trust_grade": "C",
+      "units": "scale",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-SPEC-007"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "speculative",
+      "parameter_id": "environment_model.non_physical_safety_multiplier",
+      "trust_grade": "D",
+      "units": "scale",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.plasma_density_proxy_m3",
+      "trust_grade": "C",
+      "units": "1/m^3",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-ENV-003",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "environment_model.radiative_flux_w_m2",
+      "trust_grade": "C",
+      "units": "W/m^2",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "success_threshold",
+      "trust_grade": "C",
+      "units": "fraction",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.initial_state_sigma_m",
+      "trust_grade": "C",
+      "units": "m",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.integration_step_s",
+      "trust_grade": "C",
+      "units": "s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.nav_position_sigma_m",
+      "trust_grade": "C",
+      "units": "m",
+      "value_mode": "distribution"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-MISSION-002",
+        "SRC-ASSUME-005"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "realistic",
+      "parameter_id": "trajectory_model.nav_velocity_sigma_mps",
+      "trust_grade": "C",
+      "units": "m/s",
+      "value_mode": "scalar"
+    },
+    {
+      "evidence_source_ids": [
+        "SRC-SPEC-007"
+      ],
+      "justification": "Bounded and explicitly categorized parameter claim with linked source IDs for audit.",
+      "last_reviewed_commit": "278a22fc06b8cbc9b4b0798c3af72588fa20c53c",
+      "mode": "speculative",
+      "parameter_id": "trajectory_model.non_physical_capture_bias",
+      "trust_grade": "D",
+      "units": "fraction",
+      "value_mode": "scalar"
+    }
+  ],
+  "schema_version": "parameter_claims.v1"
+}

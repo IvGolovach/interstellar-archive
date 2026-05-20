@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mission/dag/schema/failure_taxonomy.schema.v1.json",
+  "title": "Mission DAG Failure Taxonomy v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "taxonomy_version",
+    "failure_modes"
+  ],
+  "properties": {
+    "taxonomy_version": {
+      "type": "string",
+      "const": "v1"
+    },
+    "failure_modes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "stage",
+          "severity",
+          "applies_to",
+          "what_evidence_would_reduce_uncertainty"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9_]+$"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "S0",
+              "S1",
+              "S2",
+              "S3"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          "applies_to": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "TrajectoryModule",
+                "EnvironmentModule",
+                "ShieldingModule",
+                "ThermalModule",
+                "ControlWindowModule",
+                "DataIntegrityModule"
+              ]
+            }
+          },
+          "what_evidence_would_reduce_uncertainty": {
+            "type": "string",
+            "minLength": 8
+          }
+        }
+      }
+    }
+  }
+}

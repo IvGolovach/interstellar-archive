@@ -1,0 +1,70 @@
+{
+  "taxonomy_version": "v1",
+  "failure_modes": [
+    {
+      "id": "TPS_FAIL_DELAMINATION",
+      "stage": "S2",
+      "severity": "high",
+      "applies_to": [
+        "ThermalModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "Integrated TPS hot-vacuum qualification with measured thermal gradients and material post-mortem."
+    },
+    {
+      "id": "DUST_PENETRATION_MM_TAIL",
+      "stage": "S2",
+      "severity": "high",
+      "applies_to": [
+        "ShieldingModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "Hyper-velocity impact tests over representative dust-size distributions and shield geometries."
+    },
+    {
+      "id": "CONTROL_AUTHORITY_COLLAPSE",
+      "stage": "S1",
+      "severity": "critical",
+      "applies_to": [
+        "ControlWindowModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "Closed-loop actuation tests validating delta-v delivery under power and guidance uncertainty envelopes."
+    },
+    {
+      "id": "OD_UNCERTAINTY_COLLAPSE",
+      "stage": "S1",
+      "severity": "high",
+      "applies_to": [
+        "TrajectoryModule",
+        "ControlWindowModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "End-to-end orbit-determination simulation with tracked covariance growth and correction cadence sensitivity."
+    },
+    {
+      "id": "PLASMA_ENVIRONMENT_DISQUALIFIED",
+      "stage": "S0",
+      "severity": "critical",
+      "applies_to": [
+        "EnvironmentModule",
+        "ThermalModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "Improved black-hole environment observations constraining plasma density and radiative flux proxies."
+    },
+    {
+      "id": "DATA_CORRUPTION_RADIATION",
+      "stage": "S3",
+      "severity": "high",
+      "applies_to": [
+        "DataIntegrityModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "Radiation soak tests on media vault and ECC stack with measured post-exposure recoverability."
+    },
+    {
+      "id": "MISS_DISTANCE_EXCEEDS_R_INT",
+      "stage": "S1",
+      "severity": "critical",
+      "applies_to": [
+        "TrajectoryModule"
+      ],
+      "what_evidence_would_reduce_uncertainty": "Trajectory Monte Carlo with validated navigation covariance and encounter geometry constraints."
+    }
+  ]
+}

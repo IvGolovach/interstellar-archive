@@ -1,0 +1,559 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/IvGolovach/interstellar-archive/blob/main/mission/MISSION_SCHEMA_v1.json",
+  "title": "Formal Mission Definition v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mission_mode",
+    "success_threshold",
+    "bh_model",
+    "environment_acceptance_mode",
+    "seed",
+    "bh_parameters",
+    "trajectory_model",
+    "correction_window",
+    "capsule_model",
+    "environment_model",
+    "uncertainty_model",
+    "speculative_overrides",
+    "parameter_tags",
+    "outputs_required"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "mission_schema.v1"
+    },
+    "mission_mode": {
+      "type": "string",
+      "enum": [
+        "realistic",
+        "speculative"
+      ]
+    },
+    "success_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "parameter_id": "success_threshold"
+    },
+    "bh_model": {
+      "const": "schwarzschild"
+    },
+    "environment_acceptance_mode": {
+      "type": "string",
+      "enum": [
+        "strict",
+        "proxy"
+      ]
+    },
+    "seed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bh_parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mass_kg",
+        "periapsis_distance_m",
+        "distance_from_earth_ly",
+        "max_radiative_flux_w_m2",
+        "max_plasma_density_proxy_m3",
+        "max_dust_flux_scale"
+      ],
+      "properties": {
+        "mass_kg": {
+          "type": "number",
+          "minimum": 1e+30,
+          "maximum": 1e+41,
+          "parameter_id": "bh_parameters.mass_kg"
+        },
+        "periapsis_distance_m": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000000000000000.0,
+          "parameter_id": "bh_parameters.periapsis_distance_m"
+        },
+        "distance_from_earth_ly": {
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 1000000,
+          "parameter_id": "bh_parameters.distance_from_earth_ly"
+        },
+        "max_radiative_flux_w_m2": {
+          "type": "number",
+          "minimum": 100,
+          "maximum": 1000000000,
+          "parameter_id": "bh_parameters.max_radiative_flux_w_m2"
+        },
+        "max_plasma_density_proxy_m3": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1e+20,
+          "parameter_id": "bh_parameters.max_plasma_density_proxy_m3"
+        },
+        "max_dust_flux_scale": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 100,
+          "parameter_id": "bh_parameters.max_dust_flux_scale"
+        }
+      }
+    },
+    "trajectory_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deterministic_baseline",
+        "initial_state_sigma_m",
+        "nav_position_sigma_m",
+        "nav_velocity_sigma_mps",
+        "integration_step_s",
+        "non_physical_capture_bias"
+      ],
+      "properties": {
+        "deterministic_baseline": {
+          "const": true
+        },
+        "initial_state_sigma_m": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000,
+          "parameter_id": "trajectory_model.initial_state_sigma_m"
+        },
+        "nav_position_sigma_m": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000,
+          "parameter_id": "trajectory_model.nav_position_sigma_m"
+        },
+        "nav_velocity_sigma_mps": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000,
+          "parameter_id": "trajectory_model.nav_velocity_sigma_mps"
+        },
+        "integration_step_s": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 31536000,
+          "parameter_id": "trajectory_model.integration_step_s"
+        },
+        "non_physical_capture_bias": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "parameter_id": "trajectory_model.non_physical_capture_bias"
+        }
+      }
+    },
+    "correction_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "start_year",
+        "end_year",
+        "max_duration_years",
+        "delta_v_budget_mps",
+        "actuation_model",
+        "specific_impulse_s",
+        "power_available_w",
+        "actuator_efficiency",
+        "guidance_sigma_rad",
+        "execution_sigma_fraction"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "start_year": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000,
+          "parameter_id": "correction_window.start_year"
+        },
+        "end_year": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100000,
+          "parameter_id": "correction_window.end_year"
+        },
+        "max_duration_years": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2000,
+          "parameter_id": "correction_window.max_duration_years"
+        },
+        "delta_v_budget_mps": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20000,
+          "parameter_id": "correction_window.delta_v_budget_mps"
+        },
+        "actuation_model": {
+          "type": "string",
+          "enum": [
+            "deterministic_impulse",
+            "low_thrust_profile"
+          ]
+        },
+        "specific_impulse_s": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 20000,
+          "parameter_id": "correction_window.specific_impulse_s"
+        },
+        "power_available_w": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000000,
+          "parameter_id": "correction_window.power_available_w"
+        },
+        "actuator_efficiency": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 1,
+          "parameter_id": "correction_window.actuator_efficiency"
+        },
+        "guidance_sigma_rad": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.1,
+          "parameter_id": "correction_window.guidance_sigma_rad"
+        },
+        "execution_sigma_fraction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "parameter_id": "correction_window.execution_sigma_fraction"
+        }
+      }
+    },
+    "capsule_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mass_kg",
+        "frontal_area_m2",
+        "shield_areal_density_kg_m2",
+        "data_media_survival_margin",
+        "material_degradation_mu_1_per_year",
+        "geometry_model",
+        "material_family"
+      ],
+      "properties": {
+        "mass_kg": {
+          "type": "number",
+          "minimum": 50,
+          "maximum": 1000,
+          "parameter_id": "capsule_model.mass_kg"
+        },
+        "frontal_area_m2": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 20,
+          "parameter_id": "capsule_model.frontal_area_m2"
+        },
+        "shield_areal_density_kg_m2": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 500,
+          "parameter_id": "capsule_model.shield_areal_density_kg_m2"
+        },
+        "data_media_survival_margin": {
+          "type": "number",
+          "minimum": 0.4,
+          "maximum": 0.98,
+          "parameter_id": "capsule_model.data_media_survival_margin"
+        },
+        "material_degradation_mu_1_per_year": {
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 0.0004,
+          "parameter_id": "capsule_model.material_degradation_mu_1_per_year"
+        },
+        "geometry_model": {
+          "type": "string",
+          "enum": [
+            "axisymmetric_shielded",
+            "minimal_cross_section"
+          ]
+        },
+        "material_family": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "environment_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "radiative_flux_w_m2",
+        "plasma_density_proxy_m3",
+        "dust_flux_scale",
+        "accretion_luminosity_fraction",
+        "non_physical_safety_multiplier"
+      ],
+      "properties": {
+        "radiative_flux_w_m2": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000000000,
+          "parameter_id": "environment_model.radiative_flux_w_m2"
+        },
+        "plasma_density_proxy_m3": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1e+24,
+          "parameter_id": "environment_model.plasma_density_proxy_m3"
+        },
+        "dust_flux_scale": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000,
+          "parameter_id": "environment_model.dust_flux_scale"
+        },
+        "accretion_luminosity_fraction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "parameter_id": "environment_model.accretion_luminosity_fraction"
+        },
+        "non_physical_safety_multiplier": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 10,
+          "parameter_id": "environment_model.non_physical_safety_multiplier"
+        }
+      }
+    },
+    "uncertainty_model": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "distribution",
+          "parameters",
+          "units",
+          "mode",
+          "category",
+          "rationale",
+          "parameter_id",
+          "bounds"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "distribution": {
+            "type": "string",
+            "enum": [
+              "normal",
+              "lognormal",
+              "uniform",
+              "triangular"
+            ]
+          },
+          "parameters": {
+            "type": "object",
+            "minProperties": 1,
+            "patternProperties": {
+              "^[A-Za-z_][A-Za-z0-9_]*$": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "units": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "realistic",
+              "speculative",
+              "both"
+            ]
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "safe",
+              "advanced",
+              "non_physical"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 8
+          },
+          "warning_text": {
+            "type": "string"
+          },
+          "parameter_id": {
+            "type": "string",
+            "minLength": 3
+          },
+          "bounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "min",
+              "max"
+            ],
+            "properties": {
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "speculative_overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "parameter_path",
+          "value",
+          "warning_text"
+        ],
+        "properties": {
+          "parameter_path": {
+            "type": "string",
+            "minLength": 3
+          },
+          "value": {
+            "type": "number"
+          },
+          "warning_text": {
+            "type": "string",
+            "minLength": 12
+          }
+        }
+      }
+    },
+    "parameter_tags": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trajectory_model.non_physical_capture_bias",
+        "environment_model.non_physical_safety_multiplier",
+        "correction_window.delta_v_budget_mps",
+        "capsule_model.mass_kg",
+        "environment_model.radiative_flux_w_m2"
+      ],
+      "properties": {
+        "trajectory_model.non_physical_capture_bias": {
+          "$ref": "#/$defs/parameterTag"
+        },
+        "environment_model.non_physical_safety_multiplier": {
+          "$ref": "#/$defs/parameterTag"
+        },
+        "correction_window.delta_v_budget_mps": {
+          "$ref": "#/$defs/parameterTag"
+        },
+        "capsule_model.mass_kg": {
+          "$ref": "#/$defs/parameterTag"
+        },
+        "environment_model.radiative_flux_w_m2": {
+          "$ref": "#/$defs/parameterTag"
+        }
+      },
+      "patternProperties": {
+        "^[A-Za-z_][A-Za-z0-9_.]*$": {
+          "$ref": "#/$defs/parameterTag"
+        }
+      }
+    },
+    "outputs_required": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "schwarzschild_radius_m",
+          "crossing_condition_met",
+          "environment_acceptable",
+          "p_hit",
+          "p_survive",
+          "p_data_intact",
+          "p_success",
+          "success_threshold",
+          "success"
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "parameterTag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category",
+        "mode",
+        "warning_text",
+        "parameter_id"
+      ],
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "safe",
+            "advanced",
+            "non_physical"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "realistic",
+            "speculative",
+            "both"
+          ]
+        },
+        "warning_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parameter_id": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mission_mode": {
+            "const": "realistic"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "speculative_overrides": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}
