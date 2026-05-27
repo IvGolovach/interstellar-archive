@@ -11,8 +11,8 @@ The goal is not to prove optimistic outcomes, but to make assumptions auditable 
 [![Traceability](https://img.shields.io/badge/Traceability-registry--complete-0b7d3b)](artifacts/research_signals.json)
 [![External validation](https://img.shields.io/badge/External%20validation-open-6a6a6a)](evidence/external_records/README.md)
 [![Version](https://img.shields.io/badge/Version-0.3.0-465d84)](VERSION)
-[![Research license](https://img.shields.io/badge/Research-CC--BY--4.0-6a6a6a)](LICENSE)
-[![Code license](https://img.shields.io/badge/Code-MIT-6a6a6a)](LICENSE-CODE)
+[![Code license](https://img.shields.io/badge/Code-MIT-6a6a6a)](LICENSE)
+[![Research license](https://img.shields.io/badge/Research-CC--BY--4.0-6a6a6a)](docs/RESEARCH_LICENSE.md)
 
 ## Abstract
 This repository publishes a deterministic, schema-driven simulation and evidence workflow for long-horizon encounter analysis.
@@ -129,6 +129,7 @@ Workspace routes:
 
 ## Public Research Artifacts
 - [CITATION.cff](CITATION.cff)
+- [docs/RESEARCH_LICENSE.md](docs/RESEARCH_LICENSE.md)
 - [THREAT_MODEL.md](THREAT_MODEL.md)
 - [MODEL_VERSION.json](MODEL_VERSION.json)
 - [artifacts/research_signals.json](artifacts/research_signals.json)
@@ -139,5 +140,5 @@ Workspace routes:
 - Release tags should be created only after local validation, web validation, and remote GitHub checks pass for the exact commit.
 
 ## License
-- Source code is licensed under [MIT](LICENSE-CODE).
-- Research text, schemas, data, and generated artifacts are licensed under [CC BY 4.0](LICENSE).
+- Source code is licensed under [MIT](LICENSE).
+- Research text, schemas, data, and generated artifacts are licensed under [CC BY 4.0](docs/RESEARCH_LICENSE.md).

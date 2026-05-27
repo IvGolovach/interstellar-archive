@@ -298,7 +298,7 @@
       "validator_action": "fail_public_release"
     }
   ],
-  "determinism_signature": "8c793e95010be9bad4158e35aa87309a48151a14f28e36633089435456ea8c6d",
+  "determinism_signature": "01dc726d7c9558eb36f8d56bffba7eed5f05d984a74fd885c3ef0cd314c5238e",
   "external_evidence_gaps": [
     "external reviewer wording audit",
     "audience testing for overinterpretation risk",
@@ -766,7 +766,7 @@
   "source_artifacts": [
     {
       "path": "README.md",
-      "sha256": "c1d6ec413eac9b8dff4de54d59c37b3f43a6e3c5b7a2592e79a84792d80e98b6"
+      "sha256": "a3bccce0c7aadd5a000de9a723d552cce4e5506f9d9b61ba179ab68b4105e4ba"
     },
     {
       "path": "LIMITATIONS.md",

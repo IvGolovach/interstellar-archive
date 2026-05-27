@@ -18,6 +18,7 @@ This index is the stable starting point for humans and tools.
 - `INVARIANTS.md`: non-negotiable repository invariants and trust boundaries.
 - `LIMITATIONS.md`: explicit non-goals and modeling limits.
 - `CITATION.cff`: citation metadata for the published artifact.
+- `docs/RESEARCH_LICENSE.md`: CC BY 4.0 license text for research text, schemas, data, and generated artifacts.
 - `PUBLICATION_POLICY.md`: claim boundary and release-readiness policy.
 - `PROJECT_TIMELINE.md`: retained source-history timeline summarized for public readers.
 

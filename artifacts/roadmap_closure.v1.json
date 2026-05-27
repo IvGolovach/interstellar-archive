@@ -1071,7 +1071,7 @@
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "4dd75b40c36aa37d5e0e51827975ca8c65a3a72a743d779b8bf5f7f9a11f6716"
+      "sha256": "8bc2fe7029450370b4d454bfd1638c53f3708921ce3c346bcd815874353a571f"
     },
     {
       "path": "artifacts/optimization_frontier_realistic.v1.json",

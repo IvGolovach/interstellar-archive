@@ -275,15 +275,15 @@
     },
     {
       "path": "artifacts/external_validation_campaign.v1.json",
-      "sha256": "11e92b79efd1afd1f91c0d4816c87855422ecd6deea2d5f83d84a5f7773b0ed0"
+      "sha256": "a37878159f6254857a2775980f133a665b3ad284d255c7a0de220437b8b5acf5"
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "4dd75b40c36aa37d5e0e51827975ca8c65a3a72a743d779b8bf5f7f9a11f6716"
+      "sha256": "8bc2fe7029450370b4d454bfd1638c53f3708921ce3c346bcd815874353a571f"
     },
     {
       "path": "artifacts/roadmap_closure.v1.json",
-      "sha256": "7eb9e615f7316c75dc23b4e021d18fc9ce752668f5695df374585c11f60718a7"
+      "sha256": "5f5b31ebe654e26c202748d514e4c005a114e06fd36074cf512772d83188d90f"
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
