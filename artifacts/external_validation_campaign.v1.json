@@ -404,7 +404,7 @@
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "8725e6fa920b9ce58626f0d010cd4cc877bb45dbe7397e51e5ee8ad04507a6f2"
+      "sha256": "4dd75b40c36aa37d5e0e51827975ca8c65a3a72a743d779b8bf5f7f9a11f6716"
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
