@@ -33792,7 +33792,7 @@
         "validator_action": "fail_public_release"
       }
     ],
-    "determinism_signature": "c6dd48fba81d90a463d6b4f0e3b145b5ef185e423feac09aa0396b83c5f8e20b",
+    "determinism_signature": "8c793e95010be9bad4158e35aa87309a48151a14f28e36633089435456ea8c6d",
     "external_evidence_gaps": [
       "external reviewer wording audit",
       "audience testing for overinterpretation risk",
@@ -36788,7 +36788,7 @@
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "8725e6fa920b9ce58626f0d010cd4cc877bb45dbe7397e51e5ee8ad04507a6f2"
+      "sha256": "4dd75b40c36aa37d5e0e51827975ca8c65a3a72a743d779b8bf5f7f9a11f6716"
     },
     {
       "path": "artifacts/external_validation_execution_ledger.v1.json",
@@ -36816,11 +36816,11 @@
     },
     {
       "path": "artifacts/external_validation_campaign.v1.json",
-      "sha256": "4839f77869fe6c73c8951c5492576830c3929c0179168b6f237479c26b1289d7"
+      "sha256": "11e92b79efd1afd1f91c0d4816c87855422ecd6deea2d5f83d84a5f7773b0ed0"
     },
     {
       "path": "artifacts/release_candidate_readiness.v1.json",
-      "sha256": "d5ab1d24e3ae67c372c866b44a46e16482d187f3cb625bfdcc8ca7fd846945f7"
+      "sha256": "febbbb7700d7187dd96295b60b2213e3ab942797c4e9cd246c8081b43288086f"
     },
     {
       "path": "artifacts/mission_probability_coupling.v1.json",
@@ -36840,7 +36840,7 @@
     },
     {
       "path": "artifacts/roadmap_closure.v1.json",
-      "sha256": "aee52deefd30d25f88ca77336a42c373f249bb29df69e2353b5e22115e1e5f5d"
+      "sha256": "7eb9e615f7316c75dc23b4e021d18fc9ce752668f5695df374585c11f60718a7"
     }
   ],
   "source_paths": {
