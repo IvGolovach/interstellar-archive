@@ -1,17 +1,17 @@
 # Publication Policy
 
-This repository is prepared as a future public mirror of a private research workbench. The mirror is allowed to publish reproducible artifacts, source code, documentation, and validation checks. It must not publish private operational metadata from the workbench history.
+This public repository is a reviewed publication snapshot of a retained archival source repository. It publishes reproducible artifacts, source code, documentation, and validation checks. It must not publish operational metadata from the retained source history.
 
 ## Publishable
 
 - Authored research documents that describe assumptions, limitations, and reproducibility boundaries.
 - Deterministic source code, tests, schemas, and validation scripts.
 - Tracked generated baselines when they are described as repository-native artifacts.
-- Public-facing timeline summaries that describe real development phases without exposing private branch, PR, or account metadata.
+- Public-facing timeline summaries that describe real development phases without exposing branch, PR, or account metadata from the retained source history.
 
 ## Not Publishable
 
-- Private workbench Git history, branch names, pull requests, release objects, or action logs.
+- Retained source-repository Git history, branch names, pull requests, release objects, or action logs.
 - Personal email metadata or local filesystem paths.
 - Placeholder citation metadata, placeholder PDF renders, or old repository URLs.
 - Claims that imply third-party validation, certification, hardware qualification, mission readiness, or procurement-grade estimates.
@@ -24,4 +24,4 @@ Avoid terms such as `certified`, `flight-ready`, `qualified`, `externally valida
 
 ## Release Gate
 
-Before a public release, the mirror must pass local validation, web validation, privacy/provenance scans, and remote GitHub checks for the exact pushed commit. GitHub Pages should stay disabled until the public copy and research signals are intentionally reviewed.
+Before future release tags or hosted-demo updates, the repository must pass local validation, web validation, privacy/provenance scans, and remote GitHub checks for the exact pushed commit. GitHub Pages deployment must be produced only by the reviewed GitHub Actions workflow on `main`.

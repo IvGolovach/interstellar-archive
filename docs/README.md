@@ -7,8 +7,8 @@ This index is the stable starting point for humans and tools.
 
 - `README.md`: public framing, thesis, and top-level trust model.
 - `REPRODUCIBILITY.md`: canonical commands for local and CI-equivalent verification.
-- `PROJECT_TIMELINE.md`: reader-facing development chronology for the clean mirror.
-- `PUBLICATION_POLICY.md`: publication boundary and wording policy for future public release.
+- `PROJECT_TIMELINE.md`: reader-facing development chronology for the public repository snapshot.
+- `PUBLICATION_POLICY.md`: publication boundary and wording policy for current and future releases.
 - `docs/ARTIFACT_POLICY.md`: source-of-truth boundaries between authored files, tracked generated baselines, and ephemeral outputs.
 
 ## Public Contract Docs
@@ -19,7 +19,7 @@ This index is the stable starting point for humans and tools.
 - `LIMITATIONS.md`: explicit non-goals and modeling limits.
 - `CITATION.cff`: citation metadata for the published artifact.
 - `PUBLICATION_POLICY.md`: claim boundary and release-readiness policy.
-- `PROJECT_TIMELINE.md`: private-provenance timeline summarized for public readers.
+- `PROJECT_TIMELINE.md`: retained source-history timeline summarized for public readers.
 
 ## Mission and Model Contracts
 

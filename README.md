@@ -11,7 +11,8 @@ The goal is not to prove optimistic outcomes, but to make assumptions auditable 
 [![Traceability](https://img.shields.io/badge/Traceability-registry--complete-0b7d3b)](artifacts/research_signals.json)
 [![External validation](https://img.shields.io/badge/External%20validation-open-6a6a6a)](evidence/external_records/README.md)
 [![Version](https://img.shields.io/badge/Version-0.3.0-465d84)](VERSION)
-[![License](https://img.shields.io/badge/License-CC--BY--4.0-6a6a6a)](LICENSE)
+[![Research license](https://img.shields.io/badge/Research-CC--BY--4.0-6a6a6a)](LICENSE)
+[![Code license](https://img.shields.io/badge/Code-MIT-6a6a6a)](LICENSE-CODE)
 
 ## Abstract
 This repository publishes a deterministic, schema-driven simulation and evidence workflow for long-horizon encounter analysis.
@@ -19,6 +20,22 @@ It is structured as a reproducible research artifact and publication candidate.
 Claims are tied to assumptions, models, artifacts, and sources through reproducible checks.
 Simulation outputs are guarded by a golden checksum and CI enforcement to prevent silent drift.
 Governance documents define decision traceability, reproducibility requirements, and explicit non-goals.
+
+## Start Here
+1. Read the thesis and trust model in this README.
+2. Run the fast public checks:
+   ```bash
+   python3 scripts/ci/required_paths_validate.py --strict
+   python3 scripts/ci/validate_research_signals.py --strict --no-require-tag
+   npm ci --prefix web
+   npm run golden:check --prefix web
+   ```
+3. Open the local web workspace:
+   ```bash
+   npm run dev --prefix web
+   ```
+4. Inspect the evidence chain in `evidence/`, `parameters/`, `mission/`, and `artifacts/`.
+5. Run the full repository gate with `make check`.
 
 ## What this project is
 - A reproducible research demo with deterministic simulation in `sim/` and browser UI in `web/`.
@@ -61,6 +78,7 @@ Governance documents define decision traceability, reproducibility requirements,
 ```bash
 make check
 python3 scripts/ci/required_paths_validate.py --strict
+npm ci --prefix web
 npm run golden:check --prefix web
 python3 scripts/mission_baseline_check.py --verify-deterministic
 ```
@@ -69,7 +87,15 @@ Full contract: [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
 Repository map: [docs/README.md](docs/README.md)
 
 ## Web Workspace
-The web workspace is included in `web/` and can be built locally. GitHub Pages is intentionally disabled while this private mirror is prepared for future public release.
+The web workspace is included in `web/` and can be built locally.
+The hosted demo is published from the same deterministic build gate:
+
+- Live demo: https://ivgolovach.github.io/interstellar-archive/
+- Local dev server:
+  ```bash
+  npm ci --prefix web
+  npm run dev --prefix web
+  ```
 
 Workspace routes:
 - `#/mission`
@@ -109,5 +135,9 @@ Workspace routes:
 
 ## Version + Release section
 - Current repository version: see `VERSION`
-- This private mirror starts from the `0.3.0` publication-candidate content snapshot.
-- Fresh public release tags should be created only after the mirror passes local and remote validation gates.
+- This public repository starts from the `0.3.0` publication-candidate content snapshot.
+- Release tags should be created only after local validation, web validation, and remote GitHub checks pass for the exact commit.
+
+## License
+- Source code is licensed under [MIT](LICENSE-CODE).
+- Research text, schemas, data, and generated artifacts are licensed under [CC BY 4.0](LICENSE).

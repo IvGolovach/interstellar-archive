@@ -3,11 +3,11 @@
 ## Release Notes
 
 ### v0.3.0
-- Prepared the clean private mirror baseline for `interstellar-archive`.
-- Added the mission workspace expansion from the private provenance workstream: capsule survivability, mission feasibility, user mission runs, probability coupling, uncertainty interactions, optimization v2, roadmap closure, and external-review surfaces.
+- Prepared the reviewed public repository baseline for `interstellar-archive`.
+- Added the mission workspace expansion from the retained source workstream: capsule survivability, mission feasibility, user mission runs, probability coupling, uncertainty interactions, optimization v2, roadmap closure, and external-review surfaces.
 - Added external reproduction, external evidence intake, external validation review, and six-workstream external validation campaign artifacts while preserving blockers for third-party validation, lab qualification, certification, and flight readiness.
 - Extended required-path, artifact-policy, governance, and CI validation coverage for the larger research surface.
-- Synchronized release metadata for the publication-candidate mirror: `VERSION`, `CITATION.cff`, and `artifacts/research_signals.json`.
+- Synchronized release metadata for the publication-candidate repository: `VERSION`, `CITATION.cff`, and `artifacts/research_signals.json`.
 
 ### v0.2.1
 - Versioning contract formalized in `engineering/VERSIONING_CONTRACT_v1.md`.
