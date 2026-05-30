@@ -4,6 +4,14 @@ Append-only engineering changelog for governance-critical changes in the clean m
 
 Historical entries below preserve the wording that was current when the repository was still being prepared privately. The current public repository is the reviewed `interstellar-archive` publication snapshot.
 
+## 2026-05-30 - Deep-Time Feasibility Proof Boundary
+- Date (UTC): 2026-05-30T02:45:00Z
+- Commit: 205404927f947900bc7266b93a4c06dd0a5f69a1
+- Type: research
+- Summary: Added the integrated deep-time archive feasibility proof-boundary artifact, builder, validator, required-path coverage, and check-suite enforcement.
+- Link: private-provenance:205404927f947900bc7266b93a4c06dd0a5f69a1
+- Rationale: The passive archive thesis needs a machine-checkable boundary that exposes target-corridor, capsule, dust, media, architecture, probability, and blocked-claim gaps without converting repository calculations into certification or mission-readiness claims.
+
 ## 2026-05-19 - Clean Mirror Bootstrap
 - Date (UTC): 2026-05-20T00:57:40Z
 - Commit: 18f33501e24f05efccf3be4fb1f5fc240ab14b8a
