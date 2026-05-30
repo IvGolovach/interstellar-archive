@@ -10,6 +10,7 @@ This index is the stable starting point for humans and tools.
 - `PROJECT_TIMELINE.md`: reader-facing development chronology for the public repository snapshot.
 - `PUBLICATION_POLICY.md`: publication boundary and wording policy for current and future releases.
 - `docs/ARTIFACT_POLICY.md`: source-of-truth boundaries between authored files, tracked generated baselines, and ephemeral outputs.
+- `docs/DEEP_TIME_ARCHIVE_FEASIBILITY_SPEC.md`: technical work specification for turning the whitepaper's passive deep-time archive thesis into concrete models, evidence packs, validators, and release gates.
 
 ## Public Contract Docs
 
@@ -19,6 +20,7 @@ This index is the stable starting point for humans and tools.
 - `LIMITATIONS.md`: explicit non-goals and modeling limits.
 - `CITATION.cff`: citation metadata for the published artifact.
 - `docs/RESEARCH_LICENSE.md`: CC BY 4.0 license text for research text, schemas, data, and generated artifacts.
+- `docs/DEEP_TIME_ARCHIVE_FEASIBILITY_SPEC.md`: implementation-oriented specification for the next feasibility-proof phase.
 - `PUBLICATION_POLICY.md`: claim boundary and release-readiness policy.
 - `PROJECT_TIMELINE.md`: retained source-history timeline summarized for public readers.
 
