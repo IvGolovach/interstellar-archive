@@ -1,0 +1,935 @@
+{
+  "architecture_and_control": {
+    "architecture_modes": [
+      {
+        "allowed_success_levels": [
+          "S0",
+          "S1",
+          "S2"
+        ],
+        "blocked_success_levels": [
+          "S3_targeting_guarantee"
+        ],
+        "claim_boundary": "can study passive recovery physics without claiming Myr targeting control",
+        "mode_id": "archive_only",
+        "oberth_gate_required": false,
+        "summary": "Passive archive survivability study; no Sun-Oberth dependency and no terminal-interaction claim."
+      },
+      {
+        "allowed_success_levels": [
+          "S0",
+          "S1",
+          "S2",
+          "S3_probabilistic_outcome_class"
+        ],
+        "blocked_success_levels": [
+          "S3_capture_control",
+          "mission_ready"
+        ],
+        "claim_boundary": "conditional architecture; TPS/SRM, inbound-energy, RTG, and OD gates remain external",
+        "mode_id": "flagship_full",
+        "oberth_gate_required": true,
+        "summary": "Earth/Jupiter/Sun-Oberth option with finite early correction window before passive drift."
+      }
+    ],
+    "baseline_23_34_km_s": [
+      {
+        "claim_boundary": "near-parabolic Sun-Oberth energy check",
+        "flight_time_myr_1560ly": 20.185388856,
+        "inbound_vinf_m_s": 0.0,
+        "mode_id": "baseline-q0.10-dv2000",
+        "outbound_vinf_km_s": 23.169047563,
+        "q_au": 0.1,
+        "srm_delta_v_m_s": 2000.0,
+        "velocity_band": "baseline_23_34_km_s"
+      },
+      {
+        "claim_boundary": "near-parabolic Sun-Oberth energy check",
+        "flight_time_myr_1560ly": 16.99237413,
+        "inbound_vinf_m_s": 0.0,
+        "mode_id": "baseline-q0.05-dv2000",
+        "outbound_vinf_km_s": 27.522712889,
+        "q_au": 0.05,
+        "srm_delta_v_m_s": 2000.0,
+        "velocity_band": "baseline_23_34_km_s"
+      },
+      {
+        "claim_boundary": "near-parabolic Sun-Oberth energy check",
+        "flight_time_myr_1560ly": 16.450683914,
+        "inbound_vinf_m_s": 0.0,
+        "mode_id": "baseline-q0.10-dv3000",
+        "outbound_vinf_km_s": 28.428984285,
+        "q_au": 0.1,
+        "srm_delta_v_m_s": 3000.0,
+        "velocity_band": "baseline_23_34_km_s"
+      },
+      {
+        "claim_boundary": "near-parabolic Sun-Oberth energy check",
+        "flight_time_myr_1560ly": 13.855935766,
+        "inbound_vinf_m_s": 0.0,
+        "mode_id": "baseline-q0.05-dv3000",
+        "outbound_vinf_km_s": 33.752771547,
+        "q_au": 0.05,
+        "srm_delta_v_m_s": 3000.0,
+        "velocity_band": "baseline_23_34_km_s"
+      }
+    ],
+    "conditional_35_45_km_s": [
+      {
+        "claim_boundary": "conditional speed band; requires inbound-energy and TPS/SRM closure",
+        "flight_time_myr_1560ly": 13.276610903,
+        "inbound_vinf_m_s": 10000.0,
+        "mode_id": "conditional-q0.05-dv3000-inbound10",
+        "outbound_vinf_km_s": 35.225573598,
+        "q_au": 0.05,
+        "srm_delta_v_m_s": 3000.0,
+        "velocity_band": "conditional_35_45_km_s"
+      },
+      {
+        "claim_boundary": "conditional speed band; requires inbound-energy and TPS/SRM closure",
+        "flight_time_myr_1560ly": 11.895876981,
+        "inbound_vinf_m_s": 20000.0,
+        "mode_id": "conditional-q0.05-dv3000-inbound20",
+        "outbound_vinf_km_s": 39.314145165,
+        "q_au": 0.05,
+        "srm_delta_v_m_s": 3000.0,
+        "velocity_band": "conditional_35_45_km_s"
+      },
+      {
+        "claim_boundary": "conditional speed band; requires inbound-energy and TPS/SRM closure",
+        "flight_time_myr_1560ly": 10.320451385,
+        "inbound_vinf_m_s": 30000.0,
+        "mode_id": "conditional-q0.05-dv3000-inbound30",
+        "outbound_vinf_km_s": 45.315482534,
+        "q_au": 0.05,
+        "srm_delta_v_m_s": 3000.0,
+        "velocity_band": "conditional_35_45_km_s"
+      }
+    ],
+    "control_window": {
+      "baseline_status": "credible_only_with_external_OD_and_actuator_evidence",
+      "baseline_years": [
+        10,
+        50
+      ],
+      "no_myr_actuation_claim": true,
+      "stretch_status": "reliability_limited_external_required",
+      "stretch_years": [
+        100,
+        1000
+      ]
+    },
+    "perihelion_gate": {
+      "downgrade_path": "if TPS/SRM gate fails, keep Archive-only or lower-energy escape mode",
+      "parker_heritage_applicability": "solar-proximity TPS precedent only",
+      "q_au_range": [
+        0.05,
+        0.1
+      ],
+      "solar_flux_mw_m2_range": [
+        0.1361,
+        0.5444
+      ],
+      "srm_hot_vacuum_integration_status": "external_required"
+    },
+    "rtg_decay": [
+      {
+        "interpretation": "radioactive thermal fraction only; actuator and electronics reliability are separate",
+        "pu238_thermal_fraction": 0.924006505722084,
+        "years": 10.0
+      },
+      {
+        "interpretation": "radioactive thermal fraction only; actuator and electronics reliability are separate",
+        "pu238_thermal_fraction": 0.853788022616736,
+        "years": 20.0
+      },
+      {
+        "interpretation": "radioactive thermal fraction only; actuator and electronics reliability are separate",
+        "pu238_thermal_fraction": 0.673558226881004,
+        "years": 50.0
+      },
+      {
+        "interpretation": "radioactive thermal fraction only; actuator and electronics reliability are separate",
+        "pu238_thermal_fraction": 0.453680684999082,
+        "years": 100.0
+      },
+      {
+        "interpretation": "radioactive thermal fraction only; actuator and electronics reliability are separate",
+        "pu238_thermal_fraction": 0.00036940511111,
+        "years": 1000.0
+      },
+      {
+        "interpretation": "radioactive thermal fraction only; actuator and electronics reliability are separate",
+        "pu238_thermal_fraction": 0.0,
+        "years": 10000000.0
+      }
+    ]
+  },
+  "blocked_claims": [
+    "mission feasible",
+    "proven feasible",
+    "flight-ready",
+    "flight ready",
+    "certified",
+    "qualified",
+    "guaranteed survival",
+    "guaranteed archive recovery",
+    "black-hole capture targetable",
+    "external validation completed",
+    "third-party validated",
+    "procurement-grade cost estimate",
+    "launch vehicle selected"
+  ],
+  "capsule_architecture": {
+    "current_v1_proxy": {
+      "configured_capsule_mass_kg": 206.0,
+      "design_id": "interstellar_archive_capsule_v1",
+      "equivalent_diameter_m": 1.51807891,
+      "front_shield_areal_density_kg_m2": 59.668508287,
+      "front_shield_mass_kg": 108.0,
+      "frontal_area_m2": 1.81,
+      "interpretation": "optimistic reduced-order proxy, not stack-qualified hardware",
+      "stand_off_gap_m": 0.25
+    },
+    "layer_recommendations": [
+      {
+        "areal_density_kg_m2": [
+          25.0,
+          65.0
+        ],
+        "layer": "C/C-SiC or C/C TPS erosion face",
+        "thickness_m": [
+          0.015,
+          0.03
+        ]
+      },
+      {
+        "areal_density_kg_m2": [
+          8.0,
+          22.0
+        ],
+        "layer": "Al-Li sacrificial bumper",
+        "thickness_m": [
+          0.003,
+          0.008
+        ]
+      },
+      {
+        "areal_density_kg_m2": [
+          0.0,
+          0.0
+        ],
+        "gap_m": [
+          0.3,
+          0.45
+        ],
+        "layer": "open Whipple stand-off"
+      },
+      {
+        "areal_density_kg_m2": [
+          20.0,
+          65.0
+        ],
+        "layer": "B4C/Ta graded rear wall",
+        "thickness_m": [
+          0.0055,
+          0.014
+        ]
+      },
+      {
+        "layer": "Ti-6Al-4V vault",
+        "mass_kg": [
+          40.0,
+          90.0
+        ],
+        "thickness_m": [
+          0.008,
+          0.015
+        ]
+      },
+      {
+        "layer": "hybrid media package",
+        "mass_kg": [
+          20.0,
+          50.0
+        ]
+      }
+    ],
+    "physical_baseline_recommendation": {
+      "claim_boundary": "recommended sizing target pending ballistic-limit and hydrocode evidence",
+      "forward_shield_diameter_m_range": [
+        1.35,
+        1.55
+      ],
+      "front_shield_areal_density_kg_m2_target": [
+        60.0,
+        120.0
+      ],
+      "frontal_area_m2_range": [
+        1.43,
+        1.89
+      ],
+      "geometry": "spin-stabilized shield-forward short axisymmetric capsule",
+      "overall_length_m_range": [
+        0.75,
+        1.05
+      ],
+      "severe_dust_sensitivity_kg_m2": 150.0,
+      "stand_off_gap_m_range": [
+        0.3,
+        0.45
+      ],
+      "total_capsule_mass_kg_range": [
+        280.0,
+        450.0
+      ]
+    },
+    "qualification_status": "external_required"
+  },
+  "determinism_signature": "0642bb6258da7a4a3abcbb6e142de11066776916475c24123eeae4d97eebbd19",
+  "dust_and_particles": {
+    "dust_size_regimes": [
+      {
+        "distribution": "dn/da proportional to a^-3.5",
+        "regime_id": "mrn_extinction_small_grains",
+        "size_range_m": [
+          5e-09,
+          2.5e-07
+        ],
+        "source_id": "SRC-MRN-1977",
+        "validity": "small extinction grains; validator must reject extrapolation to mm/cm"
+      },
+      {
+        "regime_id": "ulysses_local_large_grains",
+        "size_range_m": [
+          1e-07,
+          1e-06
+        ],
+        "source_id": "SRC-ULYSSES-DUST-KRUEGER-2015",
+        "validity": "local in-situ evidence; not universal route distribution"
+      },
+      {
+        "regime_id": "catastrophic_tail_sensitivity",
+        "size_range_m": [
+          0.0001,
+          0.01
+        ],
+        "source_id": "SRC-DEEP-TIME-FEASIBILITY-ASSUMPTION",
+        "validity": "assumption-bound mm/cm kill-tail sensitivity"
+      }
+    ],
+    "impact_energy_table": [
+      {
+        "energy_j_by_velocity_km_s": {
+          "23": 3.656e-09,
+          "34": 7.99e-09,
+          "45": 1.3996e-08,
+          "60": 2.4881e-08
+        },
+        "grain_density_kg_m3": 3300.0,
+        "mass_kg": 1.3823008e-17,
+        "momentum_kg_m_s_by_velocity_km_s": {
+          "23": 3.17929e-13,
+          "34": 4.69982e-13,
+          "45": 6.22035e-13,
+          "60": 8.2938e-13
+        },
+        "radius_m": 1e-07,
+        "size_id": "0p1_um"
+      },
+      {
+        "energy_j_by_velocity_km_s": {
+          "23": 3.656186e-06,
+          "34": 7.989698e-06,
+          "45": 1.3995795e-05,
+          "60": 2.4881414e-05
+        },
+        "grain_density_kg_m3": 3300.0,
+        "mass_kg": 1.3823007676e-14,
+        "momentum_kg_m_s_by_velocity_km_s": {
+          "23": 3.17929177e-10,
+          "34": 4.69982261e-10,
+          "45": 6.22035345e-10,
+          "60": 8.29380461e-10
+        },
+        "radius_m": 1e-06,
+        "size_id": "1_um"
+      },
+      {
+        "energy_j_by_velocity_km_s": {
+          "23": 0.00365618553,
+          "34": 0.007989698437,
+          "45": 0.013995795272,
+          "60": 0.024881413816
+        },
+        "grain_density_kg_m3": 3300.0,
+        "mass_kg": 1.3823007675795e-11,
+        "momentum_kg_m_s_by_velocity_km_s": {
+          "23": 3.17929176543e-07,
+          "34": 4.69982260977e-07,
+          "45": 6.22035345411e-07,
+          "60": 8.29380460548e-07
+        },
+        "radius_m": 1e-05,
+        "size_id": "10_um"
+      },
+      {
+        "energy_j_by_velocity_km_s": {
+          "23": 3.656185530248,
+          "34": 7.98969843661,
+          "45": 13.995795271743,
+          "60": 24.881413816431
+        },
+        "grain_density_kg_m3": 3300.0,
+        "mass_kg": 1.382300767579509e-08,
+        "momentum_kg_m_s_by_velocity_km_s": {
+          "23": 0.000317929176543287,
+          "34": 0.000469982260977033,
+          "45": 0.000622035345410779,
+          "60": 0.000829380460547705
+        },
+        "radius_m": 0.0001,
+        "size_id": "100_um"
+      },
+      {
+        "energy_j_by_velocity_km_s": {
+          "23": 3656.185530247801,
+          "34": 7989.698436609562,
+          "45": 13995.79527174253,
+          "60": 24881.413816431163
+        },
+        "grain_density_kg_m3": 3300.0,
+        "mass_kg": 1.382300767579509e-05,
+        "momentum_kg_m_s_by_velocity_km_s": {
+          "23": 0.3179291765432871,
+          "34": 0.46998226097703305,
+          "45": 0.622035345410779,
+          "60": 0.8293804605477054
+        },
+        "radius_m": 0.001,
+        "size_id": "1_mm"
+      },
+      {
+        "energy_j_by_velocity_km_s": {
+          "23": 3656185.5302478014,
+          "34": 7989698.4366095625,
+          "45": 13995795.27174253,
+          "60": 24881413.816431165
+        },
+        "grain_density_kg_m3": 3300.0,
+        "mass_kg": 0.013823007675795092,
+        "momentum_kg_m_s_by_velocity_km_s": {
+          "23": 317.9291765432871,
+          "34": 469.9822609770331,
+          "45": 622.0353454107791,
+          "60": 829.3804605477055
+        },
+        "radius_m": 0.01,
+        "size_id": "1_cm"
+      }
+    ],
+    "monodisperse_density_sanity": [
+      {
+        "assumption": "all Ulysses local dust mass density placed into one grain radius; sanity check only",
+        "expected_hits_lambda": 4058304118.5188017,
+        "p_at_least_one": 1.0,
+        "radius_m": 1e-06,
+        "size_id": "1_um",
+        "validity": "not a physical size distribution; large-tail risk must be modeled separately"
+      },
+      {
+        "assumption": "all Ulysses local dust mass density placed into one grain radius; sanity check only",
+        "expected_hits_lambda": 4058304.1185188,
+        "p_at_least_one": 1.0,
+        "radius_m": 1e-05,
+        "size_id": "10_um",
+        "validity": "not a physical size distribution; large-tail risk must be modeled separately"
+      },
+      {
+        "assumption": "all Ulysses local dust mass density placed into one grain radius; sanity check only",
+        "expected_hits_lambda": 4058.304118519,
+        "p_at_least_one": 1.0,
+        "radius_m": 0.0001,
+        "size_id": "100_um",
+        "validity": "not a physical size distribution; large-tail risk must be modeled separately"
+      },
+      {
+        "assumption": "all Ulysses local dust mass density placed into one grain radius; sanity check only",
+        "expected_hits_lambda": 4.058304119,
+        "p_at_least_one": 0.982721703774,
+        "radius_m": 0.001,
+        "size_id": "1_mm",
+        "validity": "not a physical size distribution; large-tail risk must be modeled separately"
+      },
+      {
+        "assumption": "all Ulysses local dust mass density placed into one grain radius; sanity check only",
+        "expected_hits_lambda": 0.004058304,
+        "p_at_least_one": 0.004050080331,
+        "radius_m": 0.01,
+        "size_id": "1_cm",
+        "validity": "not a physical size distribution; large-tail risk must be modeled separately"
+      }
+    ],
+    "shield_response_boundary": {
+      "claim_boundary": "do not mark shield_handles=true at 23-60 km/s without external stack evidence",
+      "direct_test_velocity_max_km_s": 7.0,
+      "hydrocode_extrapolation_required": true,
+      "repo_velocity_bins_km_s": [
+        23.0,
+        34.0,
+        45.0,
+        60.0
+      ],
+      "single_event_kill_candidates": [
+        "mm_class_impact",
+        "cm_class_impact",
+        "dense_dust_cloud"
+      ]
+    },
+    "source_backed_local_anchor": {
+      "applicability": "local interstellar dust prior only, not whole-path route truth",
+      "dust_density_kg_m3": 2.1e-24,
+      "dust_density_sigma_kg_m3": 6e-25,
+      "gas_to_dust_ratio": 193.0,
+      "source_id": "SRC-ULYSSES-DUST-KRUEGER-2015"
+    }
+  },
+  "encounter_geometry": {
+    "case_a_capture_rows": [
+      {
+        "R_int_au": 1.97418544011e-07,
+        "case_id": "case-a-horizon-v23",
+        "claim_boundary": "capture or horizon crossing is a boundary demonstration, not a targetable mission objective",
+        "control_interpretation": "not operationally controllable on Myr horizons",
+        "focused_capture_b_max_au": 0.002573243076,
+        "focused_capture_delta_v_perp_req_m_s": 5.99908192e-07,
+        "focused_capture_theta_microarcsec": 5.380002749,
+        "geometric_delta_v_perp_req_m_s": 4.6024802e-11,
+        "geometric_theta_microarcsec": 0.000412752421,
+        "velocity_km_s": 23.0
+      },
+      {
+        "R_int_au": 1.97418544011e-07,
+        "case_id": "case-a-horizon-v45",
+        "claim_boundary": "capture or horizon crossing is a boundary demonstration, not a targetable mission objective",
+        "control_interpretation": "not operationally controllable on Myr horizons",
+        "focused_capture_b_max_au": 0.001315213138,
+        "focused_capture_delta_v_perp_req_m_s": 5.99908197e-07,
+        "focused_capture_theta_microarcsec": 2.749779206,
+        "geometric_delta_v_perp_req_m_s": 9.0048525e-11,
+        "geometric_theta_microarcsec": 0.000412752421,
+        "velocity_km_s": 45.0
+      }
+    ],
+    "case_b_encounter_rows": [
+      {
+        "R_int_au": 100.0,
+        "b_max_au": 115.559863357,
+        "case_id": "case-b-r100au-v23",
+        "control_interpretation": "early-window reshaping possible if worldline and environment uncertainty are bounded",
+        "delta_v_perp_req_m_s": 0.02694083173,
+        "focusing_model": "newtonian_first_order",
+        "theta_cone_arcsec": 0.24160655,
+        "velocity_km_s": 23.0
+      },
+      {
+        "R_int_au": 100.0,
+        "b_max_au": 104.289031863,
+        "case_id": "case-b-r100au-v45",
+        "control_interpretation": "early-window reshaping possible if worldline and environment uncertainty are bounded",
+        "delta_v_perp_req_m_s": 0.047569358339,
+        "focusing_model": "newtonian_first_order",
+        "theta_cone_arcsec": 0.218042082,
+        "velocity_km_s": 45.0
+      },
+      {
+        "R_int_au": 1000.0,
+        "b_max_au": 1016.632096774,
+        "case_id": "case-b-r1000au-v23",
+        "control_interpretation": "early-window reshaping possible if worldline and environment uncertainty are bounded",
+        "delta_v_perp_req_m_s": 0.237010614715,
+        "focusing_model": "newtonian_first_order",
+        "theta_cone_arcsec": 2.125521498,
+        "velocity_km_s": 23.0
+      },
+      {
+        "R_int_au": 1000.0,
+        "b_max_au": 1004.371456021,
+        "case_id": "case-b-r1000au-v45",
+        "control_interpretation": "early-window reshaping possible if worldline and environment uncertainty are bounded",
+        "delta_v_perp_req_m_s": 0.458123973766,
+        "focusing_model": "newtonian_first_order",
+        "theta_cone_arcsec": 2.099887588,
+        "velocity_km_s": 45.0
+      }
+    ],
+    "distance_au": 98656080.251,
+    "formulae": {
+      "b_max": "R_int * sqrt(1 + 2GM / (R_int * v_inf^2))",
+      "delta_v_perp_req": "v_inf * b_max / D",
+      "theta_cone": "b_max / D"
+    },
+    "reference_mass_msun": 10.0,
+    "schwarzschild_radius_km": 29.533393821
+  },
+  "external_evidence_gaps": [
+    "dynamic Gaia BH1 worldline corridor",
+    "whole-path dust/gas/radiation model",
+    "full-stack hypervelocity ballistic-limit evidence",
+    "material aging and radiation transport campaign",
+    "end-to-end data medium damage-to-decode campaign",
+    "TPS/SRM hot-vacuum qualification for Sun-Oberth mode",
+    "independent review and proof-promotion record"
+  ],
+  "generator": "scripts/build_deep_time_archive_feasibility_artifact.py",
+  "media_readability": {
+    "bootstrap_medium": {
+      "medium_type": "sapphire, ceramic, nickel, titanium, or equivalent analog plates",
+      "purpose": "make the artifact recognizable and decoder grammar derivable without onboard power",
+      "source_ids": [
+        "SRC-ROSETTA-DISK",
+        "SRC-WIPP-MARKERS"
+      ]
+    },
+    "copy_failure_model": {
+      "formula": "P(all copies fail) = p_common + (1 - p_common) * product(p_fail_i)",
+      "independence_warning": "three copies are not independent unless physical separation and damage tests support it"
+    },
+    "dense_payload_medium": {
+      "medium_type": "high-purity fused silica or quartz-glass internal laser-written storage",
+      "source_ids": [
+        "SRC-PROJECT-SILICA-NATURE-2026",
+        "SRC-SOUTHAMPTON-5D-FUSED-SILICA"
+      ],
+      "supported_claim": "plausible material and encoding class for passive archival storage",
+      "unsupported_claim": "10 Myr interstellar readability proven"
+    },
+    "probability_chain": [
+      "P_media_physical_intact",
+      "P_readable_given_intact",
+      "P_decode_given_readable_and_damage"
+    ],
+    "recommended_stack": [
+      "analog etched sapphire/ceramic/metal bootstrap",
+      "duplicated internal laser-written fused silica digital payload",
+      "physically separated copies",
+      "interleaved ECC with explicit erasure marking"
+    ],
+    "required_test_campaigns": [
+      "coupon matrix",
+      "accelerated aging",
+      "radiation exposure and post-readout",
+      "shock and fracture",
+      "damage-to-decode",
+      "bootstrap comprehension",
+      "correlated failure Monte Carlo"
+    ],
+    "ten_myr_experimental_proof_available": false
+  },
+  "non_certification_notice": true,
+  "probability_decomposition": {
+    "factor_status": [
+      {
+        "factor_id": "S0_launch_escape_intact",
+        "status": "external_required",
+        "value": null
+      },
+      {
+        "factor_id": "S1_verified_OD_and_archive",
+        "status": "external_required",
+        "value": null
+      },
+      {
+        "factor_id": "S2_environment_path",
+        "status": "proxy_plus_assumption",
+        "value": null
+      },
+      {
+        "factor_id": "S2_capsule_survival",
+        "status": "repo_proxy_not_qualified",
+        "value": null
+      },
+      {
+        "factor_id": "S2_data_recovered",
+        "status": "model_required",
+        "value": null
+      },
+      {
+        "factor_id": "S3_encounter_or_recovery",
+        "status": "external_required",
+        "value": null
+      }
+    ],
+    "formula": "P_archive_recoverable = P(S0_launch_escape_intact) * P(S1_verified) * P(S2_environment_path) * P(S2_capsule_survival) * P(S2_data_recovered) * P(S3_discovery_retrieval_decode)",
+    "full_P_archive_recoverable": null,
+    "null_reason": "target delivery, whole-path environment, hardware qualification, and future recovery/readout remain external-open",
+    "open_factors": [
+      "target_delivery",
+      "whole_path_environment",
+      "stack_ballistic_limit",
+      "material_aging",
+      "media_readability",
+      "recovery_readout"
+    ],
+    "repo_proxy_inputs": {
+      "capsule_risk_budget": {
+        "attack_modes_available": [
+          "nominal",
+          "skeptical",
+          "severe_dust",
+          "media_decay",
+          "radiation_stress"
+        ],
+        "default_row_id": "cap-row-reference-black-hole-ballistic-arrival-conditional-45-baseline-stack",
+        "interpretation": "existing repo proxy; not hardware qualification or final S2 closure",
+        "nominal_capsule_survival_quantiles": {
+          "p01": 0.043956281166,
+          "p05": 0.05455983617,
+          "p50": 0.10609881738,
+          "p95": 0.180737005101,
+          "p99": 0.206777521483
+        },
+        "source_artifact_ref": "artifacts/capsule_risk_budget.v1.json"
+      },
+      "mission_probability_coupling_ref": "artifacts/mission_probability_coupling.v1.json",
+      "mission_probability_schema_version": "mission_probability_coupling.v1"
+    }
+  },
+  "public_scope": "passive_archive_boundary_study",
+  "rollup": {
+    "baseline_and_conditional_velocities_separated": true,
+    "blocked_claim_count": 13,
+    "dynamic_worldline_closed": false,
+    "full_probability_closed": false,
+    "qualification_complete": false,
+    "source_record_count": 10,
+    "target_direction_fixed": true,
+    "ten_myr_media_proof_available": false
+  },
+  "schema_version": "deep_time_archive_feasibility.v1",
+  "source_artifacts": [
+    {
+      "path": "mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md",
+      "sha256": "c704680e12c6a3d783f4a8295487fe5755f7435711478969a3df358532c4dc97"
+    },
+    {
+      "path": "docs/DEEP_TIME_ARCHIVE_FEASIBILITY_SPEC.md",
+      "sha256": "872b5361007771d260216b20fd34e530768ddb6cdfbc1d0f625ba1c1e6828044"
+    },
+    {
+      "path": "mission/capsule/capsule_design.v1.json",
+      "sha256": "db6a32dd8ec9fe837ce814392d7cb664b3e94ed5b7e4ffd862eb604fe4e27671"
+    },
+    {
+      "path": "artifacts/capsule_risk_budget.v1.json",
+      "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
+    },
+    {
+      "path": "artifacts/mission_probability_coupling.v1.json",
+      "sha256": "8cccfa8ebb4037710d2925630cfcc24a154f46a97794157ece7272160a2be0d0"
+    },
+    {
+      "path": "models/core_physics.py",
+      "sha256": "515f6c17e83aacae31ca9b73208e0983f7ce710c846f863476dc9eaa2a5b1abe"
+    },
+    {
+      "path": "scripts/build_deep_time_archive_feasibility_artifact.py",
+      "sha256": "348a340af0020e8188142f992d01861d4757c9e3c7207be96920ce56cc89c347"
+    },
+    {
+      "path": "scripts/ci/deep_time_archive_feasibility_validate.py",
+      "sha256": "54a027f854d0e1282b4f0cd37554a21032ef1f6834bfba1751eae46a13ba0a88"
+    },
+    {
+      "path": "tests/test_deep_time_archive_feasibility.py",
+      "sha256": "c86b06b2bf0469f7f0b4091f5b85b489d15254b918f6c1c75115140c283e6db1"
+    }
+  ],
+  "source_records": [
+    {
+      "grade": "A",
+      "label": "ESA Gaia BH1/BH2 announcement",
+      "quantity": "1560 ly Gaia BH1 distance context and approximately 10 solar mass black-hole class",
+      "source_id": "SRC-ESA-GAIA-BH1",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Gaia_discovers_a_new_family_of_black_holes",
+      "validity_bounds": "public discovery context, not trajectory worldline closure"
+    },
+    {
+      "grade": "A",
+      "label": "SIMBAD Gaia DR3 4373465352415301632",
+      "quantity": "ICRS coordinates, parallax, proper motion, radial velocity",
+      "source_id": "SRC-SIMBAD-GAIA-BH1",
+      "url": "https://simbad.cds.unistra.fr/simbad/sim-basic?Ident=Gaia+DR3+4373465352415301632&submit=SIMBAD+search",
+      "validity_bounds": "catalog state at epoch, not a Myr propagated target corridor"
+    },
+    {
+      "doi": "10.1093/mnras/stac3140",
+      "grade": "A",
+      "label": "El-Badry et al. Gaia BH1 paper",
+      "quantity": "Gaia BH1 astrophysical reference",
+      "source_id": "SRC-ELBADRY-GAIA-BH1-2023",
+      "url": "https://academic.oup.com/mnras/article/518/1/1057/6794289",
+      "validity_bounds": "target identity and astrophysical context"
+    },
+    {
+      "doi": "10.1088/0004-637X/812/2/139",
+      "grade": "A",
+      "label": "16 years of Ulysses interstellar dust measurements",
+      "quantity": "(2.1 +/- 0.6)e-24 kg/m3 local dust density, gas-to-dust 193 +85/-57",
+      "source_id": "SRC-ULYSSES-DUST-KRUEGER-2015",
+      "url": "https://arxiv.org/abs/1510.06180",
+      "validity_bounds": "local interstellar prior, not whole-route truth"
+    },
+    {
+      "doi": "10.1086/155591",
+      "grade": "A",
+      "label": "Mathis, Rumpl, Nordsieck dust size distribution",
+      "quantity": "small-grain extinction distribution",
+      "source_id": "SRC-MRN-1977",
+      "url": "https://adsabs.harvard.edu/abs/1977ApJ...217..425M",
+      "validity_bounds": "do not extrapolate to mm/cm kill tail"
+    },
+    {
+      "grade": "B",
+      "label": "NASA JSC HyperVelocity Impact Technology testing capability",
+      "quantity": "100 micron to 10 mm aluminum projectiles below 2 to above 7 km/s",
+      "source_id": "SRC-NASA-HVIT",
+      "url": "https://hvit.jsc.nasa.gov/hypervelocity-testing/",
+      "validity_bounds": "test heritage below repo cruise impact velocities"
+    },
+    {
+      "grade": "B",
+      "label": "NASA Parker Solar Probe TPS context",
+      "quantity": "4.5 inch carbon-composite shield and near-Sun thermal precedent",
+      "source_id": "SRC-PARKER-SOLAR-PROBE",
+      "url": "https://science.nasa.gov/mission/parker-solar-probe/",
+      "validity_bounds": "heritage context, not integrated Sun-Oberth TPS/SRM qualification"
+    },
+    {
+      "grade": "B",
+      "label": "NASA NIAC combined heat shield and solar thermal propulsion for Oberth",
+      "quantity": "solar Oberth concept and 2800 K subscale prototype context",
+      "source_id": "SRC-NASA-NIAC-SOLAR-OBERTH",
+      "url": "https://www.nasa.gov/general/combined-heat-shield-and-solar-thermal-propulsion-system-for-an-oberth-manuever/",
+      "validity_bounds": "concept/prototype context with full-scale questions open"
+    },
+    {
+      "grade": "A",
+      "label": "Laser writing in glass for dense archival data storage",
+      "quantity": "glass write/read/decode and TB-scale archival storage demonstration",
+      "source_id": "SRC-PROJECT-SILICA-NATURE-2026",
+      "url": "https://www.nature.com/articles/s41586-025-10042-w",
+      "validity_bounds": "archival longevity evidence is not a 10 Myr interstellar proof"
+    },
+    {
+      "grade": "B",
+      "label": "Rosetta Project disk",
+      "quantity": "analog human-readable bootstrap precedent",
+      "source_id": "SRC-ROSETTA-DISK",
+      "url": "https://rosettaproject.org/disk/interactive/",
+      "validity_bounds": "readability design precedent, not interstellar material qualification"
+    }
+  ],
+  "success_levels": [
+    {
+      "id": "S0",
+      "meaning": "deployment and escape with capsule intact",
+      "status": "external_required"
+    },
+    {
+      "id": "S1",
+      "meaning": "early verification and OD during finite control window",
+      "status": "external_required"
+    },
+    {
+      "id": "S2",
+      "meaning": "passive survivability and recoverable information over Myr horizons",
+      "status": "repo_proxy_open"
+    },
+    {
+      "id": "S3",
+      "meaning": "terminal outcome class by R_int",
+      "status": "probabilistic_only"
+    }
+  ],
+  "target_corridor": {
+    "astrometry": {
+      "parallax_mas": 2.07,
+      "parallax_sigma_mas": 0.1167,
+      "pm_dec_mas_yr": -25.48,
+      "pm_dec_sigma_mas_yr": 0.093,
+      "pm_ra_mas_yr": -6.437,
+      "pm_ra_sigma_mas_yr": 0.123,
+      "radial_velocity_km_s": 23.03,
+      "radial_velocity_sigma_km_s": 2.63
+    },
+    "catalog_ids": [
+      "Gaia DR3 4373465352415301632"
+    ],
+    "claim_boundary": "current RA/Dec is not a 10 Myr terminal target corridor",
+    "distance_ly": 1560.0,
+    "distance_pc_from_parallax": 483.09178744,
+    "dynamic_target_worldline_corridor": {
+      "catalog_pm_uncertainty_cross_track_au_over_45km_s_arrival": 766511.657,
+      "naive_pm_sky_motion_deg_over_45km_s_arrival": 75.868959,
+      "required_models": [
+        "Galactic potential",
+        "stellar encounter perturbations",
+        "full astrometric covariance"
+      ],
+      "status": "external_required"
+    },
+    "galactic": {
+      "b_deg": 18.0458390584611,
+      "l_deg": 22.6257666714495
+    },
+    "icrs_j2000": {
+      "dec_deg": -0.5809787161,
+      "dec_dms": "-00 34 51.523377959",
+      "ra_deg": 262.171235885857,
+      "ra_hms": "17 28 41.0966126056"
+    },
+    "source_ids": [
+      "SRC-ESA-GAIA-BH1",
+      "SRC-SIMBAD-GAIA-BH1",
+      "SRC-ELBADRY-GAIA-BH1-2023"
+    ],
+    "static_environment_los": {
+      "required_datasets": [
+        "Bayestar 3D dust",
+        "HI4PI H I",
+        "local VLISM anchors"
+      ],
+      "status": "usable_for_present_day_sightline_only"
+    },
+    "target_id": "gaia-bh1-reference",
+    "target_role": "reference catalog black-hole corridor for 1560 ly scale checks"
+  },
+  "thesis": {
+    "claim": "passive_archive_survivability_boundary_study",
+    "hard_proof_target": "S2 passive survivability and recoverable information",
+    "not_the_proof_target": "S3 black-hole capture or terminal targeting guarantee",
+    "plain_language": "The artifact asks what must be true for a passive archive capsule to preserve recoverable information over about 10 Myr; it does not certify a mission or guarantee recovery."
+  },
+  "validator_guards": {
+    "case_a_must_not_be_controllable": true,
+    "conditional_speed_requires_inbound_energy": true,
+    "forbidden_public_claims": [
+      "mission feasible",
+      "proven feasible",
+      "flight-ready",
+      "flight ready",
+      "certified",
+      "qualified",
+      "guaranteed survival",
+      "guaranteed archive recovery",
+      "black-hole capture targetable",
+      "external validation completed",
+      "third-party validated",
+      "procurement-grade cost estimate",
+      "launch vehicle selected"
+    ],
+    "full_probability_must_remain_null": true,
+    "mm_cm_tail_must_remain_assumption_bound": true
+  }
+}

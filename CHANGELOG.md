@@ -2,6 +2,11 @@
 
 ## Release Notes
 
+### Unreleased
+- Added the integrated Deep-Time Archive Feasibility artifact for the passive archive proof boundary.
+- Anchored the 1560 ly reference corridor to Gaia BH1 while keeping dynamic Myr target-worldline closure external.
+- Added deterministic checks for Case A/Case B encounter geometry, dust-impact energy bins, data-medium readability decomposition, architecture-mode gates, and null full archive-recovery probability.
+
 ### v0.3.0
 - Prepared the reviewed public repository baseline for `interstellar-archive`.
 - Added the mission workspace expansion from the retained source workstream: capsule survivability, mission feasibility, user mission runs, probability coupling, uncertainty interactions, optimization v2, roadmap closure, and external-review surfaces.

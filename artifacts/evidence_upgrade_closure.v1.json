@@ -639,7 +639,7 @@
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
+      "sha256": "91e340fd8685afb039c6a25b435ba2a6eba76875344a1cf8afbb68e9009572d5"
     },
     {
       "path": "mission/EVIDENCE_UPGRADE_CLOSURE_SPEC_v1.md",
@@ -663,7 +663,7 @@
     },
     {
       "path": "docs/ARTIFACT_POLICY.md",
-      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+      "sha256": "64a2542c0e7c4ce0d07e93d902894ac0e3957deb1ef04ed337ef73a9fc8a2d8b"
     }
   ]
 }

@@ -62,6 +62,19 @@
       ]
     },
     {
+      "id": "deep_time_archive_feasibility_contract",
+      "description": "Integrated passive-archive feasibility proof-boundary contract required to keep target corridor, capsule geometry, dust/particle hazards, data readability, architecture modes, and probability decomposition honest without mission-readiness overclaims.",
+      "paths": [
+        "mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md",
+        "mission/deep_time/feasibility.py",
+        "mission/deep_time/__init__.py",
+        "scripts/build_deep_time_archive_feasibility_artifact.py",
+        "scripts/ci/deep_time_archive_feasibility_validate.py",
+        "tests/test_deep_time_archive_feasibility.py",
+        "artifacts/deep_time_archive_feasibility.v1.json"
+      ]
+    },
+    {
       "id": "full_v2_roadmap_closure_contract",
       "description": "Full v2 roadmap closure contract, generated artifact, builder, validator, and qualification-gap notes required to track all 15 complex roadmap items without certification overclaims.",
       "paths": [

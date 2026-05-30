@@ -30,6 +30,7 @@ This index is the stable starting point for humans and tools.
 - `mission/capsule/`: deterministic capsule stack, material allocations, mass closure, and survivability-facing inputs.
 - `mission/survivability/`: reduced-order deep-time capsule survivability engine with provenance-tagged inputs and model coefficients.
 - `mission/CAPSULE_RISK_BUDGET_SPEC_v1.md`: mission-facing contract for the non-certifying Capsule Risk Budget v2 Monte Carlo artifact.
+- `mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md`: integrated proof-boundary contract for target corridor, capsule architecture, dust hazards, media readability, architecture modes, and probability decomposition.
 - `mission/MISSION_FEASIBILITY_SCREEN_SPEC_v1.md`: mission-facing contract for target, velocity, flight-time, dust/gas, risk-link, and cost-proxy feasibility screens.
 - `mission/USER_MISSION_RUN_CATALOG_SPEC_v1.md`: mission-facing contract for selected mission run ids, runtime-generation recipes, local review-pack validation, and DAG manifest linkage.
 - `mission/MISSION_PROBABILITY_COUPLING_SPEC_v1.md`: mission-facing contract for factorized mission probability coupling with open external factors and compact DAG snapshots.
@@ -79,6 +80,7 @@ This index is the stable starting point for humans and tools.
 - `artifacts/public/`: stable browser-facing artifact contract; `browser_dataset.v1.json` is the single UI-facing dataset assembled from tracked generated baselines and intentionally exposes only registry-visible public mission/design/environment parameters.
 - `artifacts/capsule_survivability_lab.v1.json`: generated capsule design and deep-time survivability rows, including source data, model coefficients, and non-certification notice.
 - `artifacts/capsule_risk_budget.v1.json`: generated Capsule Risk Budget v2 rows that explain survival-number uncertainty, attack modes, and source/proxy/assumption boundaries.
+- `artifacts/deep_time_archive_feasibility.v1.json`: generated integrated passive-archive feasibility artifact with Gaia BH1 corridor anchoring, Case A/Case B encounter geometry, impact-energy tables, media-readability decomposition, architecture-mode gates, and null full-probability closure.
 - `artifacts/mission_feasibility_screen.v1.json`: generated target/velocity/time feasibility screen linking Capsule Lab rows to dust/gas screens, black-hole horizon checks, risk-budget rows, and cost-energy proxies.
 - `artifacts/user_mission_run_catalog.v1.json`: generated selected-run catalog linking target/velocity choices to stable run ids, local review-pack templates, source hashes, and blocked claims.
 - `artifacts/runtime_scenario_generation.v1.json`: generated runtime-generation recipe surface with command previews, compiled-scenario deltas, expected pack files, local ownership boundaries, and blocked runtime claims.

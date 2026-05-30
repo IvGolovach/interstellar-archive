@@ -205,19 +205,19 @@
   "source_artifacts": [
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
+      "sha256": "91e340fd8685afb039c6a25b435ba2a6eba76875344a1cf8afbb68e9009572d5"
     },
     {
       "path": "artifacts/external_validation_execution_ledger.v1.json",
-      "sha256": "4a751a3611e1f7f0a7436523d5203cc7a71e340f95e0004667aba0fb8f15c53d"
+      "sha256": "3856f9688bd5724be60db3e783a46a8c3b65bb25339635b65d3c3c605b72636a"
     },
     {
       "path": "artifacts/independent_physics_backend_comparison.v1.json",
-      "sha256": "888202dc063e5b3ea5342488de51b94142ef787966c8455bb77c3291f2dbbf6d"
+      "sha256": "d49b9107ae4592fc164340514a84a7dc37001c20c436b74ff67009e977e63ea8"
     },
     {
       "path": "artifacts/capsule_qualification_evidence_pack.v1.json",
-      "sha256": "ee78509ea576b1ec441bb6cae6da2a042989c404aa201cd66ccd915dcc45de22"
+      "sha256": "700438f570e654b1e465c7011dac7ea65fe72c02ae7560a8f5742140b50e4ac5"
     },
     {
       "path": "scripts/export_external_reproduction_pack.py",
@@ -249,7 +249,7 @@
     },
     {
       "path": "docs/ARTIFACT_POLICY.md",
-      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+      "sha256": "64a2542c0e7c4ce0d07e93d902894ac0e3957deb1ef04ed337ef73a9fc8a2d8b"
     }
   ],
   "source_commit_sha_policy": "resolved_by_exported_pack_manifest_not_tracked_artifact"

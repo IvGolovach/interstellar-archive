@@ -172,6 +172,18 @@ def build_steps(base_sha: str, head_sha: str, remote_proof_dir: str | None) -> L
             "Enforce committed capsule risk budget artifact",
             ("git", "diff", "--exit-code", "artifacts/capsule_risk_budget.v1.json"),
         ),
+        Step(
+            "Build deep-time archive feasibility artifact",
+            (python, "scripts/build_deep_time_archive_feasibility_artifact.py"),
+        ),
+        Step(
+            "Validate deep-time archive feasibility artifact",
+            (python, "scripts/ci/deep_time_archive_feasibility_validate.py", "--strict"),
+        ),
+        Step(
+            "Enforce committed deep-time archive feasibility artifact",
+            ("git", "diff", "--exit-code", "artifacts/deep_time_archive_feasibility.v1.json"),
+        ),
         Step("Build mission feasibility screen artifact", (python, "scripts/build_mission_feasibility_screen_artifact.py")),
         Step(
             "Validate mission feasibility screen artifact",

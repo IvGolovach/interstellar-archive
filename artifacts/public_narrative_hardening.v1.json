@@ -298,7 +298,7 @@
       "validator_action": "fail_public_release"
     }
   ],
-  "determinism_signature": "01dc726d7c9558eb36f8d56bffba7eed5f05d984a74fd885c3ef0cd314c5238e",
+  "determinism_signature": "d96281cc97a4780ec388d8f08e05526c7ca014396eea34a95ea48a8aef892231",
   "external_evidence_gaps": [
     "external reviewer wording audit",
     "audience testing for overinterpretation risk",
@@ -345,7 +345,7 @@
   ],
   "non_certification_notice": true,
   "public_scope": "public_claim_boundary_contract",
-  "public_surface_count": 10,
+  "public_surface_count": 11,
   "public_surfaces": [
     {
       "artifact_only_rendering_required": false,
@@ -471,6 +471,24 @@
       ],
       "source_ref": "docs/CAPSULE_RISK_BUDGET_V2.md",
       "surface_id": "capsule_risk_doc",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "artifact_only_rendering_required": false,
+      "covered_rule_ids": [
+        "browser-rendering-boundary",
+        "capsule-survival-boundary",
+        "certification-boundary",
+        "cost-procurement-boundary",
+        "evidence-trust-boundary",
+        "external-validation-boundary",
+        "mission-probability-boundary",
+        "optimization-boundary",
+        "physics-backend-boundary",
+        "runtime-boundary"
+      ],
+      "source_ref": "artifacts/deep_time_archive_feasibility.v1.json",
+      "surface_id": "deep_time_feasibility",
       "unsafe_public_overclaim_count": 0
     },
     {
@@ -766,7 +784,7 @@
   "source_artifacts": [
     {
       "path": "README.md",
-      "sha256": "a3bccce0c7aadd5a000de9a723d552cce4e5506f9d9b61ba179ab68b4105e4ba"
+      "sha256": "142794631bc2a4003a8273cb86131d20052215aa306e136d5952029b50534f1d"
     },
     {
       "path": "LIMITATIONS.md",
@@ -786,7 +804,7 @@
     },
     {
       "path": "docs/ARTIFACT_POLICY.md",
-      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+      "sha256": "64a2542c0e7c4ce0d07e93d902894ac0e3957deb1ef04ed337ef73a9fc8a2d8b"
     },
     {
       "path": "docs/CAPSULE_RISK_BUDGET_V2.md",
@@ -798,7 +816,7 @@
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
+      "sha256": "91e340fd8685afb039c6a25b435ba2a6eba76875344a1cf8afbb68e9009572d5"
     },
     {
       "path": "artifacts/evidence_upgrade_campaign.v1.json",
@@ -833,6 +851,14 @@
       "sha256": "9dfef088220ba2d6009da9ac1f3d453237f48e2a9c80c243a50e44b5598dfb4d"
     },
     {
+      "path": "artifacts/deep_time_archive_feasibility.v1.json",
+      "sha256": "79255ac7762d46040b69f575f3bef842232697d4968f53332dfc00dd659c81b6"
+    },
+    {
+      "path": "mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md",
+      "sha256": "c704680e12c6a3d783f4a8295487fe5755f7435711478969a3df358532c4dc97"
+    },
+    {
       "path": "parameters/registry/parameter_claims.v1.json",
       "sha256": "5943329ac28b556a1ab3fd23f2e17c9aa5ee44eaeb370734b1a90af474f00bda"
     },
@@ -842,7 +868,7 @@
     },
     {
       "path": "mission/narrative/hardening.py",
-      "sha256": "9c8aa23ff824238803d7532b05b176cb659bf62a11137d211b61ca7b7077cebe"
+      "sha256": "9e70b751f3cd46172638c5d9e6af52d4040b8f6f80cf1c0d43d691019aa5886a"
     },
     {
       "path": "scripts/build_public_narrative_hardening_artifact.py",
@@ -1044,6 +1070,29 @@
       "manual_review_required": false,
       "required_qualifiers_present": true,
       "source_ref": "artifacts/capsule_risk_budget.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [
+        "certified",
+        "external validation completed",
+        "flight ready",
+        "guaranteed survival",
+        "launch vehicle selected",
+        "procurement-grade cost estimate",
+        "qualified",
+        "third-party validated"
+      ],
+      "manual_review_required": false,
+      "required_qualifiers_present": true,
+      "source_ref": "artifacts/deep_time_archive_feasibility.v1.json",
+      "unsafe_public_overclaim_count": 0
+    },
+    {
+      "guarded_forbidden_claim_mentions": [],
+      "manual_review_required": true,
+      "required_qualifiers_present": true,
+      "source_ref": "mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md",
       "unsafe_public_overclaim_count": 0
     },
     {

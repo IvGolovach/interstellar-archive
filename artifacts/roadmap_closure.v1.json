@@ -353,7 +353,7 @@
     ],
     "legal_review_completed": false,
     "public_claim_approval_completed": false,
-    "public_surface_count": 10,
+    "public_surface_count": 11,
     "required_claims": [
       "deterministic artifact",
       "reduced-order",
@@ -1067,11 +1067,11 @@
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
+      "sha256": "91e340fd8685afb039c6a25b435ba2a6eba76875344a1cf8afbb68e9009572d5"
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "8bc2fe7029450370b4d454bfd1638c53f3708921ce3c346bcd815874353a571f"
+      "sha256": "66f1e8de62c8d3316d38a24abb34f59977e9f062e2293f554af0d3ece8f9527d"
     },
     {
       "path": "artifacts/optimization_frontier_realistic.v1.json",

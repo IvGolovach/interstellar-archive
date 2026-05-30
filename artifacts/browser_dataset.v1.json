@@ -21438,7 +21438,7 @@
       "module_count": 6,
       "state_trace_contract_complete": true
     },
-    "determinism_signature": "fa80aadae2650ed84fb59c1fdb1db22ce02ba468e6425bfbe89608fc92432567",
+    "determinism_signature": "e296bb777dd9a75672c0fee228fcae5a53ceb888fb134d2526ad499a510ab2b2",
     "evidence_review_surface": {
       "automatic_trust_upgrade_claimed": false,
       "claim_count": 66,
@@ -33792,7 +33792,7 @@
         "validator_action": "fail_public_release"
       }
     ],
-    "determinism_signature": "01dc726d7c9558eb36f8d56bffba7eed5f05d984a74fd885c3ef0cd314c5238e",
+    "determinism_signature": "d96281cc97a4780ec388d8f08e05526c7ca014396eea34a95ea48a8aef892231",
     "external_evidence_gaps": [
       "external reviewer wording audit",
       "audience testing for overinterpretation risk",
@@ -33839,7 +33839,7 @@
     ],
     "non_certification_notice": true,
     "public_scope": "public_claim_boundary_contract",
-    "public_surface_count": 10,
+    "public_surface_count": 11,
     "public_surfaces": [
       {
         "artifact_only_rendering_required": false,
@@ -33965,6 +33965,24 @@
         ],
         "source_ref": "docs/CAPSULE_RISK_BUDGET_V2.md",
         "surface_id": "capsule_risk_doc",
+        "unsafe_public_overclaim_count": 0
+      },
+      {
+        "artifact_only_rendering_required": false,
+        "covered_rule_ids": [
+          "browser-rendering-boundary",
+          "capsule-survival-boundary",
+          "certification-boundary",
+          "cost-procurement-boundary",
+          "evidence-trust-boundary",
+          "external-validation-boundary",
+          "mission-probability-boundary",
+          "optimization-boundary",
+          "physics-backend-boundary",
+          "runtime-boundary"
+        ],
+        "source_ref": "artifacts/deep_time_archive_feasibility.v1.json",
+        "surface_id": "deep_time_feasibility",
         "unsafe_public_overclaim_count": 0
       },
       {
@@ -34448,6 +34466,29 @@
         "manual_review_required": false,
         "required_qualifiers_present": true,
         "source_ref": "artifacts/capsule_risk_budget.v1.json",
+        "unsafe_public_overclaim_count": 0
+      },
+      {
+        "guarded_forbidden_claim_mentions": [
+          "certified",
+          "external validation completed",
+          "flight ready",
+          "guaranteed survival",
+          "launch vehicle selected",
+          "procurement-grade cost estimate",
+          "qualified",
+          "third-party validated"
+        ],
+        "manual_review_required": false,
+        "required_qualifiers_present": true,
+        "source_ref": "artifacts/deep_time_archive_feasibility.v1.json",
+        "unsafe_public_overclaim_count": 0
+      },
+      {
+        "guarded_forbidden_claim_mentions": [],
+        "manual_review_required": true,
+        "required_qualifiers_present": true,
+        "source_ref": "mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md",
         "unsafe_public_overclaim_count": 0
       },
       {
@@ -34993,7 +35034,7 @@
       ],
       "legal_review_completed": false,
       "public_claim_approval_completed": false,
-      "public_surface_count": 10,
+      "public_surface_count": 11,
       "required_claims": [
         "deterministic artifact",
         "reduced-order",
@@ -36784,43 +36825,43 @@
     },
     {
       "path": "artifacts/external_validation_review_pack.v1.json",
-      "sha256": "daef53ac2fa2ace0cdf00322357ec0debd08c9a08f30bc9d7929dc10d8e148dd"
+      "sha256": "91e340fd8685afb039c6a25b435ba2a6eba76875344a1cf8afbb68e9009572d5"
     },
     {
       "path": "artifacts/public_narrative_hardening.v1.json",
-      "sha256": "8bc2fe7029450370b4d454bfd1638c53f3708921ce3c346bcd815874353a571f"
+      "sha256": "66f1e8de62c8d3316d38a24abb34f59977e9f062e2293f554af0d3ece8f9527d"
     },
     {
       "path": "artifacts/external_validation_execution_ledger.v1.json",
-      "sha256": "4a751a3611e1f7f0a7436523d5203cc7a71e340f95e0004667aba0fb8f15c53d"
+      "sha256": "3856f9688bd5724be60db3e783a46a8c3b65bb25339635b65d3c3c605b72636a"
     },
     {
       "path": "artifacts/independent_physics_backend_comparison.v1.json",
-      "sha256": "888202dc063e5b3ea5342488de51b94142ef787966c8455bb77c3291f2dbbf6d"
+      "sha256": "d49b9107ae4592fc164340514a84a7dc37001c20c436b74ff67009e977e63ea8"
     },
     {
       "path": "artifacts/capsule_qualification_evidence_pack.v1.json",
-      "sha256": "ee78509ea576b1ec441bb6cae6da2a042989c404aa201cd66ccd915dcc45de22"
+      "sha256": "700438f570e654b1e465c7011dac7ea65fe72c02ae7560a8f5742140b50e4ac5"
     },
     {
       "path": "artifacts/evidence_upgrade_closure.v1.json",
-      "sha256": "5e9039bef597cd13f9265e7b7a6ffebd0d5b19db91feec2f01164ab6a09ab361"
+      "sha256": "989cc8b609a581a64357bfd27b74db01e320056d0b4b1567c5dfe39b510f8f8d"
     },
     {
       "path": "artifacts/external_reproduction_kit.v1.json",
-      "sha256": "05d5abb72a9c901332fbfa585f74ea4d7984c755ab2f933fb55c9de7e1474f9e"
+      "sha256": "46e79d1aae42dcb0e4b6a452bde69d69d1a62d5c87d94c7992813718de2c1f5c"
     },
     {
       "path": "artifacts/external_evidence_intake.v1.json",
-      "sha256": "e738ad25bca6e593aa2e6d86c8e1176e00b1e48679c3f87c68089341d228b304"
+      "sha256": "25bf0e75b1e133c158ad42c87db0e69759aa4ccbe96b3227485b198c84bf1c7f"
     },
     {
       "path": "artifacts/external_validation_campaign.v1.json",
-      "sha256": "a37878159f6254857a2775980f133a665b3ad284d255c7a0de220437b8b5acf5"
+      "sha256": "1f8d1e3d9c8a3f3f6d7231d9f93b288fb36c5d0e3cae42e129b589362e502d35"
     },
     {
       "path": "artifacts/release_candidate_readiness.v1.json",
-      "sha256": "06c75cb0e3d015c60d8fc20b0c142482bf7c1fb09d09fa283e9df9d94fe7805e"
+      "sha256": "b2257f0e3b6eae161781ebd57fd271b1bf620a8d200c3adddb392379e65438d9"
     },
     {
       "path": "artifacts/mission_probability_coupling.v1.json",
@@ -36840,7 +36881,7 @@
     },
     {
       "path": "artifacts/roadmap_closure.v1.json",
-      "sha256": "5f5b31ebe654e26c202748d514e4c005a114e06fd36074cf512772d83188d90f"
+      "sha256": "6cc31427ea2d7ec54aee107de9df7515a8bc0eccb907525e6d22e657d0a03e98"
     }
   ],
   "source_paths": {

@@ -20,6 +20,7 @@ It is structured as a reproducible research artifact and publication candidate.
 Claims are tied to assumptions, models, artifacts, and sources through reproducible checks.
 Simulation outputs are guarded by a golden checksum and CI enforcement to prevent silent drift.
 Governance documents define decision traceability, reproducibility requirements, and explicit non-goals.
+The current proof boundary is the passive archive question: what must be true for a capsule built from present-day material classes to preserve recoverable information over about 10 million years.
 
 ## Start Here
 1. Read the thesis and trust model in this README.
@@ -44,6 +45,7 @@ Governance documents define decision traceability, reproducibility requirements,
 - A small hash-routed workspace with mission, parameter, failure-surface, and optimization views over one tracked browser dataset.
 - An artifact-backed Capsule Lab that exposes capsule materials, target/flight-time/velocity choices, and p05/p50/p95 capsule-only survivability rows.
 - A Mission Feasibility screen artifact that makes target, velocity, flight years, dust/gas exposure, risk-budget linkage, and energy/cost proxy blockers inspectable.
+- A Deep-Time Archive Feasibility artifact that anchors the 1560 ly reference corridor to Gaia BH1, separates Case A capture from Case B astronomical encounter geometry, exposes dust-impact energy bins, decomposes data readability, and keeps full archive-recovery probability open.
 - A User Mission Run catalog, Runtime Scenario Generation artifact, and strict local pack validator that assign stable run ids, expose run recipes, and execute the Mission DAG into ignored `ops/reports/` evidence packs without claiming a server run store.
 - A Mission Probability Coupling artifact that factors selected mission probability into open external factors plus a closed capsule/data review proxy backed by compact DAG snapshots.
 - An Uncertainty Interactions artifact that exposes pairwise uncertainty residual screens while keeping covariance and correlation evidence external.
@@ -133,6 +135,7 @@ Workspace routes:
 - [THREAT_MODEL.md](THREAT_MODEL.md)
 - [MODEL_VERSION.json](MODEL_VERSION.json)
 - [artifacts/research_signals.json](artifacts/research_signals.json)
+- [artifacts/deep_time_archive_feasibility.v1.json](artifacts/deep_time_archive_feasibility.v1.json)
 
 ## Version + Release section
 - Current repository version: see `VERSION`

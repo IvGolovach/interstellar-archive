@@ -98,6 +98,16 @@ class CheckSuiteTests(unittest.TestCase):
         self.assertIn("scripts/ci/mission_feasibility_screen_validate.py", feasibility_validate_step.command)
         self.assertIn("artifacts/mission_feasibility_screen.v1.json", feasibility_diff_step.command)
 
+    def test_build_steps_include_deep_time_archive_feasibility_checks(self) -> None:
+        steps = check_suite.build_steps("base-sha", "head-sha", None)
+        build_step = next(step for step in steps if step.name == "Build deep-time archive feasibility artifact")
+        validate_step = next(step for step in steps if step.name == "Validate deep-time archive feasibility artifact")
+        diff_step = next(step for step in steps if step.name == "Enforce committed deep-time archive feasibility artifact")
+
+        self.assertIn("scripts/build_deep_time_archive_feasibility_artifact.py", build_step.command)
+        self.assertIn("scripts/ci/deep_time_archive_feasibility_validate.py", validate_step.command)
+        self.assertIn("artifacts/deep_time_archive_feasibility.v1.json", diff_step.command)
+
     def test_build_steps_include_user_mission_run_catalog_checks(self) -> None:
         steps = check_suite.build_steps("base-sha", "head-sha", None)
         catalog_build_step = next(step for step in steps if step.name == "Build user mission run catalog artifact")

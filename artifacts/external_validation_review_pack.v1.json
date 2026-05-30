@@ -32,7 +32,7 @@
     "module_count": 6,
     "state_trace_contract_complete": true
   },
-  "determinism_signature": "fa80aadae2650ed84fb59c1fdb1db22ce02ba468e6425bfbe89608fc92432567",
+  "determinism_signature": "e296bb777dd9a75672c0fee228fcae5a53ceb888fb134d2526ad499a510ab2b2",
   "evidence_review_surface": {
     "automatic_trust_upgrade_claimed": false,
     "claim_count": 66,
@@ -570,7 +570,7 @@
     },
     {
       "path": "docs/ARTIFACT_POLICY.md",
-      "sha256": "18e16d82fa83b356b41e6e83d675747730ec2cb05624d4b05aa4a85894ed9f2d"
+      "sha256": "64a2542c0e7c4ce0d07e93d902894ac0e3957deb1ef04ed337ef73a9fc8a2d8b"
     },
     {
       "path": "mission/EXTERNAL_VALIDATION_REVIEW_PACK_SPEC_v1.md",

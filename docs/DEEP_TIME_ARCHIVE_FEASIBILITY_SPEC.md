@@ -654,6 +654,7 @@ The repository is materially stronger when all of the following are true:
 
 Recommended order:
 
+0. Integrated proof-boundary slice: `mission/DEEP_TIME_ARCHIVE_FEASIBILITY_PROOF_SPEC_v1.md`, `mission/deep_time/feasibility.py`, `artifacts/deep_time_archive_feasibility.v1.json`, builder, validator, and tests.
 1. Public reframing + `SUCCESS_METRICS_SPEC_v1`.
 2. `ENVIRONMENT_CORRIDOR_PACK_SPEC_v1` and no-corridor validator.
 3. `TRAJECTORY_CONTROL_OBERTH_SPEC_v1` and baseline/conditional velocity artifact.
@@ -662,3 +663,5 @@ Recommended order:
 
 These five PRs are independently reviewable and each moves the repo toward physical feasibility proof instead of adding more narrative bulk.
 
+The integrated proof-boundary slice is intentionally not a substitute for the later narrower artifacts.
+It makes the current state reviewable now: Gaia BH1 is a concrete 1560 ly target anchor, Case A/Case B geometry is explicit, dust-tail and media-readability blockers are visible, and full `P_archive_recoverable` remains null until external evidence closes the open factors.
