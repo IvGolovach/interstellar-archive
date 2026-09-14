@@ -1,0 +1,60 @@
+# Sources
+
+Every literature number used in `proof.py` / `README.md`, with where it enters. Values were read from the cited pages (September 2026); where a value could only be reached through a secondary page, that is stated.
+
+## Targets (black-hole kinematics)
+
+- **[T1] Gaia BH1.** El-Badry et al. 2023, MNRAS 518, 1057, [arXiv:2209.06833](https://arxiv.org/abs/2209.06833). Distance 478 ± 5 pc, proper motion (−7.70 ± 0.02, −25.85 ± 0.03) mas/yr, systemic RV 23.03 ± 2.63 km/s, M_BH ≈ 9.3 M☉ (Gaia DR3 orbital solution as listed in the [Wikipedia infobox](https://en.wikipedia.org/wiki/Gaia_BH1)).
+- **[T2] Gaia BH2.** El-Badry et al. 2023, MNRAS 521, 4323, [arXiv:2302.07880](https://arxiv.org/abs/2302.07880). 1160 ± 20 pc, PM (−10.48, −4.61) mas/yr, RV −5.04 ± 2.08 km/s, 8.9 M☉.
+- **[T3] Gaia BH3.** Gaia Collaboration, Panuzzo et al. 2024, A&A 686, L2, [arXiv:2404.10486](https://arxiv.org/abs/2404.10486). 594 ± 3 pc, PM (−28.34, −155.19) mas/yr, RV −333.2 ± 3.4 km/s, 33 M☉ (halo orbit).
+- **[T4] A0620-00 (V616 Mon).** Cantrell et al. 2010, ApJ 710, 1127, [arXiv:1001.0261](https://www.arxiv.org/pdf/1001.0261): M_BH = 6.6 ± 0.25 M☉, d = 1.06 ± 0.12 kpc, E(B−V) = 0.30 ± 0.02, i = 51.0°, donor 0.40 M☉. Systemic velocity γ = 8.5 ± 1.8 km/s (González Hernández & Casares 2010, A&A 516, A58, as tabulated in Atri et al. 2019). Proper motion (−0.439 ± 0.108, −5.138 ± 0.096) mas/yr and parallax 0.697 ± 0.117 mas: Gaia DR3 via SIMBAD. The Gaia parallax alone would put the system at ~1.4 kpc; the photometric 1.06 kpc is what the kinematics literature uses, and both are carried here.
+- **[T5] X-ray-binary black holes (V404 Cyg, Cyg X-1, XTE J1118+480, GRO J1655-40, MAXI J1820+070, GRS 1716-249).** Atri et al. 2019, MNRAS 489, 3116, [arXiv:1908.07199](https://arxiv.org/abs/1908.07199) (Tables 4, 5, 7) and Gandhi et al. 2019, MNRAS 485, 2642, [arXiv:1804.11349](https://arxiv.org/abs/1804.11349); Gaia DR3 astrometry via SIMBAD; V404 Cyg VLBI parallax from Miller-Jones et al. 2009.
+- **[T6] OGLE-2011-BLG-0462 (isolated black hole).** Sahu et al. 2025, ApJ, [arXiv:2503.07820](https://arxiv.org/abs/2503.07820): lens distance 1.52 ± 0.15 kpc, lens proper motion (−5.117, +3.217) mas/yr, 7.15 M☉; no radial velocity can exist for an isolated dark lens.
+- **[T7] Sagittarius A\*.** GRAVITY Collaboration 2022, A&A 657, L12, [link](https://www.aanda.org/articles/aa/full_html/2022/01/aa42465-21/aa42465-21.html): 4.297 × 10⁶ M☉ at 8277 pc (not a target: relative speed ~200 km/s).
+
+## Galactic dynamics
+
+- **[G1] Potential.** Bovy 2015, ApJS 216, 29 — `MWPotential2014` as implemented in galpy (Bovy 2015), integrated with `dop853_c`; R₀ = 8 kpc, v₀ = 220 km/s, z☉ = 20.8 pc, solar motion of Schönrich et al.
+- **[G2] Solar motion.** Schönrich, Binney & Dehnen 2010, MNRAS 403, 1829, [arXiv:0912.3693](https://arxiv.org/abs/0912.3693): (U, V, W)☉ = (11.1, 12.24, 7.25) km/s.
+- **[G3] Oort constants / epicyclic frequency.** Bovy 2017, MNRAS 468, L63, [arXiv:1610.07610](https://arxiv.org/abs/1610.07610): A = 15.3 ± 0.4, B = −11.9 ± 0.4 km/s/kpc → κ = √(−4B(A−B)) = 36 km/s/kpc, epicyclic period 2π/κ ≈ 170 Myr (used only to explain why long-flight-time intercepts exist).
+- **[G4] Circular speed.** Eilers et al. 2019, ApJ 871, 120, [arXiv:1810.09466](https://arxiv.org/abs/1810.09466): 229.0 ± 0.2 km/s at R☉.
+- **[G5] Stellar density.** Reylé et al. 2021, A&A 650, A201, [link](https://www.aanda.org/articles/aa/full_html/2021/06/aa40985-21/aa40985-21.html): 375 stars within 10 pc → 0.0895 stars pc⁻³.
+- **[G6] Encounter rate.** Bailer-Jones et al. 2018, A&A 616, A37, [link](https://www.aanda.org/articles/aa/full_html/2018/08/aa33456-18/aa33456-18.html): 19.7 ± 2.2 stellar encounters within 1 pc of the Sun per Myr (completeness-corrected). Used to normalise the encounter Monte Carlo.
+- **[G7] Velocity dispersion.** Anguiano et al. 2018, MNRAS 474, 854, [arXiv:1710.08479](https://arxiv.org/abs/1710.08479): thin disc (σ_U, σ_V, σ_W) = (33, 28, 23) km/s.
+- **[G8] Black-hole population.** Olejak et al. 2020, A&A 638, A94, [link](https://www.aanda.org/articles/aa/full_html/2020/06/aa36557-19/aa36557-19.html): 1.2 × 10⁸ single black holes in the Milky Way, mean mass 14 M☉. Local density: Fender, Maccarone & Heywood 2013, [arXiv:1301.1341](https://arxiv.org/abs/1301.1341): 10⁸ black holes over ~200 kpc³ → 5 × 10⁻⁴ pc⁻³ (crude, uniform); the alternative 10⁻⁴ pc⁻³ used here scales the local stellar density by N_BH/N_star.
+
+## Capture physics
+
+- **[P1] Capture cross-section.** For a slow particle (v∞ ≪ c) in Schwarzschild spacetime the critical impact parameter is b = 4GM/(c v∞), σ = 16πG²M²/(c²v∞²). Confirmed in Ahmedov, Rahimov & Toshmatov 2021, Universe 7, 307, [link](https://www.mdpi.com/2218-1997/7/8/307) (b_max = 2/v in units of r_g = 2GM/c²) and in [arXiv:2412.06598](https://arxiv.org/pdf/2412.06598) (σ = 16πM²/v∞² for the Schwarzschild limit).
+
+## Launch
+
+- **[L1] Solar Oberth scaling.** Benkoski, NIAC Phase I final report 21-NIAC22B-0053 (2023), [NTRS 20250001946](https://ntrs.nasa.gov/api/citations/20250001946/downloads/NIAC_2022_PhI_Benkoski_Oberth.pdf): V_escape = 7.4 ΔV^½ r_p^−¼ (AU/yr, km/s, R☉); C/SiC shield designed to 2698 K. Applied to 2–3 km/s at 0.05–0.10 AU it gives 23–34 km/s, matching the vis-viva calculation in `proof.py`.
+- **[L2] Kick-stage regime.** Hopkins et al. 2015, NASA/AIAA, [NTRS 20150021415](https://ntrs.nasa.gov/api/citations/20150021415/downloads/20150021415.pdf): perihelion ~11 R☉ (0.05 AU), kick-stage 2.5–3.5 km/s.
+- **[L3] Parker Solar Probe.** JHUAPL [spacecraft page](https://parkersolarprobe.jhuapl.edu/Spacecraft/index.php): 11.43 cm carbon-composite shield, ~1377 °C; Ercol & Holtzman 2019, [TFAWS19-AT-07](https://tfaws.nasa.gov/wp-content/uploads/TFAWS19-AT-07.pdf): perihelion 9.86 R☉ (0.046 AU).
+- **[L4] Genesis sample-return capsule.** Desai & Lyons, [NTRS 20080020376](https://ntrs.nasa.gov/api/citations/20080020376/downloads/20080020376.pdf): 205.6 kg, ~1.5 m diameter, 60° sphere-cone.
+- **[L5] Pu-238 / RTG.** Cataldo & Bennett, [NTRS 20120000731](https://ntrs.nasa.gov/api/citations/20120000731/downloads/20120000731.pdf): half-life 87.7 yr; NASA Voyager FAQ: −4 W per year; Grandidier et al. 2017 (Cassini): 30.5 % power loss in 19 yr, i.e. roughly half from converter degradation.
+
+## Interstellar medium and dust
+
+- **[D1] Local dust density.** Krüger, Strub, Grün & Sterken 2015, ApJ 812, 139, [arXiv:1510.06180](https://arxiv.org/abs/1510.06180): (2.1 ± 0.6) × 10⁻²⁴ kg m⁻³, gas-to-dust 193 (+85/−57); large (~10⁻¹⁴ kg) grains are abundant in the inflow and absent from the MRN distribution. Landgraf et al. 2000, JGR 105, [astro-ph/9908117](https://ar5iv.arxiv.org/html/astro-ph/9908117): 6.2 × 10⁻²⁴ kg m⁻³ (earlier analysis, factor 3 higher).
+- **[D2] Largest in-situ grains.** Krüger et al. 2015: detected masses up to ~10⁻¹³ kg; the 16-year set spans 10⁻¹⁸–1.7 × 10⁻¹⁴ kg (0.1–2.3 µm) as summarised by Hajduková, Sterken & Wiegert 2019 ([PDF](https://physics.uwo.ca/~pwiegert/papers/10.4_pp_235_252_Interstellar_Meteoroids.pdf)); no grains larger than ~10 µm robustly detected in two decades (Peña-Asensio & Seligman 2025, A&A 704, L1).
+- **[D3] Interstellar meteoroid fluxes at Earth.** Musci et al. 2012, ApJ 745, 161, [arXiv:1110.5882](https://ar5iv.arxiv.org/html/1110.5882): upper limit 2 × 10⁻⁴ km⁻² h⁻¹ for m > 2 × 10⁻⁷ kg. Froncisz, Brown & Weryk 2020, [arXiv:2005.10896](https://ar5iv.labs.arxiv.org/html/2005.10896): 5 candidate interstellar events among 11 million CMOR orbits, flux ≥ 6.6 × 10⁻⁷ km⁻² h⁻¹ for m > 1.8 × 10⁻⁷ kg. Wiegert et al. 2025, ApJ, [arXiv:2503.19042](https://arxiv.org/html/2503.19042v1): < 8 × 10⁻¹¹ km⁻² h⁻¹ (95 %) for m > 6.6 × 10⁻⁵ kg (~5 mm).
+- **[D4] Gas column from reddening.** Bohlin, Savage & Drake 1978, ApJ 224, 132, [ADS](https://articles.adsabs.harvard.edu/pdf/1978ApJ...224..132B): N(H) / E(B−V) = 5.8 × 10²¹ cm⁻² mag⁻¹.
+- **[D5] Local neutral hydrogen.** Bzowski et al., [arXiv:0710.1480](https://web3.arxiv.org/abs/0710.1480v1): n(H I) = 0.195 ± 0.02 cm⁻³ in the Local Interstellar Cloud.
+- **[D6] Sputtering threshold.** Gray & Edmunds 2004, MNRAS 349, 491, [link](https://academic.oup.com/mnras/article/349/2/491/957170): threshold for H sputtering of graphite ~40–50 eV (Tielens et al. 1994 give ~40 eV).
+
+## Shielding and materials
+
+- **[M1] Whipple ballistic limit (hypervelocity regime, V_n > 7 km/s).** Piekutowski, Poormon, Christiansen & Davis 2011, Int. J. Impact Eng. 38, 495, Eq. 3, [open access](https://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1079&context=nasapub): d_c = 3.918 t_w^(2/3) ρ_p^(−1/3) ρ_b^(−1/9) (V cos θ)^(−2/3) S^(1/3) (σ/70)^(1/3) [cm, g cm⁻³, km s⁻¹, ksi]. Their 6.9–9.9 km/s tests: shields performed *better* than the equation predicts as velocity increased. The equation is not validated above ~10 km/s; here it is applied at 34–45 km/s as an extrapolation and flagged as such.
+- **[M2] Test capability.** Two-stage light-gas guns reach ~7–10 km/s for mm projectiles (Piekutowski et al. 2011; Cornelison & Watts, [NASA/TM-1998-112234](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19980236871.pdf)); Van de Graaff dust accelerators reach 0.5–90 km/s only for 10⁻¹⁹–10⁻¹³ kg grains (Burchell et al. 1999, Meas. Sci. Technol. 10, 41).
+- **[M3] ISS Whipple heritage.** Christiansen et al. 2006, IAC-06-B6.3.05, [NTRS 20060026214](https://ntrs.nasa.gov/api/citations/20060026214/downloads/20060026214.pdf): US Lab stuffed Whipple 2 mm Al bumper + Nextel/Kevlar + 4.8 mm Al wall at 11 cm standoff stops ~1.2 cm Al at 10 km/s.
+- **[M4] Cosmic-ray dose.** Guo et al. 2015, A&A 577, A58, [link](https://www.aanda.org/articles/aa/full_html/2015/05/aa25680-15/aa25680-15.html) (MSL/RAD cruise): absorbed dose 458 ± 32 µGy/day tissue-equivalent (0.167 Gy/yr), 332 µGy/day in silicon, dose equivalent 1.75 mSv/day, ~16 g/cm² average shielding. Outside the heliopause: Cummings et al. 2016, ApJ 831, 18, and Rankin et al. 2022, Space Sci. Rev. 218, [link](https://link.springer.com/article/10.1007/s11214-022-00912-4): GCR proton intensity at the 10–50 MeV/nuc peak is ~15× the 1 AU solar-minimum value; energy density 0.83–1.02 eV cm⁻³. The dose-dominant high-energy part changes much less; a factor 1–2 on the cruise dose is assumed here (not a measured number).
+- **[M5] Fused silica under irradiation.** Yang et al. 2022, Phys. Rev. Accel. Beams 25, 053001, [arXiv:2212.03392](https://arxiv.org/pdf/2212.03392): fused-silica rods irradiated at the LHC up to 18 MGy show minimal attenuation at 360–400 nm even at 10 MGy; degradation concentrates in the UV (240 nm). Griscom 2013, Physics Research International 2013, 379041: 620 nm NBOHC band after 10 MGy. Compaction: Ollier et al. 2019, Sci. Rep. 9, [link](https://link.springer.com/10.1038/s41598-018-37751-9): density saturates at ~2.26 g/cm³ (+2.7 %) only above ~10 GGy.
+- **[M6] Sapphire.** Sporea & Sporea 2016, in *Radiation Effects in Materials* (IntechOpen), [link](https://www.intechopen.com/chapters/51242): radiation hardened under gamma exposure to 10⁸ Gy.
+- **[M7] Glass data storage.** Zhang et al. 2014, PRL 112, 033901, [link](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.112.033901): 5D nanograting storage, thermal stability to 1000 °C; Kazansky 2014 ([Southampton eprint](https://eprints.soton.ac.uk/372655)): extrapolated decay time at 160 °C comparable to 13.8 Gyr. Microsoft Project Silica: *Laser writing in glass for dense, fast and efficient archival data storage*, Nature 650, 606 (2026), [link](https://www.nature.com/articles/s41586-025-10042-w): 4.8 TB per 120 mm × 2 mm platter, readout with 525 nm / 445 nm LEDs, >10,000 yr accelerated-ageing lifetime (borosilicate).
+- **[M8] C/C-SiC flight heritage.** Di Martino et al. 2026, Aerospace 13, 278, [link](https://www.mdpi.com/2226-4310/13/3/278): C/C-SiC forebody TPS on SHEFEX I/II, IXV, STORT; ~1900 kg/m³; passive-to-active oxidation transition above ~1900 K.
+
+## Not used (checked and rejected)
+
+- `refs/bibliography.bib` of the original repository: none of its three entries could be found in any catalogue or index; they are not cited anywhere in this proof.

@@ -1,0 +1,266 @@
+{
+ "all_targets": [
+  {
+   "name": "Gaia BH1",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 469.804,
+   "t_myr": 1.5,
+   "aim_l_deg": 11.98,
+   "aim_b_deg": 15.39
+  },
+  {
+   "name": "Gaia BH1",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 441.889,
+   "t_myr": 3.6,
+   "aim_l_deg": 360.86,
+   "aim_b_deg": 11.68
+  },
+  {
+   "name": "Gaia BH3",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 452.507,
+   "t_myr": 0.7,
+   "aim_l_deg": 12.34,
+   "aim_b_deg": -14.82
+  },
+  {
+   "name": "Gaia BH3",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 444.779,
+   "t_myr": 0.7,
+   "aim_l_deg": 371.18,
+   "aim_b_deg": -15.06
+  },
+  {
+   "name": "A0620-00 (V616 Mon)",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 0.242,
+   "t_myr": 55.1,
+   "aim_l_deg": 231.8,
+   "aim_b_deg": -43.03
+  },
+  {
+   "name": "A0620-00 (V616 Mon)",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 0.116,
+   "t_myr": 57.4,
+   "aim_l_deg": 235.76,
+   "aim_b_deg": -58.5
+  },
+  {
+   "name": "Gaia BH2",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 687.261,
+   "t_myr": 61.3,
+   "aim_l_deg": 253.26,
+   "aim_b_deg": -3.41
+  },
+  {
+   "name": "Gaia BH2",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 0.028,
+   "t_myr": 206.6,
+   "aim_l_deg": 276.07,
+   "aim_b_deg": 2.11
+  },
+  {
+   "name": "XTE J1118+480",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 0.825,
+   "t_myr": 295.6,
+   "aim_l_deg": 306.45,
+   "aim_b_deg": 40.85
+  },
+  {
+   "name": "XTE J1118+480",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 0.198,
+   "t_myr": 298.6,
+   "aim_l_deg": 323.58,
+   "aim_b_deg": 33.22
+  },
+  {
+   "name": "Cygnus X-1",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 0.209,
+   "t_myr": 271.1,
+   "aim_l_deg": 287.13,
+   "aim_b_deg": 8.16
+  },
+  {
+   "name": "Cygnus X-1",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 0.131,
+   "t_myr": 153.0,
+   "aim_l_deg": 286.58,
+   "aim_b_deg": -1.41
+  },
+  {
+   "name": "V404 Cygni",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 0.175,
+   "t_myr": 166.1,
+   "aim_l_deg": 297.52,
+   "aim_b_deg": -29.68
+  },
+  {
+   "name": "V404 Cygni",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 0.001,
+   "t_myr": 177.4,
+   "aim_l_deg": 300.0,
+   "aim_b_deg": -42.2
+  },
+  {
+   "name": "GRO J1655-40",
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 1715.794,
+   "t_myr": 16.1,
+   "aim_l_deg": 289.35,
+   "aim_b_deg": -6.88
+  },
+  {
+   "name": "GRO J1655-40",
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 1532.815,
+   "t_myr": 17.2,
+   "aim_l_deg": 285.07,
+   "aim_b_deg": -7.21
+  }
+ ],
+ "A0620_scan": {
+  "photometric_1060pc": [
+   {
+    "vinf_km_s": 20.0,
+    "min_miss_pc": 0.328,
+    "t_myr": 209.3,
+    "aim_l_deg": 108.75,
+    "aim_b_deg": -69.97
+   },
+   {
+    "vinf_km_s": 25.0,
+    "min_miss_pc": 0.282,
+    "t_myr": 297.2,
+    "aim_l_deg": 344.91,
+    "aim_b_deg": -67.83
+   },
+   {
+    "vinf_km_s": 30.0,
+    "min_miss_pc": 0.101,
+    "t_myr": 103.4,
+    "aim_l_deg": 319.85,
+    "aim_b_deg": -70.1
+   },
+   {
+    "vinf_km_s": 34.0,
+    "min_miss_pc": 0.242,
+    "t_myr": 55.1,
+    "aim_l_deg": 231.8,
+    "aim_b_deg": -43.03
+   },
+   {
+    "vinf_km_s": 38.0,
+    "min_miss_pc": 0.37,
+    "t_myr": 54.6,
+    "aim_l_deg": 232.51,
+    "aim_b_deg": -48.5
+   },
+   {
+    "vinf_km_s": 45.0,
+    "min_miss_pc": 0.116,
+    "t_myr": 57.4,
+    "aim_l_deg": 235.76,
+    "aim_b_deg": -58.5
+   },
+   {
+    "vinf_km_s": 60.0,
+    "min_miss_pc": 0.21,
+    "t_myr": 22.3,
+    "aim_l_deg": 226.39,
+    "aim_b_deg": -15.57
+   }
+  ],
+  "gaia_parallax_1435pc": [
+   {
+    "vinf_km_s": 20.0,
+    "min_miss_pc": 0.027,
+    "t_myr": 79.3,
+    "aim_l_deg": 252.62,
+    "aim_b_deg": -46.24
+   },
+   {
+    "vinf_km_s": 25.0,
+    "min_miss_pc": 0.083,
+    "t_myr": 74.8,
+    "aim_l_deg": 245.26,
+    "aim_b_deg": -48.19
+   },
+   {
+    "vinf_km_s": 30.0,
+    "min_miss_pc": 0.004,
+    "t_myr": 68.6,
+    "aim_l_deg": 239.02,
+    "aim_b_deg": -45.61
+   },
+   {
+    "vinf_km_s": 34.0,
+    "min_miss_pc": 0.214,
+    "t_myr": 64.0,
+    "aim_l_deg": 236.33,
+    "aim_b_deg": -44.05
+   },
+   {
+    "vinf_km_s": 38.0,
+    "min_miss_pc": 0.19,
+    "t_myr": 134.0,
+    "aim_l_deg": 354.2,
+    "aim_b_deg": -16.07
+   },
+   {
+    "vinf_km_s": 45.0,
+    "min_miss_pc": 0.207,
+    "t_myr": 41.9,
+    "aim_l_deg": 231.05,
+    "aim_b_deg": 11.19
+   },
+   {
+    "vinf_km_s": 60.0,
+    "min_miss_pc": 0.039,
+    "t_myr": 31.6,
+    "aim_l_deg": 229.59,
+    "aim_b_deg": -18.2
+   }
+  ]
+ },
+ "min_vinf": {
+  "A0620-00 (V616 Mon)": {
+   "vinf_km_s": 12.1,
+   "t_myr": 79.4,
+   "miss_pc": 0.042
+  },
+  "Gaia BH1": {
+   "vinf_km_s": 50.3,
+   "t_myr": 261.7,
+   "miss_pc": 0.027
+  }
+ },
+ "A0620_earliest": {
+  "v34": {
+   "vinf_km_s": 34.0,
+   "min_miss_pc": 0.199,
+   "t_myr": 55.1,
+   "aim_l_deg": 231.79,
+   "aim_b_deg": -42.99,
+   "scan_t_max": 60.0
+  },
+  "v45": {
+   "vinf_km_s": 45.0,
+   "min_miss_pc": 0.132,
+   "t_myr": 31.6,
+   "aim_l_deg": 228.4,
+   "aim_b_deg": -13.38,
+   "scan_t_max": 35.0
+  }
+ }
+}

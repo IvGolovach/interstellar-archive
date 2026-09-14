@@ -1,0 +1,1333 @@
+{
+ "A": {
+  "vinf_q0.05au_dv2000": {
+   "value": 27.52271288872151,
+   "unit": "km/s",
+   "note": "perihelion 0.05 AU = 10.8 R_sun, burn 2 km/s, parabolic inbound"
+  },
+  "vinf_q0.05au_dv3000": {
+   "value": 33.75277154742258,
+   "unit": "km/s",
+   "note": "perihelion 0.05 AU = 10.8 R_sun, burn 3 km/s, parabolic inbound"
+  },
+  "vinf_q0.10au_dv2000": {
+   "value": 23.169047563429448,
+   "unit": "km/s",
+   "note": "perihelion 0.1 AU = 21.5 R_sun, burn 2 km/s, parabolic inbound"
+  },
+  "vinf_q0.10au_dv3000": {
+   "value": 28.428984285314915,
+   "unit": "km/s",
+   "note": "perihelion 0.1 AU = 21.5 R_sun, burn 3 km/s, parabolic inbound"
+  },
+  "vinf_q0.05au_dv3000_inbound30": {
+   "value": 45.31548253365513,
+   "unit": "km/s",
+   "note": "conditional: needs 30 km/s inbound excess"
+  },
+  "solar_flux_0.05au": {
+   "value": 0.5443999999999999,
+   "unit": "MW/m^2",
+   "note": "inverse square from 1361 W/m^2"
+  },
+  "solar_flux_parker_perihelion_9.86Rsun": {
+   "value": 0.647308206064735,
+   "unit": "MW/m^2",
+   "note": "Parker Solar Probe reached 9.86 R_sun = 0.046 AU"
+  },
+  "straight_flight_time_1560ly_34kms": {
+   "value": 13.755183367058823,
+   "unit": "Myr",
+   "note": ""
+  },
+  "straight_flight_time_1560ly_45kms": {
+   "value": 10.392805210666666,
+   "unit": "Myr",
+   "note": ""
+  },
+  "straight_flight_time_3460ly_34kms": {
+   "value": 30.50829131411765,
+   "unit": "Myr",
+   "note": ""
+  }
+ },
+ "B": {
+  "straight_line_table": [
+   {
+    "name": "Gaia BH1",
+    "d_pc": 478,
+    "v_tan_km_s": 61.1,
+    "v_rad_km_s": 23.03,
+    "bh_mass": 9.3,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   },
+   {
+    "name": "Gaia BH3",
+    "d_pc": 594,
+    "v_tan_km_s": 444.2,
+    "v_rad_km_s": -333.2,
+    "bh_mass": 33.0,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   },
+   {
+    "name": "A0620-00 (V616 Mon)",
+    "d_pc": 1060,
+    "v_tan_km_s": 25.9,
+    "v_rad_km_s": 8.5,
+    "bh_mass": 6.6,
+    "t_intercept_34": 76.7,
+    "t_intercept_45": 36.6
+   },
+   {
+    "name": "Gaia BH2",
+    "d_pc": 1160,
+    "v_tan_km_s": 63.0,
+    "v_rad_km_s": -5.04,
+    "bh_mass": 8.9,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   },
+   {
+    "name": "OGLE-2011-BLG-0462 (isolated)",
+    "d_pc": 1520,
+    "v_tan_km_s": 43.6,
+    "v_rad_km_s": null,
+    "bh_mass": 7.15,
+    "t_intercept_34": "unreachable (v_tan)",
+    "t_intercept_45": "no RV"
+   },
+   {
+    "name": "XTE J1118+480",
+    "d_pc": 1720,
+    "v_tan_km_s": 157.4,
+    "v_rad_km_s": 2.7,
+    "bh_mass": 7.55,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   },
+   {
+    "name": "Cygnus X-1",
+    "d_pc": 2250,
+    "v_tan_km_s": 78.6,
+    "v_rad_km_s": -5.1,
+    "bh_mass": 14.8,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   },
+   {
+    "name": "V404 Cygni",
+    "d_pc": 2390,
+    "v_tan_km_s": 104.5,
+    "v_rad_km_s": -0.4,
+    "bh_mass": 9.0,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   },
+   {
+    "name": "GRS 1716-249",
+    "d_pc": 2400,
+    "v_tan_km_s": 34.2,
+    "v_rad_km_s": null,
+    "bh_mass": null,
+    "t_intercept_34": "unreachable (v_tan)",
+    "t_intercept_45": "no RV"
+   },
+   {
+    "name": "MAXI J1820+070",
+    "d_pc": 2960,
+    "v_tan_km_s": 98.3,
+    "v_rad_km_s": null,
+    "bh_mass": null,
+    "t_intercept_34": "unreachable (v_tan)",
+    "t_intercept_45": "unreachable (v_tan)"
+   },
+   {
+    "name": "GRO J1655-40",
+    "d_pc": 3200,
+    "v_tan_km_s": 130.9,
+    "v_rad_km_s": -142.0,
+    "bh_mass": 6.6,
+    "t_intercept_34": null,
+    "t_intercept_45": null
+   }
+  ],
+  "A0620_earliest_intercept_v34": {
+   "value": {
+    "vinf_km_s": 34.0,
+    "min_miss_pc": 0.199,
+    "t_myr": 55.1,
+    "aim_l_deg": 231.79,
+    "aim_b_deg": -42.99,
+    "scan_t_max": 60.0
+   },
+   "unit": "",
+   "note": ""
+  },
+  "A0620_earliest_intercept_v45": {
+   "value": {
+    "vinf_km_s": 45.0,
+    "min_miss_pc": 0.132,
+    "t_myr": 31.6,
+    "aim_l_deg": 228.4,
+    "aim_b_deg": -13.38,
+    "scan_t_max": 35.0
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Gaia_BH1_v34": {
+   "value": {
+    "min_miss_pc": 469.804,
+    "t_myr": 1.5,
+    "aim_l": 11.98,
+    "aim_b": 15.39
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Gaia_BH1_v45": {
+   "value": {
+    "min_miss_pc": 441.889,
+    "t_myr": 3.6,
+    "aim_l": 360.86,
+    "aim_b": 11.68
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Gaia_BH3_v34": {
+   "value": {
+    "min_miss_pc": 452.507,
+    "t_myr": 0.7,
+    "aim_l": 12.34,
+    "aim_b": -14.82
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Gaia_BH3_v45": {
+   "value": {
+    "min_miss_pc": 444.779,
+    "t_myr": 0.7,
+    "aim_l": 371.18,
+    "aim_b": -15.06
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_A0620-00_v34": {
+   "value": {
+    "min_miss_pc": 0.242,
+    "t_myr": 55.1,
+    "aim_l": 231.8,
+    "aim_b": -43.03
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_A0620-00_v45": {
+   "value": {
+    "min_miss_pc": 0.116,
+    "t_myr": 57.4,
+    "aim_l": 235.76,
+    "aim_b": -58.5
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Gaia_BH2_v34": {
+   "value": {
+    "min_miss_pc": 687.261,
+    "t_myr": 61.3,
+    "aim_l": 253.26,
+    "aim_b": -3.41
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Gaia_BH2_v45": {
+   "value": {
+    "min_miss_pc": 0.028,
+    "t_myr": 206.6,
+    "aim_l": 276.07,
+    "aim_b": 2.11
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_XTE_J1118+480_v34": {
+   "value": {
+    "min_miss_pc": 0.825,
+    "t_myr": 295.6,
+    "aim_l": 306.45,
+    "aim_b": 40.85
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_XTE_J1118+480_v45": {
+   "value": {
+    "min_miss_pc": 0.198,
+    "t_myr": 298.6,
+    "aim_l": 323.58,
+    "aim_b": 33.22
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Cygnus_X-1_v34": {
+   "value": {
+    "min_miss_pc": 0.209,
+    "t_myr": 271.1,
+    "aim_l": 287.13,
+    "aim_b": 8.16
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_Cygnus_X-1_v45": {
+   "value": {
+    "min_miss_pc": 0.131,
+    "t_myr": 153.0,
+    "aim_l": 286.58,
+    "aim_b": -1.41
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_V404_Cygni_v34": {
+   "value": {
+    "min_miss_pc": 0.175,
+    "t_myr": 166.1,
+    "aim_l": 297.52,
+    "aim_b": -29.68
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_V404_Cygni_v45": {
+   "value": {
+    "min_miss_pc": 0.001,
+    "t_myr": 177.4,
+    "aim_l": 300.0,
+    "aim_b": -42.2
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_GRO_J1655-40_v34": {
+   "value": {
+    "min_miss_pc": 1715.794,
+    "t_myr": 16.1,
+    "aim_l": 289.35,
+    "aim_b": -6.88
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy_GRO_J1655-40_v45": {
+   "value": {
+    "min_miss_pc": 1532.815,
+    "t_myr": 17.2,
+    "aim_l": 285.07,
+    "aim_b": -7.21
+   },
+   "unit": "",
+   "note": ""
+  },
+  "min_vinf_A0620-00": {
+   "value": {
+    "vinf_km_s": 12.1,
+    "t_myr": 79.4,
+    "miss_pc": 0.042
+   },
+   "unit": "",
+   "note": ""
+  },
+  "min_vinf_Gaia_BH1": {
+   "value": {
+    "vinf_km_s": 50.3,
+    "t_myr": 261.7,
+    "miss_pc": 0.027
+   },
+   "unit": "",
+   "note": ""
+  },
+  "galpy": {
+   "all_targets": [
+    {
+     "name": "Gaia BH1",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 469.804,
+     "t_myr": 1.5,
+     "aim_l_deg": 11.98,
+     "aim_b_deg": 15.39
+    },
+    {
+     "name": "Gaia BH1",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 441.889,
+     "t_myr": 3.6,
+     "aim_l_deg": 360.86,
+     "aim_b_deg": 11.68
+    },
+    {
+     "name": "Gaia BH3",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 452.507,
+     "t_myr": 0.7,
+     "aim_l_deg": 12.34,
+     "aim_b_deg": -14.82
+    },
+    {
+     "name": "Gaia BH3",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 444.779,
+     "t_myr": 0.7,
+     "aim_l_deg": 371.18,
+     "aim_b_deg": -15.06
+    },
+    {
+     "name": "A0620-00 (V616 Mon)",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 0.242,
+     "t_myr": 55.1,
+     "aim_l_deg": 231.8,
+     "aim_b_deg": -43.03
+    },
+    {
+     "name": "A0620-00 (V616 Mon)",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 0.116,
+     "t_myr": 57.4,
+     "aim_l_deg": 235.76,
+     "aim_b_deg": -58.5
+    },
+    {
+     "name": "Gaia BH2",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 687.261,
+     "t_myr": 61.3,
+     "aim_l_deg": 253.26,
+     "aim_b_deg": -3.41
+    },
+    {
+     "name": "Gaia BH2",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 0.028,
+     "t_myr": 206.6,
+     "aim_l_deg": 276.07,
+     "aim_b_deg": 2.11
+    },
+    {
+     "name": "XTE J1118+480",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 0.825,
+     "t_myr": 295.6,
+     "aim_l_deg": 306.45,
+     "aim_b_deg": 40.85
+    },
+    {
+     "name": "XTE J1118+480",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 0.198,
+     "t_myr": 298.6,
+     "aim_l_deg": 323.58,
+     "aim_b_deg": 33.22
+    },
+    {
+     "name": "Cygnus X-1",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 0.209,
+     "t_myr": 271.1,
+     "aim_l_deg": 287.13,
+     "aim_b_deg": 8.16
+    },
+    {
+     "name": "Cygnus X-1",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 0.131,
+     "t_myr": 153.0,
+     "aim_l_deg": 286.58,
+     "aim_b_deg": -1.41
+    },
+    {
+     "name": "V404 Cygni",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 0.175,
+     "t_myr": 166.1,
+     "aim_l_deg": 297.52,
+     "aim_b_deg": -29.68
+    },
+    {
+     "name": "V404 Cygni",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 0.001,
+     "t_myr": 177.4,
+     "aim_l_deg": 300.0,
+     "aim_b_deg": -42.2
+    },
+    {
+     "name": "GRO J1655-40",
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 1715.794,
+     "t_myr": 16.1,
+     "aim_l_deg": 289.35,
+     "aim_b_deg": -6.88
+    },
+    {
+     "name": "GRO J1655-40",
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 1532.815,
+     "t_myr": 17.2,
+     "aim_l_deg": 285.07,
+     "aim_b_deg": -7.21
+    }
+   ],
+   "A0620_scan": {
+    "photometric_1060pc": [
+     {
+      "vinf_km_s": 20.0,
+      "min_miss_pc": 0.328,
+      "t_myr": 209.3,
+      "aim_l_deg": 108.75,
+      "aim_b_deg": -69.97
+     },
+     {
+      "vinf_km_s": 25.0,
+      "min_miss_pc": 0.282,
+      "t_myr": 297.2,
+      "aim_l_deg": 344.91,
+      "aim_b_deg": -67.83
+     },
+     {
+      "vinf_km_s": 30.0,
+      "min_miss_pc": 0.101,
+      "t_myr": 103.4,
+      "aim_l_deg": 319.85,
+      "aim_b_deg": -70.1
+     },
+     {
+      "vinf_km_s": 34.0,
+      "min_miss_pc": 0.242,
+      "t_myr": 55.1,
+      "aim_l_deg": 231.8,
+      "aim_b_deg": -43.03
+     },
+     {
+      "vinf_km_s": 38.0,
+      "min_miss_pc": 0.37,
+      "t_myr": 54.6,
+      "aim_l_deg": 232.51,
+      "aim_b_deg": -48.5
+     },
+     {
+      "vinf_km_s": 45.0,
+      "min_miss_pc": 0.116,
+      "t_myr": 57.4,
+      "aim_l_deg": 235.76,
+      "aim_b_deg": -58.5
+     },
+     {
+      "vinf_km_s": 60.0,
+      "min_miss_pc": 0.21,
+      "t_myr": 22.3,
+      "aim_l_deg": 226.39,
+      "aim_b_deg": -15.57
+     }
+    ],
+    "gaia_parallax_1435pc": [
+     {
+      "vinf_km_s": 20.0,
+      "min_miss_pc": 0.027,
+      "t_myr": 79.3,
+      "aim_l_deg": 252.62,
+      "aim_b_deg": -46.24
+     },
+     {
+      "vinf_km_s": 25.0,
+      "min_miss_pc": 0.083,
+      "t_myr": 74.8,
+      "aim_l_deg": 245.26,
+      "aim_b_deg": -48.19
+     },
+     {
+      "vinf_km_s": 30.0,
+      "min_miss_pc": 0.004,
+      "t_myr": 68.6,
+      "aim_l_deg": 239.02,
+      "aim_b_deg": -45.61
+     },
+     {
+      "vinf_km_s": 34.0,
+      "min_miss_pc": 0.214,
+      "t_myr": 64.0,
+      "aim_l_deg": 236.33,
+      "aim_b_deg": -44.05
+     },
+     {
+      "vinf_km_s": 38.0,
+      "min_miss_pc": 0.19,
+      "t_myr": 134.0,
+      "aim_l_deg": 354.2,
+      "aim_b_deg": -16.07
+     },
+     {
+      "vinf_km_s": 45.0,
+      "min_miss_pc": 0.207,
+      "t_myr": 41.9,
+      "aim_l_deg": 231.05,
+      "aim_b_deg": 11.19
+     },
+     {
+      "vinf_km_s": 60.0,
+      "min_miss_pc": 0.039,
+      "t_myr": 31.6,
+      "aim_l_deg": 229.59,
+      "aim_b_deg": -18.2
+     }
+    ]
+   },
+   "min_vinf": {
+    "A0620-00 (V616 Mon)": {
+     "vinf_km_s": 12.1,
+     "t_myr": 79.4,
+     "miss_pc": 0.042
+    },
+    "Gaia BH1": {
+     "vinf_km_s": 50.3,
+     "t_myr": 261.7,
+     "miss_pc": 0.027
+    }
+   },
+   "A0620_earliest": {
+    "v34": {
+     "vinf_km_s": 34.0,
+     "min_miss_pc": 0.199,
+     "t_myr": 55.1,
+     "aim_l_deg": 231.79,
+     "aim_b_deg": -42.99,
+     "scan_t_max": 60.0
+    },
+    "v45": {
+     "vinf_km_s": 45.0,
+     "min_miss_pc": 0.132,
+     "t_myr": 31.6,
+     "aim_l_deg": 228.4,
+     "aim_b_deg": -13.38,
+     "scan_t_max": 35.0
+    }
+   }
+  }
+ },
+ "C_480pc_10Myr_generic": {
+  "implied_n_H_LIC": {
+   "value": 0.17298479436768682,
+   "unit": "cm^-3",
+   "note": "from Ulysses dust density x gas-to-dust 193"
+  },
+  "swept_dust_mass_local_LIC": {
+   "value": 0.0562975703387937,
+   "unit": "g",
+   "note": "dust mass column x frontal area"
+  },
+  "dust_kinetic_energy_local_LIC": {
+   "value": 32.53999565582276,
+   "unit": "kJ",
+   "note": "whole-path total"
+  },
+  "eroded_shield_fraction_local_LIC": {
+   "value": 0.0001223860224756385,
+   "unit": "",
+   "note": "crater mass = 100 x projectile mass, / 46 kg TPS"
+  },
+  "hits_if_all_local_dust_in_r0.1um": {
+   "value": 4072743910673.948,
+   "unit": "",
+   "note": "monodisperse sanity bound"
+  },
+  "hits_if_all_local_dust_in_r1um": {
+   "value": 4072743910.6739492,
+   "unit": "",
+   "note": "monodisperse sanity bound"
+  },
+  "expected_hits_m>2.0e-07kg_(0.5mm)": {
+   "value": 57.282835102557684,
+   "unit": "",
+   "note": "Musci et al. 2012 optical upper limit [upper], KE per hit at 34 km/s = 0.1 kJ"
+  },
+  "P_at_least_one_m>2.0e-07kg": {
+   "value": 1.0,
+   "unit": "",
+   "note": ""
+  },
+  "expected_hits_m>1.8e-07kg_(0.5mm)": {
+   "value": 0.1890333558384404,
+   "unit": "",
+   "note": "Froncisz, Brown & Weryk 2020 CMOR candidates [detection (5 candidates / 11M orbits)], KE per hit at 34 km/s = 0.1 kJ"
+  },
+  "P_at_least_one_m>1.8e-07kg": {
+   "value": 0.1722411043577493,
+   "unit": "",
+   "note": ""
+  },
+  "expected_hits_m>6.6e-05kg_(3.4mm)": {
+   "value": 2.2913134041023075e-05,
+   "unit": "",
+   "note": "Wiegert et al. 2025 optical 95% upper limit [upper], KE per hit at 34 km/s = 38.1 kJ"
+  },
+  "P_at_least_one_m>6.6e-05kg": {
+   "value": 2.2912871537217328e-05,
+   "unit": "",
+   "note": ""
+  },
+  "whipple_critical_diameter_rho3.3": {
+   "value": 8.74995117603376,
+   "unit": "mm",
+   "note": "NNO BLE at 34 km/s; validated only to ~10 km/s (equation conservative there)"
+  },
+  "whipple_critical_mass_rho3.3": {
+   "value": 0.001157522525805446,
+   "unit": "kg",
+   "note": ""
+  },
+  "whipple_critical_diameter_rho1.0": {
+   "value": 13.026975898953932,
+   "unit": "mm",
+   "note": "NNO BLE at 34 km/s; validated only to ~10 km/s (equation conservative there)"
+  },
+  "whipple_critical_mass_rho1.0": {
+   "value": 0.0011575225258054456,
+   "unit": "kg",
+   "note": ""
+  },
+  "gcr_dose_lism_factor_1": {
+   "value": 2.3046,
+   "unit": "MGy",
+   "note": "MSL/RAD cruise 0.167 Gy/yr x LISM factor x time"
+  },
+  "gcr_dose_lism_factor_2": {
+   "value": 4.6092,
+   "unit": "MGy",
+   "note": "MSL/RAD cruise 0.167 Gy/yr x LISM factor x time"
+  },
+  "silica_visible_transmission_verified_to": {
+   "value": 18.0,
+   "unit": "MGy",
+   "note": "Yang et al. 2022 (LHC irradiation)"
+  },
+  "sapphire_gamma_hardness_to": {
+   "value": 100.0,
+   "unit": "MGy",
+   "note": "Sporea & Sporea 2016"
+  },
+  "H_atom_impact_energy": {
+   "value": 6.03751305862572,
+   "unit": "eV",
+   "note": "sputtering threshold for H on graphite 40-50 eV (Gray & Edmunds 2004)"
+  },
+  "swept_gas_mass": {
+   "value": 10.865431075387184,
+   "unit": "g",
+   "note": ""
+  },
+  "drag_delta_v": {
+   "value": 0.0017933235755493411,
+   "unit": "km/s",
+   "note": "momentum-transfer bound, along track"
+  }
+ },
+ "C_A0620_34kms": {
+  "implied_n_H_LIC": {
+   "value": 0.17298479436768682,
+   "unit": "cm^-3",
+   "note": "from Ulysses dust density x gas-to-dust 193"
+  },
+  "sightline_mean_n_H_from_reddening": {
+   "value": 0.5319769777012447,
+   "unit": "cm^-3",
+   "note": "E(B-V)=0.3, N_H=5.8e21 E(B-V) cm^-2, over 1060 pc"
+  },
+  "swept_dust_mass_local_LIC": {
+   "value": 0.22471514979984,
+   "unit": "g",
+   "note": "dust mass column x frontal area"
+  },
+  "dust_kinetic_energy_local_LIC": {
+   "value": 129.88535658430752,
+   "unit": "kJ",
+   "note": "whole-path total"
+  },
+  "eroded_shield_fraction_local_LIC": {
+   "value": 0.0004885111952170434,
+   "unit": "",
+   "note": "crater mass = 100 x projectile mass, / 46 kg TPS"
+  },
+  "swept_dust_mass_sightline_reddening_gd100": {
+   "value": 1.3337504216792961,
+   "unit": "g",
+   "note": "dust mass column x frontal area"
+  },
+  "dust_kinetic_energy_sightline_reddening_gd100": {
+   "value": 770.9077437306331,
+   "unit": "kJ",
+   "note": "whole-path total"
+  },
+  "eroded_shield_fraction_sightline_reddening_gd100": {
+   "value": 0.0028994574384332526,
+   "unit": "",
+   "note": "crater mass = 100 x projectile mass, / 46 kg TPS"
+  },
+  "hits_if_all_local_dust_in_r0.1um": {
+   "value": 16256603126491.033,
+   "unit": "",
+   "note": "monodisperse sanity bound"
+  },
+  "hits_if_all_local_dust_in_r1um": {
+   "value": 16256603126.491035,
+   "unit": "",
+   "note": "monodisperse sanity bound"
+  },
+  "expected_hits_m>2.0e-07kg_(0.5mm)": {
+   "value": 228.64789356923075,
+   "unit": "",
+   "note": "Musci et al. 2012 optical upper limit [upper], KE per hit at 34 km/s = 0.1 kJ"
+  },
+  "P_at_least_one_m>2.0e-07kg": {
+   "value": 1.0,
+   "unit": "",
+   "note": ""
+  },
+  "expected_hits_m>1.8e-07kg_(0.5mm)": {
+   "value": 0.7545380487784616,
+   "unit": "",
+   "note": "Froncisz, Brown & Weryk 2020 CMOR candidates [detection (5 candidates / 11M orbits)], KE per hit at 34 km/s = 0.1 kJ"
+  },
+  "P_at_least_one_m>1.8e-07kg": {
+   "value": 0.5297722131342467,
+   "unit": "",
+   "note": ""
+  },
+  "expected_hits_m>6.6e-05kg_(3.4mm)": {
+   "value": 9.145915742769231e-05,
+   "unit": "",
+   "note": "Wiegert et al. 2025 optical 95% upper limit [upper], KE per hit at 34 km/s = 38.1 kJ"
+  },
+  "P_at_least_one_m>6.6e-05kg": {
+   "value": 9.145497516649392e-05,
+   "unit": "",
+   "note": ""
+  },
+  "whipple_critical_diameter_rho3.3": {
+   "value": 8.74995117603376,
+   "unit": "mm",
+   "note": "NNO BLE at 34 km/s; validated only to ~10 km/s (equation conservative there)"
+  },
+  "whipple_critical_mass_rho3.3": {
+   "value": 0.001157522525805446,
+   "unit": "kg",
+   "note": ""
+  },
+  "whipple_critical_diameter_rho1.0": {
+   "value": 13.026975898953932,
+   "unit": "mm",
+   "note": "NNO BLE at 34 km/s; validated only to ~10 km/s (equation conservative there)"
+  },
+  "whipple_critical_mass_rho1.0": {
+   "value": 0.0011575225258054456,
+   "unit": "kg",
+   "note": ""
+  },
+  "gcr_dose_lism_factor_1": {
+   "value": 9.2017,
+   "unit": "MGy",
+   "note": "MSL/RAD cruise 0.167 Gy/yr x LISM factor x time"
+  },
+  "gcr_dose_lism_factor_2": {
+   "value": 18.4034,
+   "unit": "MGy",
+   "note": "MSL/RAD cruise 0.167 Gy/yr x LISM factor x time"
+  },
+  "silica_visible_transmission_verified_to": {
+   "value": 18.0,
+   "unit": "MGy",
+   "note": "Yang et al. 2022 (LHC irradiation)"
+  },
+  "sapphire_gamma_hardness_to": {
+   "value": 100.0,
+   "unit": "MGy",
+   "note": "Sporea & Sporea 2016"
+  },
+  "H_atom_impact_energy": {
+   "value": 6.03751305862572,
+   "unit": "eV",
+   "note": "sputtering threshold for H on graphite 40-50 eV (Gray & Edmunds 2004)"
+  },
+  "swept_gas_mass": {
+   "value": 43.37002391136912,
+   "unit": "g",
+   "note": ""
+  },
+  "drag_delta_v": {
+   "value": 0.007158159286342476,
+   "unit": "km/s",
+   "note": "momentum-transfer bound, along track"
+  }
+ },
+ "D_A0620_34kms": {
+  "encounter_relative_speed": {
+   "value": 36.3549393035774,
+   "unit": "km/s",
+   "note": "straight-line estimate"
+  },
+  "capture_impact_parameter_b": {
+   "value": 321473.04721083556,
+   "unit": "km",
+   "note": "b = 4GM/(c v)"
+  },
+  "capture_impact_parameter_b_au": {
+   "value": 0.0021489145915419474,
+   "unit": "AU",
+   "note": ""
+  },
+  "schwarzschild_radius": {
+   "value": 19.492039921641396,
+   "unit": "km",
+   "note": ""
+  },
+  "encounter_dispersion_per_axis": {
+   "value": 95481.21406240054,
+   "unit": "AU",
+   "note": "stellar-encounter kicks, physics floor"
+  },
+  "today_catalog_errors_sigma_axes": {
+   "value": [
+    16338542.9,
+    6280627.8
+   ],
+   "unit": "AU",
+   "note": ""
+  },
+  "today_catalog_errors_P_capture": {
+   "value": 2.2500487762310433e-20,
+   "unit": "",
+   "note": ""
+  },
+  "today_catalog_errors_P_within_1000au": {
+   "value": 4.872519906260721e-09,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.1_future_astrometry_sigma_axes": {
+   "value": [
+    1635781.1,
+    633293.2
+   ],
+   "unit": "AU",
+   "note": ""
+  },
+  "errors_x0.1_future_astrometry_P_capture": {
+   "value": 2.228836948870357e-18,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.1_future_astrometry_P_within_1000au": {
+   "value": 4.826584170757957e-07,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.01_sigma_axes": {
+   "value": [
+    189160.9,
+    114178.4
+   ],
+   "unit": "AU",
+   "note": ""
+  },
+  "errors_x0.01_P_capture": {
+   "value": 1.0690372974554035e-16,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.01_P_within_1000au": {
+   "value": 2.314992140167108e-05,
+   "unit": "",
+   "note": ""
+  },
+  "floor_encounters_only_P_capture": {
+   "value": 2.532634093908558e-16,
+   "unit": "",
+   "note": "perfect astrometry, only stellar-encounter noise"
+  },
+  "floor_encounters_only_P_within_1000au": {
+   "value": 5.4843129644828276e-05,
+   "unit": "",
+   "note": ""
+  },
+  "lateral_reach_of_0.1m_s_correction_at_launch": {
+   "value": 1162.33189139904,
+   "unit": "AU",
+   "note": "what an early-window burn can move the arrival point by"
+  },
+  "lateral_reach_of_1m_s_correction_at_launch": {
+   "value": 11623.318913990399,
+   "unit": "AU",
+   "note": "what an early-window burn can move the arrival point by"
+  },
+  "scenarios": {
+   "today_catalog_errors": {
+    "sigma_axes_au": [
+     16338542.880867062,
+     6280627.825433943
+    ],
+    "P_capture": 2.2500487762310433e-20,
+    "P_within_100au": 4.872519918012739e-11,
+    "P_within_1000au": 4.872519906260721e-09
+   },
+   "errors_x0.1_future_astrometry": {
+    "sigma_axes_au": [
+     1635781.1105007462,
+     633293.2024623572
+    ],
+    "P_capture": 2.228836948870357e-18,
+    "P_within_100au": 4.826585323906107e-09,
+    "P_within_1000au": 4.826584170757957e-07
+   },
+   "errors_x0.01": {
+    "sigma_axes_au": [
+     189160.9155795931,
+     114178.42529084675
+    ],
+    "P_capture": 1.0690372974554035e-16,
+    "P_within_100au": 2.315018668558097e-07,
+    "P_within_1000au": 2.314992140167108e-05
+   }
+  }
+ },
+ "C_A0620_45kms": {
+  "implied_n_H_LIC": {
+   "value": 0.17298479436768682,
+   "unit": "cm^-3",
+   "note": "from Ulysses dust density x gas-to-dust 193"
+  },
+  "sightline_mean_n_H_from_reddening": {
+   "value": 0.5319769777012447,
+   "unit": "cm^-3",
+   "note": "E(B-V)=0.3, N_H=5.8e21 E(B-V) cm^-2, over 1060 pc"
+  },
+  "swept_dust_mass_local_LIC": {
+   "value": 0.1705695222672,
+   "unit": "g",
+   "note": "dust mass column x frontal area"
+  },
+  "dust_kinetic_energy_local_LIC": {
+   "value": 172.70164129554,
+   "unit": "kJ",
+   "note": "whole-path total"
+  },
+  "eroded_shield_fraction_local_LIC": {
+   "value": 0.00037080330927652177,
+   "unit": "",
+   "note": "crater mass = 100 x projectile mass, / 46 kg TPS"
+  },
+  "swept_dust_mass_sightline_reddening_gd100": {
+   "value": 1.0123802175872527,
+   "unit": "g",
+   "note": "dust mass column x frontal area"
+  },
+  "dust_kinetic_energy_sightline_reddening_gd100": {
+   "value": 1025.0349703070933,
+   "unit": "kJ",
+   "note": "whole-path total"
+  },
+  "eroded_shield_fraction_sightline_reddening_gd100": {
+   "value": 0.0022008265599722885,
+   "unit": "",
+   "note": "crater mass = 100 x projectile mass, / 46 kg TPS"
+  },
+  "hits_if_all_local_dust_in_r0.1um": {
+   "value": 12339537549839.996,
+   "unit": "",
+   "note": "monodisperse sanity bound"
+  },
+  "hits_if_all_local_dust_in_r1um": {
+   "value": 12339537549.839998,
+   "unit": "",
+   "note": "monodisperse sanity bound"
+  },
+  "expected_hits_m>2.0e-07kg_(0.5mm)": {
+   "value": 173.55466246153844,
+   "unit": "",
+   "note": "Musci et al. 2012 optical upper limit [upper], KE per hit at 45 km/s = 0.2 kJ"
+  },
+  "P_at_least_one_m>2.0e-07kg": {
+   "value": 1.0,
+   "unit": "",
+   "note": ""
+  },
+  "expected_hits_m>1.8e-07kg_(0.5mm)": {
+   "value": 0.572730386123077,
+   "unit": "",
+   "note": "Froncisz, Brown & Weryk 2020 CMOR candidates [detection (5 candidates / 11M orbits)], KE per hit at 45 km/s = 0.2 kJ"
+  },
+  "P_at_least_one_m>1.8e-07kg": {
+   "value": 0.4360165580293336,
+   "unit": "",
+   "note": ""
+  },
+  "expected_hits_m>6.6e-05kg_(3.4mm)": {
+   "value": 6.942186498461539e-05,
+   "unit": "",
+   "note": "Wiegert et al. 2025 optical 95% upper limit [upper], KE per hit at 45 km/s = 66.8 kJ"
+  },
+  "P_at_least_one_m>6.6e-05kg": {
+   "value": 6.941945534266747e-05,
+   "unit": "",
+   "note": ""
+  },
+  "whipple_critical_diameter_rho3.3": {
+   "value": 7.25855043066038,
+   "unit": "mm",
+   "note": "NNO BLE at 45 km/s; validated only to ~10 km/s (equation conservative there)"
+  },
+  "whipple_critical_mass_rho3.3": {
+   "value": 0.0006607881678178251,
+   "unit": "kg",
+   "note": ""
+  },
+  "whipple_critical_diameter_rho1.0": {
+   "value": 10.80657018756257,
+   "unit": "mm",
+   "note": "NNO BLE at 45 km/s; validated only to ~10 km/s (equation conservative there)"
+  },
+  "whipple_critical_mass_rho1.0": {
+   "value": 0.0006607881678178252,
+   "unit": "kg",
+   "note": ""
+  },
+  "gcr_dose_lism_factor_1": {
+   "value": 5.277200000000001,
+   "unit": "MGy",
+   "note": "MSL/RAD cruise 0.167 Gy/yr x LISM factor x time"
+  },
+  "gcr_dose_lism_factor_2": {
+   "value": 10.554400000000001,
+   "unit": "MGy",
+   "note": "MSL/RAD cruise 0.167 Gy/yr x LISM factor x time"
+  },
+  "silica_visible_transmission_verified_to": {
+   "value": 18.0,
+   "unit": "MGy",
+   "note": "Yang et al. 2022 (LHC irradiation)"
+  },
+  "sapphire_gamma_hardness_to": {
+   "value": 100.0,
+   "unit": "MGy",
+   "note": "Sporea & Sporea 2016"
+  },
+  "H_atom_impact_energy": {
+   "value": 10.57609337691789,
+   "unit": "eV",
+   "note": "sputtering threshold for H on graphite 40-50 eV (Gray & Edmunds 2004)"
+  },
+  "swept_gas_mass": {
+   "value": 32.9199177975696,
+   "unit": "g",
+   "note": ""
+  },
+  "drag_delta_v": {
+   "value": 0.007191244179080738,
+   "unit": "km/s",
+   "note": "momentum-transfer bound, along track"
+  }
+ },
+ "D_A0620_45kms": {
+  "encounter_relative_speed": {
+   "value": 44.76250229563576,
+   "unit": "km/s",
+   "note": "straight-line estimate"
+  },
+  "capture_impact_parameter_b": {
+   "value": 261092.04176964588,
+   "unit": "km",
+   "note": "b = 4GM/(c v)"
+  },
+  "capture_impact_parameter_b_au": {
+   "value": 0.0017452925001401498,
+   "unit": "AU",
+   "note": ""
+  },
+  "schwarzschild_radius": {
+   "value": 19.492039921641396,
+   "unit": "km",
+   "note": ""
+  },
+  "encounter_dispersion_per_axis": {
+   "value": 41836.28997549229,
+   "unit": "AU",
+   "note": "stellar-encounter kicks, physics floor"
+  },
+  "today_catalog_errors_sigma_axes": {
+   "value": [
+    7524378.4,
+    3601735.8
+   ],
+   "unit": "AU",
+   "note": ""
+  },
+  "today_catalog_errors_P_capture": {
+   "value": 5.619840291765048e-20,
+   "unit": "",
+   "note": ""
+  },
+  "today_catalog_errors_P_within_1000au": {
+   "value": 1.844962421460762e-08,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.1_future_astrometry_sigma_axes": {
+   "value": [
+    752932.2,
+    361466.1
+   ],
+   "unit": "AU",
+   "note": ""
+  },
+  "errors_x0.1_future_astrometry_P_capture": {
+   "value": 5.5960672722875955e-18,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.1_future_astrometry_P_within_1000au": {
+   "value": 1.8371562002952586e-06,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.01_sigma_axes": {
+   "value": [
+    86031.6,
+    55132.1
+   ],
+   "unit": "AU",
+   "note": ""
+  },
+  "errors_x0.01_P_capture": {
+   "value": 3.211027186511824e-16,
+   "unit": "",
+   "note": ""
+  },
+  "errors_x0.01_P_within_1000au": {
+   "value": 0.00010541068779046306,
+   "unit": "",
+   "note": ""
+  },
+  "floor_encounters_only_P_capture": {
+   "value": 8.70162012964966e-16,
+   "unit": "",
+   "note": "perfect astrometry, only stellar-encounter noise"
+  },
+  "floor_encounters_only_P_within_1000au": {
+   "value": 0.0002856285692634869,
+   "unit": "",
+   "note": ""
+  },
+  "lateral_reach_of_0.1m_s_correction_at_launch": {
+   "value": 666.6005039602479,
+   "unit": "AU",
+   "note": "what an early-window burn can move the arrival point by"
+  },
+  "lateral_reach_of_1m_s_correction_at_launch": {
+   "value": 6666.005039602479,
+   "unit": "AU",
+   "note": "what an early-window burn can move the arrival point by"
+  },
+  "scenarios": {
+   "today_catalog_errors": {
+    "sigma_axes_au": [
+     7524378.386675611,
+     3601735.7638583197
+    ],
+    "P_capture": 5.619840291765048e-20,
+    "P_within_100au": 1.8449624383100003e-10,
+    "P_within_1000au": 1.844962421460762e-08
+   },
+   "errors_x0.1_future_astrometry": {
+    "sigma_axes_au": [
+     752932.2497277874,
+     361466.14152799005
+    ],
+    "P_capture": 5.5960672722875955e-18,
+    "P_within_100au": 1.8371578709930327e-08,
+    "P_within_1000au": 1.8371562002952586e-06
+   },
+   "errors_x0.01": {
+    "sigma_axes_au": [
+     86031.55592392113,
+     55132.119551717886
+    ],
+    "P_capture": 3.211027186511824e-16,
+    "P_within_100au": 1.0541618832456191e-06,
+    "P_within_1000au": 0.00010541068779046306
+   }
+  }
+ },
+ "D_population": {
+  "capture_rate_per_Myr_n0.0001": {
+   "value": 5.184732980085488e-18,
+   "unit": "1/Myr",
+   "note": "stellar density 0.09/pc^3 x N_BH/N_star = 1.2e8/1e11"
+  },
+  "expected_captures_10Myr_n0.0001": {
+   "value": 5.184732980085488e-17,
+   "unit": "",
+   "note": ""
+  },
+  "expected_captures_100Myr_n0.0001": {
+   "value": 5.184732980085489e-16,
+   "unit": "",
+   "note": ""
+  },
+  "expected_captures_1000Myr_n0.0001": {
+   "value": 5.1847329800854885e-15,
+   "unit": "",
+   "note": ""
+  },
+  "capture_rate_per_Myr_n0.0005": {
+   "value": 2.5923664900427444e-17,
+   "unit": "1/Myr",
+   "note": "Fender et al. 2013: 1e8 BH over 200 kpc^3"
+  },
+  "expected_captures_10Myr_n0.0005": {
+   "value": 2.5923664900427443e-16,
+   "unit": "",
+   "note": ""
+  },
+  "expected_captures_100Myr_n0.0005": {
+   "value": 2.5923664900427442e-15,
+   "unit": "",
+   "note": ""
+  },
+  "expected_captures_1000Myr_n0.0005": {
+   "value": 2.5923664900427444e-14,
+   "unit": "",
+   "note": ""
+  },
+  "star_collision_rate_per_Myr": {
+   "value": 1.4001013167640993e-12,
+   "unit": "1/Myr",
+   "note": "Sun-like stars, focusing included"
+  },
+  "star_vs_black_hole_ratio": {
+   "value": 270043.0903851511,
+   "unit": "",
+   "note": ""
+  },
+  "sub_mm_hits_per_Myr_at_34kms": {
+   "value": 0.013693975476923078,
+   "unit": "1/Myr",
+   "note": "CMOR candidate flux; these are within the Whipple limit"
+  }
+ }
+}
