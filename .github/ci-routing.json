@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "mode": "public-hub",
+  "standard_revision": "45f2772b2e3617dd00db420174fb9dedd2ac800a",
+  "jobs": {
+    ".github/workflows/ci-routing.yml:routing": {
+      "assignment": {
+        "runs-on": "ubuntu-latest"
+      },
+      "platform": "public-hosted"
+    },
+    ".github/workflows/evidence.yml:evidence": {
+      "assignment": {
+        "runs-on": "ubuntu-latest"
+      },
+      "platform": "public-hosted"
+    },
+    ".github/workflows/governance.yml:governance": {
+      "assignment": {
+        "runs-on": "ubuntu-latest"
+      },
+      "platform": "public-hosted"
+    },
+    ".github/workflows/web-sim.yml:verify-web-sim": {
+      "assignment": {
+        "runs-on": "ubuntu-latest"
+      },
+      "platform": "public-hosted"
+    },
+    ".github/workflows/web-sim.yml:floating-point-stability": {
+      "assignment": {
+        "runs-on": "${{ matrix.os }}",
+        "matrix": {
+          "os": [
+            "ubuntu-latest",
+            "macos-latest"
+          ],
+          "node": [
+            18,
+            20
+          ]
+        }
+      },
+      "platform": "public-hosted"
+    },
+    ".github/workflows/web-sim.yml:deploy-pages": {
+      "assignment": {
+        "runs-on": "ubuntu-latest"
+      },
+      "platform": "public-hosted"
+    }
+  }
+}
