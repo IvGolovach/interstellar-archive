@@ -14,6 +14,8 @@ permissions:
 jobs:
   verify-web-sim:
     runs-on: ubuntu-latest
+    outputs:
+      deploy_needed: ${{ steps.deploy-scope.outputs.needed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -50,6 +52,15 @@ jobs:
             fi
             echo "head_sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Classify production publication scope
+        id: deploy-scope
+        env:
+          BASE_SHA: ${{ steps.shas.outputs.base_sha }}
+          HEAD_SHA: ${{ steps.shas.outputs.head_sha }}
+        run: |
+          python3 -m unittest discover -s .github/ci-tools -p 'test_*.py'
+          python3 .github/ci-tools/deploy_scope.py
 
       - name: Validate schema and scenarios
         run: npm run validate --prefix web
@@ -120,7 +131,7 @@ jobs:
         run: npm run golden:check --prefix web
 
   deploy-pages:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository_visibility == 'public'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository_visibility == 'public' && needs.verify-web-sim.outputs.deploy_needed == 'true'
     needs:
       - verify-web-sim
       - floating-point-stability
