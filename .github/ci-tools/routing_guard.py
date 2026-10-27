@@ -17,7 +17,12 @@ def workflows(root):
 
 
 def assignment(job):
-    return {'uses': job['uses']} if 'uses' in job else {'runs-on': job.get('runs-on')}
+    if 'uses' in job:
+        return {'uses': job['uses']}
+    route={'runs-on': job.get('runs-on')}
+    if 'matrix' in job.get('strategy', {}):
+        route['matrix']=job['strategy']['matrix']
+    return route
 
 
 def check(root):
